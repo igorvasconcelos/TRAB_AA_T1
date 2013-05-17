@@ -77,21 +77,7 @@ public class Execute {
 
     stringGraph2.addEdge("D", "E", 20);
 
-    /*
-     * Node<String> nodeA = new Node<String>("A", Double.POSITIVE_INFINITY); stringGraph2.addNode(nodeA); Node<String> nodeB = new Node<String>("B",
-     * Double.POSITIVE_INFINITY); stringGraph2.addNode(nodeB); Node<String> nodeC = new Node<String>("C", Double.POSITIVE_INFINITY);
-     * stringGraph2.addNode(nodeC); Node<String> nodeD = new Node<String>("D", Double.POSITIVE_INFINITY); stringGraph2.addNode(nodeD); Node<String> nodeE = new
-     * Node<String>("E", Double.POSITIVE_INFINITY); stringGraph2.addNode(nodeE);
-     * 
-     * stringGraph2.addEdge(nodeA, nodeB, 8); stringGraph2.addEdge(nodeA, nodeC, 5);
-     * 
-     * stringGraph2.addEdge(nodeB, nodeC, 2); stringGraph2.addEdge(nodeB, nodeD, 15);
-     * 
-     * stringGraph2.addEdge(nodeC, nodeD, 10); stringGraph2.addEdge(nodeC, nodeE, 5);
-     * 
-     * stringGraph2.addEdge(nodeD, nodeE, 20);
-     */
-    //UndirectedGraph<Integer> result = mst.Prim.mst(graph);
+    System.out.println(" ********** Prim ********");
 
     mst.Prim<Integer> teste = new Prim<Integer>(intGraph);
     teste.generateMST();
@@ -119,10 +105,6 @@ public class Execute {
     }
     System.out.println("Custo da MST:" + teste3.getCost());
 
-    //teste2.generateMST(true);
-
-    //Node n = new Node(1, 2);
-    //n.g
-    // Utils.getListFromInputFile("data/ALUE/alue2087.stp");
+    System.out.println(" ********** Round Robin ********");
   }
 }

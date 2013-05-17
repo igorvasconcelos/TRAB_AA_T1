@@ -33,7 +33,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import library.Node;
 import library.PairVertex;
 import library.UndirectedGraph;
 import fibonacciHeap.FibonacciHeap;
@@ -42,12 +41,80 @@ import fibonacciHeap.FibonacciHeap;
 
 public final class Prim<T> {
 
-  private Node<T>                        startNode;
-  private UndirectedGraph<Node<T>>       graph;
-  private double                         cost;
-  private ArrayList<PairVertex<Node<T>>> spanningTree;
+  private T                        startNode;
+  private UndirectedGraph<T>       graph;
+  private double                   cost;
+  private ArrayList<PairVertex<T>> spanningTree;
 
-  //private static boolean                 lazy;
+  /**
+   * Given a connected undirected graph with real-valued edge costs, returns an MST of that graph.
+   * 
+   * @param graph The graph from which to compute an MST.
+   * @return A spanning tree of the graph with minimum total weight.
+   */
+  public static <T> UndirectedGraph<T> mst(UndirectedGraph<T> graph) {
+
+    double custo = 0;
+
+    /* The Fibonacci heap we'll use to select nodes efficiently. */
+    FibonacciHeap<T> pq = new FibonacciHeap<T>();
+
+    /*
+     * This Fibonacci heap hands back internal handles to the nodes it stores. This map will associate each node with its entry in the Fibonacci heap.
+     */
+    Map<T, FibonacciHeap.Entry<T>> entries = new HashMap<T, FibonacciHeap.Entry<T>>();
+
+    /* The graph which will hold the resulting MST. */
+    UndirectedGraph<T> result = new UndirectedGraph<T>();
+
+    /*
+     * As an edge case, if the graph is empty, just hand back the empty graph.
+     */
+    if (graph.isEmpty())
+      return result;
+
+    /* Pick an arbitrary starting node. */
+    T startNode = graph.iterator().next();
+
+    /*
+     * Add it as a node in the graph. During this process, we'll use whether a node is in the result graph or not as a sentinel of whether it's already been
+     * picked.
+     */
+    result.addNode(startNode);
+
+    /*
+     * Begin by adding all outgoing edges of this start node to the Fibonacci heap.
+     */
+    addOutgoingEdges(startNode, graph, pq, result, entries);
+
+    /*
+     * Now, until we have added |V| - 1 edges to the graph, continously pick a node and determine which edge to add.
+     */
+    for (int i = 0; i < graph.size() - 1; ++i) {
+      /* Grab the cheapest node we can add. */
+      T toAdd = pq.dequeueMin().getValue();
+
+      /*
+       * Determine which edge we should pick to add to the MST. We'll do this by getting the endpoint of the edge leaving the current node that's of minimum
+       * cost and that enters the visited edges.
+       */
+      T endpoint = minCostEndpoint(toAdd, graph, result);
+
+      /* Add this edge to the graph. */
+      result.addNode(toAdd);
+      result.addEdge(toAdd, endpoint, graph.edgeCost(toAdd, endpoint));
+
+      custo += graph.edgeCost(toAdd, endpoint);
+      System.out.println(" " + endpoint + " " + toAdd + " Custo: " + graph.edgeCost(toAdd, endpoint));
+
+      /* Explore outward from this node. */
+      addOutgoingEdges(toAdd, graph, pq, result, entries);
+    }
+
+    /* Hand back the generated graph. */
+    System.out.println("Custo: " + custo);
+    return result;
+  }
 
   /**
    * Given a node in the source graph and a set of nodes that we've visited so far, returns the minimum-cost edge from that node to some node that has been
@@ -56,17 +123,16 @@ public final class Prim<T> {
    * @param node The node that has not been considered yet.
    * @param graph The original graph whose MST is being computed.
    * @param result The resulting graph, used to check what has been visited so far.
-   * @return retun min cost
    */
-  private static <Node> Node minCostEndpoint(Node node, UndirectedGraph<Node> graph, UndirectedGraph<Node> result) {
+  private static <T> T minCostEndpoint(T node, UndirectedGraph<T> graph, UndirectedGraph<T> result) {
     /*
      * Track the best endpoint so far and its cost, initially null and +infinity.
      */
-    Node endpoint = null;
+    T endpoint = null;
     double leastCost = Double.POSITIVE_INFINITY;
 
     /* Scan each node, checking whether it's a candidate. */
-    for (Map.Entry<Node, Double> entry : graph.edgesFrom(node).entrySet()) {
+    for (Map.Entry<T, Double> entry : graph.edgesFrom(node).entrySet()) {
       /*
        * If the endpoint isn't in the nodes constructed so far, don't consider it.
        */
@@ -99,10 +165,10 @@ public final class Prim<T> {
    *          isn't in the queue.
    * @param entries A map from nodes to their corresponding heap entries. We need this so we can call decreaseKey on the correct elements.
    */
-  private static <T> void addOutgoingEdges(Node<T> node, UndirectedGraph<Node<T>> graph, FibonacciHeap<Node<T>> pq, UndirectedGraph<Node<T>> result,
-    Map<Node<T>, FibonacciHeap.Entry<Node<T>>> entries) {
+  private static <T> void addOutgoingEdges(T node, UndirectedGraph<T> graph, FibonacciHeap<T> pq, UndirectedGraph<T> result,
+    Map<T, FibonacciHeap.Entry<T>> entries) {
     /* Start off by scanning over all edges emanating from our node. */
-    for (Map.Entry<Node<T>, Double> arc : graph.edgesFrom(node).entrySet()) {
+    for (Map.Entry<T, Double> arc : graph.edgesFrom(node).entrySet()) {
       /*
        * Given this arc, there are four possibilities.
        * 
@@ -119,11 +185,12 @@ public final class Prim<T> {
       else if (entries.get(arc.getKey()).getPriority() > arc.getValue()) { // Case 3
         pq.decreaseKey(entries.get(arc.getKey()), arc.getValue());
       }
+
       // Case 4 handled implicitly by doing nothing.
     }
   }
 
-  public Node<T> getStartNode() {
+  public T getStartNode() {
     return startNode;
   }
 
@@ -131,34 +198,26 @@ public final class Prim<T> {
     return cost;
   }
 
-  public ArrayList<PairVertex<Node<T>>> getSpanningTree() {
+  public ArrayList<PairVertex<T>> getSpanningTree() {
     return spanningTree;
   }
 
-  public Prim(UndirectedGraph<Node<T>> graph, boolean lazy) throws Exception {
+  public Prim(UndirectedGraph<T> graph) throws Exception {
     this.graph = graph;
-    this.spanningTree = new ArrayList<PairVertex<Node<T>>>();
-    //this.lazy = lazy;
+    this.spanningTree = new ArrayList<PairVertex<T>>();
   }
 
-  public void generateMST(boolean lazy) throws Exception {
-    //if (lazy)
-    lazy();
-    //else
-    //noLazy();
-  }
-
-  private void lazy() throws Exception {
+  public void generateMST() throws Exception {
     /* The Fibonacci heap we'll use to select nodes efficiently. */
-    FibonacciHeap<Node<T>> pq = new FibonacciHeap<Node<T>>();
+    FibonacciHeap<T> pq = new FibonacciHeap<T>();
 
     /*
      * This Fibonacci heap hands back internal handles to the nodes it stores. This map will associate each node with its entry in the Fibonacci heap.
      */
-    Map<Node<T>, FibonacciHeap.Entry<Node<T>>> entries = new HashMap<Node<T>, FibonacciHeap.Entry<Node<T>>>();
+    Map<T, FibonacciHeap.Entry<T>> entries = new HashMap<T, FibonacciHeap.Entry<T>>();
 
     /* The graph which will hold the resulting MST. */
-    UndirectedGraph<Node<T>> result = new UndirectedGraph<Node<T>>();
+    UndirectedGraph<T> result = new UndirectedGraph<T>();
 
     /*
      * As an edge case, if the graph is empty, just hand back the empty graph.
@@ -185,13 +244,13 @@ public final class Prim<T> {
      */
     for (int i = 0; i < graph.size() - 1; ++i) {
       /* Grab the cheapest node we can add. */
-      Node<T> toAdd = pq.dequeueMin().getValue();
+      T toAdd = pq.dequeueMin().getValue();
 
       /*
        * Determine which edge we should pick to add to the MST. We'll do this by getting the endpoint of the edge leaving the current node that's of minimum
        * cost and that enters the visited edges.
        */
-      Node<T> endpoint = minCostEndpoint(toAdd, graph, result);
+      T endpoint = minCostEndpoint(toAdd, graph, result);
 
       /* Add this edge to the graph. */
       result.addNode(toAdd);
@@ -199,65 +258,7 @@ public final class Prim<T> {
 
       double edgeCost = graph.edgeCost(toAdd, endpoint);
       cost += edgeCost;
-      this.spanningTree.add(new PairVertex<Node<T>>(endpoint, toAdd, edgeCost));
-
-      /* Explore outward from this node. */
-      addOutgoingEdges(toAdd, graph, pq, result, entries);
-    }
-  }
-
-  private void noLazy() throws Exception {
-    /* The Fibonacci heap we'll use to select nodes efficiently. */
-    FibonacciHeap<Node<T>> pq = new FibonacciHeap<Node<T>>();
-
-    /*
-     * This Fibonacci heap hands back internal handles to the nodes it stores. This map will associate each node with its entry in the Fibonacci heap.
-     */
-    Map<Node<T>, FibonacciHeap.Entry<Node<T>>> entries = new HashMap<Node<T>, FibonacciHeap.Entry<Node<T>>>();
-
-    /* The graph which will hold the resulting MST. */
-    UndirectedGraph<Node<T>> result = new UndirectedGraph<Node<T>>();
-
-    /*
-     * As an edge case, if the graph is empty, just hand back the empty graph.
-     */
-    if (graph.isEmpty())
-      throw new Exception("The graph can not be empty");
-
-    /* Pick an arbitrary starting node. */
-    this.startNode = graph.iterator().next();
-
-    /*
-     * Add it as a node in the graph. During this process, we'll use whether a node is in the result graph or not as a sentinel of whether it's already been
-     * picked.
-     */
-    result.addNode(startNode);
-
-    /*
-     * Begin by adding all outgoing edges of this start node to the Fibonacci heap.
-     */
-    addOutgoingEdges(startNode, graph, pq, result, entries);
-
-    /*
-     * Now, until we have added |V| - 1 edges to the graph, continously pick a node and determine which edge to add.
-     */
-    for (int i = 0; i < graph.size() - 1; ++i) {
-      /* Grab the cheapest node we can add. */
-      Node<T> toAdd = pq.dequeueMin().getValue();
-
-      /*
-       * Determine which edge we should pick to add to the MST. We'll do this by getting the endpoint of the edge leaving the current node that's of minimum
-       * cost and that enters the visited edges.
-       */
-      Node<T> endpoint = minCostEndpoint(toAdd, graph, result);
-
-      /* Add this edge to the graph. */
-      result.addNode(toAdd);
-      result.addEdge(toAdd, endpoint, graph.edgeCost(toAdd, endpoint));
-
-      double edgeCost = graph.edgeCost(toAdd, endpoint);
-      cost += edgeCost;
-      this.spanningTree.add(new PairVertex<Node<T>>(endpoint, toAdd, edgeCost));
+      this.spanningTree.add(new PairVertex<T>(endpoint, toAdd, edgeCost));
 
       /* Explore outward from this node. */
       addOutgoingEdges(toAdd, graph, pq, result, entries);

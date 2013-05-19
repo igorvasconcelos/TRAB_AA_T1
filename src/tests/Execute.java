@@ -65,7 +65,7 @@ public class Execute {
     System.out.println();
     mst.Prim<String> teste2 = new mst.Prim<String>(stringGraph);
     teste2.generateMST();
-    System.out.println("NÃ³ inicial: " + teste2.getStartNode());
+    System.out.println("Nó inicial: " + teste2.getStartNode());
     for (PairVertex<String> parVetex : teste2.getSpanningTree()) {
       System.out.println(parVetex.getOne() + " - " + parVetex.getTwo() + " : " + parVetex.getCost());
     }
@@ -79,7 +79,7 @@ public class Execute {
     System.out.println();
     mst.RoundRobin<String> teste4 = new mst.RoundRobin<String>(stringGraph);
     teste4.generateMST();
-    System.out.println("NÃ³ inicial: " + teste4.getStartNode());
+    System.out.println("Nó inicial: " + teste4.getStartNode());
     for (PairVertex<String> parVetex : teste4.getSpanningTree()) {
       System.out.println(parVetex.getOne() + " - " + parVetex.getTwo() + " : " + parVetex.getCost());
     }

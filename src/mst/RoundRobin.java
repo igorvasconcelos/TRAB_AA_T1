@@ -195,7 +195,7 @@ public class RoundRobin<T> {
       int index = find(listRR, toAdd);
       RoundRobinStruct<T> itemToMerge = listRR.get(index);
       RoundRobinStruct<T> newItem = new RoundRobinStruct<T>();
-      newItem.pq = item.pq.merge(item.pq, itemToMerge.pq);
+      newItem.pq = FibonacciHeap.merge(item.pq, itemToMerge.pq);
       newItem.entries = mergeEntries(item.entries, itemToMerge.entries);
       listRR.add(newItem);
       listRR.remove(item);

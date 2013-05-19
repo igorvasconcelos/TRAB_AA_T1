@@ -9,8 +9,7 @@ public class ExecuteTree {
    * @param args
    * @throws Exception
    */
-  public static void main(String[] args) throws Exception {
-
+	public static void main(String[] args) throws Exception {
     UndirectedGraph<String> stringGraph = new UndirectedGraph<String>();
     UndirectedGraph<Integer> intGraph = new UndirectedGraph<Integer>();
     
@@ -93,6 +92,7 @@ public class ExecuteTree {
     }
     System.out.println("Custo da MST:" + teste.getCost());
     
-    System.out.println(" ********** Round Robin ********");
+    //System.out.println(" ********** Round Robin ********");
+
   }
 }

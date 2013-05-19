@@ -94,7 +94,8 @@ public final class PrimTree<T> {
     for (int i = 0; i < graph.size() - 1; ++i) {
       /* Grab the cheapest node we can add. */
       //T toAdd = pq.dequeueMin().getValue();
-      T toAdd = pq.deleteMin().getKey();
+      T toAdd = pq.min().getKey();
+      pq.deleteMin();
 
       /*
        * Determine which edge we should pick to add to the MST. We'll do this by getting the endpoint of the edge leaving the current node that's of minimum
@@ -187,9 +188,10 @@ public final class PrimTree<T> {
       //else if (entries.get(arc.getKey()).getPriority() > arc.getValue()) { // Case 3
       else if ( entries.get(arc.getKey()).getVal() > arc.getValue() ) { // Case 3
         //pq.decreaseKey(entries.get(arc.getKey()), arc.getValue());
-    	  pq.delete( entries.get(arc.getKey()).getVal() );
+    	  RedBlackBST.Node<T> temp = new 
+    		 RedBlackBST.Node<T>( arc.getKey(), entries.get(arc.getKey()).getVal(), 0, false);
+    	  pq.delete( temp );
     	  pq.put( arc.getKey(), arc.getValue() );
-    	  
       }
 
       // Case 4 handled implicitly by doing nothing.
@@ -251,7 +253,8 @@ public final class PrimTree<T> {
     for (int i = 0; i < graph.size() - 1; ++i) {
       /* Grab the cheapest node we can add. */
       //T toAdd = pq.dequeueMin().getValue();
-    	T toAdd = pq.deleteMin().getKey();
+    	T toAdd = pq.min().getKey();
+        pq.deleteMin();
 
       /*
        * Determine which edge we should pick to add to the MST. We'll do this by getting the endpoint of the edge leaving the current node that's of minimum

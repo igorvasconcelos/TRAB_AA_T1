@@ -9,16 +9,17 @@ public class RedBlackBST<T>
 	{
 		T key; // key
 		double val; // associated data
-		Node<T> left, right; // subtrees
+		Node<T> left, right, parent; // subtrees
 		int N; // # nodes in this subtree
 		boolean color; // color of link from
 		// parent to this node
-		Node( T key, double val, int N, boolean color )
+		public Node( T key, double val, int N, boolean color )
 		{
 			this.key = key;
 			this.val = val;
 			this.N = N;
 			this.color = color;
+			this.parent = null;
 		}
 		
 		public T getKey() {
@@ -27,8 +28,13 @@ public class RedBlackBST<T>
 		public double getVal() {
 			return val;
 		}
-		
-		
+	}
+
+	/**
+	 * @return the root
+	 */
+	public Node<T> getRoot() {
+		return root;
 	}
 
 	public int size()
@@ -119,8 +125,9 @@ public class RedBlackBST<T>
 	}
 	
 	private Node<T> moveRedLeft( Node<T> h )
-	{ // Assuming that h is red and both h.left and h.left.left
-	// are black, make h.left or one of its children red.
+	{
+		// Assuming that h is red and both h.left and h.left.left
+		// are black, make h.left or one of its children red.
 		flipColors( h );
 		if ( isRed( h.right.left ) )
 		{
@@ -131,8 +138,9 @@ public class RedBlackBST<T>
 	}
 	
 	private Node<T> moveRedRight( Node<T> h )
-	{ // Assuming that h is red and both h.right and h.right.left
-	// are black, make h.right or one of its children red.
+	{
+		// Assuming that h is red and both h.right and h.right.left
+		// are black, make h.right or one of its children red.
 		flipColors( h );
 		if ( !isRed( h.left.left ) ) h = rotateRight(h);
 		return h;
@@ -140,19 +148,35 @@ public class RedBlackBST<T>
 	
 	public Node<T> deleteMin()
 	{ 
-		if (!isRed( root.left ) && !isRed( root.right ) )
+		Node<T> del = null;
+		if (!isRed( root.left ) && !isRed( root.right ) ) {
 			root.color = RED;
-		root = deleteMin( root );
-		if ( !isEmpty() ) root.color = BLACK;
-		return root;
+		}
+		//System.out.println( "Entrando no deleteMin na raiz" );
+		del = deleteMin( root );
+		if ( !isEmpty() ) 
+		{
+			root.color = BLACK;
+		}
+		return del;
 	}
 	
 	private Node<T> deleteMin( Node<T> h )
 	{
-		if ( h.left == null ) return null;
+		
+		if ( h.left == null ) 
+		{
+			return null;
+		}
 		if ( !isRed( h.left ) && !isRed( h.left.left ) )
+		{
+			//System.out.println( "Entrando no moveRedLeft no nó " + h.key );
 			h = moveRedLeft( h );
+			
+		}
+		//System.out.println( "Entrando no deleteMin no nó " + h.left.key );
 		h.left = deleteMin( h.left );
+		
 		return balance( h );
 	}
 	
@@ -189,44 +213,44 @@ public class RedBlackBST<T>
 		return balance( h );
 	}
 */	
-	public Node<T> delete( double val )
+	public Node<T> delete( Node<T> h )
 	{
 		if ( !isRed( root.left ) && !isRed( root.right ) )
 			root.color = RED;
-		root = delete( root, val );
+		root = delete( root, h );
 		if ( !isEmpty() ) root.color = BLACK;
 		return root;
 	}
 	
-	private Node<T> delete( Node<T> h, double val )
+	private Node<T> delete( Node<T> h, Node<T> x )
 	{
-		if ( val < h.val )
+		if ( x.val < h.val )
 		{
 			if ( !isRed( h.left ) && !isRed( h.left.left ) )
 				h = moveRedLeft( h );
-			h.left = delete( h.left, val );
+			h.left = delete( h.left, x );
 		}
 		else
 		{
 			if ( isRed( h.left ) ) h = rotateRight( h );
-			if ( val == h.val && ( h.right == null ) )
+			if ( x.val == h.val && ( h.right == null ) )
 				return null;
 			if ( !isRed( h.right ) && !isRed( h.right.left ) )
 				h = moveRedRight( h );
-			if ( val == h.val )
+			if ( x.val == h.val )
 			{
-				h.key = get( h.right, min( h.right ).val );
 				h.val = min( h.right ).val;
+				h.key = min( h.right ).key;
 				h.right = deleteMin( h.right );
 			}
-			else h.right = delete( h.right, val );
+			else h.right = delete( h.right, x );
 		}
 		return balance( h );
 	}
 
-	public double min()
+	public Node<T> min()
 	{
-		return min( root ).val;
+		return min( root );
 	}
 	
 	private Node<T> min( Node<T> h )
@@ -285,9 +309,15 @@ public class RedBlackBST<T>
 */	
 	public void print( Node<T> x )
 	{
-		if ( x == null ) return;
+		if ( x == null )
+		{
+			//System.out.println( "Não tem filho" );
+			return;
+		}
+		//System.out.println( "Entrando na subarvore a esquerda" );
 		print( x.left );
-		System.out.println( x.key );
+		System.out.println( "Chave:" + x.key + " - Val: " + x.val );
+		//System.out.println( "Entrando na subarvore a direita" );
 		print( x.right );
 	}
 }

@@ -181,6 +181,8 @@ public final class Prim<T> {
 
       if (!entries.containsKey(arc.getKey())) { // Case 2
         entries.put(arc.getKey(), pq.enqueue(arc.getKey(), arc.getValue()));
+        //System.out.println("ADD em pq a aresta (Key; Value): " + arc.getKey() + " ; " + arc.getValue());
+        //System.out.println("ADD em entries (MAP): " + arc.getKey().toString());
       }
       else if (entries.get(arc.getKey()).getPriority() > arc.getValue()) { // Case 3
         pq.decreaseKey(entries.get(arc.getKey()), arc.getValue());
@@ -233,7 +235,7 @@ public final class Prim<T> {
      * picked.
      */
     result.addNode(startNode);
-
+    System.out.println("ADD " + startNode + " em result");
     /*
      * Begin by adding all outgoing edges of this start node to the Fibonacci heap.
      */
@@ -255,6 +257,8 @@ public final class Prim<T> {
       /* Add this edge to the graph. */
       result.addNode(toAdd);
       result.addEdge(toAdd, endpoint, graph.edgeCost(toAdd, endpoint));
+
+      //System.out.println("ADD em result: " + toAdd);
 
       double edgeCost = graph.edgeCost(toAdd, endpoint);
       cost += edgeCost;

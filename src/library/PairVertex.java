@@ -1,12 +1,12 @@
 package library;
 
-public class PairVertex<Node> {
+public class PairVertex<T> {
 
-  private Node   one;
-  private Node   two;
+  private T      one;
+  private T      two;
   private double cost;
 
-  public PairVertex(Node one, Node two, double cost) {
+  public PairVertex(T one, T two, double cost) {
 
     this.setOne(one);
     this.setTwo(two);
@@ -14,24 +14,24 @@ public class PairVertex<Node> {
     this.setCost(cost);
   }
 
-  public PairVertex<Node> getPair() {
+  public PairVertex<T> getPair() {
 
     return this;
   }
 
-  public Node getOne() {
+  public T getOne() {
     return one;
   }
 
-  public void setOne(Node one) {
+  public void setOne(T one) {
     this.one = one;
   }
 
-  public Node getTwo() {
+  public T getTwo() {
     return two;
   }
 
-  public void setTwo(Node two) {
+  public void setTwo(T two) {
     this.two = two;
   }
 

@@ -33,6 +33,7 @@ package fibonacciHeap;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
+
 // For ArrayList
 
 /**
@@ -106,6 +107,23 @@ public final class FibonacciHeap<T> {
 
   /* Cached size of the heap, so we don't have to recompute this explicitly. */
   private int      mSize = 0;
+
+  public boolean find(T x /* , double priority */) {
+
+    Entry<T> temp = mMin;
+    while (temp != null) {
+
+      if (!x.equals(temp.getValue())) {
+        temp = temp.mNext;
+      }
+      else {
+        // if (priority == temp.mPriority) {
+        return true;
+        // }
+      }
+    }
+    return false;
+  }
 
   /**
    * Inserts the specified element into the Fibonacci heap with the specified priority. Its priority must be a valid double, so you cannot set the priority to

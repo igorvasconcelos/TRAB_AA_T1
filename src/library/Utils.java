@@ -27,18 +27,12 @@ public class Utils {
     // Obtém o objeto que vai iterar por todas as linhas do arquivo.
     Iterator<Integer> iterator = rbf.iterator();
 
-    // Obtém a quantidade de números contidos neste arquivo.
-    // O valor encontrado é o mesmo para os elementos de A e de B, ou seja, se o valor for 10
-    // temos 10 elementos para o conjunto A e 10 para o conjunto B.
-    // O + 1 é porque temos que ler mais dois(1 em para cada conjunto) números que são um para A0 e um para o B0.
-    int quantityOfInputValues = (iterator.hasNext()) ? iterator.next() + 1 : 0;
-
     // Cria uma lista temporária que vai conter os elementos lidos do arquivo.
-    List<PairVertex<Integer>> listTemp = new ArrayList<PairVertex<Integer>>(quantityOfInputValues);
+    List<PairVertex<Integer>> listTemp = new ArrayList<PairVertex<Integer>>();
 
     // Este loop, adiciona todos os elementos de A.
     int count = 0;
-    while ((iterator.hasNext()) && (count < quantityOfInputValues)) {
+    while ((iterator.hasNext())) {
       int currentValue = iterator.next();
       count++;
 

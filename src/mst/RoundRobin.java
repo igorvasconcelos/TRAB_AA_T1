@@ -3,6 +3,7 @@ package mst;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 import library.PairVertex;
@@ -15,74 +16,45 @@ public class RoundRobin<T> {
   private double                   cost;
   private ArrayList<PairVertex<T>> spanningTree;
 
-  /**
-   * Given a connected undirected graph with real-valued edge costs, returns an MST of that graph.
-   * 
-   * @param graph The graph from which to compute an MST.
-   * @return A spanning tree of the graph with minimum total weight.
-   */
-  public <T> UndirectedGraph<T> mst(UndirectedGraph<T> graph) {
-
-    double custo = 0;
-
+  public class RoundRobinStruct<T> {
     /* The Fibonacci heap we'll use to select nodes efficiently. */
-    FibonacciHeap<T> pq = new FibonacciHeap<T>();
+    private FibonacciHeap<T>               pq;
 
     /*
      * This Fibonacci heap hands back internal handles to the nodes it stores. This map will associate each node with its entry in the Fibonacci heap.
      */
-    Map<T, FibonacciHeap.Entry<T>> entries = new HashMap<T, FibonacciHeap.Entry<T>>();
+    private Map<T, FibonacciHeap.Entry<T>> entries;
+    private UndirectedGraph<T>             result;
 
-    /* The graph which will hold the resulting MST. */
-    UndirectedGraph<T> result = new UndirectedGraph<T>();
-
-    /*
-     * As an edge case, if the graph is empty, just hand back the empty graph.
-     */
-    if (graph.isEmpty())
-      return result;
-
-    /* Pick an arbitrary starting node. */
-    T startNode = graph.iterator().next();
-
-    /*
-     * Add it as a node in the graph. During this process, we'll use whether a node is in the result graph or not as a sentinel of whether it's already been
-     * picked.
-     */
-    result.addNode(startNode);
-
-    /*
-     * Begin by adding all outgoing edges of this start node to the Fibonacci heap.
-     */
-    addOutgoingEdges(graph, pq, result, entries);
-
-    /*
-     * Now, until we have added |V| - 1 edges to the graph, continously pick a node and determine which edge to add.
-     */
-    for (int i = 0; i < graph.size() - 1; ++i) {
-      /* Grab the cheapest node we can add. */
-      T toAdd = pq.dequeueMin().getValue();
-
-      /*
-       * Determine which edge we should pick to add to the MST. We'll do this by getting the endpoint of the edge leaving the current node that's of minimum
-       * cost and that enters the visited edges.
-       */
-      T endpoint = minCostEndpoint(toAdd, graph, result);
-
-      /* Add this edge to the graph. */
-      result.addNode(toAdd);
-      result.addEdge(toAdd, endpoint, graph.edgeCost(toAdd, endpoint));
-
-      custo += graph.edgeCost(toAdd, endpoint);
-      System.out.println(" " + endpoint + " " + toAdd + " Custo: " + graph.edgeCost(toAdd, endpoint));
-
-      /* Explore outward from this node. */
-      addOutgoingEdges(graph, pq, result, entries);
+    public FibonacciHeap<T> getPq() {
+      return pq;
     }
 
-    /* Hand back the generated graph. */
-    System.out.println("Custo: " + custo);
-    return result;
+    public void setPq(FibonacciHeap<T> pq) {
+      this.pq = pq;
+    }
+
+    public Map<T, FibonacciHeap.Entry<T>> getEntries() {
+      return entries;
+    }
+
+    public void setEntries(Map<T, FibonacciHeap.Entry<T>> entries) {
+      this.entries = entries;
+    }
+
+    public RoundRobinStruct() {
+      pq = new FibonacciHeap<T>();
+      entries = new HashMap<T, FibonacciHeap.Entry<T>>();
+      result = new UndirectedGraph<T>();
+    }
+
+    public UndirectedGraph<T> getResult() {
+      return result;
+    }
+
+    public void setResult(UndirectedGraph<T> result) {
+      this.result = result;
+    }
   }
 
   /**
@@ -93,7 +65,7 @@ public class RoundRobin<T> {
    * @param graph The original graph whose MST is being computed.
    * @param result The resulting graph, used to check what has been visited so far.
    */
-  private <T> T minCostEndpoint(UndirectedGraph<T> graph, UndirectedGraph<T> result) {
+  private static <T> T minCostEndpoint(T node, UndirectedGraph<T> graph, UndirectedGraph<T> result) {
     /*
      * Track the best endpoint so far and its cost, initially null and +infinity.
      */
@@ -101,19 +73,20 @@ public class RoundRobin<T> {
     double leastCost = Double.POSITIVE_INFINITY;
 
     /* Scan each node, checking whether it's a candidate. */
-    for (Iterator<T> iterator = graph.iterator(); iterator.hasNext();) {
-      T node = iterator.next();
-      for (Map.Entry<T, Double> entry : graph.edgesFrom(node).entrySet()) {
-        /*
-         * If the endpoint isn't in the nodes constructed so far, don't consider it.
-         */
-        if (result.containsNode(entry.getKey()) && entry.getValue() >= leastCost)
-          continue;
+    for (Map.Entry<T, Double> entry : graph.edgesFrom(node).entrySet()) {
+      /*
+       * If the endpoint isn't in the nodes constructed so far, don't consider it.
+       */
+      if (!result.containsNode(entry.getKey()))
+        continue;
 
-        /* Otherwise, update our guess to be this node. */
-        endpoint = entry.getKey();
-        leastCost = entry.getValue();
-      }
+      /* If the edge costs more than what we know, skip it. */
+      if (entry.getValue() >= leastCost)
+        continue;
+
+      /* Otherwise, update our guess to be this node. */
+      endpoint = entry.getKey();
+      leastCost = entry.getValue();
     }
 
     /*
@@ -133,47 +106,31 @@ public class RoundRobin<T> {
    *          isn't in the queue.
    * @param entries A map from nodes to their corresponding heap entries. We need this so we can call decreaseKey on the correct elements.
    */
-  private <T> void addOutgoingEdges(UndirectedGraph<T> graph, FibonacciHeap<T> pq, UndirectedGraph<T> result, Map<T, FibonacciHeap.Entry<T>> entries) {
+  private static <T> void addOutgoingEdges(T node, UndirectedGraph<T> graph, FibonacciHeap<T> pq, UndirectedGraph<T> result,
+    Map<T, FibonacciHeap.Entry<T>> entries) {
+    /* Start off by scanning over all edges emanating from our node. */
+    for (Map.Entry<T, Double> arc : graph.edgesFrom(node).entrySet()) {
+      /*
+       * Given this arc, there are four possibilities.
+       * 
+       * 1. This endpoint has already been added to the graph. If so, we ignore the edge since it would form a cycle. 2. This endpoint is not in the graph and
+       * has never been in the heap. Then we add it to the heap. 3. This endpoint is in the graph, but this is a better edge. Then we use decreaseKey to update
+       * its priority. 4. This endpoint is in the graph, but there is a better edge to it. In that case, we similarly ignore it.
+       */
+      if (result.containsNode(arc.getKey()))
+        continue; // Case 1
 
-    for (Iterator<T> iterator = graph.iterator(); iterator.hasNext();) {
-      T node = iterator.next();
-
-      for (Map.Entry<T, Double> arc : graph.edgesFrom(node).entrySet()) {
-        if (result.containsNode(arc.getKey()))
-
-          continue; // Case 1
-
-        if (!entries.containsKey(arc.getKey())) { // Case 2
-          entries.put(arc.getKey(), pq.enqueue(arc.getKey(), arc.getValue()));
-        }
-        else if (entries.get(arc.getKey()).getPriority() > arc.getValue()) { // Case 3
-          pq.decreaseKey(entries.get(arc.getKey()), arc.getValue());
-        }
+      if (!entries.containsKey(arc.getKey())) { // Case 2
+        entries.put(arc.getKey(), pq.enqueue(arc.getKey(), arc.getValue()));
+        //System.out.println("ADD em pq a aresta (Key; Value): " + arc.getKey() + " ; " + arc.getValue());
+        //System.out.println("ADD em entries (MAP): " + arc.getKey().toString());
+      }
+      else if (entries.get(arc.getKey()).getPriority() > arc.getValue()) { // Case 3
+        pq.decreaseKey(entries.get(arc.getKey()), arc.getValue());
       }
 
+      // Case 4 handled implicitly by doing nothing.
     }
-
-    /* Start off by scanning over all edges emanating from our node. */
-    //for (Map.Entry<T, Double> arc : graph.edgesFrom(node).entrySet()) {
-    /*
-     * Given this arc, there are four possibilities.
-     * 
-     * 1. This endpoint has already been added to the graph. If so, we ignore the edge since it would form a cycle. 2. This endpoint is not in the graph and has
-     * never been in the heap. Then we add it to the heap. 3. This endpoint is in the graph, but this is a better edge. Then we use decreaseKey to update its
-     * priority. 4. This endpoint is in the graph, but there is a better edge to it. In that case, we similarly ignore it.
-     */
-    //   if (result.containsNode(arc.getKey()))
-    //     continue; // Case 1
-
-    //   if (!entries.containsKey(arc.getKey())) { // Case 2
-    //   entries.put(arc.getKey(), pq.enqueue(arc.getKey(), arc.getValue()));
-    //}
-    //else if (entries.get(arc.getKey()).getPriority() > arc.getValue()) { // Case 3
-    // pq.decreaseKey(entries.get(arc.getKey()), arc.getValue());
-    // }
-
-    // Case 4 handled implicitly by doing nothing.
-    // }
   }
 
   public T getStartNode() {
@@ -194,16 +151,24 @@ public class RoundRobin<T> {
   }
 
   public void generateMST() throws Exception {
-    /* The Fibonacci heap we'll use to select nodes efficiently. */
-    FibonacciHeap<T> pq = new FibonacciHeap<T>();
-
-    /*
-     * This Fibonacci heap hands back internal handles to the nodes it stores. This map will associate each node with its entry in the Fibonacci heap.
-     */
-    Map<T, FibonacciHeap.Entry<T>> entries = new HashMap<T, FibonacciHeap.Entry<T>>();
 
     /* The graph which will hold the resulting MST. */
-    UndirectedGraph<T> result = new UndirectedGraph<T>();
+    //UndirectedGraph<T> result = new UndirectedGraph<T>();
+
+    ArrayList<RoundRobinStruct<T>> listRR = new ArrayList<RoundRobinStruct<T>>(graph.size());
+
+    for (Iterator<T> iterator = graph.iterator(); iterator.hasNext();) {
+      T node = iterator.next();
+      RoundRobinStruct<T> rrs = new RoundRobinStruct<T>();
+
+      // adicionando os vértices
+      rrs.pq.enqueue(node, Double.POSITIVE_INFINITY);
+      rrs.result.addNode(node);
+      // adicionando as arestas para esse vértice
+      addOutgoingEdges(node, graph, rrs.pq, rrs.result, rrs.entries);
+      // adicioando na "fila"
+      listRR.add(rrs);
+    }
 
     /*
      * As an edge case, if the graph is empty, just hand back the empty graph.
@@ -211,46 +176,49 @@ public class RoundRobin<T> {
     if (graph.isEmpty())
       throw new Exception("The graph can not be empty");
 
-    /* Pick an arbitrary starting node. */
-    this.startNode = graph.iterator().next();
-
-    /*
-     * Add it as a node in the graph. During this process, we'll use whether a node is in the result graph or not as a sentinel of whether it's already been
-     * picked.
-     */
-
-    for (Iterator<T> iterator = graph.iterator(); iterator.hasNext();) {
-      result.addNode(iterator.next());
-    }
-
-    /*
-     * Begin by adding all outgoing edges of this start node to the Fibonacci heap.
-     */
-    addOutgoingEdges(graph, pq, result, entries);
-
-    /*
-     * Now, until we have added |V| - 1 edges to the graph, continously pick a node and determine which edge to add.
-     */
-    for (int i = 0; i < graph.size() - 1; ++i) {
+    while (listRR.size() > 1) {
+      RoundRobinStruct<T> item = listRR.get(0);
       /* Grab the cheapest node we can add. */
-      T toAdd = pq.dequeueMin().getValue();
-
+      T toAdd = item.pq.dequeueMin().getValue();
       /*
        * Determine which edge we should pick to add to the MST. We'll do this by getting the endpoint of the edge leaving the current node that's of minimum
        * cost and that enters the visited edges.
        */
-      T endpoint = minCostEndpoint(graph, result);
-
+      T endpoint = minCostEndpoint(toAdd, graph, item.result);
       /* Add this edge to the graph. */
-      result.addNode(toAdd);
-      result.addEdge(toAdd, endpoint, graph.edgeCost(toAdd, endpoint));
-
+      item.result.addNode(toAdd);
+      //item.result.addNode(endpoint);
       double edgeCost = graph.edgeCost(toAdd, endpoint);
-      cost += edgeCost;
-      this.spanningTree.add(new PairVertex<T>(endpoint, toAdd, edgeCost));
+      item.result.addEdge(toAdd, endpoint, edgeCost);
 
-      /* Explore outward from this node. */
-      addOutgoingEdges(graph, pq, result, entries);
+      // Procurar
+      int index = find(listRR, toAdd);
+      RoundRobinStruct<T> itemToMerge = listRR.get(index);
+      RoundRobinStruct<T> newItem = new RoundRobinStruct<T>();
+      newItem.pq = item.pq.merge(item.pq, itemToMerge.pq);
+      newItem.entries = mergeEntries(item.entries, itemToMerge.entries);
+      listRR.add(newItem);
+      listRR.remove(item);
+      listRR.remove(itemToMerge);
     }
+  }
+
+  public int find(List<RoundRobinStruct<T>> listRR, T node) {
+    for (int i = 1; i < listRR.size(); i++) {
+      if (listRR.get(i).pq.find(node))
+        return i;
+    }
+    return -1;
+  }
+
+  public Map<T, FibonacciHeap.Entry<T>> mergeEntries(Map<T, FibonacciHeap.Entry<T>> one, Map<T, FibonacciHeap.Entry<T>> two) {
+    Map<T, FibonacciHeap.Entry<T>> three = new HashMap<T, FibonacciHeap.Entry<T>>();
+    three.putAll(one);
+    three.putAll(two);
+    //for (int i = 0; i < two.size(); i++) {
+    // if ( three. )
+    //}
+
+    return three;
   }
 };

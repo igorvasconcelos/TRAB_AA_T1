@@ -199,7 +199,7 @@ public final class AVLTree<T>
 				}
 				else
 				{
-					// q has two children –> will be replaced by successor
+					// q has two children ï¿½> will be replaced by successor
 					r = successor( q );
 					q.mElem = r.mElem;
 				}
@@ -279,7 +279,7 @@ public final class AVLTree<T>
 		else
 		{
 			this.mRoot = cur;
-			System.out.println( "———— Balancing finished —————-" );
+			System.out.println( "ï¿½ï¿½ï¿½ï¿½ Balancing finished ï¿½ï¿½ï¿½ï¿½ï¿½-" );
 		}
 	}
 	

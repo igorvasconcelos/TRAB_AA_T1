@@ -29,18 +29,18 @@ package mst;
  * 
  * http://keithschwarz.com/interesting/code/?dir=fibonacci-heap
  */
+import heap.FibonacciHeap;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
-import avl.AVL;
 
 import library.PairVertex;
 import library.UndirectedGraph;
 
 // For HashMap
 
-public final class PrimTree<T> {
+public final class PrimFibonacci<T> {
 
   private T                        startNode;
   private UndirectedGraph<T>       graph;
@@ -58,12 +58,12 @@ public final class PrimTree<T> {
     double custo = 0;
 
     /* The Fibonacci heap we'll use to select nodes efficiently. */
-    AVL<T> pq = new AVL<T>();
+    FibonacciHeap<T> pq = new FibonacciHeap<T>();
 
     /*
      * This Fibonacci heap hands back internal handles to the nodes it stores. This map will associate each node with its entry in the Fibonacci heap.
      */
-    Map<T, AVL.Elem<T>> entries = new HashMap<T, AVL.Elem<T>>();
+    Map<T, FibonacciHeap.Entry<T>> entries = new HashMap<T, FibonacciHeap.Entry<T>>();
 
     /* The graph which will hold the resulting MST. */
     UndirectedGraph<T> result = new UndirectedGraph<T>();
@@ -93,8 +93,7 @@ public final class PrimTree<T> {
      */
     for (int i = 0; i < graph.size() - 1; ++i) {
       /* Grab the cheapest node we can add. */
-      //T toAdd = pq.dequeueMin().getValue();
-      T toAdd = pq.removeMin().getValue();
+      T toAdd = pq.dequeueMin().getValue();
 
       /*
        * Determine which edge we should pick to add to the MST. We'll do this by getting the endpoint of the edge leaving the current node that's of minimum
@@ -167,7 +166,8 @@ public final class PrimTree<T> {
    *          isn't in the queue.
    * @param entries A map from nodes to their corresponding heap entries. We need this so we can call decreaseKey on the correct elements.
    */
-  private static <T> void addOutgoingEdges(T node, UndirectedGraph<T> graph, AVL<T> pq, UndirectedGraph<T> result, Map<T, AVL.Elem<T>> entries) {
+  private static <T> void addOutgoingEdges(T node, UndirectedGraph<T> graph, FibonacciHeap<T> pq, UndirectedGraph<T> result,
+    Map<T, FibonacciHeap.Entry<T>> entries) {
     /* Start off by scanning over all edges emanating from our node. */
     for (Map.Entry<T, Double> arc : graph.edgesFrom(node).entrySet()) {
       /*
@@ -177,22 +177,16 @@ public final class PrimTree<T> {
        * has never been in the heap. Then we add it to the heap. 3. This endpoint is in the graph, but this is a better edge. Then we use decreaseKey to update
        * its priority. 4. This endpoint is in the graph, but there is a better edge to it. In that case, we similarly ignore it.
        */
-      if ( result.containsNode( arc.getKey() ) )
+      if (result.containsNode(arc.getKey()))
         continue; // Case 1
 
-      if ( !entries.containsKey( arc.getKey() ) ) { // Case 2
-        //entries.put(arc.getKey(), pq.enqueue(arc.getKey(), arc.getValue()));
-    	  AVL.Elem<T> temp = new AVL.Elem<T>( arc.getKey(), arc.getValue());
-    	  pq.put( arc.getKey(), arc.getValue() );
-    	  entries.put( arc.getKey(), temp );
+      if (!entries.containsKey(arc.getKey())) { // Case 2
+        entries.put(arc.getKey(), pq.enqueue(arc.getKey(), arc.getValue()));
+        //System.out.println("ADD em pq a aresta (Key; Value): " + arc.getKey() + " ; " + arc.getValue());
+        //System.out.println("ADD em entries (MAP): " + arc.getKey().toString());
       }
-      //else if (entries.get(arc.getKey()).getPriority() > arc.getValue()) { // Case 3
-      else if ( entries.get(arc.getKey()).getPriority() > arc.getValue() ) { // Case 3
-        //pq.decreaseKey(entries.get(arc.getKey()), arc.getValue());
-    	  AVL.Elem<T> temp = new 
-    		 AVL.Elem<T>( arc.getKey(), entries.get(arc.getKey()).getPriority());
-    	  pq.remove( temp );
-    	  pq.put( arc.getKey(), arc.getValue() );
+      else if (entries.get(arc.getKey()).getPriority() > arc.getValue()) { // Case 3
+        pq.decreaseKey(entries.get(arc.getKey()), arc.getValue());
       }
 
       // Case 4 handled implicitly by doing nothing.
@@ -211,19 +205,19 @@ public final class PrimTree<T> {
     return spanningTree;
   }
 
-  public PrimTree(UndirectedGraph<T> graph) throws Exception {
+  public PrimFibonacci(UndirectedGraph<T> graph) throws Exception {
     this.graph = graph;
     this.spanningTree = new ArrayList<PairVertex<T>>();
   }
 
   public void generateMST() throws Exception {
     /* The Fibonacci heap we'll use to select nodes efficiently. */
-    AVL<T> pq = new AVL<T>();
+    FibonacciHeap<T> pq = new FibonacciHeap<T>();
 
     /*
      * This Fibonacci heap hands back internal handles to the nodes it stores. This map will associate each node with its entry in the Fibonacci heap.
      */
-    Map<T, AVL.Elem<T>> entries = new HashMap<T, AVL.Elem<T>>();
+    Map<T, FibonacciHeap.Entry<T>> entries = new HashMap<T, FibonacciHeap.Entry<T>>();
 
     /* The graph which will hold the resulting MST. */
     UndirectedGraph<T> result = new UndirectedGraph<T>();
@@ -242,7 +236,7 @@ public final class PrimTree<T> {
      * picked.
      */
     result.addNode(startNode);
-
+    System.out.println("ADD " + startNode + " em result");
     /*
      * Begin by adding all outgoing edges of this start node to the Fibonacci heap.
      */
@@ -253,8 +247,7 @@ public final class PrimTree<T> {
      */
     for (int i = 0; i < graph.size() - 1; ++i) {
       /* Grab the cheapest node we can add. */
-      //T toAdd = pq.dequeueMin().getValue();
-    	T toAdd = pq.removeMin().getValue();
+      T toAdd = pq.dequeueMin().getValue();
 
       /*
        * Determine which edge we should pick to add to the MST. We'll do this by getting the endpoint of the edge leaving the current node that's of minimum
@@ -265,6 +258,8 @@ public final class PrimTree<T> {
       /* Add this edge to the graph. */
       result.addNode(toAdd);
       result.addEdge(toAdd, endpoint, graph.edgeCost(toAdd, endpoint));
+
+      //System.out.println("ADD em result: " + toAdd);
 
       double edgeCost = graph.edgeCost(toAdd, endpoint);
       cost += edgeCost;

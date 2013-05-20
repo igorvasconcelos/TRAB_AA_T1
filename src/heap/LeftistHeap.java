@@ -1,5 +1,7 @@
 package heap;
 
+import library.struct.UnderflowException;
+
 // LeftistHeap class
 //
 // CONSTRUCTION: with a negative infinity sentinel
@@ -98,6 +100,25 @@ public class LeftistHeap<AnyType extends Comparable<? super AnyType>> {
     return root.element;
   }
 
+  public boolean find(AnyType x) {
+
+    LeftistNode<AnyType> temp = root;
+    ;
+    while (temp != null) {
+
+      if (x.compareTo(temp.element) == 0) {
+        return true;
+      }
+      else if (x.compareTo(temp.element) < 0) {
+        temp = temp.left;
+      }
+      else if (x.compareTo(temp.element) > 0) {
+        temp = temp.right;
+      }
+    }
+    return false;
+  }
+
   /**
    * Remove the smallest item from the priority queue.
    * 
@@ -129,7 +150,7 @@ public class LeftistHeap<AnyType extends Comparable<? super AnyType>> {
     root = null;
   }
 
-  private static class LeftistNode<AnyType> {
+  public static class LeftistNode<AnyType> {
     // Constructors
     LeftistNode(AnyType theElement) {
       this(theElement, null, null);

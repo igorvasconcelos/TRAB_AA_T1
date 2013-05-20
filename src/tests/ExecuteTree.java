@@ -2,6 +2,7 @@ package tests;
 
 import library.PairVertex;
 import library.UndirectedGraph;
+import avl.AVL;
 
 public class ExecuteTree {
 
@@ -10,6 +11,45 @@ public class ExecuteTree {
    * @throws Exception
    */
 	public static void main(String[] args) throws Exception {
+/*	AVL<String> t = new AVL<String>();
+	AVL.Elem<String> elem; 
+	System.out.println("Escolhido nï¿½ A");
+	t.put("B", 8);
+	t.printBST();
+	t.put("C", 5);
+	t.printBST();
+	System.out.println("Escolhido nï¿½ " + t.removeMin().getValue());
+	t.printBST();
+	t.put("D", 3);
+	t.printBST();
+	t.put("F", 16);
+	t.printBST();
+	System.out.println("Escolhido nï¿½ " + t.removeMin().getValue());
+	t.printBST();
+	t.put("E", 12);
+	t.printBST();
+	t.put("G", 14);
+	t.printBST();
+	elem = new AVL.Elem<String>("B", 8);
+	t.remove( elem );
+	t.printBST();
+	t.put("B", 2);
+	t.printBST();
+	System.out.println("Escolhido nï¿½ " + t.removeMin().getValue());
+	t.printBST();
+	System.out.println("Escolhido nï¿½ " + t.removeMin().getValue());
+	t.printBST();
+	elem = new AVL.Elem<String>("G", 14);
+	t.remove( elem );
+	t.printBST();
+	t.put("G", 4);
+	t.printBST();
+	System.out.println("Escolhido nï¿½ " + t.removeMin().getValue());
+	t.printBST();
+	System.out.println("Escolhido nï¿½ " + t.removeMin().getValue());
+	t.printBST();
+	System.out.println("Arvore Geradora Minima Pronta");
+*/		
     UndirectedGraph<String> stringGraph = new UndirectedGraph<String>();
     UndirectedGraph<Integer> intGraph = new UndirectedGraph<Integer>();
     
@@ -57,18 +97,18 @@ public class ExecuteTree {
     System.out.println(" ********** Prim ********");
 
     System.out.println();
-    mst.Prim<Integer> teste3 = new mst.Prim<Integer>(intGraph);
+    mst.PrimFibonacci<Integer> teste3 = new mst.PrimFibonacci<Integer>(intGraph);
     teste3.generateMST();
-    System.out.println("Nó inicial: " + teste3.getStartNode());
+    System.out.println("Nï¿½ inicial: " + teste3.getStartNode());
     for (PairVertex<Integer> parVetex : teste3.getSpanningTree()) {
       System.out.println(parVetex.getOne() + " - " + parVetex.getTwo() + " : " + parVetex.getCost());
     }
     System.out.println("Custo da MST:" + teste3.getCost());
     
     System.out.println();
-    mst.Prim<String> teste2 = new mst.Prim<String>(stringGraph);
+    mst.PrimFibonacci<String> teste2 = new mst.PrimFibonacci<String>(stringGraph);
     teste2.generateMST();
-    System.out.println("Nó inicial: " + teste2.getStartNode());
+    System.out.println("Nï¿½ inicial: " + teste2.getStartNode());
     for (PairVertex<String> parVetex : teste2.getSpanningTree()) {
       System.out.println(parVetex.getOne() + " - " + parVetex.getTwo() + " : " + parVetex.getCost());
     }
@@ -77,7 +117,7 @@ public class ExecuteTree {
     System.out.println();
     mst.PrimTree<Integer> teste4 = new mst.PrimTree<Integer>(intGraph);
     teste4.generateMST();
-    System.out.println("Nó inicial: " + teste4.getStartNode());
+    System.out.println("Nï¿½ inicial: " + teste4.getStartNode());
     for (PairVertex<Integer> parVetex : teste4.getSpanningTree()) {
       System.out.println(parVetex.getOne() + " - " + parVetex.getTwo() + " : " + parVetex.getCost());
     }
@@ -86,7 +126,7 @@ public class ExecuteTree {
 	System.out.println();
     mst.PrimTree<String> teste = new mst.PrimTree<String>(stringGraph);
     teste.generateMST();
-    System.out.println("Nó inicial: " + teste.getStartNode());
+    System.out.println("Nï¿½ inicial: " + teste.getStartNode());
     for (PairVertex<String> parVetex : teste.getSpanningTree()) {
       System.out.println(parVetex.getOne() + " - " + parVetex.getTwo() + " : " + parVetex.getCost());
     }

@@ -3,6 +3,10 @@ package library;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
+
+import pph.utils.OrderedPair;
+import pph.utils.ReadBigFile;
 
 /**
  * Esta classe contém alguns métodos utils e comuns para ajudar no desenvolvimento de questão pph.<br/>
@@ -17,8 +21,7 @@ public class Utils {
    * @return Obtém os valores que correspondem ao A ou ao B.
    * @throws Exception
    */
-  public static List<PairVertex<Integer>> getListFromInputFile(String inputFile) throws Exception {
-
+  public static List<OrderedPair> getListFromInputFile(String inputFile) throws Exception {
     Logger.printOntoScreen("Obtendo valores do arquivo de entrada...");
 
     // Tentar abrir o arquivo.
@@ -27,20 +30,60 @@ public class Utils {
     // Obtém o objeto que vai iterar por todas as linhas do arquivo.
     Iterator<Integer> iterator = rbf.iterator();
 
+    // Obtém a quantidade de números contidos neste arquivo.
+    // O valor encontrado é o mesmo para os elementos de A e de B, ou seja, se o valor for 10
+    // temos 10 elementos para o conjunto A e 10 para o conjunto B.
+    // O + 1 é porque temos que ler mais dois(1 em para cada conjunto) números que são um para A0 e um para o B0.
+    int quantityOfInputValues = (iterator.hasNext()) ? iterator.next() + 1 : 0;
+
     // Cria uma lista temporária que vai conter os elementos lidos do arquivo.
-    List<PairVertex<Integer>> listTemp = new ArrayList<PairVertex<Integer>>();
+    List<OrderedPair> listTemp = new ArrayList<OrderedPair>(quantityOfInputValues);
 
     // Este loop, adiciona todos os elementos de A.
     int count = 0;
-    while ((iterator.hasNext())) {
+    while ((iterator.hasNext()) && (count < quantityOfInputValues)) {
       int currentValue = iterator.next();
       count++;
 
-      //listTemp.add(new PairVetex<Integer>(one, two, cost));
+      listTemp.add(new OrderedPair(currentValue));
+    }
+
+    // Este loop, adiciona todos os elementos de B.
+    count = 0;
+    while ((iterator.hasNext()) && (count < quantityOfInputValues)) {
+      int currentValue = iterator.next();
+
+      listTemp.get(count).setB(currentValue);
+
+      count++;
     }
 
     // Libera o arquivo.
     rbf.Close();
+
+    return listTemp;
+  }
+
+  /**
+   * São gerados números aleatórios baseado na quantidade de elementos que é solicitada.
+   * 
+   * @param quantityOfInputValues Quantidade de elementos que serão criados.
+   * @return A lista de pares ordenados criada aleatóriamente.
+   */
+  public static List<OrderedPair> getRandomValues(int quantityOfInputValues) {
+    Logger.printOntoScreen("Obtendo valores randomicamente...");
+    Random rnd = new Random();
+
+    List<OrderedPair> listTemp = new ArrayList<OrderedPair>(quantityOfInputValues);
+    int a;
+    int b;
+
+    for (int i = 0; i < quantityOfInputValues; i++) {
+      a = i; //rnd.nextInt(500) + 1;
+      b = 0;//rnd.nextInt(1000) + 1;
+
+      listTemp.add(new OrderedPair(a, b));
+    }
 
     return listTemp;
   }

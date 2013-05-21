@@ -2,14 +2,11 @@ package mst;
 
 import heap.LeftistHeap;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.StringTokenizer;
 
 import library.PairVertex;
+import library.Utils;
 import library.struct.Edge;
 import library.struct.GraphException;
 import library.struct.MstGraph;
@@ -126,53 +123,20 @@ public class PrimLeftist {
    * A main routine that: 1. Reads a file containing edges (supplied as a command-line parameter); 2. Forms the graph; 3. Repeatedly prompts for two vertices
    * and runs the shortest path algorithm. The data file is a sequence of lines of the format source destination.
    * 
-   * @throws IOException
+   * @throws Exception
    */
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws Exception {
 
-    MstGraph g = new MstGraph();
+    MstGraph g = Utils.getGraphFromInputFile("data/ALUE/alue2087.stp");
     PrimLeftist prim = new PrimLeftist(g);
 
-    try {
-      FileReader fin = new FileReader("data/weiss/graph1.txt");
-      BufferedReader graphFile = new BufferedReader(fin);
-
-      // Read the edges and insert
-      String line;
-      while ((line = graphFile.readLine()) != null) {
-        StringTokenizer st = new StringTokenizer(line);
-
-        try {
-          if (st.countTokens() != 3) {
-            System.err.println("Skipping ill-formatted line " + line);
-            continue;
-          }
-          String source = st.nextToken();
-          String dest = st.nextToken();
-          int cost = Integer.parseInt(st.nextToken());
-          g.addEdge(source, dest, cost);
-        }
-        catch (NumberFormatException e) {
-          System.err.println("Skipping ill-formatted line " + line);
-        }
-      }
-    }
-    catch (IOException e) {
-      System.err.println(e);
-    }
-
-    System.out.println("File read...");
-    System.out.println(g.getVertexMap().size() + " vertices");
-
-    BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-
-    processRequest(in, prim);
+    processRequest(prim);
   }
 
   /**
    * Process a request; return false if end of file.
    */
-  public static boolean processRequest(BufferedReader in, PrimLeftist prim) throws IOException {
+  public static boolean processRequest(PrimLeftist prim) throws IOException {
 
     try {
       prim.generateMst();

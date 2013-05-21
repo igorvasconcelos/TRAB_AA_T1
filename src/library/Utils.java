@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
+import library.struct.MstGraph;
 import pph.utils.OrderedPair;
 import pph.utils.ReadBigFile;
 
@@ -62,6 +63,100 @@ public class Utils {
     rbf.Close();
 
     return listTemp;
+  }
+
+  /**
+   * Obtém os vértices, arestas e os respectivos pesos
+   * 
+   * @param inputFile O arquivo que será usando como fonte de dados.
+   * @return Obtém os valores que correspondem ao A ou ao B.
+   * @throws Exception
+   */
+  public static MstGraph getGraphFromInputFile(String inputFile) throws Exception {
+    Logger.printOntoScreen("Obtendo valores do arquivo de entrada...");
+
+    // Tentar abrir o arquivo.
+    GenericReadBigFile rbf = new GenericReadBigFile(inputFile);
+
+    // Obtém o objeto que vai iterar por todas as linhas do arquivo.
+    Iterator<String> iterator = rbf.iterator();
+
+    MstGraph graph = new MstGraph();
+
+    // Este loop, adiciona todos os elementos de A.
+    int count = 0;
+
+    while ((iterator.hasNext())) {
+      String currentValue;
+      if (count < 10) {
+        currentValue = iterator.next();
+        System.err.println(currentValue.toString() + " ");
+        count++;
+      }
+      else {
+        currentValue = iterator.next();
+        if ("end".equals(currentValue.toLowerCase()))
+          break;
+
+        String[] values = currentValue.split(" ");
+        String vertex1 = values[1];
+        String vertex2 = values[2];
+        String cost = values[3];
+        graph.addEdge(vertex1, vertex2, Double.parseDouble(cost));
+      }
+    }
+    // Libera o arquivo.
+    rbf.Close();
+
+    return graph;
+  }
+
+  /**
+   * Obtém os vértices, arestas e os respectivos pesos
+   * 
+   * @param inputFile O arquivo que será usando como fonte de dados.
+   * @return Obtém os valores que correspondem ao A ou ao B.
+   * @throws Exception
+   */
+  public static UndirectedGraph<Integer> getUndirectedFromInputFile(String inputFile) throws Exception {
+    Logger.printOntoScreen("Obtendo valores do arquivo de entrada...");
+
+    // Tentar abrir o arquivo.
+    GenericReadBigFile rbf = new GenericReadBigFile(inputFile);
+
+    // Obtém o objeto que vai iterar por todas as linhas do arquivo.
+    Iterator<String> iterator = rbf.iterator();
+
+    UndirectedGraph<Integer> graph = new UndirectedGraph<Integer>();
+
+    // Este loop, adiciona todos os elementos de A.
+    int count = 0;
+
+    while ((iterator.hasNext())) {
+      String currentValue;
+      if (count < 10) {
+        currentValue = iterator.next();
+        System.err.println(currentValue.toString() + " ");
+        count++;
+      }
+      else {
+        currentValue = iterator.next();
+        if ("end".equals(currentValue.toLowerCase()))
+          break;
+
+        String[] values = currentValue.split(" ");
+        String vertex1 = values[1];
+        String vertex2 = values[2];
+        String cost = values[3];
+        graph.addNode(Integer.parseInt(vertex1));
+        graph.addNode(Integer.parseInt(vertex2));
+        graph.addEdge(Integer.parseInt(vertex1), Integer.parseInt(vertex1), Double.parseDouble(cost));
+      }
+    }
+    // Libera o arquivo.
+    rbf.Close();
+
+    return graph;
   }
 
   /**

@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
+import library.struct.Edge;
 import library.struct.MstGraph;
 import pph.utils.OrderedPair;
 import pph.utils.ReadBigFile;
@@ -118,7 +119,7 @@ public class Utils {
    * @return Obtém os valores que correspondem ao A ou ao B.
    * @throws Exception
    */
-  public static UndirectedGraph<Integer> getUndirectedFromInputFile(String inputFile) throws Exception {
+  public static UndirectedGraph<Integer> getUndirectedFromInputFile(UndirectedGraph<Integer> graph, String inputFile) throws Exception {
     Logger.printOntoScreen("Obtendo valores do arquivo de entrada...");
 
     // Tentar abrir o arquivo.
@@ -127,7 +128,9 @@ public class Utils {
     // Obtém o objeto que vai iterar por todas as linhas do arquivo.
     Iterator<String> iterator = rbf.iterator();
 
-    UndirectedGraph<Integer> graph = new UndirectedGraph<Integer>();
+    //UndirectedGraph<Integer> graph = new UndirectedGraph<Integer>();
+    ArrayList<Integer> vertice = new ArrayList<Integer>();
+    ArrayList<Edge> edges = new ArrayList<Edge>();
 
     // Este loop, adiciona todos os elementos de A.
     int count = 0;
@@ -148,10 +151,14 @@ public class Utils {
         String vertex1 = values[1];
         String vertex2 = values[2];
         String cost = values[3];
-        graph.addNode(Integer.parseInt(vertex1));
-        graph.addNode(Integer.parseInt(vertex2));
-        graph.addEdge(Integer.parseInt(vertex1), Integer.parseInt(vertex1), Double.parseDouble(cost));
+
+        int v1 = Integer.parseInt(vertex1);
+        int v2 = Integer.parseInt(vertex2);
+        graph.addNode(v1);
+        graph.addNode(v2);
+        graph.addEdge(v1, v2, Double.parseDouble(cost));
       }
+
     }
     // Libera o arquivo.
     rbf.Close();

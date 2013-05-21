@@ -20,11 +20,13 @@ public class PrimLeftist {
   public static final double            INFINITY = Double.MAX_VALUE;
   private MstGraph                      graph;
   private ArrayList<PairVertex<String>> spanningTree;
+  private int                           cost;
   /* The graph which will hold the resulting MST. */
   ArrayList                             result   = new ArrayList();
 
   public PrimLeftist(MstGraph graph) {
     this.graph = graph;
+    this.cost = 0;
   }
 
   /**
@@ -80,7 +82,7 @@ public class PrimLeftist {
         }
       }
     }
-    printPath();
+    //printPath();
   }
 
   /**
@@ -89,6 +91,17 @@ public class PrimLeftist {
   private void clearAll() {
     for (Vertex v : graph.getVertexMap().values())
       v.reset();
+  }
+
+  public double getCost() {
+    if (cost == 0) {
+      for (Vertex v : this.graph.getVertexMap().values()) {
+        if (v.prev != null) {
+          cost += v.dist;
+        }
+      }
+    }
+    return cost;
   }
 
   public void printPath() {

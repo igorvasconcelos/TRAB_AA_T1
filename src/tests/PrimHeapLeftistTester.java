@@ -4,17 +4,17 @@ import java.io.File;
 import java.util.Date;
 
 import library.Logger;
-import library.UndirectedGraph;
 import library.Utils;
-import mst.PrimFibonacci;
+import library.struct.MstGraph;
+import mst.PrimLeftist;
 
-public class PrimFibonacciTester {
+public class PrimHeapLeftistTester {
 
   //O nome do arquivo de input padrão(usado para testes).
-  private static final String      DEFAULT_INPUT_FILE_NAME = "data/ALUE/alue2087.stp";
-  private static String            path                    = "data/ALUE/";
-  private static String            inputFile               = "";
-  private UndirectedGraph<Integer> graph;
+  private static final String DEFAULT_INPUT_FILE_NAME = "data/ALUE/alue2087.stp";
+  private static String       path                    = "data/ALUE/";
+  private static String       inputFile               = "";
+  private MstGraph            graph;
 
   public static void main(String[] args) throws Exception {
 
@@ -32,7 +32,7 @@ public class PrimFibonacciTester {
       Logger.isDebugging = false;
     }
     Logger.printOntoScreen(" ********* Prim com Heal de Fibonacci *********");
-    new PrimFibonacciTester().run(args.length == 2);
+    new PrimHeapLeftistTester().run(args.length == 2);
   }
 
   public void run(boolean batch) throws Exception {
@@ -49,15 +49,13 @@ public class PrimFibonacciTester {
           fileNameAndPath = path + fileName;
           Logger.printOntoScreen("***********************************************");
           Logger.printOntoScreen("Lendo Arquivo: " + fileName);
-          graph = new UndirectedGraph<Integer>();
-          Utils.getUndirectedFromInputFile(graph, fileNameAndPath);
+          graph = Utils.getGraphFromInputFile(fileNameAndPath);
           genericProcess(graph);
         }
       }
     }
     else {
-      graph = new UndirectedGraph<Integer>();
-      Utils.getUndirectedFromInputFile(graph, inputFile);
+      graph = Utils.getGraphFromInputFile(inputFile);
       genericProcess(graph);
     }
   }
@@ -69,11 +67,11 @@ public class PrimFibonacciTester {
    * @param listNOfOrderedPairs
    * @param title
    */
-  protected void genericProcess(UndirectedGraph<Integer> graph) {
+  protected void genericProcess(MstGraph graph) {
     try {
 
       Logger.printOntoScreen("Execução iniciada às: " + new Date());
-      PrimFibonacci<Integer> primFibonacci = new PrimFibonacci<>(graph);
+      PrimLeftist primLeftist = new PrimLeftist(graph);
 
       // Momento em que o algoritmo iniciou sua execução.
       long startTime = System.currentTimeMillis();
@@ -83,8 +81,8 @@ public class PrimFibonacciTester {
 
       //while (System.currentTimeMillis() - startTime < 5000) {
       // Em cada iteração, é um novo processamento, então a quantidade de operações é setada para 0.
-      primFibonacci.generateMST();
-      Logger.printOntoScreen("Custo total da MST: " + primFibonacci.getCost());
+      primLeftist.generateMst();
+      Logger.printOntoScreen("Custo total da MST: " + primLeftist.getCost());
       // Incrementa a quantidade de iterações feitas dentro de 5 segundos.
       //iterations++;
       //      }

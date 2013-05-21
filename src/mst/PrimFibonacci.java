@@ -236,7 +236,7 @@ public final class PrimFibonacci<T> {
      * picked.
      */
     result.addNode(startNode);
-    System.out.println("ADD " + startNode + " em result");
+    //System.out.println("ADD " + startNode + " em result");
     /*
      * Begin by adding all outgoing edges of this start node to the Fibonacci heap.
      */

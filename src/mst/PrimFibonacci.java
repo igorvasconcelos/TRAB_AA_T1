@@ -213,7 +213,7 @@ public final class PrimFibonacci<T> {
   public void generateMST() throws Exception {
     /* The Fibonacci heap we'll use to select nodes efficiently. */
     FibonacciHeap<T> pq = new FibonacciHeap<T>();
-
+    cost = 0;
     /*
      * This Fibonacci heap hands back internal handles to the nodes it stores. This map will associate each node with its entry in the Fibonacci heap.
      */

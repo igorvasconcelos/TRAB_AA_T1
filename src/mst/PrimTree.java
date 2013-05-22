@@ -33,10 +33,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import avl.AVL;
-
 import library.PairVertex;
 import library.UndirectedGraph;
+import avl.AVL;
 
 // For HashMap
 
@@ -177,22 +176,21 @@ public final class PrimTree<T> {
        * has never been in the heap. Then we add it to the heap. 3. This endpoint is in the graph, but this is a better edge. Then we use decreaseKey to update
        * its priority. 4. This endpoint is in the graph, but there is a better edge to it. In that case, we similarly ignore it.
        */
-      if ( result.containsNode( arc.getKey() ) )
+      if (result.containsNode(arc.getKey()))
         continue; // Case 1
 
-      if ( !entries.containsKey( arc.getKey() ) ) { // Case 2
+      if (!entries.containsKey(arc.getKey())) { // Case 2
         //entries.put(arc.getKey(), pq.enqueue(arc.getKey(), arc.getValue()));
-    	  AVL.Elem<T> temp = new AVL.Elem<T>( arc.getKey(), arc.getValue());
-    	  pq.put( arc.getKey(), arc.getValue() );
-    	  entries.put( arc.getKey(), temp );
+        AVL.Elem<T> temp = new AVL.Elem<T>(arc.getKey(), arc.getValue());
+        pq.put(arc.getKey(), arc.getValue());
+        entries.put(arc.getKey(), temp);
       }
       //else if (entries.get(arc.getKey()).getPriority() > arc.getValue()) { // Case 3
-      else if ( entries.get(arc.getKey()).getPriority() > arc.getValue() ) { // Case 3
+      else if (entries.get(arc.getKey()).getPriority() > arc.getValue()) { // Case 3
         //pq.decreaseKey(entries.get(arc.getKey()), arc.getValue());
-    	  AVL.Elem<T> temp = new 
-    		 AVL.Elem<T>( arc.getKey(), entries.get(arc.getKey()).getPriority());
-    	  pq.remove( temp );
-    	  pq.put( arc.getKey(), arc.getValue() );
+        AVL.Elem<T> temp = new AVL.Elem<T>(arc.getKey(), entries.get(arc.getKey()).getPriority());
+        pq.remove(temp);
+        pq.put(arc.getKey(), arc.getValue());
       }
 
       // Case 4 handled implicitly by doing nothing.
@@ -219,6 +217,8 @@ public final class PrimTree<T> {
   public void generateMST() throws Exception {
     /* The Fibonacci heap we'll use to select nodes efficiently. */
     AVL<T> pq = new AVL<T>();
+
+    cost = 0;
 
     /*
      * This Fibonacci heap hands back internal handles to the nodes it stores. This map will associate each node with its entry in the Fibonacci heap.
@@ -254,7 +254,7 @@ public final class PrimTree<T> {
     for (int i = 0; i < graph.size() - 1; ++i) {
       /* Grab the cheapest node we can add. */
       //T toAdd = pq.dequeueMin().getValue();
-    	T toAdd = pq.removeMin().getValue();
+      T toAdd = pq.removeMin().getValue();
 
       /*
        * Determine which edge we should pick to add to the MST. We'll do this by getting the endpoint of the edge leaving the current node that's of minimum

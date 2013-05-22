@@ -1,4 +1,4 @@
-package tests;
+package tests.old;
 
 import library.PairVertex;
 import library.UndirectedGraph;

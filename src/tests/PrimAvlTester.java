@@ -4,17 +4,16 @@ import java.io.File;
 import java.util.Date;
 
 import library.Logger;
+import library.UndirectedGraph;
 import library.Utils;
-import library.struct.MstGraph;
-import mst.PrimLeftist;
+import mst.PrimTree;
 
-public class PrimHeapLeftistTester {
-
+public class PrimAvlTester {
   //O nome do arquivo de input padrão(usado para testes).
-  private static final String DEFAULT_INPUT_FILE_NAME = "data/ALUE/alue2087.stp";
-  private static String       path                    = "data/ALUE/";
-  private static String       inputFile               = "";
-  private MstGraph            graph;
+  private static final String      DEFAULT_INPUT_FILE_NAME = "data/ALUE/alue2087.stp";
+  private static String            path                    = "data/ALUE/";
+  private static String            inputFile               = "";
+  private UndirectedGraph<Integer> graph;
 
   public static void main(String[] args) throws Exception {
 
@@ -31,8 +30,8 @@ public class PrimHeapLeftistTester {
       // Informa que a applicação esta em modo debug.
       Logger.isDebugging = false;
     }
-    Logger.printOntoScreen(" ********* Prim com Heal de Fibonacci *********");
-    new PrimHeapLeftistTester().run(args.length == 2);
+    Logger.printOntoScreen(" ********* Prim com AVL *********");
+    new PrimAvlTester().run(args.length == 2);
   }
 
   public void run(boolean batch) throws Exception {
@@ -49,13 +48,15 @@ public class PrimHeapLeftistTester {
           fileNameAndPath = path + fileName;
           Logger.printOntoScreen("***********************************************");
           Logger.printOntoScreen("Lendo Arquivo: " + fileName);
-          graph = Utils.getGraphFromInputFile(fileNameAndPath);
+          graph = new UndirectedGraph<Integer>();
+          Utils.getUndirectedFromInputFile(graph, fileNameAndPath);
           genericProcess(graph);
         }
       }
     }
     else {
-      graph = Utils.getGraphFromInputFile(inputFile);
+      graph = new UndirectedGraph<Integer>();
+      Utils.getUndirectedFromInputFile(graph, inputFile);
       genericProcess(graph);
     }
   }
@@ -67,11 +68,11 @@ public class PrimHeapLeftistTester {
    * @param listNOfOrderedPairs
    * @param title
    */
-  protected void genericProcess(MstGraph graph) {
+  protected void genericProcess(UndirectedGraph<Integer> graph) {
     try {
 
       Logger.printOntoScreen("Execução iniciada às: " + new Date());
-      PrimLeftist primLeftist = new PrimLeftist(graph);
+      PrimTree<Integer> primAvl = new PrimTree<Integer>(graph);
 
       // Momento em que o algoritmo iniciou sua execução.
       long startTime = System.currentTimeMillis();
@@ -81,7 +82,8 @@ public class PrimHeapLeftistTester {
 
       while (System.currentTimeMillis() - startTime < 5000) {
         // Em cada iteração, é um novo processamento, então a quantidade de operações é setada para 0.
-        primLeftist.generateMst();
+        primAvl.generateMST();
+
         // Incrementa a quantidade de iterações feitas dentro de 5 segundos.
         iterations++;
       }
@@ -93,8 +95,8 @@ public class PrimHeapLeftistTester {
       float media = (float) finishTime / iterations;
 
       // Imprime os resultados obtidos.
-      Logger.printOntoScreen("Custo total da MST: " + primLeftist.getCost());
-      Logger.printOntoScreen("Tempo de execução médio : " + media + " segundo(s)");
+      Logger.printOntoScreen("Custo total da MST: " + primAvl.getCost());
+      Logger.printOntoScreen("Tempo de execução médio: " + media + " segundo(s)");
       Logger.printOntoScreen("Quantidade de iterações em 5 segundos: " + iterations);
     }
     catch (Exception e) {

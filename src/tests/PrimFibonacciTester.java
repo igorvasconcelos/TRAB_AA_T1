@@ -31,7 +31,7 @@ public class PrimFibonacciTester {
       // Informa que a applicação esta em modo debug.
       Logger.isDebugging = false;
     }
-    Logger.printOntoScreen(" ********* Prim com Heal de Fibonacci *********");
+    Logger.printOntoScreen(" ********* Prim com Heap de Fibonacci *********");
     new PrimFibonacciTester().run(args.length == 2);
   }
 
@@ -79,24 +79,26 @@ public class PrimFibonacciTester {
       long startTime = System.currentTimeMillis();
 
       // Quantidade de iterações feitas dentro de 5 segundos.
-      //long iterations = 0;
+      long iterations = 0;
 
-      //while (System.currentTimeMillis() - startTime < 5000) {
-      // Em cada iteração, é um novo processamento, então a quantidade de operações é setada para 0.
-      primFibonacci.generateMST();
-      Logger.printOntoScreen("Custo total da MST: " + primFibonacci.getCost());
-      // Incrementa a quantidade de iterações feitas dentro de 5 segundos.
-      //iterations++;
-      //      }
+      while (System.currentTimeMillis() - startTime < 5000) {
+        // Em cada iteração, é um novo processamento, então a quantidade de operações é setada para 0.
+        primFibonacci.generateMST();
+
+        // Incrementa a quantidade de iterações feitas dentro de 5 segundos.
+        iterations++;
+      }
 
       // Momento em que o algoritmo terminou sua execução.
       long finishTime = System.currentTimeMillis() - startTime;
 
       // Calcula a média de tempo de cada iteração.
-      //float media = (float) finishTime / iterations;
+      float media = (float) finishTime / iterations;
 
       // Imprime os resultados obtidos.
-      Logger.printOntoScreen("Tempo de execução: " + finishTime + " segundo(s)");
+      Logger.printOntoScreen("Custo total da MST: " + primFibonacci.getCost());
+      Logger.printOntoScreen("Tempo de execução médio: " + media + " segundo(s)");
+      Logger.printOntoScreen("Quantidade de iterações em 5 segundos: " + iterations);
     }
     catch (Exception e) {
       e.printStackTrace();

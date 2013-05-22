@@ -22,7 +22,7 @@ public class PrimLeftist {
   private ArrayList<PairVertex<String>> spanningTree;
   private int                           cost;
   /* The graph which will hold the resulting MST. */
-  ArrayList                             result   = new ArrayList();
+  ArrayList                             result;
 
   public PrimLeftist(MstGraph graph) {
     this.graph = graph;
@@ -34,6 +34,7 @@ public class PrimLeftist {
    */
   public void generateMst() {
     LeftistHeap<Path> pq = new LeftistHeap<Path>();
+    result = new ArrayList();
 
     if (!graph.getVertexMap().values().iterator().hasNext())
       throw new NoSuchElementException("Start vertex not found");

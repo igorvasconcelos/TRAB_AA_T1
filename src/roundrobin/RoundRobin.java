@@ -12,10 +12,10 @@ import library.PairVertex;
 import library.UndirectedGraph;
 
 public class RoundRobin<T> {
-  private T                        startNode;
-  private UndirectedGraph<T>       graph;
-  private double                   cost;
-  private ArrayList<PairVertex<T>> spanningTree;
+  private T                              startNode;
+  private UndirectedGraph<T>             graph;
+  private double                         cost;
+  private ArrayList<RoundRobinStruct<T>> listRR;
 
   public class RoundRobinStruct<T> {
     /* The Fibonacci heap we'll use to select nodes efficiently. */
@@ -26,6 +26,8 @@ public class RoundRobin<T> {
      */
     private Map<T, FibonacciHeap.Entry<T>> entries;
     private UndirectedGraph<T>             result;
+    private ArrayList<T>                   keys;
+    private ArrayList<PairVertex<T>>       spanningTree;
 
     public FibonacciHeap<T> getPq() {
       return pq;
@@ -47,6 +49,8 @@ public class RoundRobin<T> {
       pq = new FibonacciHeap<T>();
       entries = new HashMap<T, FibonacciHeap.Entry<T>>();
       result = new UndirectedGraph<T>();
+      keys = new ArrayList<T>();
+      spanningTree = new ArrayList<PairVertex<T>>();
     }
 
     public UndirectedGraph<T> getResult() {
@@ -89,7 +93,6 @@ public class RoundRobin<T> {
       endpoint = entry.getKey();
       leastCost = entry.getValue();
     }
-
     /*
      * Hand back the result. We're guaranteed to have found something, since otherwise we couldn't have dequeued this node.
      */
@@ -139,16 +142,24 @@ public class RoundRobin<T> {
   }
 
   public double getCost() {
+
+    if (cost == 0) {
+      for (PairVertex<T> pair : listRR.get(0).spanningTree) {
+        cost += pair.getCost();
+      }
+    }
     return cost;
   }
 
-  public ArrayList<PairVertex<T>> getSpanningTree() {
-    return spanningTree;
+  public void PrintSpanningTree() {
+    for (PairVertex<T> pair : listRR.get(0).spanningTree) {
+      System.out.println(pair.getOne() + " - " + pair.getTwo() + " : " + pair.getCost());
+    }
   }
 
   public RoundRobin(UndirectedGraph<T> graph) throws Exception {
     this.graph = graph;
-    this.spanningTree = new ArrayList<PairVertex<T>>();
+    //this.spanningTree = new ArrayList<PairVertex<T>>();
   }
 
   public void generateMST() throws Exception {
@@ -156,13 +167,14 @@ public class RoundRobin<T> {
     /* The graph which will hold the resulting MST. */
     //UndirectedGraph<T> result = new UndirectedGraph<T>();
 
-    ArrayList<RoundRobinStruct<T>> listRR = new ArrayList<RoundRobinStruct<T>>(graph.size());
+    listRR = new ArrayList<RoundRobinStruct<T>>(graph.size());
 
     for (Iterator<T> iterator = graph.iterator(); iterator.hasNext();) {
       T node = iterator.next();
       RoundRobinStruct<T> rrs = new RoundRobinStruct<T>();
 
       // adicionando os vértices
+      rrs.keys.add(node);
       rrs.pq.enqueue(node, Double.POSITIVE_INFINITY);
       rrs.result.addNode(node);
       // adicionando as arestas para esse vértice
@@ -191,6 +203,7 @@ public class RoundRobin<T> {
       //item.result.addNode(endpoint);
       double edgeCost = graph.edgeCost(toAdd, endpoint);
       item.result.addEdge(toAdd, endpoint, edgeCost);
+      item.spanningTree.add(new PairVertex<T>(toAdd, endpoint, edgeCost));
 
       // Procurar
       int index = find(listRR, toAdd);
@@ -198,16 +211,30 @@ public class RoundRobin<T> {
       RoundRobinStruct<T> newItem = new RoundRobinStruct<T>();
       newItem.pq = FibonacciHeap.merge(item.pq, itemToMerge.pq);
       newItem.entries = mergeEntries(item.entries, itemToMerge.entries);
+      mergeResult(newItem.result, item.result, itemToMerge.result);
+      newItem.keys.addAll(item.keys);
+      newItem.keys.addAll(itemToMerge.keys);
+      newItem.spanningTree.addAll(item.spanningTree);
+      newItem.spanningTree.addAll(itemToMerge.spanningTree);
       listRR.add(newItem);
       listRR.remove(item);
       listRR.remove(itemToMerge);
     }
+
+    /*
+     * for (PairVertex<T> pair : listRR.get(0).spanningTree) { System.out.println(pair.getOne() + " - " + pair.getTwo() + " : " + pair.getCost()); cost +=
+     * pair.getCost(); } System.out.println("Custo: " + cost);
+     */
   }
 
   public int find(List<RoundRobinStruct<T>> listRR, T node) {
     for (int i = 1; i < listRR.size(); i++) {
-      if (listRR.get(i).pq.find(node))
-        return i;
+      for (T key : listRR.get(i).keys) {
+        if (key.equals(node)) {
+          return i;
+        }
+      }
+      //if (listRR.get(i).pq.find(node))
     }
     return -1;
   }
@@ -221,5 +248,29 @@ public class RoundRobin<T> {
     //}
 
     return three;
+  }
+
+  public void mergeResult(UndirectedGraph<T> toMerge, UndirectedGraph<T> one, UndirectedGraph<T> two) {
+
+    for (T t : one) {
+      toMerge.addNode(t);
+    }
+
+    for (T t : two) {
+      toMerge.addNode(t);
+    }
+
+    for (Iterator<T> iterator = one.iterator(); iterator.hasNext();) {
+      T node = iterator.next();
+      System.out.println(node);
+      //double edgeCost = graph.edgeCost(, node);
+      //toMerge.addEdge(one, node, edgeCost);
+    }
+
+    for (Iterator<T> iterator = two.iterator(); iterator.hasNext();) {
+      T node = iterator.next();
+      System.out.println(node);
+    }
+
   }
 };

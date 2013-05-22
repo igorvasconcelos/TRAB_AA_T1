@@ -1,6 +1,5 @@
 package tests.old;
 
-import library.PairVertex;
 import library.UndirectedGraph;
 import library.Utils;
 
@@ -14,18 +13,22 @@ public class Execute {
     // TODO Auto-generated method stub
 
     //UndirectedGraph<Integer> intGraph = new UndirectedGraph<Integer>();
-    //UndirectedGraph<String> stringGraph = new UndirectedGraph<String>();
+    UndirectedGraph<String> stringGraph = new UndirectedGraph<String>();
     UndirectedGraph<Integer> intGraph = new UndirectedGraph<Integer>(); //Utils.getUndirectedFromInputFile("data/ALUE/alue2087_teste.stp"); //new UndirectedGraph<String>();
 
-    gerarGrafo(intGraph);
+    //gerarGrafo(intGraph);
 
-    /*
-     * stringGraph.addNode("A"); stringGraph.addNode("B"); stringGraph.addNode("C"); stringGraph.addNode("D");
-     * 
-     * stringGraph.addEdge("A", "B", 2); stringGraph.addEdge("A", "C", 8);
-     * 
-     * stringGraph.addEdge("B", "D", 1); stringGraph.addEdge("C", "D", 3);
-     */
+    stringGraph.addNode("A");
+    stringGraph.addNode("B");
+    stringGraph.addNode("C");
+    stringGraph.addNode("D");
+
+    stringGraph.addEdge("A", "B", 2);
+    stringGraph.addEdge("A", "C", 8);
+
+    stringGraph.addEdge("B", "D", 1);
+    stringGraph.addEdge("C", "D", 3);
+
     /*
      * stringGraph2.addNode("A"); stringGraph2.addNode("B"); stringGraph2.addNode("C"); stringGraph2.addNode("D"); stringGraph2.addNode("E");
      * 
@@ -49,25 +52,21 @@ public class Execute {
      * teste2.getStartNode()); for (PairVertex<String> parVetex : teste2.getSpanningTree()) { System.out.println(parVetex.getOne() + " - " + parVetex.getTwo() +
      * " : " + parVetex.getCost()); } System.out.println("Custo da MST:" + teste2.getCost());
      */
-
-    System.out.println();
-    mst.PrimFibonacci<Integer> teste3 = new mst.PrimFibonacci<Integer>(intGraph);
-    teste3.generateMST();
-    System.out.println("Nó inicial: " + teste3.getStartNode());
-    for (PairVertex<Integer> parVetex : teste3.getSpanningTree()) {
-      System.out.println(parVetex.getOne() + " - " + parVetex.getTwo() + " : " + parVetex.getCost());
-    }
-    System.out.println("Custo da MST:" + teste3.getCost());
-
+/*
+ * System.out.println(); mst.PrimFibonacci<Integer> teste3 = new mst.PrimFibonacci<Integer>(intGraph); teste3.generateMST(); System.out.println("Nó inicial: " +
+ * teste3.getStartNode()); for (PairVertex<Integer> parVetex : teste3.getSpanningTree()) { System.out.println(parVetex.getOne() + " - " + parVetex.getTwo() +
+ * " : " + parVetex.getCost()); } System.out.println("Custo da MST:" + teste3.getCost());
+ */
     System.out.println(" ********** Round Robin ********");
-    //System.out.println();
-    //roundrobin.RoundRobin<String> teste4 = new roundrobin.RoundRobin<String>(stringGraph);
-    //teste4.generateMST();
-    //System.out.println("N� inicial: " + teste4.getStartNode());
+    System.out.println();
+    roundrobin.RoundRobin<String> teste4 = new roundrobin.RoundRobin<String>(stringGraph);
+    teste4.generateMST();
+    teste4.PrintSpanningTree();
+    System.out.println("Custo: " + teste4.getCost());
     //for (PairVertex<String> parVetex : teste4.getSpanningTree()) {
-    // System.out.println(parVetex.getOne() + " - " + parVetex.getTwo() + " : " + parVetex.getCost());
+    //   System.out.println(parVetex.getOne() + " - " + parVetex.getTwo() + " : " + parVetex.getCost());
     // }
-    //System.out.println("Custo da MST:" + teste4.getCost());
+    // System.out.println("Custo da MST:" + teste4.getCost());
 
   }
 

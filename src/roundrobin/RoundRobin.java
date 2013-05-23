@@ -70,7 +70,7 @@ public class RoundRobin<T> {
    * @param graph The original graph whose MST is being computed.
    * @param result The resulting graph, used to check what has been visited so far.
    */
-  private static <T> T minCostEndpoint(T node, UndirectedGraph<T> graph, UndirectedGraph<T> result) {
+  private <T> T minCostEndpoint(T node, UndirectedGraph<T> graph, UndirectedGraph<T> result, ArrayList<PairVertex<T>> spanningTree) {
     /*
      * Track the best endpoint so far and its cost, initially null and +infinity.
      */
@@ -82,7 +82,7 @@ public class RoundRobin<T> {
       /*
        * If the endpoint isn't in the nodes constructed so far, don't consider it.
        */
-      if (!result.containsNode(entry.getKey()))
+      if (!result.containsNode(entry.getKey()) /* && !spanningTree.contains(entry.getKey()) */)
         continue;
 
       /* If the edge costs more than what we know, skip it. */
@@ -197,7 +197,7 @@ public class RoundRobin<T> {
        * Determine which edge we should pick to add to the MST. We'll do this by getting the endpoint of the edge leaving the current node that's of minimum
        * cost and that enters the visited edges.
        */
-      T endpoint = minCostEndpoint(toAdd, graph, item.result);
+      T endpoint = minCostEndpoint(toAdd, graph, item.result, item.spanningTree);
       /* Add this edge to the graph. */
       item.result.addNode(toAdd);
       //item.result.addNode(endpoint);
@@ -239,13 +239,18 @@ public class RoundRobin<T> {
     return -1;
   }
 
+  public boolean findSpanningTree(T node, ArrayList<PairVertex<?>> spanningTree) {
+    for (PairVertex<?> pairVertex : spanningTree) {
+      if (pairVertex.getOne().equals(node) || pairVertex.getTwo().equals(node))
+        return true;
+    }
+    return false;
+  }
+
   public Map<T, FibonacciHeap.Entry<T>> mergeEntries(Map<T, FibonacciHeap.Entry<T>> one, Map<T, FibonacciHeap.Entry<T>> two) {
     Map<T, FibonacciHeap.Entry<T>> three = new HashMap<T, FibonacciHeap.Entry<T>>();
     three.putAll(one);
     three.putAll(two);
-    //for (int i = 0; i < two.size(); i++) {
-    // if ( three. )
-    //}
 
     return three;
   }
@@ -262,15 +267,18 @@ public class RoundRobin<T> {
 
     for (Iterator<T> iterator = one.iterator(); iterator.hasNext();) {
       T node = iterator.next();
-      System.out.println(node);
-      //double edgeCost = graph.edgeCost(, node);
-      //toMerge.addEdge(one, node, edgeCost);
+      for (Map.Entry<T, Double> arc : graph.edgesFrom(node).entrySet()) {
+        if (toMerge.containsNode(arc.getKey()))
+          toMerge.addEdge(arc.getKey(), node, arc.getValue());
+      }
     }
 
     for (Iterator<T> iterator = two.iterator(); iterator.hasNext();) {
       T node = iterator.next();
-      System.out.println(node);
+      for (Map.Entry<T, Double> arc : graph.edgesFrom(node).entrySet()) {
+        if (toMerge.containsNode(arc.getKey()))
+          toMerge.addEdge(arc.getKey(), node, arc.getValue());
+      }
     }
-
   }
 };

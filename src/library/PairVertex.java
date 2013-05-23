@@ -42,4 +42,15 @@ public class PairVertex<T> {
   public void setCost(double cost) {
     this.cost = cost;
   }
+
+  @Override
+  public boolean equals(Object object) {
+    if (this.one.equals(object) || this.two.equals(object))
+      return true;
+    /*
+     * if (object instanceof PairVertex) { PairVertex<?> pv = (PairVertex<?>) object; if (pv.one.equals(this.one) || pv.two.equals(this.two)) { return true; } }
+     */
+    return false;
+  }
+
 }

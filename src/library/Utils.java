@@ -5,7 +5,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
-import library.struct.Edge;
 import library.struct.MstGraph;
 import pph.utils.OrderedPair;
 import pph.utils.ReadBigFile;
@@ -127,10 +126,6 @@ public class Utils {
 
     // Obtém o objeto que vai iterar por todas as linhas do arquivo.
     Iterator<String> iterator = rbf.iterator();
-
-    //UndirectedGraph<Integer> graph = new UndirectedGraph<Integer>();
-    ArrayList<Integer> vertice = new ArrayList<Integer>();
-    ArrayList<Edge> edges = new ArrayList<Edge>();
 
     // Este loop, adiciona todos os elementos de A.
     int count = 0;

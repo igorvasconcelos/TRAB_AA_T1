@@ -6,7 +6,7 @@ import java.util.Date;
 import library.Logger;
 import library.UndirectedGraph;
 import library.Utils;
-import roundrobin.RoundRobin;
+import mst.PrimRoundRobinFibonacci;
 
 public class PrimRoundRobinFibonacciTester {
 
@@ -73,7 +73,7 @@ public class PrimRoundRobinFibonacciTester {
     try {
 
       Logger.printOntoScreen("Execução iniciada às: " + new Date());
-      RoundRobin<Integer> primFibonacci = new RoundRobin<Integer>(graph);
+      PrimRoundRobinFibonacci<Integer> primFibonacci = new PrimRoundRobinFibonacci<Integer>(graph);
 
       // Momento em que o algoritmo iniciou sua execução.
       long startTime = System.currentTimeMillis();
@@ -97,8 +97,11 @@ public class PrimRoundRobinFibonacciTester {
 
       // Imprime os resultados obtidos.
       Logger.printOntoScreen("Custo total da MST: " + primFibonacci.getCost());
+
       Logger.printOntoScreen("Tempo de execução médio: " + media + " segundo(s)");
       Logger.printOntoScreen("Quantidade de iterações em 5 segundos: " + iterations);
+
+      primFibonacci.PrintSpanningTree();
     }
     catch (Exception e) {
       e.printStackTrace();

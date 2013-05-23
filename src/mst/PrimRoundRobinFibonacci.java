@@ -1,4 +1,4 @@
-package roundrobin;
+package mst;
 
 import heap.FibonacciHeap;
 
@@ -11,7 +11,7 @@ import java.util.Map;
 import library.PairVertex;
 import library.UndirectedGraph;
 
-public class RoundRobin<T> {
+public class PrimRoundRobinFibonacci<T> {
   private T                              startNode;
   private UndirectedGraph<T>             graph;
   private double                         cost;
@@ -66,32 +66,43 @@ public class RoundRobin<T> {
    * Given a node in the source graph and a set of nodes that we've visited so far, returns the minimum-cost edge from that node to some node that has been
    * visited before.
    * 
+   * @param keys Group Keys
    * @param node The node that has not been considered yet.
    * @param graph The original graph whose MST is being computed.
    * @param result The resulting graph, used to check what has been visited so far.
+   * @return
    */
-  private <T> T minCostEndpoint(T node, UndirectedGraph<T> graph, UndirectedGraph<T> result, ArrayList<PairVertex<T>> spanningTree) {
+  private <T> T minCostEndpoint(ArrayList<T> keys, UndirectedGraph<T> graph, UndirectedGraph<T> result) {
+
     /*
      * Track the best endpoint so far and its cost, initially null and +infinity.
      */
     T endpoint = null;
     double leastCost = Double.POSITIVE_INFINITY;
 
-    /* Scan each node, checking whether it's a candidate. */
-    for (Map.Entry<T, Double> entry : graph.edgesFrom(node).entrySet()) {
-      /*
-       * If the endpoint isn't in the nodes constructed so far, don't consider it.
-       */
-      if (!result.containsNode(entry.getKey()) /* && !spanningTree.contains(entry.getKey()) */)
-        continue;
+    for (int i = 0; i < keys.size(); i++) {
+      /* Scan each node, checking whether it's a candidate. */
+      for (Map.Entry<T, Double> entry : graph.edgesFrom(keys.get(i)).entrySet()) {
+        /*
+         * If the endpoint isn't in the nodes constructed so far, don't consider it.
+         */
+        if (result.containsNode(entry.getKey()) /* && !spanningTree.contains(entry.getKey()) */)
+          continue;
 
-      /* If the edge costs more than what we know, skip it. */
-      if (entry.getValue() >= leastCost)
-        continue;
+        if (keys.get(i) != entry.getKey()) {
+          /* If the edge costs more than what we know, skip it. */
+          if (entry.getValue() >= leastCost)
+            continue;
 
-      /* Otherwise, update our guess to be this node. */
-      endpoint = entry.getKey();
-      leastCost = entry.getValue();
+          /* Otherwise, update our guess to be this node. */
+          if (keys.size() < 2)
+            endpoint = keys.get(i);//entry.getKey();
+          else
+            endpoint = entry.getKey();
+
+          leastCost = entry.getValue();
+        }
+      }
     }
     /*
      * Hand back the result. We're guaranteed to have found something, since otherwise we couldn't have dequeued this node.
@@ -157,7 +168,7 @@ public class RoundRobin<T> {
     }
   }
 
-  public RoundRobin(UndirectedGraph<T> graph) throws Exception {
+  public PrimRoundRobinFibonacci(UndirectedGraph<T> graph) throws Exception {
     this.graph = graph;
     //this.spanningTree = new ArrayList<PairVertex<T>>();
   }
@@ -189,6 +200,7 @@ public class RoundRobin<T> {
     if (graph.isEmpty())
       throw new Exception("The graph can not be empty");
 
+    int cont = 1;
     while (listRR.size() > 1) {
       RoundRobinStruct<T> item = listRR.get(0);
       /* Grab the cheapest node we can add. */
@@ -197,16 +209,22 @@ public class RoundRobin<T> {
        * Determine which edge we should pick to add to the MST. We'll do this by getting the endpoint of the edge leaving the current node that's of minimum
        * cost and that enters the visited edges.
        */
-      T endpoint = minCostEndpoint(toAdd, graph, item.result, item.spanningTree);
+      T endpoint = minCostEndpoint(item.keys, graph, item.result);
       /* Add this edge to the graph. */
       item.result.addNode(toAdd);
-      //item.result.addNode(endpoint);
+      item.result.addNode(endpoint);
+      System.out.println("toAdd: " + toAdd + " - endpoint: " + endpoint);
+      System.out.println(cont);
+      cont++;
+      if (cont == 697)
+        System.out.println("Ponto");
+
       double edgeCost = graph.edgeCost(toAdd, endpoint);
       item.result.addEdge(toAdd, endpoint, edgeCost);
       item.spanningTree.add(new PairVertex<T>(toAdd, endpoint, edgeCost));
 
       // Procurar
-      int index = find(listRR, toAdd);
+      int index = find(listRR, item.keys, toAdd, endpoint);
       RoundRobinStruct<T> itemToMerge = listRR.get(index);
       RoundRobinStruct<T> newItem = new RoundRobinStruct<T>();
       newItem.pq = FibonacciHeap.merge(item.pq, itemToMerge.pq);
@@ -220,23 +238,23 @@ public class RoundRobin<T> {
       listRR.remove(item);
       listRR.remove(itemToMerge);
     }
-
-    /*
-     * for (PairVertex<T> pair : listRR.get(0).spanningTree) { System.out.println(pair.getOne() + " - " + pair.getTwo() + " : " + pair.getCost()); cost +=
-     * pair.getCost(); } System.out.println("Custo: " + cost);
-     */
   }
 
-  public int find(List<RoundRobinStruct<T>> listRR, T node) {
+  public int find(List<RoundRobinStruct<T>> listRR, ArrayList<T> keys, T node, T endPoint) {
+    int index = -1;
     for (int i = 1; i < listRR.size(); i++) {
-      for (T key : listRR.get(i).keys) {
-        if (key.equals(node)) {
-          return i;
-        }
-      }
-      //if (listRR.get(i).pq.find(node))
+      if (listRR.get(i).keys.contains(node))
+        index = i;
     }
-    return -1;
+
+    if (index == -1) {
+      for (int i = 1; i < listRR.size(); i++) {
+        if (listRR.get(i).keys.contains(endPoint))
+          index = i;
+      }
+    }
+
+    return index;
   }
 
   public boolean findSpanningTree(T node, ArrayList<PairVertex<?>> spanningTree) {

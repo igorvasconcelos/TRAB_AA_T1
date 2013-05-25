@@ -32,7 +32,7 @@ public class PrimFibonacciTester {
       Logger.isDebugging = false;
     }
     Logger.printOntoScreen(" ********* Prim com Heap de Fibonacci *********");
-    new PrimFibonacciTester().run(args.length == 2);
+    new PrimFibonacciTester().run(args.length == 2);//args.length == 2
   }
 
   public void run(boolean batch) throws Exception {
@@ -48,9 +48,13 @@ public class PrimFibonacciTester {
           fileName = listOfFiles[i].getName();
           fileNameAndPath = path + fileName;
           Logger.printOntoScreen("***********************************************");
-          Logger.printOntoScreen("Lendo Arquivo: " + fileName);
+
           graph = new UndirectedGraph<Integer>();
+          Logger.printOntoScreen("Lendo Arquivo....: " + fileName);
+
           Utils.getUndirectedFromInputFile(graph, fileNameAndPath);
+
+          Logger.printOntoScreen("Grafo Montado.");
           genericProcess(graph);
         }
       }
@@ -71,7 +75,6 @@ public class PrimFibonacciTester {
    */
   protected void genericProcess(UndirectedGraph<Integer> graph) {
     try {
-
       Logger.printOntoScreen("Execução iniciada às: " + new Date());
       PrimFibonacci<Integer> primFibonacci = new PrimFibonacci<>(graph);
 
@@ -82,6 +85,7 @@ public class PrimFibonacciTester {
       long iterations = 0;
 
       while (System.currentTimeMillis() - startTime < 5000) {
+
         // Em cada iteração, é um novo processamento, então a quantidade de operações é setada para 0.
         primFibonacci.generateMST();
 
@@ -96,8 +100,9 @@ public class PrimFibonacciTester {
       float media = (float) finishTime / iterations;
 
       // Imprime os resultados obtidos.
+      Logger.printOntoScreen("Execução Finalizada as: " + new Date());
       Logger.printOntoScreen("Custo total da MST: " + primFibonacci.getCost());
-      Logger.printOntoScreen("Tempo de execução médio: " + media + " segundo(s)");
+      Logger.printOntoScreen("Tempo de execução médio: " + media + " milesegundos");
       Logger.printOntoScreen("Quantidade de iterações em 5 segundos: " + iterations);
     }
     catch (Exception e) {

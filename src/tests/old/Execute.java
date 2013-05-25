@@ -59,7 +59,7 @@ public class Execute {
  */
     System.out.println(" ********** Round Robin ********");
     System.out.println();
-    mst.PrimRoundRobinFibonacci<String> teste4 = new mst.PrimRoundRobinFibonacci<String>(stringGraph);
+    mst.RoundRobinFibonacci<String> teste4 = new mst.RoundRobinFibonacci<String>(stringGraph);
     teste4.generateMST();
     teste4.PrintSpanningTree();
     System.out.println("Custo: " + teste4.getCost());

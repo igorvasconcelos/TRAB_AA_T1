@@ -1,4 +1,4 @@
-package tests;
+package roundrobin;
 
 import java.io.File;
 import java.util.Date;
@@ -6,12 +6,12 @@ import java.util.Date;
 import library.Logger;
 import library.UndirectedGraph;
 import library.Utils;
-import mst.PrimRoundRobinFibonacci;
+import mst.RoundRobinFibonacci;
 
-public class PrimRoundRobinFibonacciTester {
+public class RoundRobinFibonacciTester {
 
   //O nome do arquivo de input padrão(usado para testes).
-  private static final String      DEFAULT_INPUT_FILE_NAME = "data/ALUE/alue2087_teste.stp";
+  private static final String      DEFAULT_INPUT_FILE_NAME = "data/ALUE/alue2087.stp";
   private static String            path                    = "data/ALUE/";
   private static String            inputFile               = "";
   private UndirectedGraph<Integer> graph;
@@ -31,8 +31,8 @@ public class PrimRoundRobinFibonacciTester {
       // Informa que a applicação esta em modo debug.
       Logger.isDebugging = false;
     }
-    Logger.printOntoScreen(" ********* Prim com Heap de Fibonacci *********");
-    new PrimRoundRobinFibonacciTester().run(args.length == 2);
+    Logger.printOntoScreen(" ********* Round Robin *********");
+    new RoundRobinFibonacciTester().run(args.length == 2); //args.length == 2
   }
 
   public void run(boolean batch) throws Exception {
@@ -48,9 +48,12 @@ public class PrimRoundRobinFibonacciTester {
           fileName = listOfFiles[i].getName();
           fileNameAndPath = path + fileName;
           Logger.printOntoScreen("***********************************************");
+
           Logger.printOntoScreen("Lendo Arquivo: " + fileName);
           graph = new UndirectedGraph<Integer>();
           Utils.getUndirectedFromInputFile(graph, fileNameAndPath);
+
+          Logger.printOntoScreen("Grafo Montado.");
           genericProcess(graph);
         }
       }
@@ -73,7 +76,7 @@ public class PrimRoundRobinFibonacciTester {
     try {
 
       Logger.printOntoScreen("Execução iniciada às: " + new Date());
-      PrimRoundRobinFibonacci<Integer> primFibonacci = new PrimRoundRobinFibonacci<Integer>(graph);
+      RoundRobinFibonacci<Integer> primFibonacci = new RoundRobinFibonacci<Integer>(graph);
 
       // Momento em que o algoritmo iniciou sua execução.
       long startTime = System.currentTimeMillis();
@@ -90,18 +93,20 @@ public class PrimRoundRobinFibonacciTester {
       }
 
       // Momento em que o algoritmo terminou sua execução.
+      //long end = System.currentTimeMillis();
       long finishTime = System.currentTimeMillis() - startTime;
 
       // Calcula a média de tempo de cada iteração.
       float media = (float) finishTime / iterations;
 
       // Imprime os resultados obtidos.
+      //System.err.println("Fim em mile: " + finishTime);
+      Logger.printOntoScreen("Execução Finalizada as: " + new Date());
       Logger.printOntoScreen("Custo total da MST: " + primFibonacci.getCost());
-
-      Logger.printOntoScreen("Tempo de execução médio: " + media + " segundo(s)");
+      Logger.printOntoScreen("Tempo de execução médio: " + media + " milisegundos");
       Logger.printOntoScreen("Quantidade de iterações em 5 segundos: " + iterations);
 
-      primFibonacci.PrintSpanningTree();
+      //primFibonacci.PrintSpanningTree();
     }
     catch (Exception e) {
       e.printStackTrace();

@@ -48,76 +48,6 @@ public final class PrimFibonacci<T> {
   private ArrayList<PairVertex<T>> spanningTree;
 
   /**
-   * Given a connected undirected graph with real-valued edge costs, returns an MST of that graph.
-   * 
-   * @param graph The graph from which to compute an MST.
-   * @return A spanning tree of the graph with minimum total weight.
-   */
-  public static <T> UndirectedGraph<T> mst(UndirectedGraph<T> graph) {
-
-    double custo = 0;
-
-    /* The Fibonacci heap we'll use to select nodes efficiently. */
-    FibonacciHeap<T> pq = new FibonacciHeap<T>();
-
-    /*
-     * This Fibonacci heap hands back internal handles to the nodes it stores. This map will associate each node with its entry in the Fibonacci heap.
-     */
-    Map<T, FibonacciHeap.Entry<T>> entries = new HashMap<T, FibonacciHeap.Entry<T>>();
-
-    /* The graph which will hold the resulting MST. */
-    UndirectedGraph<T> result = new UndirectedGraph<T>();
-
-    /*
-     * As an edge case, if the graph is empty, just hand back the empty graph.
-     */
-    if (graph.isEmpty())
-      return result;
-
-    /* Pick an arbitrary starting node. */
-    T startNode = graph.iterator().next();
-
-    /*
-     * Add it as a node in the graph. During this process, we'll use whether a node is in the result graph or not as a sentinel of whether it's already been
-     * picked.
-     */
-    result.addNode(startNode);
-
-    /*
-     * Begin by adding all outgoing edges of this start node to the Fibonacci heap.
-     */
-    addOutgoingEdges(startNode, graph, pq, result, entries);
-
-    /*
-     * Now, until we have added |V| - 1 edges to the graph, continously pick a node and determine which edge to add.
-     */
-    for (int i = 0; i < graph.size() - 1; ++i) {
-      /* Grab the cheapest node we can add. */
-      T toAdd = pq.dequeueMin().getValue();
-
-      /*
-       * Determine which edge we should pick to add to the MST. We'll do this by getting the endpoint of the edge leaving the current node that's of minimum
-       * cost and that enters the visited edges.
-       */
-      T endpoint = minCostEndpoint(toAdd, graph, result);
-
-      /* Add this edge to the graph. */
-      result.addNode(toAdd);
-      result.addEdge(toAdd, endpoint, graph.edgeCost(toAdd, endpoint));
-
-      custo += graph.edgeCost(toAdd, endpoint);
-      System.out.println(" " + endpoint + " " + toAdd + " Custo: " + graph.edgeCost(toAdd, endpoint));
-
-      /* Explore outward from this node. */
-      addOutgoingEdges(toAdd, graph, pq, result, entries);
-    }
-
-    /* Hand back the generated graph. */
-    System.out.println("Custo: " + custo);
-    return result;
-  }
-
-  /**
    * Given a node in the source graph and a set of nodes that we've visited so far, returns the minimum-cost edge from that node to some node that has been
    * visited before.
    * 
@@ -268,5 +198,6 @@ public final class PrimFibonacci<T> {
       /* Explore outward from this node. */
       addOutgoingEdges(toAdd, graph, pq, result, entries);
     }
+
   }
 };

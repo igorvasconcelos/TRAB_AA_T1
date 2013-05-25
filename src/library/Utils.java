@@ -73,7 +73,7 @@ public class Utils {
    * @throws Exception
    */
   public static MstGraph getGraphFromInputFile(String inputFile) throws Exception {
-    Logger.printOntoScreen("Obtendo valores do arquivo de entrada...");
+    //Logger.printOntoScreen("Obtendo valores do arquivo de entrada...");
 
     // Tentar abrir o arquivo.
     GenericReadBigFile rbf = new GenericReadBigFile(inputFile);
@@ -90,7 +90,7 @@ public class Utils {
       String currentValue;
       if (count < 10) {
         currentValue = iterator.next();
-        System.err.println(currentValue.toString() + " ");
+        //System.err.println(currentValue.toString() + " ");
         count++;
       }
       else {
@@ -119,7 +119,7 @@ public class Utils {
    * @throws Exception
    */
   public static UndirectedGraph<Integer> getUndirectedFromInputFile(UndirectedGraph<Integer> graph, String inputFile) throws Exception {
-    Logger.printOntoScreen("Obtendo valores do arquivo de entrada...");
+    //Logger.printOntoScreen("Obtendo valores do arquivo de entrada...");
 
     // Tentar abrir o arquivo.
     GenericReadBigFile rbf = new GenericReadBigFile(inputFile);
@@ -134,7 +134,7 @@ public class Utils {
       String currentValue;
       if (count < 10) {
         currentValue = iterator.next();
-        System.err.println(currentValue.toString() + " ");
+        //System.err.println(currentValue.toString() + " ");
         count++;
       }
       else {

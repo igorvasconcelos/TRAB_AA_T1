@@ -11,13 +11,16 @@ import java.util.Map;
 import library.PairVertex;
 import library.UndirectedGraph;
 
-public class PrimRoundRobinFibonacci<T> {
+public class RoundRobinFibonacci<T> {
   private T                              startNode;
   private UndirectedGraph<T>             graph;
   private double                         cost;
   private ArrayList<RoundRobinStruct<T>> listRR;
 
+  //private ArrayList<PairVertex<T>>       spanningTree;
+
   public class RoundRobinStruct<T> {
+
     /* The Fibonacci heap we'll use to select nodes efficiently. */
     private FibonacciHeap<T>               pq;
 
@@ -27,6 +30,7 @@ public class PrimRoundRobinFibonacci<T> {
     private Map<T, FibonacciHeap.Entry<T>> entries;
     private UndirectedGraph<T>             result;
     private ArrayList<T>                   keys;
+
     private ArrayList<PairVertex<T>>       spanningTree;
 
     public FibonacciHeap<T> getPq() {
@@ -72,8 +76,8 @@ public class PrimRoundRobinFibonacci<T> {
    * @param result The resulting graph, used to check what has been visited so far.
    * @return
    */
-  private <T> T minCostEndpoint(ArrayList<T> keys, UndirectedGraph<T> graph, UndirectedGraph<T> result) {
-
+  private PairVertex<T> minCostEndpoint(T toAdd, ArrayList<T> keys, UndirectedGraph<T> graph, UndirectedGraph<T> result) {
+    //<T> T
     /*
      * Track the best endpoint so far and its cost, initially null and +infinity.
      */
@@ -95,11 +99,18 @@ public class PrimRoundRobinFibonacci<T> {
             continue;
 
           /* Otherwise, update our guess to be this node. */
-          if (keys.size() < 2)
-            endpoint = keys.get(i);//entry.getKey();
-          else
-            endpoint = entry.getKey();
+          //if (keys.size() < 2)
+          //  endpoint = entry.getKey();
+          //else
+          //endpoint = keys.get(i);
 
+          //if (toAdd.equals(entry.getKey()))
+          //  endpoint = keys.get(i);
+          //else
+          //  endpoint = entry.getKey(); //keys.get(i); 
+
+          toAdd = keys.get(i);
+          endpoint = entry.getKey();
           leastCost = entry.getValue();
         }
       }
@@ -107,7 +118,8 @@ public class PrimRoundRobinFibonacci<T> {
     /*
      * Hand back the result. We're guaranteed to have found something, since otherwise we couldn't have dequeued this node.
      */
-    return endpoint;
+    PairVertex<T> p = new PairVertex<T>(toAdd, endpoint, leastCost);
+    return p;
   }
 
   /**
@@ -168,7 +180,7 @@ public class PrimRoundRobinFibonacci<T> {
     }
   }
 
-  public PrimRoundRobinFibonacci(UndirectedGraph<T> graph) throws Exception {
+  public RoundRobinFibonacci(UndirectedGraph<T> graph) throws Exception {
     this.graph = graph;
     //this.spanningTree = new ArrayList<PairVertex<T>>();
   }
@@ -209,19 +221,24 @@ public class PrimRoundRobinFibonacci<T> {
        * Determine which edge we should pick to add to the MST. We'll do this by getting the endpoint of the edge leaving the current node that's of minimum
        * cost and that enters the visited edges.
        */
-      T endpoint = minCostEndpoint(item.keys, graph, item.result);
+      //T endpoint = minCostEndpoint(toAdd, item.keys, graph, item.result);
+      PairVertex<T> a = minCostEndpoint(toAdd, item.keys, graph, item.result);
+      T endpoint = a.getOne();
+      toAdd = a.getTwo();
       /* Add this edge to the graph. */
       item.result.addNode(toAdd);
       item.result.addNode(endpoint);
-      System.out.println("toAdd: " + toAdd + " - endpoint: " + endpoint);
-      System.out.println(cont);
-      cont++;
-      if (cont == 697)
-        System.out.println("Ponto");
+      //System.out.println("toAdd: " + toAdd + " - endpoint: " + endpoint);
+      // System.out.println(cont);
+      //cont++;
+      //if (cont == 697)
+      //  System.out.println("Ponto");
 
       double edgeCost = graph.edgeCost(toAdd, endpoint);
       item.result.addEdge(toAdd, endpoint, edgeCost);
       item.spanningTree.add(new PairVertex<T>(toAdd, endpoint, edgeCost));
+
+      //spanningTree.add(new PairVertex<T>(toAdd, endpoint, edgeCost));
 
       // Procurar
       int index = find(listRR, item.keys, toAdd, endpoint);
@@ -232,8 +249,10 @@ public class PrimRoundRobinFibonacci<T> {
       mergeResult(newItem.result, item.result, itemToMerge.result);
       newItem.keys.addAll(item.keys);
       newItem.keys.addAll(itemToMerge.keys);
+
       newItem.spanningTree.addAll(item.spanningTree);
       newItem.spanningTree.addAll(itemToMerge.spanningTree);
+
       listRR.add(newItem);
       listRR.remove(item);
       listRR.remove(itemToMerge);

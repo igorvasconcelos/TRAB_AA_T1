@@ -31,8 +31,8 @@ public class PrimHeapLeftistTester {
       // Informa que a applicação esta em modo debug.
       Logger.isDebugging = false;
     }
-    Logger.printOntoScreen(" ********* Prim com Heal de Fibonacci *********");
-    new PrimHeapLeftistTester().run(args.length == 2);
+    Logger.printOntoScreen(" ********* Prim com Heap de Leftist *********");
+    new PrimHeapLeftistTester().run(args.length == 2); //args.length == 2
   }
 
   public void run(boolean batch) throws Exception {
@@ -48,8 +48,11 @@ public class PrimHeapLeftistTester {
           fileName = listOfFiles[i].getName();
           fileNameAndPath = path + fileName;
           Logger.printOntoScreen("***********************************************");
-          Logger.printOntoScreen("Lendo Arquivo: " + fileName);
+
+          Logger.printOntoScreen("Lendo Arquivo....: " + fileName);
           graph = Utils.getGraphFromInputFile(fileNameAndPath);
+
+          Logger.printOntoScreen("Grafo Montado.");
           genericProcess(graph);
         }
       }
@@ -93,8 +96,9 @@ public class PrimHeapLeftistTester {
       float media = (float) finishTime / iterations;
 
       // Imprime os resultados obtidos.
+      Logger.printOntoScreen("Execução Finalizada as: " + new Date());
       Logger.printOntoScreen("Custo total da MST: " + primLeftist.getCost());
-      Logger.printOntoScreen("Tempo de execução médio : " + media + " segundo(s)");
+      Logger.printOntoScreen("Tempo de execução médio : " + media + " milesegundos");
       Logger.printOntoScreen("Quantidade de iterações em 5 segundos: " + iterations);
     }
     catch (Exception e) {

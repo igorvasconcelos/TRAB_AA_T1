@@ -1,19 +1,21 @@
 package avl;
 
+import java.util.ArrayList;
+
 /* ================================================================
 This is BST with balancing "height" (= AVL)
 
 Each node has a height to determine if the BST is balanced
 ================================================================ */
 
-public class AVL<T>
+public class AVL
 {
-	public static final class Elem<T>
+	public static final class Elem
 	{
-		private Elem<T>	mLeft;		// Left child
-		private Elem<T>	mRight;		// Right  child
-		private Elem<T>	mParent;	// Parent in the tree
-		private T		mElem;		// Element being stored here
+		private Elem	mLeft;		// Left child
+		private Elem	mRight;		// Right  child
+		private Elem	mParent;	// Parent in the tree
+		private int		mElem;		// Element being stored here
 		private int		mHeight;	// Balance of the element
 		private double	mPriority;	// Its priority
 
@@ -22,7 +24,7 @@ public class AVL<T>
 		 * 
 		 * @return The element represented by this tree element.
 		 */
-		public T getValue()
+		public int getValue()
 		{
 			return mElem;
 		}
@@ -32,7 +34,7 @@ public class AVL<T>
 		 *
 		 *  @param value The element to associate with this tree element.
 		 */
-		public void setValue( T value )
+		public void setValue( int value )
 		{
 			mElem = value;
 		}
@@ -53,7 +55,7 @@ public class AVL<T>
 		 * @param elem The element stored in this node.
 		 * @param priority The priority of this element.
 		 */
-		public Elem( T elem, double priority )
+		public Elem( int elem, double priority )
 		{
 			mRight = mLeft = mParent = null;
 			mElem = elem;
@@ -62,7 +64,7 @@ public class AVL<T>
 
 	}
 	
-	public Elem<T> root;	// References the root node of the BST
+	public Elem root;	// References the root node of the BST
 
 	public AVL()
 	{
@@ -75,10 +77,10 @@ public class AVL<T>
    Return:  reference to (k,v) IF k is in BST
             reference to parent(k,v) IF k is NOT in BST (for put)
    ================================================================ */
-public Elem<T> findEntry( Elem<T> k )
+public Elem findEntry( Elem k )
 {
-	Elem<T> curr_node;   // Help variable
-	Elem<T> prev_node;   // Help variable
+	Elem curr_node;   // Help variable
+	Elem prev_node;   // Help variable
 
     /* --------------------------------------------
 	  Find the node with key == "k" in the BST
@@ -88,17 +90,17 @@ public Elem<T> findEntry( Elem<T> k )
 
     while ( curr_node != null )
     {
-       if ( k.mPriority < curr_node.mPriority )
+       if ( Integer.compare( k.mElem, curr_node.mElem ) < 0 )
 	  {
 	     prev_node = curr_node;       // Remember prev. node
 	     curr_node = curr_node.mLeft;  // Continue search in left subtree
 	  }
-       else if ( k.mPriority > curr_node.mPriority )
+       else if ( Integer.compare( k.mElem, curr_node.mElem ) > 0 )
 	  {
 	     prev_node = curr_node;       // Remember prev. node
 	     curr_node = curr_node.mRight; // Continue search in right subtree
 	  }
-       else //if ( k.mElem.equals( curr_node.mElem ) )
+       else
 	  {
 	     // Found key in BST 
 	     return curr_node;
@@ -114,17 +116,17 @@ public Elem<T> findEntry( Elem<T> k )
 /* ================================================================
    get(k): find key k and return assoc. value
    ================================================================ */
-public T get( Elem<T> k )
+public Elem get( Elem k )
 {
-	Elem<T> p;   // Help variable
+	Elem p;   // Help variable
 
     /* --------------------------------------------
 	  Find the node with key == "key" in the BST
        -------------------------------------------- */
     p = findEntry( k );
 
-    if ( k.mElem.equals( p.mElem ) )
-	  return p.mElem;
+    if ( Integer.compare( k.mElem, p.mElem ) == 0 )
+	  return p;
     else
 	  return null;
 }
@@ -136,9 +138,9 @@ public T get( Elem<T> k )
       1. if the key "k" is NOT found in the BST, we insert
 	    a new node containing (k, v)
    ================================================================ */
-public void put( T k, double v )
+public void put( int k, double v )
 {
-	Elem<T> p, q;   // Help variable
+	Elem p, q;   // Help variable
 
     /* ----------------------------------------------------------
 	  Just like linked list, insert in an EMPTY BST
@@ -147,7 +149,7 @@ public void put( T k, double v )
     if ( root == null )
     {  // Insert into an empty BST
 
-      root = new Elem<T>( k, v );
+      root = new Elem( k, v );
 	  root.mHeight = 1;
 	  return;
     }
@@ -155,24 +157,23 @@ public void put( T k, double v )
     /* --------------------------------------------
 	  Find the node with key == "key" in the BST
        -------------------------------------------- */
-    q = new Elem<T>( k, v );
+    q = new Elem( k, v );
     p = findEntry( q );
 
-    if ( q.mElem.equals( p.mElem ) )
+    if ( Integer.compare( q.mElem, p.mElem ) == 0 )
     {
-      //p.mPriority = v;			// Update value
+      p.mPriority = v;			// Update value
 	  return;
     }
 
     /* --------------------------------------------
 	  Insert a new entry (k,v) under p !!!
        -------------------------------------------- */
-    q = new Elem<T>( k, v );
+    q = new Elem( k, v );
     q.mHeight = 1;
-
     q.mParent = p;
 
-    if 	( v < p.mPriority )	//( k.compareTo( p.key ) < 0 )
+    if 	( Integer.compare( q.mElem, p.mElem ) < 0 )
 	  p.mLeft = q;            	// Add q as left child
     else 
 	  p.mRight = q;           	// Add q as right child
@@ -185,7 +186,7 @@ public void put( T k, double v )
     /* --------------------------------------------
        Check for height violation
        -------------------------------------------- */
-    Elem<T> x, y, z;
+    Elem x, y, z;
     x = y = z = q;      // Start search at q (new node)
 
     while ( x != null )
@@ -230,7 +231,7 @@ public void put( T k, double v )
           x = parent(y)
           y = parent(z)
    ======================================================= */
-public Elem<T> tri_node_restructure( Elem<T> x, Elem<T> y, Elem<T> z)
+public Elem tri_node_restructure( Elem x, Elem y, Elem z)
 {
   /* *******************************************************************
      Determine the parent child relationships between (y,z) and (x,y))
@@ -248,8 +249,8 @@ public Elem<T> tri_node_restructure( Elem<T> x, Elem<T> y, Elem<T> z)
                            /   \
                           a     c
 	======================================================= */
-  Elem<T> a, b, c;
-  Elem<T> T0, T1, T2, T3;
+  Elem a, b, c;
+  Elem T0, T1, T2, T3;
 
   if (zIsLeftChild && yIsLeftChild) 
   { /* Configuration 1 */
@@ -311,7 +312,7 @@ public Elem<T> tri_node_restructure( Elem<T> x, Elem<T> y, Elem<T> z)
   }
   else 
   {
-	  Elem<T> xParent;
+	  Elem xParent;
 
      xParent = x.mParent;   // Find x's parent
 
@@ -369,78 +370,44 @@ public Elem<T> tri_node_restructure( Elem<T> x, Elem<T> y, Elem<T> z)
 }
 
 /* =======================================================
-removeMin(): delete minimum entry
+removeMin(): delete minimum priority
 ======================================================= */
-public Elem<T> removeMin()
+public Elem getMin()
 {
-	Elem<T> curr_node;   // Help variable
-	Elem<T> prev_node;   // Help variable
-
-    /* --------------------------------------------
-	  Find the node with key == "k" in the BST
-       -------------------------------------------- */
-    curr_node = root;  // Always start at the root node
-    prev_node = root;  // Remember the previous node for insertion
-
-    while ( curr_node.mLeft != null )
-    {
-      prev_node = curr_node;       // Remember prev. node
-	  curr_node = curr_node.mLeft;  // Continue search in left subtree
+	Elem min, curr;   // Help variable
+	ArrayList<Elem> k = new ArrayList<Elem>();
+	
+	if( root == null) return null;
+	min = root;
+	k.add( root );
+	while( !(k.isEmpty() ) )
+	{
+		curr = k.remove(0);
+		if( curr.mPriority < min.mPriority )
+		{
+			min = curr;
+		}
+		if( curr.mLeft != null ) k.add( curr.mLeft );
+		if( curr.mRight != null ) k.add( curr.mRight );
 	}
-    if ( prev_node == curr_node ) { // root case
-    	if( curr_node.mLeft == curr_node.mRight ) root = null;
-    	else
-    	{
-     	   root = curr_node.mRight;
-     	   root.mParent = null;
-     	   /* --------------------------------------------
- 	          Recompute the height of all parent nodes...
- 	          -------------------------------------------- */
- 	       recompHeight( root );
- 	
- 	       /* --------------------------------------------
- 	          Re-balance AVL tree starting at ActionPos
- 	          -------------------------------------------- */
- 	       rebalance ( root );     // Rebalance AVL tree after delete at parent
-    	}
-    }
-    else
-    {
-	    prev_node = curr_node.mParent;
-	
-		/* --------------------------------
-		Delete curr_node from curr_node's parent
-		-------------------------------- */
-		prev_node.mLeft = null;
-		  
-	    /* --------------------------------------------
-	    Recompute the height of all parent nodes...
-	    -------------------------------------------- */
-	    recompHeight( prev_node );
-	
-	    /* --------------------------------------------
-	    Re-balance AVL tree starting at ActionPos
-	    -------------------------------------------- */
-	    rebalance ( prev_node );     // Rebalance AVL tree after delete at parent
-    }
-    return curr_node;
+    return min;
 }
 
 /* =======================================================
    remove(k): delete entry containg key k
    ======================================================= */
-public void remove(Elem<T> k)
+public void remove(Elem k)
 {
-	Elem<T> p;     // Help variables
-	Elem<T> parent;   // parent node
-	Elem<T> succ;     // successor node
+	Elem p;     // Help variables
+	Elem parent;   // parent node
+	Elem succ;     // successor node
 
     /* --------------------------------------------
        Find the node with key == "key" in the BST
        -------------------------------------------- */
     p = findEntry(k);
 
-    if ( ! k.mElem.equals( p.mElem ) )
+    if ( !( Integer.compare( k.mElem, p.mElem ) == 0 ) )
        return;			// Not found ==> nothing to delete....
 
 
@@ -463,6 +430,7 @@ public void remove(Elem<T> k)
 		  else
 		     parent.mRight = null;
 	
+		  k = null;
 	       /* --------------------------------------------
 	          Recompute the height of all parent nodes...
 	          -------------------------------------------- */
@@ -597,9 +565,9 @@ public void remove(Elem<T> k)
 }
 
 
-public void rebalance(Elem<T> p)
+public void rebalance(Elem p)
 {
-	Elem<T> x, y, z;
+	Elem x, y, z;
 
    while ( p != null )
    { 
@@ -623,7 +591,7 @@ public void rebalance(Elem<T> p)
    }
 }
 
-public Elem<T> tallerChild(Elem<T> p)
+public Elem tallerChild(Elem p)
 {
    if ( p.mLeft == null )
 	 return p.mRight;
@@ -641,7 +609,7 @@ public Elem<T> tallerChild(Elem<T> p)
 /* =======================================================
    Show what the BST look like....
    ======================================================= */
-public void printnode(Elem<T> x, int h)
+public void printnode(Elem x, int h)
 {
    for (int i = 0; i < h; i++)
       System.out.print("               ");
@@ -660,7 +628,7 @@ public void printBST()
    System.out.println("================================");
 }
 
-public void showR(Elem<T> t, int h)
+public void showR(Elem t, int h)
 {
    if (t == null)
       return;
@@ -674,7 +642,7 @@ public void showR(Elem<T> t, int h)
 /* ================================================================
    maxHeight(t1,t2): compute max height of 2 (sub)trees
    ================================================================ */
-public int maxHeight( Elem<T> t1, Elem<T> t2 )
+public int maxHeight( Elem t1, Elem t2 )
 {
    int h1, h2;
 
@@ -694,7 +662,7 @@ public int maxHeight( Elem<T> t1, Elem<T> t2 )
 /* ================================================================
    diffHeight(t1,t2): compute difference in height of 2 (sub)trees
    ================================================================ */
-public int diffHeight( Elem<T> t1, Elem<T> t2 )
+public int diffHeight( Elem t1, Elem t2 )
 {
    int h1, h2;
 
@@ -714,7 +682,7 @@ public int diffHeight( Elem<T> t1, Elem<T> t2 )
 /* ================================================================
    recompHeight(x): recompute height starting at x (and up)
    ================================================================ */
-public void recompHeight( Elem<T> x )
+public void recompHeight( Elem x )
 {
    while ( x != null )
    {

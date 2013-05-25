@@ -8,99 +8,111 @@ import library.UndirectedGraph;
 import library.Utils;
 import mst.PrimTree;
 
-public class PrimAvlTester {
-  //O nome do arquivo de input padr√£o(usado para testes).
-  private static final String      DEFAULT_INPUT_FILE_NAME = "data/ALUE/alue2087.stp";
-  private static String            path                    = "data/ALUE/";
-  private static String            inputFile               = "";
-  private UndirectedGraph<Integer> graph;
+public class PrimAvlTester
+{
+	// O nome do arquivo de input padr„o (usado para testes).
+	private static final String      DEFAULT_INPUT_FILE_NAME = "data/DMXA/dmxa0628.stp";
+	private static String            path                    = "data/DMXA/";
+	private static String            inputFile               = "";
+	private UndirectedGraph<Integer> graph;
 
-  public static void main(String[] args) throws Exception {
+	public static void main( String[] args ) throws Exception
+	{
+		// Verifica se o arquivo de input foi passado como par√¢metro.
+		if ( args.length == 1 )
+		{
+			inputFile = args[ 0 ];
+		}
+		else if ( args.length == 2 )
+		{
+			path = args[ 1 ];
+		}
+		else
+		{
+			// Caso nenhum arquivo tenha sido informado, testa com o arquivo criado para testes.
+			inputFile = DEFAULT_INPUT_FILE_NAME;
+			// Informa que a applicaÁ„o esta em modo debug.
+			Logger.isDebugging = false;
+		}
+		Logger.printOntoScreen( " ********* Prim com AVL *********" );
+		new PrimAvlTester().run( args.length == 2 );
+	}
 
-    // Verifica se o arquivo de input foi passado como par√¢metro.
-    if (args.length == 1) {
-      inputFile = args[0];
-    }
-    else if (args.length == 2) {
-      path = args[1];
-    }
-    else {
-      // Caso nenhum arquivo tenha sido informado, testa com o arquivo criado para testes.
-      inputFile = DEFAULT_INPUT_FILE_NAME;
-      // Informa que a applica√ß√£o esta em modo debug.
-      Logger.isDebugging = false;
-    }
-    Logger.printOntoScreen(" ********* Prim com AVL *********");
-    new PrimAvlTester().run(args.length == 2);
-  }
+	public void run( boolean batch ) throws Exception
+	{
+		if ( batch )
+		{
+			String fileName;
+			String fileNameAndPath;
+			File folder = new File( path );
+			// ObtÈm a lista de arquivos neste diretÛrio, como o prÛprio mÈtodo "listFiles()" diz,
+			// n„o existe uma garantia em que ordem os arquivos ser„o retornados.
+			File[] listOfFiles = folder.listFiles();
+			for ( int i = 0; i < listOfFiles.length; i++ )
+			{
+				if ( listOfFiles[ i ].isFile() )
+				{
+					fileName = listOfFiles[ i ].getName();
+					fileNameAndPath = path + fileName;
+					Logger.printOntoScreen( "***********************************************" );
+					Logger.printOntoScreen( "Lendo Arquivo: " + fileName );
+					graph = new UndirectedGraph<Integer>();
+					Utils.getUndirectedFromInputFile( graph, fileNameAndPath );
+					genericProcess( graph );
+				}
+			}
+		}
+		else
+		{
+			graph = new UndirectedGraph<Integer>();
+			Utils.getUndirectedFromInputFile( graph, inputFile );
+			genericProcess( graph );
+		}
+	}
 
-  public void run(boolean batch) throws Exception {
-    if (batch) {
-      String fileName;
-      String fileNameAndPath;
-      File folder = new File(path);
-      // Obt√©m a lista de arquivos neste diret√≥rio, como o pr√≥prio m√©todo "listFiles()" diz,
-      // n√£o existe uma garantia em que ordem os arquivos ser√£o retornados.
-      File[] listOfFiles = folder.listFiles();
-      for (int i = 0; i < listOfFiles.length; i++) {
-        if (listOfFiles[i].isFile()) {
-          fileName = listOfFiles[i].getName();
-          fileNameAndPath = path + fileName;
-          Logger.printOntoScreen("***********************************************");
-          Logger.printOntoScreen("Lendo Arquivo: " + fileName);
-          graph = new UndirectedGraph<Integer>();
-          Utils.getUndirectedFromInputFile(graph, fileNameAndPath);
-          genericProcess(graph);
-        }
-      }
-    }
-    else {
-      graph = new UndirectedGraph<Integer>();
-      Utils.getUndirectedFromInputFile(graph, inputFile);
-      genericProcess(graph);
-    }
-  }
+	/**
+	 * Este È o mÈtodo que realmente faz todo o processamento. O mÈtodo run foi criado apenas para que n„o fosse necess·rio ficar usando vari·veis e mÈtodos
+	 * est·ticos.
+	 * 
+	 * @param listNOfOrderedPairs
+	 * @param title
+	 */
+	protected void genericProcess( UndirectedGraph<Integer> graph )
+	{
+		try
+		{
+			Logger.printOntoScreen( "ExecuÁ„o iniciada ‡s: " + new Date() );
+			PrimTree primAvl = new PrimTree( graph );
 
-  /**
-   * Este √© o m√©todo que realmente faz todo o processamento. O m√©todo run foi criado apenas para que n√£o fosse necess√°rio ficar usando vari√°veis e m√©todos
-   * est√°ticos.
-   * 
-   * @param listNOfOrderedPairs
-   * @param title
-   */
-  protected void genericProcess(UndirectedGraph<Integer> graph) {
-    try {
+			// Momento em que o algoritmo iniciou sua execuÁ„o.
+			long startTime = System.currentTimeMillis();
 
-      Logger.printOntoScreen("Execu√ß√£o iniciada √†s: " + new Date());
-      PrimTree<Integer> primAvl = new PrimTree<Integer>(graph);
+			// Quantidade de iteraÁıes feitas dentro de 5 segundos.
+			long iterations = 0;
 
-      // Momento em que o algoritmo iniciou sua execu√ß√£o.
-      long startTime = System.currentTimeMillis();
+			while ( System.currentTimeMillis() - startTime < 5000 )
+			{
+				// Em cada iteraÁ„o, È um novo processamento, ent„o a quantidade de operaÁıes È setada para 0.
+				primAvl.generateMST();
 
-      // Quantidade de itera√ß√µes feitas dentro de 5 segundos.
-      long iterations = 0;
+				// Incrementa a quantidade de iteraÁıes feitas dentro de 5 segundos.
+				iterations++;
+			}
 
-      while (System.currentTimeMillis() - startTime < 5000) {
-        // Em cada itera√ß√£o, √© um novo processamento, ent√£o a quantidade de opera√ß√µes √© setada para 0.
-        primAvl.generateMST();
+			// Momento em que o algoritmo terminou sua execuÁ„o.
+			long finishTime = System.currentTimeMillis() - startTime;
 
-        // Incrementa a quantidade de itera√ß√µes feitas dentro de 5 segundos.
-        iterations++;
-      }
+			// Calcula a mÈdia de tempo de cada iteraÁ„o.
+			float media = (float) finishTime / iterations;
 
-      // Momento em que o algoritmo terminou sua execu√ß√£o.
-      long finishTime = System.currentTimeMillis() - startTime;
-
-      // Calcula a m√©dia de tempo de cada itera√ß√£o.
-      float media = (float) finishTime / iterations;
-
-      // Imprime os resultados obtidos.
-      Logger.printOntoScreen("Custo total da MST: " + primAvl.getCost());
-      Logger.printOntoScreen("Tempo de execu√ß√£o m√©dio: " + media + " segundo(s)");
-      Logger.printOntoScreen("Quantidade de itera√ß√µes em 5 segundos: " + iterations);
-    }
-    catch (Exception e) {
-      e.printStackTrace();
-    }
-  }
+			// Imprime os resultados obtidos.
+			Logger.printOntoScreen( "Custo total da MST: " + primAvl.getCost() );
+			Logger.printOntoScreen( "Tempo de execuÁ„o mÈdio: " + media + " segundo(s)" );
+			Logger.printOntoScreen( "Quantidade de iteraÁıes em 5 segundos: " + iterations );
+		}
+		catch ( Exception e )
+		{
+			e.printStackTrace();
+		}
+	}
 }

@@ -229,10 +229,6 @@ public class RoundRobinFibonacci<T> {
       item.result.addNode(toAdd);
       item.result.addNode(endpoint);
       //System.out.println("toAdd: " + toAdd + " - endpoint: " + endpoint);
-      // System.out.println(cont);
-      //cont++;
-      //if (cont == 697)
-      //  System.out.println("Ponto");
 
       double edgeCost = graph.edgeCost(toAdd, endpoint);
       item.result.addEdge(toAdd, endpoint, edgeCost);

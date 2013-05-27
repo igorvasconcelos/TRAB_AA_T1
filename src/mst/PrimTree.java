@@ -35,7 +35,7 @@ import java.util.Map;
 
 import library.PairVertex;
 import library.UndirectedGraph;
-import avl.AVL;
+import avl.EduAVLTree;
 
 // For HashMap
 public final class PrimTree
@@ -45,78 +45,6 @@ public final class PrimTree
 	private double							cost;
 	private ArrayList<PairVertex<Integer>>	spanningTree;
 
-  /**
-   * Given a connected undirected graph with real-valued edge costs, returns an MST of that graph.
-   * 
-   * @param graph The graph from which to compute an MST.
-   * @return A spanning tree of the graph with minimum total weight.
-   */
-/*	public static UndirectedGraph<Integer> mst(UndirectedGraph<Integer> graph) {
-
-    double custo = 0;
-
-    /* The Fibonacci heap we'll use to select nodes efficiently. 
-    AVL pq = new AVL();
-
-    /*
-     * This Fibonacci heap hands back internal handles to the nodes it stores. This map will associate each node with its entry in the Fibonacci heap.
-     
-    Map<Integer, AVL.Elem> entries = new HashMap<Integer, AVL.Elem>();
-
-    /* The graph which will hold the resulting MST. 
-    UndirectedGraph<Integer> result = new UndirectedGraph<Integer>();
-
-    /*
-     * As an edge case, if the graph is empty, just hand back the empty graph.
-     
-    if (graph.isEmpty())
-      return result;
-
-    /* Pick an arbitrary starting node. 
-    int startNode = (Integer)graph.iterator().next();
-
-    /*
-     * Add it as a node in the graph. During this process, we'll use whether a node is in the result graph or not as a sentinel of whether it's already been
-     * picked.
-     
-    result.addNode(startNode);
-
-    /*
-     * Begin by adding all outgoing edges of this start node to the Fibonacci heap.
-     
-    addOutgoingEdges(startNode, graph, pq, result, entries);
-
-    /*
-     * Now, until we have added |V| - 1 edges to the graph, continously pick a node and determine which edge to add.
-     
-    for (int i = 0; i < graph.size() - 1; ++i) {
-      /* Grab the cheapest node we can add. 
-      //T toAdd = pq.dequeueMin().getValue();
-      AVL.Elem toAdd = pq.getMin();
-      pq.remove( toAdd );
-
-      /*
-       * Determine which edge we should pick to add to the MST. We'll do this by getting the endpoint of the edge leaving the current node that's of minimum
-       * cost and that enters the visited edges.
-       
-      int endpoint = minCostEndpoint(toAdd.getValue(), graph, result);
-
-      /* Add this edge to the graph. 
-      result.addNode(toAdd.getValue());
-      result.addEdge(toAdd.getValue(), endpoint, graph.edgeCost(toAdd.getValue(), endpoint));
-
-      custo += graph.edgeCost(toAdd.getValue(), endpoint);
-      System.out.println(" " + endpoint + " " + toAdd.getValue() + " Custo: " + graph.edgeCost(toAdd.getValue(), endpoint));
-
-      /* Explore outward from this node. 
-      addOutgoingEdges(toAdd.getValue(), graph, pq, result, entries);
-    }
-
-    /* Hand back the generated graph. 
-    System.out.println("Custo: " + custo);
-    return result;
-  }
-*/
   /**
    * Given a node in the source graph and a set of nodes that we've visited so far, returns the minimum-cost edge from that node to some node that has been
    * visited before.
@@ -166,7 +94,7 @@ public final class PrimTree
    *          isn't in the queue.
    * @param entries A map from nodes to their corresponding heap entries. We need this so we can call decreaseKey on the correct elements.
    */
-  private static void addOutgoingEdges(int node, UndirectedGraph<Integer> graph, AVL pq, UndirectedGraph<Integer> result, Map<Integer, AVL.Elem> entries) {
+  private static void addOutgoingEdges(int node, UndirectedGraph<Integer> graph, EduAVLTree pq, UndirectedGraph<Integer> result, Map<Integer, EduAVLTree.Node> entries) {
     /* Start off by scanning over all edges emanating from our node. */
     for (Map.Entry<Integer, Double> arc : graph.edgesFrom(node).entrySet()) {
       /*
@@ -182,23 +110,14 @@ public final class PrimTree
 
       if (!entries.containsKey(arc.getKey())) { // Case 2
         //entries.put(arc.getKey(), pq.enqueue(arc.getKey(), arc.getValue()));
-        AVL.Elem temp = new AVL.Elem(arc.getKey(), arc.getValue());
-        System.out.println("Imprimindo arvore antes de inserir " + temp.getValue() + " - " + temp.getPriority());
-        pq.printBST();
-        pq.put(temp.getValue(), temp.getPriority());
-        System.out.println("Imprimindo arvore depois de ter inserido " + temp.getValue() + " - " + temp.getPriority());
-        pq.printBST();
+        pq.add(arc.getKey(), arc.getValue());
         
-        entries.put(temp.getValue(), temp);
+        entries.put(arc.getKey(), new EduAVLTree.Node(arc.getKey(), arc.getValue()));
       }
-      else if (entries.get(arc.getKey()).getPriority() > arc.getValue()) { // Case 3
+      else if (entries.get(arc.getKey()).getData() > arc.getValue()) { // Case 3
         //pq.decreaseKey(entries.get(arc.getKey()), arc.getValue());
-        
-        System.out.println("Imprimindo arvore antes de atualizar " + entries.get(arc.getKey()).getValue() + " - " + entries.get(arc.getKey()).getPriority());
-        pq.printBST();
-        pq.put(arc.getKey(), arc.getValue());
-        System.out.println("Imprimindo arvore depois de ter atualizado " + arc.getKey() + " - " + arc.getValue());
-        pq.printBST();
+        pq.remove(arc.getKey());
+        pq.add(arc.getKey(), arc.getValue());
         
       }
 
@@ -225,14 +144,14 @@ public final class PrimTree
 
   public void generateMST() throws Exception {
     /* The Fibonacci heap we'll use to select nodes efficiently. */
-    AVL pq = new AVL();
+    EduAVLTree pq = new EduAVLTree();
 
     cost = 0;
 
     /*
      * This Fibonacci heap hands back internal handles to the nodes it stores. This map will associate each node with its entry in the Fibonacci heap.
      */
-    Map<Integer, AVL.Elem> entries = new HashMap<Integer, AVL.Elem>();
+    Map<Integer, EduAVLTree.Node> entries = new HashMap<Integer, EduAVLTree.Node>();
 
     /* The graph which will hold the resulting MST. */
     UndirectedGraph<Integer> result = new UndirectedGraph<Integer>();
@@ -265,12 +184,8 @@ public final class PrimTree
       //T toAdd = pq.dequeueMin().getValue();
     	
     
-      AVL.Elem toAdd = new AVL.Elem(pq.getMin().getValue(), pq.getMin().getPriority());
-      System.out.println("Imprimindo arvore antes de remover " + toAdd.getValue() + " - " + toAdd.getPriority());
-      pq.printBST();
-      pq.remove( toAdd );
-      System.out.println("Imprimindo arvore depois de ter removido " + toAdd.getValue() + " - " + toAdd.getPriority());
-      pq.printBST();
+      EduAVLTree.Node toAdd = pq.findMinData();
+      pq.remove( toAdd.getValue() );
       
       /*
        * Determine which edge we should pick to add to the MST. We'll do this by getting the endpoint of the edge leaving the current node that's of minimum

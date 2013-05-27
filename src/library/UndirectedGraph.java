@@ -1,4 +1,5 @@
 package library;
+
 /*****************************************************************************
  * File: DirectedGraph.java Author: Keith Schwarz (htiek@cs.stanford.edu)
  * 
@@ -11,6 +12,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.NoSuchElementException;
+
 // For HashMap
 
 public final class UndirectedGraph<T> implements Iterable<T> {
@@ -70,6 +72,18 @@ public final class UndirectedGraph<T> implements Iterable<T> {
     /* Remove the edges from both adjacency lists. */
     mGraph.get(one).remove(two);
     mGraph.get(two).remove(one);
+  }
+
+  public boolean containsEdge(T one, T two) {
+    /* Confirm both endpoints exist. */
+    if (!mGraph.containsKey(one) || !mGraph.containsKey(two))
+      return false;
+    //throw new NoSuchElementException("Both nodes must be in the graph.");
+
+    /* Look up the edge between the two. */
+    Double result = mGraph.get(one).get(two);
+
+    return result != null;
   }
 
   /**

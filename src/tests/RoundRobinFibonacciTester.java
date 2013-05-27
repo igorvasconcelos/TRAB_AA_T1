@@ -6,7 +6,7 @@ import java.util.Date;
 import library.Logger;
 import library.UndirectedGraph;
 import library.Utils;
-import mst.RoundRobinFibonacci;
+import mst.RoundRobinFibonacciV2;
 
 public class RoundRobinFibonacciTester {
 
@@ -76,7 +76,7 @@ public class RoundRobinFibonacciTester {
     try {
 
       Logger.printOntoScreen("Execução iniciada às: " + new Date());
-      RoundRobinFibonacci<Integer> primFibonacci = new RoundRobinFibonacci<Integer>(graph);
+      RoundRobinFibonacciV2<Integer> primFibonacci = new RoundRobinFibonacciV2<Integer>(graph);
 
       // Momento em que o algoritmo iniciou sua execução.
       long startTime = System.currentTimeMillis();

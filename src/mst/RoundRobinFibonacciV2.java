@@ -126,48 +126,6 @@ public class RoundRobinFibonacciV2<T> {
     return p;
   }
 
-  /**
-   * Given a node in the graph, updates the priorities of adjacent nodes to take these edges into account. Due to some optimizations we make, this step takes in
-   * several parameters beyond what might seem initially required. They are explained in the param section below.
-   * 
-   * @param node The node to explore outward from.
-   * @param graph The graph whose MST is being computed, used so we can get the edges to consider.
-   * @param pq The Fibonacci heap holding each endpoint.
-   * @param result The result graph. We need this information so that we don't try to update information on a node that has already been considered and thus
-   *          isn't in the queue.
-   * @param entries A map from nodes to their corresponding heap entries. We need this so we can call decreaseKey on the correct elements.
-   */
-  private static <T> void addOutgoingEdges(T node, UndirectedGraph<T> graph, FibonacciHeap<T> pq, UndirectedGraph<T> result,
-    Map<T, FibonacciHeap.Entry<T>> entries) {
-    /* Start off by scanning over all edges emanating from our node. */
-    for (Map.Entry<T, Double> arc : graph.edgesFrom(node).entrySet()) {
-      /*
-       * Given this arc, there are four possibilities.
-       * 
-       * 1. This endpoint has already been added to the graph. If so, we ignore the edge since it would form a cycle. 2. This endpoint is not in the graph and
-       * has never been in the heap. Then we add it to the heap. 3. This endpoint is in the graph, but this is a better edge. Then we use decreaseKey to update
-       * its priority. 4. This endpoint is in the graph, but there is a better edge to it. In that case, we similarly ignore it.
-       */
-      if (result.containsNode(arc.getKey()))
-        continue; // Case 1
-
-      if (!entries.containsKey(arc.getKey())) { // Case 2
-        entries.put(arc.getKey(), pq.enqueue(arc.getKey(), arc.getValue()));
-        //System.out.println("ADD em pq a aresta (Key; Value): " + arc.getKey() + " ; " + arc.getValue());
-        //System.out.println("ADD em entries (MAP): " + arc.getKey().toString());
-      }
-      else if (entries.get(arc.getKey()).getPriority() > arc.getValue()) { // Case 3
-        pq.decreaseKey(entries.get(arc.getKey()), arc.getValue());
-      }
-
-      // Case 4 handled implicitly by doing nothing.
-    }
-  }
-
-  public T getStartNode() {
-    return startNode;
-  }
-
   public double getCost() {
 
     if (cost == 0) {
@@ -208,7 +166,7 @@ public class RoundRobinFibonacciV2<T> {
       //rrs.result.addNode(node);
       // adicionando as arestas para esse vértice
       //addOutgoingEdges(node, graph, rrs.pq, rrs.result, rrs.entries);
-      addOutgoingEdges(node, graph, rrs.pq, result, rrs.entries);
+      //addOutgoingEdges(node, graph, rrs.pq, result, rrs.entries);
       // adicioando na "fila"
       listRR.add(rrs);
     }
@@ -253,7 +211,7 @@ public class RoundRobinFibonacciV2<T> {
       RoundRobinStruct<T> itemToMerge = listRR.get(index);
       RoundRobinStruct<T> newItem = new RoundRobinStruct<T>();
       newItem.pq = FibonacciHeap.merge(item.pq, itemToMerge.pq);
-      newItem.entries = mergeEntries(item.entries, itemToMerge.entries);
+      // newItem.entries = mergeEntries(item.entries, itemToMerge.entries);
       //mergeResult(newItem.result, item.result, itemToMerge.result);
       newItem.keys.addAll(item.keys);
       newItem.keys.addAll(itemToMerge.keys);

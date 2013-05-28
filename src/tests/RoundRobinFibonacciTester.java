@@ -69,8 +69,7 @@ public class RoundRobinFibonacciTester {
    * Este é o método que realmente faz todo o processamento. O método run foi criado apenas para que não fosse necessário ficar usando variáveis e métodos
    * estáticos.
    * 
-   * @param listNOfOrderedPairs
-   * @param title
+   * @param graph
    */
   protected void genericProcess(UndirectedGraph<Integer> graph) {
     try {

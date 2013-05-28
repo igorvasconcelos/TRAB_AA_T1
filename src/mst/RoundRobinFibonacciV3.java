@@ -11,13 +11,43 @@ import java.util.Map;
 import library.PairVertex;
 import library.UndirectedGraph;
 
-public class RoundRobinFibonacciV2<T> {
+public class RoundRobinFibonacciV3<T> {
   private UndirectedGraph<T>        graph;
   private double                    cost;
   private List<RoundRobinStruct<T>> listRR;
 
   private ArrayList<PairVertex<T>>  spanningTree;
   private UndirectedGraph<T>        result;
+
+  public class forest_struct<T> {
+    T                value;
+    forest_struct<T> parent;
+    int              rank;
+
+    public T getValue() {
+      return value;
+    }
+
+    public void setValue(T value) {
+      this.value = value;
+    }
+
+    public forest_struct<T> getParent() {
+      return parent;
+    }
+
+    public void setParent(forest_struct<T> parent) {
+      this.parent = parent;
+    }
+
+    public int getRank() {
+      return rank;
+    }
+
+    public void setRank(int rank) {
+      this.rank = rank;
+    }
+  }
 
   public class RoundRobinStruct<T> {
 
@@ -28,42 +58,14 @@ public class RoundRobinFibonacciV2<T> {
      * This Fibonacci heap hands back internal handles to the nodes it stores. This map will associate each node with its entry in the Fibonacci heap.
      */
     private Map<T, FibonacciHeap.Entry<T>> entries;
-    //private UndirectedGraph<T>             result;
     private ArrayList<T>                   keys;
-
-    //private ArrayList<PairVertex<T>>       spanningTree;
-
-    public FibonacciHeap<T> getPq() {
-      return pq;
-    }
-
-    public void setPq(FibonacciHeap<T> pq) {
-      this.pq = pq;
-    }
-
-    public Map<T, FibonacciHeap.Entry<T>> getEntries() {
-      return entries;
-    }
-
-    public void setEntries(Map<T, FibonacciHeap.Entry<T>> entries) {
-      this.entries = entries;
-    }
+    private forest_struct<T>               struct;
 
     public RoundRobinStruct() {
       pq = new FibonacciHeap<T>();
       entries = new HashMap<T, FibonacciHeap.Entry<T>>();
-      //result = new UndirectedGraph<T>();
       keys = new ArrayList<T>();
-      //spanningTree = new ArrayList<PairVertex<T>>();
     }
-
-    //public UndirectedGraph<T> getResult() {
-    //  return result;
-    // }
-
-    //public void setResult(UndirectedGraph<T> result) {
-    //  this.result = result;
-    // }
   }
 
   /**
@@ -78,6 +80,7 @@ public class RoundRobinFibonacciV2<T> {
    * @return pair
    */
   private PairVertex<T> minCostEndpoint(T toAdd, ArrayList<T> keys, UndirectedGraph<T> graph, UndirectedGraph<T> result) {
+    //<T> T
     /*
      * Track the best endpoint so far and its cost, initially null and +infinity.
      */
@@ -87,6 +90,11 @@ public class RoundRobinFibonacciV2<T> {
     for (int i = 0; i < keys.size(); i++) {
       /* Scan each node, checking whether it's a candidate. */
       for (Map.Entry<T, Double> entry : graph.edgesFrom(keys.get(i)).entrySet()) {
+        /*
+         * If the endpoint isn't in the nodes constructed so far, don't consider it.
+         */
+        //if (result.containsNode(entry.getKey()) && result.containsNode(keys.get(i)) /* && !spanningTree.contains(entry.getKey()) */)
+        //  continue;
 
         if (result.containsEdge(entry.getKey(), keys.get(i)))
           continue;
@@ -95,6 +103,17 @@ public class RoundRobinFibonacciV2<T> {
           /* If the edge costs more than what we know, skip it. */
           if (entry.getValue() >= leastCost)
             continue;
+
+          /* Otherwise, update our guess to be this node. */
+          //if (keys.size() < 2)
+          //  endpoint = entry.getKey();
+          //else
+          //endpoint = keys.get(i);
+
+          //if (toAdd.equals(entry.getKey()))
+          //  endpoint = keys.get(i);
+          //else
+          //  endpoint = entry.getKey(); //keys.get(i); 
 
           toAdd = keys.get(i);
           endpoint = entry.getKey();
@@ -125,10 +144,50 @@ public class RoundRobinFibonacciV2<T> {
     }
   }
 
-  public RoundRobinFibonacciV2(UndirectedGraph<T> graph) throws Exception {
+  public RoundRobinFibonacciV3(UndirectedGraph<T> graph) throws Exception {
     this.graph = graph;
-    //this.spanningTree = new ArrayList<PairVertex<T>>();
-    //this.result = new UndirectedGraph<T>();
+    this.spanningTree = new ArrayList<PairVertex<T>>();
+    this.result = new UndirectedGraph<T>();
+  }
+
+  private forest_struct<T> makeSet(T value) {
+    forest_struct<T> node = new forest_struct<T>();
+    node.value = value;
+    node.parent = null;
+    node.rank = 0;
+    return node;
+  }
+
+  private forest_struct<T> union(forest_struct<T> one, forest_struct<T> two) {
+    if (two.rank > one.rank) {
+      one.parent = two;
+      return two;
+    }
+    else if (one.rank > two.rank) {
+      two.parent = one;
+    }
+    else { // iguais
+      two.parent = one;
+      one.rank++;
+    }
+
+    return one;
+  }
+
+  private forest_struct<T> find(forest_struct<T> node) {
+
+    forest_struct<T> temp;
+    forest_struct<T> root = node;
+    while (root.parent != null) {
+      root = root.parent;
+    }
+    while (node.parent != root) {
+      temp = node.parent;
+      node.parent = root;
+      node = temp;
+    }
+
+    return root;
   }
 
   public void generateMST() throws Exception {
@@ -136,9 +195,7 @@ public class RoundRobinFibonacciV2<T> {
     /* The graph which will hold the resulting MST. */
     //UndirectedGraph<T> result = new UndirectedGraph<T>();
 
-    this.listRR = new ArrayList<RoundRobinStruct<T>>();
-    this.spanningTree = new ArrayList<PairVertex<T>>();
-    this.result = new UndirectedGraph<T>();
+    listRR = new ArrayList<RoundRobinStruct<T>>();
 
     for (Iterator<T> iterator = graph.iterator(); iterator.hasNext();) {
       T node = iterator.next();
@@ -146,6 +203,7 @@ public class RoundRobinFibonacciV2<T> {
 
       // adicionando os vértices
       rrs.keys.add(node);
+      rrs.struct = makeSet(node);
       rrs.pq.enqueue(node, Double.POSITIVE_INFINITY);
       listRR.add(rrs);
     }
@@ -156,19 +214,20 @@ public class RoundRobinFibonacciV2<T> {
     if (graph.isEmpty())
       throw new Exception("The graph can not be empty");
 
+    int cont = 13;
+    //System.out.println(cond);
     while (listRR.size() > 1) {
       RoundRobinStruct<T> item = listRR.get(0);
       /* Grab the cheapest node we can add. */
       T toAdd = item.pq.dequeueMin().getValue();
-      T aux = toAdd;
 
       PairVertex<T> pair = minCostEndpoint(toAdd, item.keys, graph, result);
-      T endpoint = pair.getOne();
-      toAdd = pair.getTwo();
+      T endpoint = pair.getTwo();
+      toAdd = pair.getOne();
       /* Add this edge to the graph. */
       result.addNode(toAdd);
       result.addNode(endpoint);
-      //System.out.println("toAdd: " + toAdd + " - endpoint: " + endpoint);
+      System.out.println("toAdd: " + toAdd + " - endpoint: " + endpoint);
 
       double edgeCost = graph.edgeCost(toAdd, endpoint);
       result.addEdge(toAdd, endpoint, edgeCost);
@@ -176,25 +235,34 @@ public class RoundRobinFibonacciV2<T> {
       spanningTree.add(new PairVertex<T>(toAdd, endpoint, edgeCost));
 
       // Procurar
-      int index = find(listRR, item.keys, toAdd, endpoint);
-      if (index < 0) {
-        System.out.println("ops...");
-        System.out.println(aux);
-        minCostEndpoint(aux, item.keys, graph, result);
-      }
-      if (index >= 0) {
-        RoundRobinStruct<T> itemToMerge = listRR.get(index);
-        RoundRobinStruct<T> newItem = new RoundRobinStruct<T>();
-        newItem.pq = FibonacciHeap.merge(item.pq, itemToMerge.pq);
+      //int index = find(listRR, item.keys, toAdd, endpoint);
+      forest_struct<T> index = find(((RoundRobinStruct) endpoint).struct);
+      RoundRobinStruct<T> itemToMerge = listRR.get((Integer) index.getValue());
+      RoundRobinStruct<T> newItem = new RoundRobinStruct<T>();
+      newItem.pq = FibonacciHeap.merge(item.pq, itemToMerge.pq);
 
-        newItem.keys.addAll(item.keys);
-        newItem.keys.addAll(itemToMerge.keys);
+      newItem.keys.addAll(item.keys);
+      newItem.keys.addAll(itemToMerge.keys);
+      newItem.struct = union(item.struct, itemToMerge.struct);
 
-        // Merge
-        listRR.add(newItem);
-        listRR.remove(item);
-        listRR.remove(itemToMerge);
+      // Merge
+      listRR.add(newItem);
+      listRR.remove(item);
+      listRR.remove(itemToMerge);
+
+      //System.out.println("Tamanho da lista listRR: " + listRR.size());
+      //Thread.sleep(1000);
+      cont--;
+      if (cont == 1) {
+        //if (toAdd.equals(6) && endpoint.equals(3)) {
+        System.out.println("ops");
+        System.out.println(cont);
+        System.out.println(listRR.size());
+        System.out.println("Tem que parar !!!");
+        System.out.println("***********");
       }
+      //System.out.println(listRR.size());
+
     }
   }
 

@@ -5,7 +5,6 @@ import heap.FibonacciHeap;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -154,7 +153,7 @@ public class RoundRobinFibonacciV2<T> {
     /* The graph which will hold the resulting MST. */
     //UndirectedGraph<T> result = new UndirectedGraph<T>();
 
-    listRR = new LinkedList<RoundRobinStruct<T>>();
+    listRR = new ArrayList<RoundRobinStruct<T>>();
 
     for (Iterator<T> iterator = graph.iterator(); iterator.hasNext();) {
       T node = iterator.next();

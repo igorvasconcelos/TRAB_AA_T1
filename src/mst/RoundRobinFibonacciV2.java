@@ -173,10 +173,8 @@ public class RoundRobinFibonacciV2<T> {
 
     int cont = 13;
     //System.out.println(cond);
-    while (cont > 1) {
+    while (listRR.size() > 1) {
       RoundRobinStruct<T> item = listRR.get(0);
-      if (item.keys.size() == 13)
-        break;
       /* Grab the cheapest node we can add. */
       T toAdd = item.pq.dequeueMin().getValue();
 
@@ -186,7 +184,7 @@ public class RoundRobinFibonacciV2<T> {
       /* Add this edge to the graph. */
       result.addNode(toAdd);
       result.addNode(endpoint);
-      //System.out.println("toAdd: " + toAdd + " - endpoint: " + endpoint);
+      System.out.println("toAdd: " + toAdd + " - endpoint: " + endpoint);
 
       double edgeCost = graph.edgeCost(toAdd, endpoint);
       result.addEdge(toAdd, endpoint, edgeCost);
@@ -219,8 +217,6 @@ public class RoundRobinFibonacciV2<T> {
         System.out.println("Tem que parar !!!");
         System.out.println("***********");
       }
-
-      System.out.println(cont);
       System.out.println(listRR.size());
 
     }

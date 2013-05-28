@@ -11,7 +11,7 @@ import mst.RoundRobinFibonacciV2;
 public class RoundRobinFibonacciTester {
 
   //O nome do arquivo de input padrão(usado para testes).
-  private static final String      DEFAULT_INPUT_FILE_NAME = "data/ALUE/alue2087.stp";
+  private static final String      DEFAULT_INPUT_FILE_NAME = "data/ALUE/alue2087_teste2.stp";
   private static String            path                    = "data/DMXA/";
   private static String            inputFile               = "";
   private UndirectedGraph<Integer> graph;
@@ -77,6 +77,12 @@ public class RoundRobinFibonacciTester {
 
       Logger.printOntoScreen("Execução iniciada às: " + new Date());
       RoundRobinFibonacciV2<Integer> primFibonacci = new RoundRobinFibonacciV2<Integer>(graph);
+      //for (Integer node : graph) {
+      // System.err.println("Partindo de " + node);
+      // for (Entry<Integer, Double> entry : graph.edgesFrom(node).entrySet()) {
+      //  System.out.println("      - chega em: " + entry.getKey() + " com peso: " + entry.getValue());
+      // }
+      // }
 
       // Momento em que o algoritmo iniciou sua execução.
       long startTime = System.currentTimeMillis();

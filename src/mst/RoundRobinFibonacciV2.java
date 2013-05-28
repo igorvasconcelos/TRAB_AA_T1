@@ -5,6 +5,7 @@ import heap.FibonacciHeap;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -12,13 +13,13 @@ import library.PairVertex;
 import library.UndirectedGraph;
 
 public class RoundRobinFibonacciV2<T> {
-  private T                              startNode;
-  private UndirectedGraph<T>             graph;
-  private double                         cost;
-  private ArrayList<RoundRobinStruct<T>> listRR;
+  private T                         startNode;
+  private UndirectedGraph<T>        graph;
+  private double                    cost;
+  private List<RoundRobinStruct<T>> listRR;
 
-  private ArrayList<PairVertex<T>>       spanningTree;
-  private UndirectedGraph<T>             result;
+  private ArrayList<PairVertex<T>>  spanningTree;
+  private UndirectedGraph<T>        result;
 
   public class RoundRobinStruct<T> {
 
@@ -153,7 +154,7 @@ public class RoundRobinFibonacciV2<T> {
     /* The graph which will hold the resulting MST. */
     //UndirectedGraph<T> result = new UndirectedGraph<T>();
 
-    listRR = new ArrayList<RoundRobinStruct<T>>(graph.size());
+    listRR = new LinkedList<RoundRobinStruct<T>>();
 
     for (Iterator<T> iterator = graph.iterator(); iterator.hasNext();) {
       T node = iterator.next();
@@ -162,12 +163,6 @@ public class RoundRobinFibonacciV2<T> {
       // adicionando os vértices
       rrs.keys.add(node);
       rrs.pq.enqueue(node, Double.POSITIVE_INFINITY);
-      //result.addNode(node);
-      //rrs.result.addNode(node);
-      // adicionando as arestas para esse vértice
-      //addOutgoingEdges(node, graph, rrs.pq, rrs.result, rrs.entries);
-      //addOutgoingEdges(node, graph, rrs.pq, result, rrs.entries);
-      // adicioando na "fila"
       listRR.add(rrs);
     }
 
@@ -177,31 +172,25 @@ public class RoundRobinFibonacciV2<T> {
     if (graph.isEmpty())
       throw new Exception("The graph can not be empty");
 
-    int cont = 1;
-    while (listRR.size() > 1) {
+    int cont = 13;
+    //System.out.println(cond);
+    while (cont > 1) {
       RoundRobinStruct<T> item = listRR.get(0);
+      if (item.keys.size() == 13)
+        break;
       /* Grab the cheapest node we can add. */
       T toAdd = item.pq.dequeueMin().getValue();
-      /*
-       * Determine which edge we should pick to add to the MST. We'll do this by getting the endpoint of the edge leaving the current node that's of minimum
-       * cost and that enters the visited edges.
-       */
-      //T endpoint = minCostEndpoint(toAdd, item.keys, graph, item.result);
-      //PairVertex<T> a = minCostEndpoint(toAdd, item.keys, graph, item.result);
-      PairVertex<T> a = minCostEndpoint(toAdd, item.keys, graph, result);
-      T endpoint = a.getOne();
-      toAdd = a.getTwo();
+
+      PairVertex<T> pair = minCostEndpoint(toAdd, item.keys, graph, result);
+      T endpoint = pair.getOne();
+      toAdd = pair.getTwo();
       /* Add this edge to the graph. */
-      //item.result.addNode(toAdd);
-      //item.result.addNode(endpoint);
       result.addNode(toAdd);
       result.addNode(endpoint);
-      System.out.println("toAdd: " + toAdd + " - endpoint: " + endpoint);
+      //System.out.println("toAdd: " + toAdd + " - endpoint: " + endpoint);
 
       double edgeCost = graph.edgeCost(toAdd, endpoint);
-      //item.result.addEdge(toAdd, endpoint, edgeCost);
       result.addEdge(toAdd, endpoint, edgeCost);
-      //item.spanningTree.add(new PairVertex<T>(toAdd, endpoint, edgeCost));
 
       spanningTree.add(new PairVertex<T>(toAdd, endpoint, edgeCost));
 
@@ -211,34 +200,39 @@ public class RoundRobinFibonacciV2<T> {
       RoundRobinStruct<T> itemToMerge = listRR.get(index);
       RoundRobinStruct<T> newItem = new RoundRobinStruct<T>();
       newItem.pq = FibonacciHeap.merge(item.pq, itemToMerge.pq);
-      // newItem.entries = mergeEntries(item.entries, itemToMerge.entries);
-      //mergeResult(newItem.result, item.result, itemToMerge.result);
+
       newItem.keys.addAll(item.keys);
       newItem.keys.addAll(itemToMerge.keys);
 
-      //newItem.spanningTree.addAll(item.spanningTree);
-      //newItem.spanningTree.addAll(itemToMerge.spanningTree);
-
+      // Merge
       listRR.add(newItem);
       listRR.remove(item);
       listRR.remove(itemToMerge);
+
+      System.out.println("Tamanho da lista listRR: " + listRR.size());
+      //Thread.sleep(1000);
+      cont--;
+      if (cont == 1) {
+        //if (toAdd.equals(6) && endpoint.equals(3)) {
+        System.out.println("ops");
+        System.out.println(cont);
+        System.out.println(listRR.size());
+        System.out.println("Tem que parar !!!");
+        System.out.println("***********");
+      }
+
+      System.out.println(cont);
+      System.out.println(listRR.size());
+
     }
   }
 
   public int find(List<RoundRobinStruct<T>> listRR, ArrayList<T> keys, T node, T endPoint) {
     int index = -1;
     for (int i = 1; i < listRR.size(); i++) {
-      if (listRR.get(i).keys.contains(node))
+      if (listRR.get(i).keys.contains(node) || listRR.get(i).keys.contains(endPoint))
         index = i;
     }
-
-    if (index == -1) {
-      for (int i = 1; i < listRR.size(); i++) {
-        if (listRR.get(i).keys.contains(endPoint))
-          index = i;
-      }
-    }
-
     return index;
   }
 

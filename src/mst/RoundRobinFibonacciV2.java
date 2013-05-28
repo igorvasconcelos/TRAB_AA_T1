@@ -12,7 +12,6 @@ import library.PairVertex;
 import library.UndirectedGraph;
 
 public class RoundRobinFibonacciV2<T> {
-  private T                         startNode;
   private UndirectedGraph<T>        graph;
   private double                    cost;
   private List<RoundRobinStruct<T>> listRR;
@@ -71,11 +70,12 @@ public class RoundRobinFibonacciV2<T> {
    * Given a node in the source graph and a set of nodes that we've visited so far, returns the minimum-cost edge from that node to some node that has been
    * visited before.
    * 
+   * @param toAdd
+   * 
    * @param keys Group Keys
-   * @param node The node that has not been considered yet.
    * @param graph The original graph whose MST is being computed.
    * @param result The resulting graph, used to check what has been visited so far.
-   * @return
+   * @return pair
    */
   private PairVertex<T> minCostEndpoint(T toAdd, ArrayList<T> keys, UndirectedGraph<T> graph, UndirectedGraph<T> result) {
     //<T> T

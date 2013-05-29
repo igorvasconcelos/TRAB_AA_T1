@@ -90,7 +90,7 @@ public class RoundRobinFibonacciV2 {
           continue;
 
         // Testa se estão no mesmo grupo
-        if (find(entry.getKey()) == find(list.get(i))) {
+        if (find(entry.getKey()).equals(find(list.get(i)))) {
           continue;
         }
 
@@ -171,12 +171,12 @@ public class RoundRobinFibonacciV2 {
       /* Add this edge to the graph. */
       result.addNode(toAdd);
       result.addNode(endpoint);
-      System.out.println("toAdd: " + toAdd + " - endpoint: " + endpoint);
+      //System.out.println("toAdd: " + toAdd + " - endpoint: " + endpoint);
 
       double edgeCost = graph.edgeCost(toAdd, endpoint);
       result.addEdge(toAdd, endpoint, edgeCost);
 
-      spanningTree.add(new PairVertex<Integer>(toAdd, endpoint, edgeCost));
+      //spanningTree.add(new PairVertex<Integer>(toAdd, endpoint, edgeCost));
 
       // Procurar
       int index = find(listRR, toAdd, endpoint);
@@ -194,6 +194,9 @@ public class RoundRobinFibonacciV2 {
       }
       else {
         System.err.println(index);
+        System.out.println(find(toAdd));
+        System.out.println(find(endpoint));
+        minCostEndpoint(toAdd, graph, result);
         find(listRR, toAdd, endpoint);
       }
     }
@@ -201,7 +204,7 @@ public class RoundRobinFibonacciV2 {
 
   public int find(List<RoundRobinStruct> listRR, Integer toAdd, Integer endPoint) {
     int index = -1;
-    int u = find(toAdd);
+    //int u = find(toAdd);
     int v = find(endPoint);
 
     //System.out.println(u);

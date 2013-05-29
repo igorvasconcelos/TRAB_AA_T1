@@ -192,12 +192,16 @@ public class RoundRobinFibonacciV2 {
         listRR.remove(item);
         listRR.remove(itemToMerge);
       }
+      else {
+        System.err.println(index);
+        find(listRR, toAdd, endpoint);
+      }
     }
   }
 
-  public int find(List<RoundRobinStruct> listRR, Integer node, Integer endPoint) {
+  public int find(List<RoundRobinStruct> listRR, Integer toAdd, Integer endPoint) {
     int index = -1;
-    //int u = find(Integer.parseInt(node.toString()));
+    int u = find(toAdd);
     int v = find(endPoint);
 
     //System.out.println(u);

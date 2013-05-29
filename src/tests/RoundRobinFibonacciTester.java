@@ -11,7 +11,7 @@ import mst.RoundRobinFibonacciV2;
 public class RoundRobinFibonacciTester {
 
   //O nome do arquivo de input padrão(usado para testes).
-  private static final String      DEFAULT_INPUT_FILE_NAME = "data/ALUE/alue2087.stp";
+  private static final String      DEFAULT_INPUT_FILE_NAME = "data/ALUT/alut0787.stp";
   private static String            path                    = "data/DMXA/";
   private static String            inputFile               = "";
   private UndirectedGraph<Integer> graph;

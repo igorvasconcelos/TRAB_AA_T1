@@ -28,28 +28,6 @@ public class RoundRobinFibonacciV2 {
     /*
      * This Fibonacci heap hands back internal handles to the nodes it stores. This map will associate each node with its entry in the Fibonacci heap.
      */
-    //private Map<T, FibonacciHeap.Entry<T>> entries;
-    //private UndirectedGraph<T>             result;
-    //private ArrayList<T>                   keys;
-
-    //private ArrayList<PairVertex<T>>       spanningTree;
-
-    public int getValue() {
-      return value;
-    }
-
-    public void setValue(int value) {
-      this.value = value;
-    }
-
-    public FibonacciHeap<Integer> getPq() {
-      return pq;
-    }
-
-    public void setPq(FibonacciHeap<Integer> pq) {
-      this.pq = pq;
-    }
-
     public RoundRobinStruct() {
       pq = new FibonacciHeap<Integer>();
     }
@@ -162,9 +140,6 @@ public class RoundRobinFibonacciV2 {
       /* Grab the cheapest node we can add. */
       int toAdd = item.pq.dequeueMin().getValue();
 
-      //if (toAdd == 133)
-      //  System.out.println("ops;;");
-
       PairVertex<Integer> pair = minCostEndpoint(toAdd, graph, result);
       toAdd = pair.getOne();
       Integer endpoint = pair.getTwo();
@@ -176,7 +151,7 @@ public class RoundRobinFibonacciV2 {
       double edgeCost = graph.edgeCost(toAdd, endpoint);
       result.addEdge(toAdd, endpoint, edgeCost);
 
-      //spanningTree.add(new PairVertex<Integer>(toAdd, endpoint, edgeCost));
+      spanningTree.add(new PairVertex<Integer>(toAdd, endpoint, edgeCost));
 
       // Procurar
       int index = find(listRR, toAdd, endpoint);

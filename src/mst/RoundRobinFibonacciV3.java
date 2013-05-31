@@ -162,15 +162,16 @@ public class RoundRobinFibonacciV3 {
         RoundRobinStruct itemToMerge = listRR.get(index);
         RoundRobinStruct newItem = new RoundRobinStruct();
         newItem.pq = FibonacciHeap.merge(item.pq, itemToMerge.pq);
-        newItem.value = itemToMerge.value;
+        //newItem.value = itemToMerge.value;
 
         // Merge
-        union(item.value, itemToMerge.value);
+        //union(item.value, itemToMerge.value);
+        newItem.value = union(toAdd, endpoint);
         listRR.add(newItem);
         listRR.remove(item);
         listRR.remove(itemToMerge);
       }
-      else {
+      else { // apenas para teste
         System.err.println(index);
         System.out.println(find(toAdd));
         System.out.println(find(endpoint));
@@ -197,14 +198,6 @@ public class RoundRobinFibonacciV3 {
     return index;
   }
 
-  public boolean findSpanningTree(Integer node, ArrayList<PairVertex<?>> spanningTree) {
-    for (PairVertex<?> pairVertex : spanningTree) {
-      if (pairVertex.getOne().equals(node) || pairVertex.getTwo().equals(node))
-        return true;
-    }
-    return false;
-  }
-
   private void makeSet() {
     for (int i = 0; i <= this.graph.size(); i++) {
       groups.add(-1);
@@ -212,21 +205,23 @@ public class RoundRobinFibonacciV3 {
     }
   }
 
-  private void union(Integer one, Integer two) {
+  private int union(Integer one, Integer two) {
     int u = find(one);
     int v = find(two);
 
     if (ranks.get(one).compareTo(ranks.get(two)) > 0) {
-      groups.set(u, v);
+      groups.set(v, u);
+      return u;
     }
     else if (ranks.get(two).compareTo(ranks.get(one)) > 0) {
-      groups.set(v, u);
+      groups.set(u, v);
+      return v;
     }
     else {
       groups.set(v, u);
       ranks.set(one, ranks.get(one) + 1);
     }
-
+    return u;
   }
 
   private Integer find(Integer node) {

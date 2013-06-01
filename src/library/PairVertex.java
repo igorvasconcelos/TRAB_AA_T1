@@ -45,11 +45,15 @@ public class PairVertex<T> {
 
   @Override
   public boolean equals(Object object) {
-    if (this.one.equals(object) || this.two.equals(object))
-      return true;
-    /*
-     * if (object instanceof PairVertex) { PairVertex<?> pv = (PairVertex<?>) object; if (pv.one.equals(this.one) || pv.two.equals(this.two)) { return true; } }
-     */
+    if (object instanceof PairVertex<?>) {
+      PairVertex<?> obj = (PairVertex<?>) object;
+      if (this.one.equals(obj.getOne()) || this.two.equals(obj.getTwo()))
+        return true;
+      /*
+       * if (object instanceof PairVertex) { PairVertex<?> pv = (PairVertex<?>) object; if (pv.one.equals(this.one) || pv.two.equals(this.two)) { return true; }
+       * }
+       */
+    }
     return false;
   }
 

@@ -6,7 +6,7 @@ import java.util.Date;
 import library.Logger;
 import library.UndirectedGraph;
 import library.Utils;
-import mst.RoundRobinFibonacciV2;
+import mst.RoundRobinFibonacciV4;
 
 public class RoundRobinFibonacciTester {
 
@@ -75,7 +75,7 @@ public class RoundRobinFibonacciTester {
     try {
 
       Logger.printOntoScreen("Execução iniciada às: " + new Date());
-      RoundRobinFibonacciV2 primFibonacci = new RoundRobinFibonacciV2(graph);
+      RoundRobinFibonacciV4 primFibonacci = new RoundRobinFibonacciV4(graph);
       //for (Integer node : graph) {
       // System.err.println("Partindo de " + node);
       // for (Entry<Integer, Double> entry : graph.edgesFrom(node).entrySet()) {

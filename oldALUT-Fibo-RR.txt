@@ -1,0 +1,11 @@
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 15:54:15 BRT 2013-Tue Jun 04 15:54:20 BRT 2013-6043.0-11.651163-430
+alut0805.stp-Tue Jun 04 15:54:20 BRT 2013-Tue Jun 04 15:54:25 BRT 2013-5065.0-6.337136-789
+alut1181.stp-Tue Jun 04 15:54:25 BRT 2013-Tue Jun 04 15:54:30 BRT 2013-16352.0-66.06579-76
+alut2010.stp-Tue Jun 04 15:54:30 BRT 2013-Tue Jun 04 15:54:35 BRT 2013-33723.0-244.7619-21
+alut2288.stp-Tue Jun 04 15:54:35 BRT 2013-Tue Jun 04 15:54:40 BRT 2013-49737.0-476.36365-11
+alut2566.stp-Tue Jun 04 15:54:40 BRT 2013-Tue Jun 04 15:54:46 BRT 2013-27596.0-176.6207-29
+alut2610.stp-Tue Jun 04 15:54:46 BRT 2013-Tue Jun 04 15:54:52 BRT 2013-184956.0-5810.0-1
+alut2625.stp-Tue Jun 04 15:54:52 BRT 2013-Tue Jun 04 15:54:58 BRT 2013-200270.0-6010.0-1
+alut2764.stp-Tue Jun 04 15:54:58 BRT 2013-Tue Jun 04 15:55:03 BRT 2013-1970.0-1.5216068-3286

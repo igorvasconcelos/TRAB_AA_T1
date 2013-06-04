@@ -31,7 +31,7 @@ public class RoundRobinFibonacciTester {
       // Informa que a applicação esta em modo debug.
       Logger.isDebugging = false;
     }
-    Logger.printOntoScreen(" ********* Round Robin *********");
+    Logger.printOntoScreen(" ********* Round Robin com Heap de Fibonacci *********");
     new RoundRobinFibonacciTester().run(args.length == 2); //args.length == 2
   }
 

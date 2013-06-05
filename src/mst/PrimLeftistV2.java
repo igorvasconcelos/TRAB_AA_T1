@@ -40,12 +40,12 @@ import library.UndirectedGraph;
 
 // For HashMap
 
-public final class PrimLeftistV2 {
+public final class PrimLeftistV2<T> {
 
-  private int                            startNode;
-  private UndirectedGraph<Integer>       graph;
-  private double                         cost;
-  private ArrayList<PairVertex<Integer>> spanningTree;
+  private T                        startNode;
+  private UndirectedGraph<T>       graph;
+  private double                   cost;
+  private ArrayList<PairVertex<T>> spanningTree;
 
   /**
    * Given a node in the source graph and a set of nodes that we've visited so far, returns the minimum-cost edge from that node to some node that has been
@@ -55,15 +55,15 @@ public final class PrimLeftistV2 {
    * @param graph The original graph whose MST is being computed.
    * @param result The resulting graph, used to check what has been visited so far.
    */
-  private static int minCostEndpoint(int node, UndirectedGraph<Integer> graph, UndirectedGraph<Integer> result) {
+  private static <T> T minCostEndpoint(T node, UndirectedGraph<T> graph, UndirectedGraph<T> result) {
     /*
      * Track the best endpoint so far and its cost, initially null and +infinity.
      */
-    int endpoint = 0;
+    T endpoint = null;
     double leastCost = Double.POSITIVE_INFINITY;
 
     /* Scan each node, checking whether it's a candidate. */
-    for (Map.Entry<Integer, Double> entry : graph.edgesFrom(node).entrySet()) {
+    for (Map.Entry<T, Double> entry : graph.edgesFrom(node).entrySet()) {
       /*
        * If the endpoint isn't in the nodes constructed so far, don't consider it.
        */
@@ -96,10 +96,10 @@ public final class PrimLeftistV2 {
    *          isn't in the queue.
    * @param entries A map from nodes to their corresponding heap entries. We need this so we can call decreaseKey on the correct elements.
    */
-  private static void addOutgoingEdges(int node, UndirectedGraph<Integer> graph, LeftistHeapV2 pq, UndirectedGraph<Integer> result,
-    Map<Integer, LeftistHeapV2.LeftistHeapEntry> entries) {
+  private static <T> void addOutgoingEdges(T node, UndirectedGraph<T> graph, LeftistHeapV2<T> pq, UndirectedGraph<T> result,
+    Map<T, LeftistHeapV2.LeftistHeapEntry<T>> entries) {
     /* Start off by scanning over all edges emanating from our node. */
-    for (Map.Entry<Integer, Double> arc : graph.edgesFrom(node).entrySet()) {
+    for (Map.Entry<T, Double> arc : graph.edgesFrom(node).entrySet()) {
       /*
        * Given this arc, there are four possibilities.
        * 
@@ -126,7 +126,7 @@ public final class PrimLeftistV2 {
     }
   }
 
-  public int getStartNode() {
+  public T getStartNode() {
     return startNode;
   }
 
@@ -134,26 +134,26 @@ public final class PrimLeftistV2 {
     return cost;
   }
 
-  public ArrayList<PairVertex<Integer>> getSpanningTree() {
+  public ArrayList<PairVertex<T>> getSpanningTree() {
     return spanningTree;
   }
 
-  public PrimLeftistV2(UndirectedGraph<Integer> graph) throws Exception {
+  public PrimLeftistV2(UndirectedGraph<T> graph) throws Exception {
     this.graph = graph;
-    this.spanningTree = new ArrayList<PairVertex<Integer>>();
+    this.spanningTree = new ArrayList<PairVertex<T>>();
   }
 
   public void generateMST() throws Exception {
     /* The Fibonacci heap we'll use to select nodes efficiently. */
-	  LeftistHeapV2 pq = new LeftistHeapV2();
+	  LeftistHeapV2<T> pq = new LeftistHeapV2<T>();
     cost = 0;
     /*
      * This Fibonacci heap hands back internal handles to the nodes it stores. This map will associate each node with its entry in the Fibonacci heap.
      */
-    Map<Integer, LeftistHeapV2.LeftistHeapEntry> entries = new HashMap<Integer, LeftistHeapV2.LeftistHeapEntry>();
+    Map<T, LeftistHeapV2.LeftistHeapEntry<T>> entries = new HashMap<T, LeftistHeapV2.LeftistHeapEntry<T>>();
 
     /* The graph which will hold the resulting MST. */
-    UndirectedGraph<Integer> result = new UndirectedGraph<Integer>();
+    UndirectedGraph<T> result = new UndirectedGraph<T>();
 
     /*
      * As an edge case, if the graph is empty, just hand back the empty graph.
@@ -181,13 +181,13 @@ public final class PrimLeftistV2 {
     for (int i = 0; i < graph.size() - 1; ++i) {
       /* Grab the cheapest node we can add. */
       //int toAdd = pq.dequeueMin().getValue();
-      int toAdd = pq.extractMinimum().getKey();
+      T toAdd = pq.extractMinimum().getKey();
 
       /*
        * Determine which edge we should pick to add to the MST. We'll do this by getting the endpoint of the edge leaving the current node that's of minimum
        * cost and that enters the visited edges.
        */
-      int endpoint = minCostEndpoint(toAdd, graph, result);
+      T endpoint = minCostEndpoint(toAdd, graph, result);
 
       /* Add this edge to the graph. */
       result.addNode(toAdd);
@@ -197,7 +197,7 @@ public final class PrimLeftistV2 {
 
       double edgeCost = graph.edgeCost(toAdd, endpoint);
       cost += edgeCost;
-      this.spanningTree.add(new PairVertex<Integer>(endpoint, toAdd, edgeCost));
+      this.spanningTree.add(new PairVertex<T>(endpoint, toAdd, edgeCost));
 
       /* Explore outward from this node. */
       addOutgoingEdges(toAdd, graph, pq, result, entries);

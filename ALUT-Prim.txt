@@ -1,0 +1,138 @@
+﻿ ********* Prim com arvore AVL *********
+***********************************************
+Lendo Arquivo: alut0787.stp
+Custo total da MST: 6043.0
+Tempo de execução médio: 9.874016 milesegundos
+Quantidade de itera��es em 5 segundos: 508
+***********************************************
+Lendo Arquivo: alut0805.stp
+Custo total da MST: 5065.0
+Tempo de execução médio: 5.406582 milesegundos
+Quantidade de itera��es em 5 segundos: 942
+***********************************************
+Lendo Arquivo: alut1181.stp
+Custo total da MST: 16352.0
+Tempo de execução médio: 29.94012 milesegundos
+Quantidade de itera��es em 5 segundos: 167
+***********************************************
+Lendo Arquivo: alut2010.stp
+Custo total da MST: 33723.0
+Tempo de execução médio: 94.62264 milesegundos
+Quantidade de itera��es em 5 segundos: 53
+***********************************************
+Lendo Arquivo: alut2288.stp
+Custo total da MST: 49737.0
+Tempo de execução médio: 144.65715 milesegundos
+Quantidade de itera��es em 5 segundos: 35
+***********************************************
+Lendo Arquivo: alut2566.stp
+Custo total da MST: 27596.0
+Tempo de execução médio: 54.858696 milesegundos
+Quantidade de itera��es em 5 segundos: 92
+***********************************************
+Lendo Arquivo: alut2610.stp
+Custo total da MST: 184956.0
+Tempo de execução médio: 770.1429 milesegundos
+Quantidade de itera��es em 5 segundos: 7
+***********************************************
+Lendo Arquivo: alut2625.stp
+Custo total da MST: 200270.0
+Tempo de execução médio: 770.0 milesegundos
+Quantidade de itera��es em 5 segundos: 7
+***********************************************
+Lendo Arquivo: alut2764.stp
+Custo total da MST: 1970.0
+Tempo de execução médio: 1.8559762 milesegundos
+Quantidade de itera��es em 5 segundos: 2694
+ ********* Prim com Heap de Leftist *********
+***********************************************
+Lendo Arquivo....: alut0787.stp
+Custo total da MST: 6043.0
+Tempo de execução médio : 3.1168427 milesegundos
+Quantidade de iterações em 5 segundos: 1609
+***********************************************
+Lendo Arquivo....: alut0805.stp
+Custo total da MST: 5065.0
+Tempo de execução médio : 2.2758307 milesegundos
+Quantidade de iterações em 5 segundos: 2197
+***********************************************
+Lendo Arquivo....: alut1181.stp
+Custo total da MST: 16352.0
+Tempo de execução médio : 7.7760496 milesegundos
+Quantidade de iterações em 5 segundos: 643
+***********************************************
+Lendo Arquivo....: alut2010.stp
+Custo total da MST: 33723.0
+Tempo de execução médio : 16.02564 milesegundos
+Quantidade de iterações em 5 segundos: 312
+***********************************************
+Lendo Arquivo....: alut2288.stp
+Custo total da MST: 49737.0
+Tempo de execução médio : 24.950249 milesegundos
+Quantidade de iterações em 5 segundos: 201
+***********************************************
+Lendo Arquivo....: alut2566.stp
+Custo total da MST: 27596.0
+Tempo de execução médio : 13.755435 milesegundos
+Quantidade de iterações em 5 segundos: 368
+***********************************************
+Lendo Arquivo....: alut2610.stp
+Custo total da MST: 184956.0
+Tempo de execução médio : 113.55556 milesegundos
+Quantidade de iterações em 5 segundos: 45
+***********************************************
+Lendo Arquivo....: alut2625.stp
+Custo total da MST: 200270.0
+Tempo de execução médio : 125.0 milesegundos
+Quantidade de iterações em 5 segundos: 40
+***********************************************
+Lendo Arquivo....: alut2764.stp
+Custo total da MST: 1970.0
+Tempo de execução médio : 0.86206895 milesegundos
+Quantidade de iterações em 5 segundos: 5800
+ ********* Prim com Heap de Fibonacci *********
+***********************************************
+Lendo Arquivo....: alut0787.stp
+Custo total da MST: 6043.0
+Tempo de execução médio: 3.6127167 milesegundos
+Quantidade de iterações em 5 segundos: 1384
+***********************************************
+Lendo Arquivo....: alut0805.stp
+Custo total da MST: 5065.0
+Tempo de execução médio: 2.7685492 milesegundos
+Quantidade de iterações em 5 segundos: 1806
+***********************************************
+Lendo Arquivo....: alut1181.stp
+Custo total da MST: 16352.0
+Tempo de execução médio: 9.505703 milesegundos
+Quantidade de iterações em 5 segundos: 526
+***********************************************
+Lendo Arquivo....: alut2010.stp
+Custo total da MST: 33723.0
+Tempo de execução médio: 19.53125 milesegundos
+Quantidade de iterações em 5 segundos: 256
+***********************************************
+Lendo Arquivo....: alut2288.stp
+Custo total da MST: 49737.0
+Tempo de execução médio: 31.949045 milesegundos
+Quantidade de iterações em 5 segundos: 157
+***********************************************
+Lendo Arquivo....: alut2566.stp
+Custo total da MST: 27596.0
+Tempo de execução médio: 16.286646 milesegundos
+Quantidade de iterações em 5 segundos: 307
+***********************************************
+Lendo Arquivo....: alut2610.stp
+Custo total da MST: 184956.0
+Tempo de execução médio: 174.03448 milesegundos
+Quantidade de iterações em 5 segundos: 29
+***********************************************
+Lendo Arquivo....: alut2625.stp
+Custo total da MST: 200270.0
+Tempo de execução médio: 182.5 milesegundos
+Quantidade de iterações em 5 segundos: 28
+***********************************************
+Lendo Arquivo....: alut2764.stp
+Custo total da MST: 1970.0
+Tempo de execução médio: 1.0414497 milesegundos
+Quantidade de iterações em 5 segundos: 4801

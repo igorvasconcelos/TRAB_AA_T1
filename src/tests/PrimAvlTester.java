@@ -11,7 +11,7 @@ import mst.PrimTree;
 public class PrimAvlTester {
   // O nome do arquivo de input padr�o (usado para testes).
   private static final String      DEFAULT_INPUT_FILE_NAME = "data/ALUE/alue2087.stp";
-  private static String            path                    = "data/ALUT/";
+  private static String            path                    = "data/DMXA/";
   private static String            inputFile               = "";
   private UndirectedGraph<Integer> graph;
 
@@ -29,7 +29,7 @@ public class PrimAvlTester {
       // Informa que a applicação esta em modo debug.
       Logger.isDebugging = false;
     }
-    Logger.printOntoScreen(" ********* Prim com AVL *********");
+    Logger.printOntoScreen(" ********* Prim com arvore AVL *********");
     new PrimAvlTester().run(true);
   }
 
@@ -50,7 +50,7 @@ public class PrimAvlTester {
           Logger.printOntoScreen("Lendo Arquivo: " + fileName);
           graph = new UndirectedGraph<Integer>();
           Utils.getUndirectedFromInputFile(graph, fileNameAndPath);
-          Logger.printOntoScreen("Grafo Montado.");
+          //Logger.printOntoScreen("Grafo Montado.");
           genericProcess(graph);
         }
       }
@@ -71,7 +71,7 @@ public class PrimAvlTester {
    */
   protected void genericProcess(UndirectedGraph<Integer> graph) {
     try {
-      Logger.printOntoScreen("Execução iniciada às: " + new Date());
+      //Logger.printOntoScreen("Execução iniciada às: " + new Date());
       PrimTree primAvl = new PrimTree(graph);
 
       // Momento em que o algoritmo iniciou sua execu��o.
@@ -95,7 +95,7 @@ public class PrimAvlTester {
       float media = (float) finishTime / iterations;
 
       // Imprime os resultados obtidos.
-      Logger.printOntoScreen("Execução Finalizada as: " + new Date());
+      //Logger.printOntoScreen("Execução Finalizada as: " + new Date());
       Logger.printOntoScreen("Custo total da MST: " + primAvl.getCost());
       Logger.printOntoScreen("Tempo de execução médio: " + media + " milesegundos");
       Logger.printOntoScreen("Quantidade de itera��es em 5 segundos: " + iterations);

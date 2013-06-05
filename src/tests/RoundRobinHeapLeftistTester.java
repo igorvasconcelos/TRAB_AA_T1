@@ -6,13 +6,13 @@ import java.util.Date;
 import library.Logger;
 import library.UndirectedGraph;
 import library.Utils;
-import mst.RoundRobinFibonacciV4;
+import mst.RoundRobinLeftistHeap;
 
 public class RoundRobinHeapLeftistTester {
 
   //O nome do arquivo de input padrão(usado para testes).
-  private static final String      DEFAULT_INPUT_FILE_NAME = "data/ALUE/alue2087.stp";
-  private static String            path                    = "data/DMXA/";
+  private static final String      DEFAULT_INPUT_FILE_NAME = "data/DMXA/dmxa0628.stp";
+  private static String            path                    = "data/ALUE/";
   private static String            inputFile               = "";
   private UndirectedGraph<Integer> graph;
 
@@ -31,8 +31,8 @@ public class RoundRobinHeapLeftistTester {
       // Informa que a applicação esta em modo debug.
       Logger.isDebugging = false;
     }
-    Logger.printOntoScreen(" ********* Round Robin com Heap Leftist *********");
-    new RoundRobinHeapLeftistTester().run(args.length == 2); //args.length == 2
+    Logger.printOntoScreen(" ********* Round Robin com Heap de Leftist *********");
+    new RoundRobinHeapLeftistTester().run(true); //args.length == 2
   }
 
   public void run(boolean batch) throws Exception {
@@ -53,7 +53,7 @@ public class RoundRobinHeapLeftistTester {
           graph = new UndirectedGraph<Integer>();
           Utils.getUndirectedFromInputFile(graph, fileNameAndPath);
 
-          Logger.printOntoScreen("Grafo Montado.");
+          //Logger.printOntoScreen("Grafo Montado.");
           genericProcess(graph);
         }
       }
@@ -74,8 +74,8 @@ public class RoundRobinHeapLeftistTester {
   protected void genericProcess(UndirectedGraph<Integer> graph) {
     try {
 
-      Logger.printOntoScreen("Execução iniciada às: " + new Date());
-      RoundRobinFibonacciV4 primFibonacci = new RoundRobinFibonacciV4(graph);
+      //Logger.printOntoScreen("Execução iniciada às: " + new Date());
+      RoundRobinLeftistHeap rrLeftist = new RoundRobinLeftistHeap(graph);
       //for (Integer node : graph) {
       // System.err.println("Partindo de " + node);
       // for (Entry<Integer, Double> entry : graph.edgesFrom(node).entrySet()) {
@@ -91,7 +91,7 @@ public class RoundRobinHeapLeftistTester {
 
       while (System.currentTimeMillis() - startTime < 5000) {
         // Em cada iteração, é um novo processamento, então a quantidade de operações é setada para 0.
-        primFibonacci.generateMST();
+        rrLeftist.generateMST();
 
         // Incrementa a quantidade de iterações feitas dentro de 5 segundos.
         iterations++;
@@ -106,8 +106,8 @@ public class RoundRobinHeapLeftistTester {
 
       // Imprime os resultados obtidos.
       //System.err.println("Fim em mile: " + finishTime);
-      Logger.printOntoScreen("Execução Finalizada as: " + new Date());
-      Logger.printOntoScreen("Custo total da MST: " + primFibonacci.getCost());
+      //Logger.printOntoScreen("Execução Finalizada as: " + new Date());
+      Logger.printOntoScreen("Custo total da MST: " + rrLeftist.getCost());
       Logger.printOntoScreen("Tempo de execução médio: " + media + " milisegundos");
       Logger.printOntoScreen("Quantidade de iterações em 5 segundos: " + iterations);
 

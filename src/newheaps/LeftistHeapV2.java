@@ -109,8 +109,7 @@ import java.io.Serializable;
  * @author Fran Lattanzio
  * @version $Revision$ $Date$
  */
-public class LeftistHeapV2 extends AbstractLinkedHeap
-        implements Serializable
+public class LeftistHeapV2<T> extends AbstractLinkedHeap<T> implements Serializable
 {
 
         /**
@@ -126,7 +125,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
         /**
          * The root/minimum node.
          */
-        transient LeftistHeapEntry minimum;
+        transient LeftistHeapEntry<T> minimum;
 
         /**
          * The size of this heap.
@@ -210,7 +209,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
          * @see org.teneighty.heap.Heap#holdsEntry(org.teneighty.heap.Heap.Entry)
          */
         @Override
-        public boolean holdsEntry(final Heap.Entry e) throws NullPointerException
+        public boolean holdsEntry(final Heap.Entry<T> e) throws NullPointerException
         {
                 if (e == null)
                 {
@@ -224,7 +223,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
                 }
 
                 // Narrow.
-                LeftistHeapEntry entry = (LeftistHeapEntry) e;
+                LeftistHeapEntry<T> entry = (LeftistHeapEntry<T>) e;
 
                 // Use reference trickery.
                 return entry.isContainedBy(this);
@@ -234,9 +233,9 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
          * @see org.teneighty.heap.Heap#insert(java.lang.Object, java.lang.Object)
          */
         @Override
-        public LeftistHeapEntry insert(final Integer key, final Double value) throws ClassCastException, NullPointerException
+        public LeftistHeapEntry<T> insert(final T key, final Double value) throws ClassCastException, NullPointerException
         {
-                LeftistHeapEntry lhe = new LeftistHeapEntry(key, value, source_heap);
+                LeftistHeapEntry<T> lhe = new LeftistHeapEntry<T>(key, value, source_heap);
 
                 // Link new entry with current minimum.
                 minimum = link(minimum, lhe);
@@ -263,7 +262,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
          * @return the entry which is now the parent of tree containing both
          *         <code>e1</code> and <code>e2</code>.
          */
-        private LeftistHeapEntry link(final LeftistHeapEntry e1, final LeftistHeapEntry e2)
+        private LeftistHeapEntry<T> link(final LeftistHeapEntry<T> e1, final LeftistHeapEntry<T> e2)
         {
                 if (e1 == null)
                 {
@@ -298,7 +297,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
          * @throws NullPointerException If <code>parent</code> or
          *             <code>newleft</code> are <code>null</code>.
          */
-        private void linkLeft(final LeftistHeapEntry parent, final LeftistHeapEntry newleft) throws NullPointerException
+        private void linkLeft(final LeftistHeapEntry<T> parent, final LeftistHeapEntry<T> newleft) throws NullPointerException
         {
                 if (parent.left == null)
                 {
@@ -312,7 +311,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
 
                         // First, link the parent's right and the new left (which isn't so
                         // left anymore).
-                        LeftistHeapEntry newright = link(parent.right, newleft);
+                        LeftistHeapEntry<T> newright = link(parent.right, newleft);
 
                         // Set dumb references.
                         parent.right = newright;
@@ -323,7 +322,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
                         if (parent.right.nullPathLength > parent.left.nullPathLength)
                         {
                                 // Swap them!
-                                LeftistHeapEntry happy = parent.right;
+                                LeftistHeapEntry<T> happy = parent.right;
                                 parent.right = parent.left;
                                 parent.left = happy;
                         }
@@ -337,7 +336,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
          * @see org.teneighty.heap.Heap#union(org.teneighty.heap.Heap)
          */
         @Override
-        public void union(final Heap other) throws ClassCastException, NullPointerException, IllegalArgumentException
+        public void union(final Heap<T> other) throws ClassCastException, NullPointerException, IllegalArgumentException
         {
                 if (other == null)
                 {
@@ -356,7 +355,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
 
                 if (other.getClass().equals(LeftistHeapV2.class))
                 {
-                        LeftistHeapV2 that = (LeftistHeapV2) other;
+                        LeftistHeapV2<T> that = (LeftistHeapV2<T>) other;
 
                         try
                         {
@@ -390,7 +389,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
          * @see org.teneighty.heap.Heap#getMinimum()
          */
         @Override
-        public Entry getMinimum()
+        public Entry<T> getMinimum()
                 throws NoSuchElementException
         {
                 if (minimum == null)
@@ -405,7 +404,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
          * @see org.teneighty.heap.Heap#extractMinimum()
          */
         @Override
-        public Entry extractMinimum() throws NoSuchElementException
+        public Entry<T> extractMinimum() throws NoSuchElementException
         {
                 if (minimum == null)
                 {
@@ -413,7 +412,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
                 }
 
                 // Temp pointer...
-                LeftistHeapEntry min = minimum;
+                LeftistHeapEntry<T> min = minimum;
 
                 // Replace the minimum.
                 minimum = link(min.left, min.right);
@@ -442,7 +441,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
          * @see org.teneighty.heap.Heap#decreaseKey(org.teneighty.heap.Heap.Entry, java.lang.Object)
          */
         @Override
-        public void decreaseKey(final Heap.Entry e, final Double k) throws IllegalArgumentException, ClassCastException
+        public void decreaseKey(final Heap.Entry<T> e, final Double k) throws IllegalArgumentException, ClassCastException
         {
                 // Check and cast.
                 if (holdsEntry(e) == false)
@@ -451,7 +450,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
                 }
 
                 // Narrow.
-                LeftistHeapEntry x = (LeftistHeapEntry) e;
+                LeftistHeapEntry<T> x = (LeftistHeapEntry<T>) e;
 
                 // Check key... May throw class cast as well.
                 if (compareKeys(k, x.getValue()) > 0)
@@ -480,7 +479,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
          * @see org.teneighty.heap.Heap#delete(org.teneighty.heap.Heap.Entry)
          */
         @Override
-        public void delete(final Heap.Entry e) throws IllegalArgumentException, NullPointerException
+        public void delete(final Heap.Entry<T> e) throws IllegalArgumentException, NullPointerException
         {
                 // Check and cast.
                 if (holdsEntry(e) == false)
@@ -489,7 +488,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
                 }
 
                 // Narrow.
-                LeftistHeapEntry entry = (LeftistHeapEntry) e;
+                LeftistHeapEntry<T> entry = (LeftistHeapEntry<T>) e;
 
                 if (entry == minimum)
                 {
@@ -516,16 +515,16 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
          *
          * @param entry the entry to cut.
          */
-        private void cut(final LeftistHeapEntry entry)
+        private void cut(final LeftistHeapEntry<T> entry)
         {
                 // Which side are we replacing?
                 boolean left = (entry.parent.left == entry);
 
                 // Find the replacemnet.
-                LeftistHeapEntry replacement = link(entry.left, entry.right);
+                LeftistHeapEntry<T> replacement = link(entry.left, entry.right);
 
                 // Definitely not null...
-                LeftistHeapEntry parent = entry.parent;
+                LeftistHeapEntry<T> parent = entry.parent;
 
                 // Actually replace.
                 if (left)
@@ -548,7 +547,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
                         // Easy case - parent has no left (which must be replacement, which
                         // must
                         // also have been null, but why check stuff we know is true?)
-                        LeftistHeapEntry happy = parent.right;
+                        LeftistHeapEntry<T> happy = parent.right;
                         parent.right = parent.left;
                         parent.left = happy;
                         parent.nullPathLength = 0;
@@ -557,7 +556,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
                                 && parent.right.nullPathLength > parent.left.nullPathLength)
                 {
                         // Swap them!
-                        LeftistHeapEntry happy = parent.right;
+                        LeftistHeapEntry<T> happy = parent.right;
                         parent.right = parent.left;
                         parent.left = happy;
                         parent.nullPathLength = (parent.right.nullPathLength + 1);
@@ -596,7 +595,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
          * @see org.teneighty.heap.Heap#iterator()
          */
         @Override
-        public Iterator<Heap.Entry> iterator()
+        public Iterator<Heap.Entry<T>> iterator()
         {
                 return new EntryIterator();
         }
@@ -620,8 +619,8 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
                 out.writeInt(size);
 
                 // Write out all key/value pairs.
-                Iterator<Heap.Entry> it = new EntryIterator();
-                Heap.Entry et = null;
+                Iterator<Heap.Entry<T>> it = new EntryIterator();
+                Heap.Entry<T> et = null;
                 while (it.hasNext())
                 {
                         try
@@ -656,6 +655,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
          * @throws ClassNotFoundException If deserialization tries to classload an
          *             undefined class.
          */
+        @SuppressWarnings("unchecked")
         private void readObject(final ObjectInputStream in)
                 throws IOException, ClassNotFoundException
         {
@@ -669,11 +669,11 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
                 source_heap = new HeapReference(this);
 
                 // Read and insert all the keys and values.
-                Integer key;
+                T key;
                 Double value;
                 for (int index = 0; index < rsize; index++)
                 {
-                        key = (Integer) in.readObject();
+                        key = (T) in.readObject();
                         value = (Double) in.readObject();
                         insert(key, value);
                 }
@@ -690,13 +690,13 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
          * @version $Revision$ $Date: 2009-10-29 23:54:44 -0400 (Thu, 29 Oct
          *          2009) $
          */
-        private final class EntryIterator extends Object implements Iterator<Heap.Entry>
+        private final class EntryIterator extends Object implements Iterator<Heap.Entry<T>>
         {
 
                 /**
                  * The next entry.
                  */
-                private LeftistHeapEntry next;
+                private LeftistHeapEntry<T> next;
 
                 /**
                  * The mod count.
@@ -745,7 +745,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
                  * @see java.util.Iterator#next()
                  */
                 @Override
-                public Heap.Entry next()
+                public Heap.Entry<T> next()
                         throws NoSuchElementException, ConcurrentModificationException
                 {
                         if (hasNext() == false)
@@ -754,7 +754,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
                         }
 
                         // Get the next node.
-                        LeftistHeapEntry n = next;
+                        LeftistHeapEntry<T> n = next;
                         next = getSuccessor(next);
                         return n;
                 }
@@ -766,7 +766,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
                  * @param entry the entry.
                  * @return the next node or <code>null</code>.
                  */
-                private LeftistHeapEntry getSuccessor(final LeftistHeapEntry entry)
+                private LeftistHeapEntry<T> getSuccessor(final LeftistHeapEntry<T> entry)
                 {
                         if (entry == null)
                         {
@@ -774,7 +774,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
                         }
                         else if (entry.right != null)
                         {
-                                LeftistHeapEntry p = entry.right;
+                                LeftistHeapEntry<T> p = entry.right;
                                 while (p.left != null)
                                 {
                                         p = p.left;
@@ -783,8 +783,8 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
                         }
                         else
                         {
-                                LeftistHeapEntry p = entry.parent;
-                                LeftistHeapEntry ch = entry;
+                                LeftistHeapEntry<T> p = entry.parent;
+                                LeftistHeapEntry<T> ch = entry;
                                 while (p != null && ch == p.right)
                                 {
                                         ch = p;
@@ -816,7 +816,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
          * @version $Revision$ $Date: 2009-10-29 23:54:44 -0400 (Thu, 29 Oct
          *          2009) $
          */
-        public static final class LeftistHeapEntry extends AbstractLinkedHeap.AbstractLinkedHeapEntry implements Serializable
+        public static final class LeftistHeapEntry<T> extends AbstractLinkedHeap.AbstractLinkedHeapEntry<T> implements Serializable
         {
 
                 /**
@@ -827,17 +827,17 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
                 /**
                  * The parent node.
                  */
-                transient LeftistHeapEntry left;
+                transient LeftistHeapEntry<T> left;
 
                 /**
                  * The sibling node.
                  */
-                transient LeftistHeapEntry right;
+                transient LeftistHeapEntry<T> right;
 
                 /**
                  * The parent node.
                  */
-                transient LeftistHeapEntry parent;
+                transient LeftistHeapEntry<T> parent;
 
                 /**
                  * The null path length.
@@ -851,7 +851,7 @@ public class LeftistHeapV2 extends AbstractLinkedHeap
                  * @param value the value.
                  * @param ref the creating containing heap.
                  */
-                LeftistHeapEntry(final Integer key, final Double value, final HeapReference ref)
+                LeftistHeapEntry(final T key, final Double value, final HeapReference ref)
                 {
                         super(key, value, ref);
                 }

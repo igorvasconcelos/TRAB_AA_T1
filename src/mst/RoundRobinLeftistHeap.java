@@ -31,7 +31,7 @@ public class RoundRobinLeftistHeap {
      */
 
     public RoundRobinStruct() {
-      pq = new LeftistHeap<PairVertex<Integer>>();
+      pq = new LeftistHeapV2<PairVertex<Integer>>();
     }
   }
 
@@ -106,7 +106,9 @@ public class RoundRobinLeftistHeap {
       if (index >= 0) {
         RoundRobinStruct itemToMerge = listRR.get(index);
         RoundRobinStruct newItem = new RoundRobinStruct();
-        newItem.pq = LeftistHeap.merge(item.pq, itemToMerge.pq);
+        //newItem.pq = LeftistHeapV2.merge(item.pq, itemToMerge.pq);
+        newItem.pq.insertAll(item.pq);
+        newItem.pq.union(itemToMerge.pq);
 
         // Merge
         newItem.value = union(edge.getOne(), edge.getTwo());
@@ -126,7 +128,8 @@ public class RoundRobinLeftistHeap {
     PairVertex<Integer> edge;
     int group;
     do {
-      edge = item.pq.dequeueMin().getValue();
+      //edge = item.pq.dequeueMin().getValue();
+      edge = item.pq.extractMinimum().getKey();
 
       group = find(edge.getTwo());
     } while (result.containsEdge(edge.getOne(), edge.getTwo()) || item.value.equals(group));
@@ -180,10 +183,11 @@ public class RoundRobinLeftistHeap {
     return groups.get(node).equals(-1) ? node : find(groups.get(node));
   }
 
-  private void makeEdgesFrom(LeftistHeap<PairVertex<Integer>> heap, int node) {
+  private void makeEdgesFrom(LeftistHeapV2<PairVertex<Integer>> heap, int node) {
     for (Map.Entry<Integer, Double> entry : graph.edgesFrom(node).entrySet()) {
       PairVertex<Integer> pairVertex = new PairVertex<Integer>(node, entry.getKey(), entry.getValue());
-      heap.enqueue(pairVertex, entry.getValue());
+      //heap.enqueue(pairVertex, entry.getValue());
+      heap.insert(pairVertex, entry.getValue());
     }
   }
 };

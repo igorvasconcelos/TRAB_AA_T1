@@ -1,0 +1,142 @@
+ ********* Round Robin com Heap de Leftist *********
+***********************************************
+Lendo Arquivo: dmxa0296.stp
+Custo total da MST: 1424.0
+Tempo de execução médio: 1.1800803 milisegundos
+Quantidade de iterações em 5 segundos: 4237
+***********************************************
+Lendo Arquivo: dmxa0368.stp
+Custo total da MST: 11037.0
+Tempo de execução médio: 40.650406 milisegundos
+Quantidade de iterações em 5 segundos: 123
+***********************************************
+Lendo Arquivo: dmxa0454.stp
+Custo total da MST: 10339.0
+Tempo de execução médio: 34.356163 milisegundos
+Quantidade de iterações em 5 segundos: 146
+***********************************************
+Lendo Arquivo: dmxa0628.stp
+Custo total da MST: 944.0
+Tempo de execução médio: 0.7315289 milisegundos
+Quantidade de iterações em 5 segundos: 6835
+***********************************************
+Lendo Arquivo: dmxa0734.stp
+Custo total da MST: 3742.0
+Tempo de execução médio: 4.8638134 milisegundos
+Quantidade de iterações em 5 segundos: 1028
+***********************************************
+Lendo Arquivo: dmxa0848.stp
+Custo total da MST: 2938.0
+Tempo de execução médio: 3.3829498 milisegundos
+Quantidade de iterações em 5 segundos: 1478
+***********************************************
+Lendo Arquivo: dmxa0903.stp
+Custo total da MST: 3723.0
+Tempo de execução médio: 4.6210723 milisegundos
+Quantidade de iterações em 5 segundos: 1082
+***********************************************
+Lendo Arquivo: dmxa1010.stp
+Custo total da MST: 22478.0
+Tempo de execução médio: 128.58974 milisegundos
+Quantidade de iterações em 5 segundos: 39
+***********************************************
+Lendo Arquivo: dmxa1109.stp
+Custo total da MST: 2078.0
+Tempo de execução médio: 1.9215988 milisegundos
+Quantidade de iterações em 5 segundos: 2602
+***********************************************
+Lendo Arquivo: dmxa1200.stp
+Custo total da MST: 4381.0
+Tempo de execução médio: 6.134969 milisegundos
+Quantidade de iterações em 5 segundos: 815
+***********************************************
+Lendo Arquivo: dmxa1304.stp
+Custo total da MST: 1781.0
+Tempo de execução médio: 1.6123831 milisegundos
+Quantidade de iterações em 5 segundos: 3101
+***********************************************
+Lendo Arquivo: dmxa1516.stp
+Custo total da MST: 4051.0
+Tempo de execução médio: 5.624297 milisegundos
+Quantidade de iterações em 5 segundos: 889
+***********************************************
+Lendo Arquivo: dmxa1721.stp
+Custo total da MST: 5932.0
+Tempo de execução médio: 10.0 milisegundos
+Quantidade de iterações em 5 segundos: 500
+***********************************************
+Lendo Arquivo: dmxa1801.stp
+Custo total da MST: 12572.0
+Tempo de execução médio: 49.66337 milisegundos
+Quantidade de iterações em 5 segundos: 101
+ ********* Round Robin com Heap de Fibonacci *********
+***********************************************
+Lendo Arquivo: dmxa0296.stp
+Custo total da MST: 1424.0
+Tempo de execução médio: 1.026062 milisegundos
+Quantidade de iterações em 5 segundos: 4873
+***********************************************
+Lendo Arquivo: dmxa0368.stp
+Custo total da MST: 11037.0
+Tempo de execução médio: 31.645569 milisegundos
+Quantidade de iterações em 5 segundos: 158
+***********************************************
+Lendo Arquivo: dmxa0454.stp
+Custo total da MST: 10339.0
+Tempo de execução médio: 26.17801 milisegundos
+Quantidade de iterações em 5 segundos: 191
+***********************************************
+Lendo Arquivo: dmxa0628.stp
+Custo total da MST: 944.0
+Tempo de execução médio: 0.62282014 milisegundos
+Quantidade de iterações em 5 segundos: 8028
+***********************************************
+Lendo Arquivo: dmxa0734.stp
+Custo total da MST: 3742.0
+Tempo de execução médio: 4.3215213 milisegundos
+Quantidade de iterações em 5 segundos: 1157
+***********************************************
+Lendo Arquivo: dmxa0848.stp
+Custo total da MST: 2938.0
+Tempo de execução médio: 3.0413625 milisegundos
+Quantidade de iterações em 5 segundos: 1644
+***********************************************
+Lendo Arquivo: dmxa0903.stp
+Custo total da MST: 3723.0
+Tempo de execução médio: 4.0584416 milisegundos
+Quantidade de iterações em 5 segundos: 1232
+***********************************************
+Lendo Arquivo: dmxa1010.stp
+Custo total da MST: 22478.0
+Tempo de execução médio: 104.5 milisegundos
+Quantidade de iterações em 5 segundos: 48
+***********************************************
+Lendo Arquivo: dmxa1109.stp
+Custo total da MST: 2078.0
+Tempo de execução médio: 1.7319016 milisegundos
+Quantidade de iterações em 5 segundos: 2887
+***********************************************
+Lendo Arquivo: dmxa1200.stp
+Custo total da MST: 4381.0
+Tempo de execução médio: 5.382131 milisegundos
+Quantidade de iterações em 5 segundos: 929
+***********************************************
+Lendo Arquivo: dmxa1304.stp
+Custo total da MST: 1781.0
+Tempo de execução médio: 1.4140271 milisegundos
+Quantidade de iterações em 5 segundos: 3536
+***********************************************
+Lendo Arquivo: dmxa1516.stp
+Custo total da MST: 4051.0
+Tempo de execução médio: 5.035247 milisegundos
+Quantidade de iterações em 5 segundos: 993
+***********************************************
+Lendo Arquivo: dmxa1721.stp
+Custo total da MST: 5932.0
+Tempo de execução médio: 8.976661 milisegundos
+Quantidade de iterações em 5 segundos: 557
+***********************************************
+Lendo Arquivo: dmxa1801.stp
+Custo total da MST: 12572.0
+Tempo de execução médio: 38.576923 milisegundos
+Quantidade de iterações em 5 segundos: 130

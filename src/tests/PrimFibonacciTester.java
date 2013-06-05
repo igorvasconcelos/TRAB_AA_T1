@@ -12,7 +12,7 @@ public class PrimFibonacciTester {
 
   //O nome do arquivo de input padrão(usado para testes).
   private static final String      DEFAULT_INPUT_FILE_NAME = "data/ALUE/alue2087.stp";
-  private static String            path                    = "data/ALUE/";
+  private static String            path                    = "data/DMXA/";
   private static String            inputFile               = "";
   private UndirectedGraph<Integer> graph;
 
@@ -32,7 +32,7 @@ public class PrimFibonacciTester {
       Logger.isDebugging = false;
     }
     Logger.printOntoScreen(" ********* Prim com Heap de Fibonacci *********");
-    new PrimFibonacciTester().run(args.length == 2);//args.length == 2
+    new PrimFibonacciTester().run(true);//args.length == 2
   }
 
   public void run(boolean batch) throws Exception {
@@ -54,7 +54,7 @@ public class PrimFibonacciTester {
 
           Utils.getUndirectedFromInputFile(graph, fileNameAndPath);
 
-          Logger.printOntoScreen("Grafo Montado.");
+          //Logger.printOntoScreen("Grafo Montado.");
           genericProcess(graph);
         }
       }
@@ -75,7 +75,7 @@ public class PrimFibonacciTester {
    */
   protected void genericProcess(UndirectedGraph<Integer> graph) {
     try {
-      Logger.printOntoScreen("Execução iniciada às: " + new Date());
+      //Logger.printOntoScreen("Execução iniciada às: " + new Date());
       PrimFibonacci<Integer> primFibonacci = new PrimFibonacci<>(graph);
 
       // Momento em que o algoritmo iniciou sua execução.
@@ -100,7 +100,7 @@ public class PrimFibonacciTester {
       float media = (float) finishTime / iterations;
 
       // Imprime os resultados obtidos.
-      Logger.printOntoScreen("Execução Finalizada as: " + new Date());
+      //Logger.printOntoScreen("Execução Finalizada as: " + new Date());
       Logger.printOntoScreen("Custo total da MST: " + primFibonacci.getCost());
       Logger.printOntoScreen("Tempo de execução médio: " + media + " milesegundos");
       Logger.printOntoScreen("Quantidade de iterações em 5 segundos: " + iterations);

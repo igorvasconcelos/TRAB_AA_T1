@@ -111,9 +111,7 @@ import java.io.IOException;
  * @version $Revision$ $Date$
  * @see "<a href='http://en.wikipedia.org/wiki/Introduction_to_Algorithms'>Cormen, T. H.; Leiserson C. E.; Rivest R. L.; &amp; Stein, C (2001) <i>Introduction to Algorithms</i>. MIT Press.</a>"
  */
-public class FibonacciHeapV2<TKey, TValue>
-        extends AbstractLinkedHeap<TKey, TValue>
-        implements Serializable
+public class FibonacciHeapV2<T> extends AbstractLinkedHeap<T> implements Serializable
 {
 
         /**
@@ -124,12 +122,12 @@ public class FibonacciHeapV2<TKey, TValue>
         /**
          * Comparator.
          */
-        private final Comparator<? super TKey> comp;
+        private final Comparator<Double> comp;
        
         /**
          * The minimum entry of this heap.
          */
-        transient FibonacciHeapEntry<TKey, TValue> minimum;
+        transient FibonacciHeapEntry<T> minimum;
 
         /**
          * The size of this heap.
@@ -175,7 +173,7 @@ public class FibonacciHeapV2<TKey, TValue>
          * @param comp the comparator to use. A <code>null</code> means the keys'
          *        natural ordering will be used.
          */
-        public FibonacciHeapV2(final Comparator<? super TKey> comp)
+        public FibonacciHeapV2(final Comparator<Double> comp)
         {
                 super();
 
@@ -191,7 +189,7 @@ public class FibonacciHeapV2<TKey, TValue>
          * @see org.teneighty.heap.Heap#getComparator()
          */
         @Override
-        public Comparator<? super TKey> getComparator()
+        public Comparator<Double> getComparator()
         {
                 return comp;
         }
@@ -209,7 +207,7 @@ public class FibonacciHeapV2<TKey, TValue>
          * @see org.teneighty.heap.Heap#holdsEntry(org.teneighty.heap.Heap.Entry)
          */
         @Override
-        public boolean holdsEntry(final Heap.Entry<TKey, TValue> e)
+        public boolean holdsEntry(final Heap.Entry<T> e)
                 throws NullPointerException
         {
                 if (e == null)
@@ -224,7 +222,7 @@ public class FibonacciHeapV2<TKey, TValue>
                 }
 
                 // Narrow.
-                FibonacciHeapEntry<TKey, TValue> entry = (FibonacciHeapEntry<TKey, TValue>) e;
+                FibonacciHeapEntry<T> entry = (FibonacciHeapEntry<T>) e;
 
                 // Use reference trickery.
                 return entry.isContainedBy(this);
@@ -234,10 +232,10 @@ public class FibonacciHeapV2<TKey, TValue>
          * @see org.teneighty.heap.Heap#insert(java.lang.Object, java.lang.Object)
          */
         @Override
-        public Entry<TKey, TValue> insert(final TKey key, final TValue value)
+        public FibonacciHeapEntry<T> insert(final T key, final Double value)
                 throws ClassCastException, NullPointerException
         {
-                FibonacciHeapEntry<TKey, TValue> node = new FibonacciHeapEntry<TKey, TValue>(key, value, source_heap);
+                FibonacciHeapEntry<T> node = new FibonacciHeapEntry<T>(key, value, source_heap);
 
                 // Do some node housekeeping.
                 node.degree = 0;
@@ -284,7 +282,7 @@ public class FibonacciHeapV2<TKey, TValue>
          * @see org.teneighty.heap.Heap#union(org.teneighty.heap.Heap)
          */
         @Override
-        public void union(final Heap<TKey, TValue> other)
+        public void union(final Heap<T> other)
                 throws ClassCastException, NullPointerException, IllegalArgumentException
         {
                 if (other == null)
@@ -305,7 +303,7 @@ public class FibonacciHeapV2<TKey, TValue>
                 if (other.getClass().equals(FibonacciHeapV2.class))
                 {
                         // Get other root.
-                        FibonacciHeapV2<TKey, TValue> that = (FibonacciHeapV2<TKey, TValue>) other;
+                        FibonacciHeapV2<T> that = (FibonacciHeapV2<T>) other;
 
                         try
                         {
@@ -354,7 +352,7 @@ public class FibonacciHeapV2<TKey, TValue>
          * @see org.teneighty.heap.Heap#extractMinimum()
          */
         @Override
-        public Entry<TKey, TValue> extractMinimum()
+        public Entry<T> extractMinimum()
                 throws NoSuchElementException
         {
                 if (isEmpty())
@@ -363,9 +361,9 @@ public class FibonacciHeapV2<TKey, TValue>
                 }
 
                 // References that will be needed. See CLRS.
-                FibonacciHeapEntry<TKey, TValue> t;
-                FibonacciHeapEntry<TKey, TValue> w;
-                FibonacciHeapEntry<TKey, TValue> z = minimum;
+                FibonacciHeapEntry<T> t;
+                FibonacciHeapEntry<T> w;
+                FibonacciHeapEntry<T> z = minimum;
 
                 if (z.child != null)
                 {
@@ -418,7 +416,7 @@ public class FibonacciHeapV2<TKey, TValue>
          * @see org.teneighty.heap.Heap#getMinimum()
          */
         @Override
-        public Entry<TKey, TValue> getMinimum()
+        public Entry<T> getMinimum()
                 throws NoSuchElementException
         {
                 if (isEmpty())
@@ -443,17 +441,17 @@ public class FibonacciHeapV2<TKey, TValue>
                 FibonacciHeapEntry[] a = new FibonacciHeapEntry[dn];
 
                 // Iterating node - node at which to stop iterating...
-                FibonacciHeapEntry<TKey, TValue> iter = minimum;
+                FibonacciHeapEntry<T> iter = minimum;
 
                 // The node we're on now; w from CLRS.
-                FibonacciHeapEntry<TKey, TValue> w = iter;
+                FibonacciHeapEntry<T> w = iter;
 
                 // x and y from CLRS code.
-                FibonacciHeapEntry<TKey, TValue> x;
-                FibonacciHeapEntry<TKey, TValue> y;
+                FibonacciHeapEntry<T> x;
+                FibonacciHeapEntry<T> y;
 
                 // temp ref.
-                FibonacciHeapEntry<TKey, TValue> temp;
+                FibonacciHeapEntry<T> temp;
 
                 // d from CLRS code.
                 int d;
@@ -521,7 +519,7 @@ public class FibonacciHeapV2<TKey, TValue>
          * @param y the new child node.
          * @param x the new parent node.
          */
-        private void link(final FibonacciHeapEntry<TKey, TValue> y, final FibonacciHeapEntry<TKey, TValue> x)
+        private void link(final FibonacciHeapEntry<T> y, final FibonacciHeapEntry<T> x)
         {
                 // Remove y from the root list.
                 y.left.right = y.right;
@@ -553,7 +551,7 @@ public class FibonacciHeapV2<TKey, TValue>
          * @see org.teneighty.heap.Heap#decreaseKey(org.teneighty.heap.Heap.Entry, java.lang.Object)
          */
         @Override
-        public void decreaseKey(final Heap.Entry<TKey, TValue> e, final TKey k)
+        public void decreaseKey(final Heap.Entry<T> e, final Double k)
                 throws IllegalArgumentException, ClassCastException
         {
                 // Check and cast.
@@ -563,16 +561,16 @@ public class FibonacciHeapV2<TKey, TValue>
                 }
 
                 // x from CLRS.
-                FibonacciHeapEntry<TKey, TValue> x = (FibonacciHeapEntry<TKey, TValue>) e;
+                FibonacciHeapEntry<T> x = (FibonacciHeapEntry<T>) e;
 
                 // Check key... May throw class cast as well.
-                if (compareKeys(k, x.getKey()) > 0)
+                if (compareKeys(k, x.getValue()) > 0)
                 {
                         throw new IllegalArgumentException();
                 }
 
                 // Store the new key value.
-                x.setKey(k);
+                x.setValue(k);
 
                 // Restore the heap structure.
                 decreaseKeyImpl(x);
@@ -586,10 +584,10 @@ public class FibonacciHeapV2<TKey, TValue>
          * @param x the whose key has just been decreased and needs to be percolated
          *        toward the top of the heap.
          */
-        private void decreaseKeyImpl(final FibonacciHeapEntry<TKey, TValue> x)
+        private void decreaseKeyImpl(final FibonacciHeapEntry<T> x)
         {
                 // Get x's parent.
-                FibonacciHeapEntry<TKey, TValue> y = x.parent;
+                FibonacciHeapEntry<T> y = x.parent;
 
                 // If x has a lower key than it's parent (and assuming x was not already
                 // in the root list) then we have work to do.
@@ -615,7 +613,7 @@ public class FibonacciHeapV2<TKey, TValue>
          * @param x the node to cut.
          * @param y the node from which to cut <code>x</code>.
          */
-        private void cut(final FibonacciHeapEntry<TKey, TValue> x, final FibonacciHeapEntry<TKey, TValue> y)
+        private void cut(final FibonacciHeapEntry<T> x, final FibonacciHeapEntry<T> y)
         {
                 if (x.right == x)
                 {
@@ -653,9 +651,9 @@ public class FibonacciHeapV2<TKey, TValue>
          *
          * @param y the node on which to perform a cascading cut.
          */
-        private void cascadingCut(final FibonacciHeapEntry<TKey, TValue> y)
+        private void cascadingCut(final FibonacciHeapEntry<T> y)
         {
-                FibonacciHeapEntry<TKey, TValue> z = y.parent;
+                FibonacciHeapEntry<T> z = y.parent;
 
                 if (z != null)
                 {
@@ -677,7 +675,7 @@ public class FibonacciHeapV2<TKey, TValue>
          * @see org.teneighty.heap.Heap#delete(org.teneighty.heap.Heap.Entry)
          */
         @Override
-        public void delete(final Heap.Entry<TKey, TValue> e)
+        public void delete(final Heap.Entry<T> e)
                 throws IllegalArgumentException, NullPointerException
         {
                 // Check and cast.
@@ -687,7 +685,7 @@ public class FibonacciHeapV2<TKey, TValue>
                 }
 
                 // Narrow.
-                FibonacciHeapEntry<TKey, TValue> entry = (FibonacciHeapEntry<TKey, TValue>) e;
+                FibonacciHeapEntry<T> entry = (FibonacciHeapEntry<T>) e;
 
                 // Make it infinitely small.
                 entry.is_infinite = true;
@@ -725,7 +723,7 @@ public class FibonacciHeapV2<TKey, TValue>
          * @see org.teneighty.heap.Heap#iterator()
          */
         @Override
-        public Iterator<Heap.Entry<TKey, TValue>> iterator()
+        public Iterator<Heap.Entry<T>> iterator()
         {
                 return new EntryIterator();
         }
@@ -746,8 +744,8 @@ public class FibonacciHeapV2<TKey, TValue>
                 out.writeInt(size);
 
                 // Write out all key/value pairs.
-                Iterator<Heap.Entry<TKey, TValue>> it = new EntryIterator();
-                Heap.Entry<TKey, TValue> et = null;
+                Iterator<Heap.Entry<T>> it = new EntryIterator();
+                Heap.Entry<T> et = null;
                 while (it.hasNext())
                 {
                         try
@@ -794,12 +792,12 @@ public class FibonacciHeapV2<TKey, TValue>
                 source_heap = new HeapReference(this);
 
                 // Read and insert all the keys and values.
-                TKey key;
-                TValue value;
+                T key;
+                Double value;
                 for (int index = 0; index < rsize; index++)
                 {
-                        key = (TKey) in.readObject();
-                        value = (TValue) in.readObject();
+                        key = (T) in.readObject();
+                        value = (Double) in.readObject();
                         insert(key, value);
                 }
         }
@@ -814,15 +812,13 @@ public class FibonacciHeapV2<TKey, TValue>
          * @author Fran Lattanzio
          * @version $Revision$ $Date$
          */
-        private class EntryIterator
-                extends Object
-                implements Iterator<Heap.Entry<TKey, TValue>>
+        private class EntryIterator extends Object implements Iterator<Heap.Entry<T>>
         {
 
                 /**
                  * The next entry.
                  */
-                private FibonacciHeapEntry<TKey, TValue> next;
+                private FibonacciHeapEntry<T> next;
 
                 /**
                  * The mod count.
@@ -861,7 +857,7 @@ public class FibonacciHeapV2<TKey, TValue>
                  * @see java.util.Iterator#next()
                  */
                 @Override
-                public Heap.Entry<TKey, TValue> next()
+                public Heap.Entry<T> next()
                         throws NoSuchElementException, ConcurrentModificationException
                 {
                         if (hasNext() == false)
@@ -870,7 +866,7 @@ public class FibonacciHeapV2<TKey, TValue>
                         }
 
                         // Get the next node.
-                        FibonacciHeapEntry<TKey, TValue> n = next;
+                        FibonacciHeapEntry<T> n = next;
                         next = getSuccessor(next);
                         return n;
                 }
@@ -881,7 +877,7 @@ public class FibonacciHeapV2<TKey, TValue>
                  * @param entry the given entry.
                  * @return the successor entry.
                  */
-                private FibonacciHeapEntry<TKey, TValue> getSuccessor(FibonacciHeapEntry<TKey, TValue> entry)
+                private FibonacciHeapEntry<T> getSuccessor(FibonacciHeapEntry<T> entry)
                 {
                         if (entry.child != null)
                         {
@@ -889,7 +885,7 @@ public class FibonacciHeapV2<TKey, TValue>
                         }
 
                         // The first entry.
-                        FibonacciHeapEntry<TKey, TValue> first;
+                        FibonacciHeapEntry<T> first;
 
                         do
                         {
@@ -930,8 +926,8 @@ public class FibonacciHeapV2<TKey, TValue>
          * @author Fran Lattanzio
          * @version $Revision$ $Date$
          */
-        private static final class FibonacciHeapEntry<TKey, TValue>
-                extends AbstractLinkedHeap.AbstractLinkedHeapEntry<TKey, TValue>
+        public static final class FibonacciHeapEntry<T>
+                extends AbstractLinkedHeap.AbstractLinkedHeapEntry<T>
                 implements Serializable
         {
 
@@ -953,22 +949,22 @@ public class FibonacciHeapV2<TKey, TValue>
                 /**
                  * Parent node.
                  */
-                transient FibonacciHeapEntry<TKey, TValue> parent;
+                transient FibonacciHeapEntry<T> parent;
 
                 /**
                  * Child node.
                  */
-                transient FibonacciHeapEntry<TKey, TValue> child;
+                transient FibonacciHeapEntry<T> child;
 
                 /**
                  * Left sibling node.
                  */
-                transient FibonacciHeapEntry<TKey, TValue> left;
+                transient FibonacciHeapEntry<T> left;
 
                 /**
                  * Right sibling node.
                  */
-                transient FibonacciHeapEntry<TKey, TValue> right;
+                transient FibonacciHeapEntry<T> right;
 
                 /**
                  * Constructor.
@@ -977,7 +973,7 @@ public class FibonacciHeapV2<TKey, TValue>
                  * @param value the value.
                  * @param source_ref a wrapped weak reference to the creating heap.
                  */
-                FibonacciHeapEntry(final TKey key, final TValue value, final HeapReference source_ref)
+                FibonacciHeapEntry(final T key, final Double value, final HeapReference source_ref)
                 {
                         super(key, value, source_ref);
                 }

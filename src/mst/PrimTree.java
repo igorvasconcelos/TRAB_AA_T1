@@ -38,6 +38,7 @@ import library.UndirectedGraph;
 import avl.EduAVLTree;
 
 // For HashMap
+
 public final class PrimTree
 {
 	private int								startNode;

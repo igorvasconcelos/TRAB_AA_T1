@@ -1,0 +1,92 @@
+ ********* Round Robin com Heap de Leftist *********
+***********************************************
+Lendo Arquivo: alut0787.stp
+Custo total da MST: 6043.0
+Tempo de execução médio: 11.848341 milisegundos
+Quantidade de iterações em 5 segundos: 422
+***********************************************
+Lendo Arquivo: alut0805.stp
+Custo total da MST: 5065.0
+Tempo de execução médio: 7.64526 milisegundos
+Quantidade de iterações em 5 segundos: 654
+***********************************************
+Lendo Arquivo: alut1181.stp
+Custo total da MST: 16352.0
+Tempo de execução médio: 78.375 milisegundos
+Quantidade de iterações em 5 segundos: 64
+***********************************************
+Lendo Arquivo: alut2010.stp
+Custo total da MST: 33723.0
+Tempo de execução médio: 254.7 milisegundos
+Quantidade de iterações em 5 segundos: 20
+***********************************************
+Lendo Arquivo: alut2288.stp
+Custo total da MST: 49737.0
+Tempo de execução médio: 506.2 milisegundos
+Quantidade de iterações em 5 segundos: 10
+***********************************************
+Lendo Arquivo: alut2566.stp
+Custo total da MST: 27596.0
+Tempo de execução médio: 179.14285 milisegundos
+Quantidade de iterações em 5 segundos: 28
+***********************************************
+Lendo Arquivo: alut2610.stp
+Custo total da MST: 184956.0
+Tempo de execução médio: 5719.0 milisegundos
+Quantidade de iterações em 5 segundos: 1
+***********************************************
+Lendo Arquivo: alut2625.stp
+Custo total da MST: 200270.0
+Tempo de execução médio: 6297.0 milisegundos
+Quantidade de iterações em 5 segundos: 1
+***********************************************
+Lendo Arquivo: alut2764.stp
+Custo total da MST: 1970.0
+Tempo de execução médio: 1.8932222 milisegundos
+Quantidade de iterações em 5 segundos: 2641
+ ********* Round Robin com Heap de Fibonacci *********
+***********************************************
+Lendo Arquivo: alut0787.stp
+Custo total da MST: 6043.0
+Tempo de execução médio: 9.940358 milisegundos
+Quantidade de iterações em 5 segundos: 503
+***********************************************
+Lendo Arquivo: alut0805.stp
+Custo total da MST: 5065.0
+Tempo de execução médio: 6.756757 milisegundos
+Quantidade de iterações em 5 segundos: 740
+***********************************************
+Lendo Arquivo: alut1181.stp
+Custo total da MST: 16352.0
+Tempo de execução médio: 61.365852 milisegundos
+Quantidade de iterações em 5 segundos: 82
+***********************************************
+Lendo Arquivo: alut2010.stp
+Custo total da MST: 33723.0
+Tempo de execução médio: 208.76 milisegundos
+Quantidade de iterações em 5 segundos: 25
+***********************************************
+Lendo Arquivo: alut2288.stp
+Custo total da MST: 49737.0
+Tempo de execução médio: 453.16666 milisegundos
+Quantidade de iterações em 5 segundos: 12
+***********************************************
+Lendo Arquivo: alut2566.stp
+Custo total da MST: 27596.0
+Tempo de execução médio: 147.5 milisegundos
+Quantidade de iterações em 5 segundos: 34
+***********************************************
+Lendo Arquivo: alut2610.stp
+Custo total da MST: 184956.0
+Tempo de execução médio: 5296.0 milisegundos
+Quantidade de iterações em 5 segundos: 1
+***********************************************
+Lendo Arquivo: alut2625.stp
+Custo total da MST: 200270.0
+Tempo de execução médio: 5906.0 milisegundos
+Quantidade de iterações em 5 segundos: 1
+***********************************************
+Lendo Arquivo: alut2764.stp
+Custo total da MST: 1970.0
+Tempo de execução médio: 1.6801075 milisegundos
+Quantidade de iterações em 5 segundos: 2976

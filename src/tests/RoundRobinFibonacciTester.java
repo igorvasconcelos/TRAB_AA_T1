@@ -12,7 +12,7 @@ public class RoundRobinFibonacciTester {
 
   //O nome do arquivo de input padrão(usado para testes).
   private static final String      DEFAULT_INPUT_FILE_NAME = "data/ALUE/alue2087.stp";
-  private static String            path                    = "data/DMXA/";
+  private static String            path                    = "data/ALUE/";
   private static String            inputFile               = "";
   private UndirectedGraph<Integer> graph;
 
@@ -32,7 +32,7 @@ public class RoundRobinFibonacciTester {
       Logger.isDebugging = false;
     }
     Logger.printOntoScreen(" ********* Round Robin com Heap de Fibonacci *********");
-    new RoundRobinFibonacciTester().run(args.length == 2); //args.length == 2
+    new RoundRobinFibonacciTester().run(true); //args.length == 2
   }
 
   public void run(boolean batch) throws Exception {
@@ -53,7 +53,7 @@ public class RoundRobinFibonacciTester {
           graph = new UndirectedGraph<Integer>();
           Utils.getUndirectedFromInputFile(graph, fileNameAndPath);
 
-          Logger.printOntoScreen("Grafo Montado.");
+          //Logger.printOntoScreen("Grafo Montado.");
           genericProcess(graph);
         }
       }
@@ -74,7 +74,7 @@ public class RoundRobinFibonacciTester {
   protected void genericProcess(UndirectedGraph<Integer> graph) {
     try {
 
-      Logger.printOntoScreen("Execução iniciada às: " + new Date());
+      //Logger.printOntoScreen("Execução iniciada às: " + new Date());
       RoundRobinFibonacciV4 primFibonacci = new RoundRobinFibonacciV4(graph);
       //for (Integer node : graph) {
       // System.err.println("Partindo de " + node);
@@ -106,7 +106,7 @@ public class RoundRobinFibonacciTester {
 
       // Imprime os resultados obtidos.
       //System.err.println("Fim em mile: " + finishTime);
-      Logger.printOntoScreen("Execução Finalizada as: " + new Date());
+      //Logger.printOntoScreen("Execução Finalizada as: " + new Date());
       Logger.printOntoScreen("Custo total da MST: " + primFibonacci.getCost());
       Logger.printOntoScreen("Tempo de execução médio: " + media + " milisegundos");
       Logger.printOntoScreen("Quantidade de iterações em 5 segundos: " + iterations);

@@ -1,0 +1,152 @@
+ ********* Round Robin com Heap de Leftist *********
+***********************************************
+Lendo Arquivo: alue2087.stp
+Custo total da MST: 7415.0
+Tempo de execução médio: 14.662757 milisegundos
+Quantidade de iterações em 5 segundos: 341
+***********************************************
+Lendo Arquivo: alue2105.stp
+Custo total da MST: 7551.0
+Tempo de execução médio: 13.774105 milisegundos
+Quantidade de iterações em 5 segundos: 363
+***********************************************
+Lendo Arquivo: alue3146.stp
+Custo total da MST: 22693.0
+Tempo de execução médio: 117.0 milisegundos
+Quantidade de iterações em 5 segundos: 43
+***********************************************
+Lendo Arquivo: alue5067.stp
+Custo total da MST: 21775.0
+Tempo de execução médio: 108.695656 milisegundos
+Quantidade de iterações em 5 segundos: 46
+***********************************************
+Lendo Arquivo: alue5345.stp
+Custo total da MST: 32010.0
+Tempo de execução médio: 217.39131 milisegundos
+Quantidade de iterações em 5 segundos: 23
+***********************************************
+Lendo Arquivo: alue5623.stp
+Custo total da MST: 28563.0
+Tempo de execução médio: 172.41379 milisegundos
+Quantidade de iterações em 5 segundos: 29
+***********************************************
+Lendo Arquivo: alue5901.stp
+Custo total da MST: 71150.0
+Tempo de execução médio: 911.3333 milisegundos
+Quantidade de iterações em 5 segundos: 6
+***********************************************
+Lendo Arquivo: alue6179.stp
+Custo total da MST: 21439.0
+Tempo de execução médio: 100.62 milisegundos
+Quantidade de iterações em 5 segundos: 50
+***********************************************
+Lendo Arquivo: alue6457.stp
+Custo total da MST: 25327.0
+Tempo de execução médio: 142.80556 milisegundos
+Quantidade de iterações em 5 segundos: 36
+***********************************************
+Lendo Arquivo: alue6735.stp
+Custo total da MST: 25638.0
+Tempo de execução médio: 145.54286 milisegundos
+Quantidade de iterações em 5 segundos: 35
+***********************************************
+Lendo Arquivo: alue6951.stp
+Custo total da MST: 17653.0
+Tempo de execução médio: 73.75 milisegundos
+Quantidade de iterações em 5 segundos: 68
+***********************************************
+Lendo Arquivo: alue7065.stp
+Custo total da MST: 211817.0
+Tempo de execução médio: 7265.0 milisegundos
+Quantidade de iterações em 5 segundos: 1
+***********************************************
+Lendo Arquivo: alue7066.stp
+Custo total da MST: 39772.0
+Tempo de execução médio: 309.7647 milisegundos
+Quantidade de iterações em 5 segundos: 17
+***********************************************
+Lendo Arquivo: alue7080.stp
+Custo total da MST: 215158.0
+Tempo de execução médio: 7266.0 milisegundos
+Quantidade de iterações em 5 segundos: 1
+***********************************************
+Lendo Arquivo: alue7229.stp
+Custo total da MST: 5527.0
+Tempo de execução médio: 7.9617834 milisegundos
+Quantidade de iterações em 5 segundos: 628
+ ********* Round Robin com Heap de Fibonacci *********
+***********************************************
+Lendo Arquivo: alue2087.stp
+Custo total da MST: 7415.0
+Tempo de execução médio: 12.531328 milisegundos
+Quantidade de iterações em 5 segundos: 399
+***********************************************
+Lendo Arquivo: alue2105.stp
+Custo total da MST: 7551.0
+Tempo de execução médio: 12.195122 milisegundos
+Quantidade de iterações em 5 segundos: 410
+***********************************************
+Lendo Arquivo: alue3146.stp
+Custo total da MST: 22693.0
+Tempo de execução médio: 98.960785 milisegundos
+Quantidade de iterações em 5 segundos: 51
+***********************************************
+Lendo Arquivo: alue5067.stp
+Custo total da MST: 21775.0
+Tempo de execução médio: 92.59259 milisegundos
+Quantidade de iterações em 5 segundos: 54
+***********************************************
+Lendo Arquivo: alue5345.stp
+Custo total da MST: 32010.0
+Tempo de execução médio: 185.18518 milisegundos
+Quantidade de iterações em 5 segundos: 27
+***********************************************
+Lendo Arquivo: alue5623.stp
+Custo total da MST: 28563.0
+Tempo de execução médio: 148.91176 milisegundos
+Quantidade de iterações em 5 segundos: 34
+***********************************************
+Lendo Arquivo: alue5901.stp
+Custo total da MST: 71150.0
+Tempo de execução médio: 823.5714 milisegundos
+Quantidade de iterações em 5 segundos: 7
+***********************************************
+Lendo Arquivo: alue6179.stp
+Custo total da MST: 21439.0
+Tempo de execução médio: 87.55173 milisegundos
+Quantidade de iterações em 5 segundos: 58
+***********************************************
+Lendo Arquivo: alue6457.stp
+Custo total da MST: 25327.0
+Tempo de execução médio: 120.166664 milisegundos
+Quantidade de iterações em 5 segundos: 42
+***********************************************
+Lendo Arquivo: alue6735.stp
+Custo total da MST: 25638.0
+Tempo de execução médio: 122.70731 milisegundos
+Quantidade de iterações em 5 segundos: 41
+***********************************************
+Lendo Arquivo: alue6951.stp
+Custo total da MST: 17653.0
+Tempo de execução médio: 60.987953 milisegundos
+Quantidade de iterações em 5 segundos: 83
+***********************************************
+Lendo Arquivo: alue7065.stp
+Custo total da MST: 211817.0
+Tempo de execução médio: 6735.0 milisegundos
+Quantidade de iterações em 5 segundos: 1
+***********************************************
+Lendo Arquivo: alue7066.stp
+Custo total da MST: 39772.0
+Tempo de execução médio: 268.94736 milisegundos
+Quantidade de iterações em 5 segundos: 19
+***********************************************
+Lendo Arquivo: alue7080.stp
+Custo total da MST: 215158.0
+Tempo de execução médio: 6766.0 milisegundos
+Quantidade de iterações em 5 segundos: 1
+***********************************************
+Lendo Arquivo: alue7229.stp
+Custo total da MST: 5527.0
+Tempo de execução médio: 7.496252 milisegundos
+Quantidade de iterações em 5 segundos: 667

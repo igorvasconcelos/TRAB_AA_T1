@@ -1,0 +1,213 @@
+﻿ ********* Prim com arvore AVL *********
+***********************************************
+Lendo Arquivo: dmxa0296.stp
+Custo total da MST: 1424.0
+Tempo de execução médio: 0.87458456 milesegundos
+Quantidade de itera��es em 5 segundos: 5717
+***********************************************
+Lendo Arquivo: dmxa0368.stp
+Custo total da MST: 11037.0
+Tempo de execução médio: 17.857143 milesegundos
+Quantidade de itera��es em 5 segundos: 280
+***********************************************
+Lendo Arquivo: dmxa0454.stp
+Custo total da MST: 10339.0
+Tempo de execução médio: 13.586957 milesegundos
+Quantidade de itera��es em 5 segundos: 368
+***********************************************
+Lendo Arquivo: dmxa0628.stp
+Custo total da MST: 944.0
+Tempo de execução médio: 0.5965164 milesegundos
+Quantidade de itera��es em 5 segundos: 8382
+***********************************************
+Lendo Arquivo: dmxa0734.stp
+Custo total da MST: 3742.0
+Tempo de execução médio: 3.1665611 milesegundos
+Quantidade de itera��es em 5 segundos: 1579
+***********************************************
+Lendo Arquivo: dmxa0848.stp
+Custo total da MST: 2938.0
+Tempo de execução médio: 2.2634676 milesegundos
+Quantidade de itera��es em 5 segundos: 2209
+***********************************************
+Lendo Arquivo: dmxa0903.stp
+Custo total da MST: 3723.0
+Tempo de execução médio: 2.9940119 milesegundos
+Quantidade de itera��es em 5 segundos: 1670
+***********************************************
+Lendo Arquivo: dmxa1010.stp
+Custo total da MST: 22478.0
+Tempo de execução médio: 26.88172 milesegundos
+Quantidade de itera��es em 5 segundos: 186
+***********************************************
+Lendo Arquivo: dmxa1109.stp
+Custo total da MST: 2078.0
+Tempo de execução médio: 1.3528138 milesegundos
+Quantidade de itera��es em 5 segundos: 3696
+***********************************************
+Lendo Arquivo: dmxa1200.stp
+Custo total da MST: 4381.0
+Tempo de execução médio: 4.095004 milesegundos
+Quantidade de itera��es em 5 segundos: 1221
+***********************************************
+Lendo Arquivo: dmxa1304.stp
+Custo total da MST: 1781.0
+Tempo de execução médio: 1.1715089 milesegundos
+Quantidade de itera��es em 5 segundos: 4268
+***********************************************
+Lendo Arquivo: dmxa1516.stp
+Custo total da MST: 4051.0
+Tempo de execução médio: 3.8022814 milesegundos
+Quantidade de itera��es em 5 segundos: 1315
+***********************************************
+Lendo Arquivo: dmxa1721.stp
+Custo total da MST: 5932.0
+Tempo de execução médio: 6.9637885 milesegundos
+Quantidade de itera��es em 5 segundos: 718
+***********************************************
+Lendo Arquivo: dmxa1801.stp
+Custo total da MST: 12572.0
+Tempo de execução médio: 18.867924 milesegundos
+Quantidade de itera��es em 5 segundos: 265
+ ********* Prim com Heap de Leftist *********
+***********************************************
+Lendo Arquivo....: dmxa0296.stp
+Custo total da MST: 1424.0
+Tempo de execução médio : 0.5943516 milesegundos
+Quantidade de iterações em 5 segundos: 8675
+***********************************************
+Lendo Arquivo....: dmxa0368.stp
+Custo total da MST: 11037.0
+Tempo de execução médio : 5.0251255 milesegundos
+Quantidade de iterações em 5 segundos: 995
+***********************************************
+Lendo Arquivo....: dmxa0454.stp
+Custo total da MST: 10339.0
+Tempo de execução médio : 4.456328 milesegundos
+Quantidade de iterações em 5 segundos: 1122
+***********************************************
+Lendo Arquivo....: dmxa0628.stp
+Custo total da MST: 944.0
+Tempo de execução médio : 0.37352458 milesegundos
+Quantidade de iterações em 5 segundos: 13386
+***********************************************
+Lendo Arquivo....: dmxa0734.stp
+Custo total da MST: 3742.0
+Tempo de execução médio : 1.5475085 milesegundos
+Quantidade de iterações em 5 segundos: 3231
+***********************************************
+Lendo Arquivo....: dmxa0848.stp
+Custo total da MST: 2938.0
+Tempo de execução médio : 1.2416191 milesegundos
+Quantidade de iterações em 5 segundos: 4027
+***********************************************
+Lendo Arquivo....: dmxa0903.stp
+Custo total da MST: 3723.0
+Tempo de execução médio : 1.5142338 milesegundos
+Quantidade de iterações em 5 segundos: 3302
+***********************************************
+Lendo Arquivo....: dmxa1010.stp
+Custo total da MST: 22478.0
+Tempo de execução médio : 10.060362 milesegundos
+Quantidade de iterações em 5 segundos: 497
+***********************************************
+Lendo Arquivo....: dmxa1109.stp
+Custo total da MST: 2078.0
+Tempo de execução médio : 0.77160496 milesegundos
+Quantidade de iterações em 5 segundos: 6480
+***********************************************
+Lendo Arquivo....: dmxa1200.stp
+Custo total da MST: 4381.0
+Tempo de execução médio : 1.8083183 milesegundos
+Quantidade de iterações em 5 segundos: 2765
+***********************************************
+Lendo Arquivo....: dmxa1304.stp
+Custo total da MST: 1781.0
+Tempo de execução médio : 0.7182876 milesegundos
+Quantidade de iterações em 5 segundos: 6961
+***********************************************
+Lendo Arquivo....: dmxa1516.stp
+Custo total da MST: 4051.0
+Tempo de execução médio : 1.7099863 milesegundos
+Quantidade de iterações em 5 segundos: 2924
+***********************************************
+Lendo Arquivo....: dmxa1721.stp
+Custo total da MST: 5932.0
+Tempo de execução médio : 2.3441162 milesegundos
+Quantidade de iterações em 5 segundos: 2133
+***********************************************
+Lendo Arquivo....: dmxa1801.stp
+Custo total da MST: 12572.0
+Tempo de execução médio : 5.780347 milesegundos
+Quantidade de iterações em 5 segundos: 865
+ ********* Prim com Heap de Fibonacci *********
+***********************************************
+Lendo Arquivo....: dmxa0296.stp
+Custo total da MST: 1424.0
+Tempo de execução médio: 0.65824115 milesegundos
+Quantidade de iterações em 5 segundos: 7596
+***********************************************
+Lendo Arquivo....: dmxa0368.stp
+Custo total da MST: 11037.0
+Tempo de execução médio: 6.443299 milesegundos
+Quantidade de iterações em 5 segundos: 776
+***********************************************
+Lendo Arquivo....: dmxa0454.stp
+Custo total da MST: 10339.0
+Tempo de execução médio: 5.605381 milesegundos
+Quantidade de iterações em 5 segundos: 892
+***********************************************
+Lendo Arquivo....: dmxa0628.stp
+Custo total da MST: 944.0
+Tempo de execução médio: 0.4498021 milesegundos
+Quantidade de iterações em 5 segundos: 11116
+***********************************************
+Lendo Arquivo....: dmxa0734.stp
+Custo total da MST: 3742.0
+Tempo de execução médio: 1.8642803 milesegundos
+Quantidade de iterações em 5 segundos: 2682
+***********************************************
+Lendo Arquivo....: dmxa0848.stp
+Custo total da MST: 2938.0
+Tempo de execução médio: 1.370614 milesegundos
+Quantidade de iterações em 5 segundos: 3648
+***********************************************
+Lendo Arquivo....: dmxa0903.stp
+Custo total da MST: 3723.0
+Tempo de execução médio: 1.7946877 milesegundos
+Quantidade de iterações em 5 segundos: 2786
+***********************************************
+Lendo Arquivo....: dmxa1010.stp
+Custo total da MST: 22478.0
+Tempo de execução médio: 12.224939 milesegundos
+Quantidade de iterações em 5 segundos: 409
+***********************************************
+Lendo Arquivo....: dmxa1109.stp
+Custo total da MST: 2078.0
+Tempo de execução médio: 0.9372071 milesegundos
+Quantidade de iterações em 5 segundos: 5335
+***********************************************
+Lendo Arquivo....: dmxa1200.stp
+Custo total da MST: 4381.0
+Tempo de execução médio: 2.1468441 milesegundos
+Quantidade de iterações em 5 segundos: 2329
+***********************************************
+Lendo Arquivo....: dmxa1304.stp
+Custo total da MST: 1781.0
+Tempo de execução médio: 0.82403225 milesegundos
+Quantidade de iterações em 5 segundos: 6200
+***********************************************
+Lendo Arquivo....: dmxa1516.stp
+Custo total da MST: 4051.0
+Tempo de execução médio: 2.0542316 milesegundos
+Quantidade de iterações em 5 segundos: 2434
+***********************************************
+Lendo Arquivo....: dmxa1721.stp
+Custo total da MST: 5932.0
+Tempo de execução médio: 2.8785262 milesegundos
+Quantidade de iterações em 5 segundos: 1737
+***********************************************
+Lendo Arquivo....: dmxa1801.stp
+Custo total da MST: 12572.0
+Tempo de execução médio: 7.0422535 milesegundos
+Quantidade de iterações em 5 segundos: 710

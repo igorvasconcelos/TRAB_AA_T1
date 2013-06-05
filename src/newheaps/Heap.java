@@ -78,7 +78,7 @@ import java.util.NoSuchElementException;
  * @version $Revision$
  * @see org.teneighty.heap.Heaps
  */
-public interface Heap extends Iterable<Heap.Entry>
+public interface Heap<T> extends Iterable<Heap.Entry<T>>
 {
 
 	/**
@@ -136,7 +136,7 @@ public interface Heap extends Iterable<Heap.Entry>
 	 * @throws NullPointerException If <code>entry</code> is <code>null</code>.
 	 * @see #containsEntry(Heap.Entry)
 	 */
-	public boolean holdsEntry(Entry entry) throws NullPointerException;
+	public boolean holdsEntry(Entry<T> entry) throws NullPointerException;
 
 	/**
 	 * Does this heap contain the specified entry? In other words, does this
@@ -156,7 +156,7 @@ public interface Heap extends Iterable<Heap.Entry>
 	 * @throws NullPointerException If <code>entry</code> is <code>null</code>.
 	 * @see #holdsEntry(Heap.Entry)
 	 */
-	public boolean containsEntry(Entry entry) throws NullPointerException;
+	public boolean containsEntry(Entry<T> entry) throws NullPointerException;
 
 	/**
 	 * Add a key/value pair to this heap.
@@ -169,7 +169,7 @@ public interface Heap extends Iterable<Heap.Entry>
 	 * @throws NullPointerException If <code>key</code> is <code>null</code> and
 	 *         this heap does not support <code>null</code> keys.
 	 */
-	public Entry insert(Integer key, Double value) throws ClassCastException, NullPointerException;
+	public Entry<T> insert(T key, Double value) throws ClassCastException, NullPointerException;
 
 	/**
 	 * Insert all the entries of the specified heap into this heap.
@@ -185,7 +185,7 @@ public interface Heap extends Iterable<Heap.Entry>
 	 *         itself.
 	 * @see #union(Heap)
 	 */
-	public void insertAll(Heap other) throws NullPointerException, ClassCastException, IllegalArgumentException;
+	public void insertAll(Heap<? extends T> other) throws NullPointerException, ClassCastException, IllegalArgumentException;
 
 	/**
 	 * Union this heap with another heap.
@@ -208,7 +208,7 @@ public interface Heap extends Iterable<Heap.Entry>
 	 *         itself (i.e if <code>other == this</code>).
 	 * @see #insertAll(Heap)
 	 */
-	public void union(Heap other) throws ClassCastException, NullPointerException, IllegalArgumentException;
+	public void union(Heap<T> other) throws ClassCastException, NullPointerException, IllegalArgumentException;
 
 	/**
 	 * Get the entry with the minimum key.
@@ -219,7 +219,7 @@ public interface Heap extends Iterable<Heap.Entry>
 	 * @throws NoSuchElementException If this heap is empty.
 	 * @see #extractMinimum()
 	 */
-	public Entry getMinimum() throws NoSuchElementException;
+	public Entry<T> getMinimum() throws NoSuchElementException;
 
 	/**
 	 * Remove and return the entry minimum key.
@@ -228,7 +228,7 @@ public interface Heap extends Iterable<Heap.Entry>
 	 * @throws NoSuchElementException If the heap is empty.
 	 * @see #getMinimum()
 	 */
-	public Entry extractMinimum() throws NoSuchElementException;
+	public Entry<T> extractMinimum() throws NoSuchElementException;
 
 	/**
 	 * Decrease the key of the given element.
@@ -246,7 +246,7 @@ public interface Heap extends Iterable<Heap.Entry>
 	 * @throws NullPointerException If <code>e</code> is <code>null</code>.
 	 * @see #holdsEntry(Heap.Entry)
 	 */
-	public void decreaseKey(Entry e, Double key) throws IllegalArgumentException, ClassCastException, NullPointerException;
+	public void decreaseKey(Entry<T> e, Double key) throws IllegalArgumentException, ClassCastException, NullPointerException;
 
 	/**
 	 * Delete the entry from this heap.
@@ -260,7 +260,7 @@ public interface Heap extends Iterable<Heap.Entry>
 	 * @throws NullPointerException If <code>e</code> is <code>null</code>.
 	 * @see #holdsEntry(Heap.Entry)
 	 */
-	public void delete(Entry e)	throws IllegalArgumentException, NullPointerException;
+	public void delete(Entry<T> e)	throws IllegalArgumentException, NullPointerException;
 
 	/**
 	 * Clear this heap.
@@ -279,7 +279,7 @@ public interface Heap extends Iterable<Heap.Entry>
 	 * @param action the action to perform.
 	 * @throws NullPointerException If <code>action</code> is <code>null</code>.
 	 */
-	public void forEach(Action<Heap.Entry> action) throws NullPointerException;
+	public void forEach(Action<Heap.Entry<T>> action) throws NullPointerException;
 
 	/**
 	 * Get an iterator over the entries of this heap.
@@ -289,7 +289,7 @@ public interface Heap extends Iterable<Heap.Entry>
 	 *
 	 * @return an iterator over the entries of this heap.
 	 */
-	public Iterator<Heap.Entry> iterator();
+	public Iterator<Heap.Entry<T>> iterator();
 
 	/**
 	 * Get the collection of keys.
@@ -298,7 +298,7 @@ public interface Heap extends Iterable<Heap.Entry>
 	 *
 	 * @return the keys.
 	 */
-	public Collection<Integer> getKeys();
+	public Collection<T> getKeys();
 
 	/**
 	 * Get the collection of values.
@@ -317,7 +317,7 @@ public interface Heap extends Iterable<Heap.Entry>
 	 * @return the entry collection.
 	 * @see org.teneighty.heap.Heap.Entry
 	 */
-	public Collection<Heap.Entry> getEntries();
+	public Collection<Heap.Entry<T>> getEntries();
 
 	/**
 	 * Compare this heap for equality with the specified object.
@@ -372,7 +372,7 @@ public interface Heap extends Iterable<Heap.Entry>
 	 * @version $Revision$ $Date: 2009-10-29 23:54:44 -0400 (Thu, 29 Oct
 	 *          2009) $
 	 */
-	public static interface Entry
+	public static interface Entry<T>
 	{
 
 		/**
@@ -380,7 +380,7 @@ public interface Heap extends Iterable<Heap.Entry>
 		 *
 		 * @return the key.
 		 */
-		public Integer getKey();
+		public T getKey();
 
 		/**
 		 * Get the value of this entry.

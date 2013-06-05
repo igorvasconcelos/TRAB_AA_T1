@@ -11,7 +11,7 @@ import mst.PrimTree;
 public class PrimAvlTester {
   // O nome do arquivo de input padr�o (usado para testes).
   private static final String      DEFAULT_INPUT_FILE_NAME = "data/ALUE/alue2087.stp";
-  private static String            path                    = "data/ALUE/";
+  private static String            path                    = "data/ALUT/";
   private static String            inputFile               = "";
   private UndirectedGraph<Integer> graph;
 

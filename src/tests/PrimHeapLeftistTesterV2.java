@@ -12,7 +12,7 @@ public class PrimHeapLeftistTesterV2 {
 
   //O nome do arquivo de input padrão(usado para testes).
   private static final String DEFAULT_INPUT_FILE_NAME = "data/ALUE/alue2087.stp";
-  private static String       path                    = "data/ALUE/";
+  private static String       path                    = "data/DMXA/";
   private static String       inputFile               = "";
   private MstGraph            graph;
 
@@ -32,7 +32,7 @@ public class PrimHeapLeftistTesterV2 {
       Logger.isDebugging = false;
     }
     Logger.printOntoScreen(" ********* Prim com Heap de Leftist *********");
-    new PrimHeapLeftistTesterV2().run(args.length == 2); //args.length == 2
+    new PrimHeapLeftistTesterV2().run(true); //args.length == 2
   }
 
   public void run(boolean batch) throws Exception {

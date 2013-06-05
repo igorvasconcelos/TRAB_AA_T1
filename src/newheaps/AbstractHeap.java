@@ -60,9 +60,7 @@ import java.util.List;
  * @version $Revision$ $Date$
  */
 
-public abstract class AbstractHeap<TKey, TValue>
-        extends Object
-        implements Heap<TKey, TValue>, Iterable<Heap.Entry<TKey, TValue>>
+public abstract class AbstractHeap extends Object implements Heap, Iterable<Heap.Entry>
 {
 
         /**
@@ -95,13 +93,13 @@ public abstract class AbstractHeap<TKey, TValue>
          * first time this view is requested. The view is stateless, so there's no
          * reason to create more than one.
          */
-        private transient volatile Collection<TKey> keys;
+        private transient volatile Collection<Integer> keys;
 
         /**
          * This field is initialized to contain an instance of the values collection
          * view the first time this view is requested.
          */
-        private transient volatile Collection<TValue> values;
+        private transient volatile Collection<Double> values;
 
         /**
          * Entry collection view.
@@ -109,7 +107,7 @@ public abstract class AbstractHeap<TKey, TValue>
          * Like other collection-view fields, this one is lazy initialized the first
          * time it's accessed.
          */
-        private transient volatile Collection<Heap.Entry<TKey, TValue>> entries;
+        private transient volatile Collection<Heap.Entry> entries;
 
         /**
          * Constructor.
@@ -133,11 +131,9 @@ public abstract class AbstractHeap<TKey, TValue>
          * @throws NullPointerException If <code>node1</code> or <code>node2</code>
          *             is <code>null</code>. This probably shouldn't happen.
          */
-        protected int compare(final Entry<TKey, TValue> node1,
-                        final Entry<TKey, TValue> node2)
-                throws ClassCastException, NullPointerException
+        protected int compare(final Entry node1, final Entry node2) throws ClassCastException, NullPointerException
         {
-                return compareKeys(node1.getKey(), node2.getKey());
+                return compareKeys(node1.getValue(), node2.getValue());
         }
 
         /**
@@ -157,11 +153,10 @@ public abstract class AbstractHeap<TKey, TValue>
          *             not mutually comparable.
          * @see java.util.Comparator#compare(Object,Object)
          */
-        @SuppressWarnings("unchecked")
-        protected int compareKeys(final TKey k1, final TKey k2)
+        protected int compareKeys(final Double k1, final Double k2)
                 throws ClassCastException
         {
-                return (getComparator() == null ? (((Comparable<TKey>) k1).compareTo(k2))
+                return (getComparator() == null ? (((Comparable<Double>) k1).compareTo(k2))
                                 : getComparator().compare(k1, k2));
         }
 
@@ -169,7 +164,7 @@ public abstract class AbstractHeap<TKey, TValue>
          * @see org.teneighty.heap.Heap#insertAll(org.teneighty.heap.Heap)
          */
         @Override
-        public void insertAll(final Heap<? extends TKey, ? extends TValue> other)
+        public void insertAll(final Heap other)
                 throws NullPointerException, ClassCastException,
                 IllegalArgumentException
         {
@@ -189,9 +184,8 @@ public abstract class AbstractHeap<TKey, TValue>
                 }
 
                 // Loop over entries and stuff.
-                Iterator<? extends Heap.Entry<? extends TKey, ? extends TValue>> it = other
-                                .getEntries().iterator();
-                Entry<? extends TKey, ? extends TValue> entry;
+                Iterator<? extends Heap.Entry> it = other.getEntries().iterator();
+                Entry entry;
                 while (it.hasNext())
                 {
                         entry = it.next();
@@ -214,7 +208,7 @@ public abstract class AbstractHeap<TKey, TValue>
          * @see org.teneighty.heap.Heap#forEach(org.teneighty.heap.Action)
          */
         @Override
-        public void forEach(final Action<Heap.Entry<TKey, TValue>> action)
+        public void forEach(final Action<Heap.Entry> action)
                 throws NullPointerException
         {
                 if (action == null)
@@ -226,7 +220,7 @@ public abstract class AbstractHeap<TKey, TValue>
                 // iterator detects concurrent modification - we'll die right here
                 // with a ConcurrentModificationException (or something equally
                 // sinister).
-                Iterator<Heap.Entry<TKey, TValue>> entryIterator = iterator();
+                Iterator<Heap.Entry> entryIterator = iterator();
                 while (entryIterator.hasNext())
                 {
                         action.action(entryIterator.next());
@@ -249,7 +243,6 @@ public abstract class AbstractHeap<TKey, TValue>
          * @see java.lang.Object#equals(Object)
          * @see #hashCode()
          */
-        @SuppressWarnings("unchecked")
         @Override
         public boolean equals(final Object other)
         {
@@ -270,7 +263,7 @@ public abstract class AbstractHeap<TKey, TValue>
 
                 // erased cast... a little bit evil. We should also figure out
                 // here if we want to just cast to Heap<K,V>.
-                Heap<? extends TKey, ? extends TValue> that = (Heap<? extends TKey, ? extends TValue>) other;
+                Heap that = (Heap) other;
                 return getEntries().equals(that.getEntries());
         }
 
@@ -282,7 +275,7 @@ public abstract class AbstractHeap<TKey, TValue>
         public int hashCode()
         {
                 int code = 0;
-                Iterator<Heap.Entry<TKey, TValue>> it = getEntries().iterator();
+                Iterator<Heap.Entry> it = getEntries().iterator();
                 while (it.hasNext())
                 {
                         code += it.next().hashCode();
@@ -304,11 +297,11 @@ public abstract class AbstractHeap<TKey, TValue>
                 buffer.append(") ");
                 buffer.append("[");
 
-                Iterator<Heap.Entry<TKey, TValue>> it = getEntries().iterator();
+                Iterator<Heap.Entry> it = getEntries().iterator();
                 boolean next = it.hasNext();
-                Heap.Entry<TKey, TValue> entry = null;
-                TKey k = null;
-                TValue v = null;
+                Heap.Entry entry = null;
+                Integer k = null;
+                Double v = null;
                 while (next)
                 {
                         // Get next entry.
@@ -317,9 +310,11 @@ public abstract class AbstractHeap<TKey, TValue>
                         v = entry.getValue();
 
                         // Append mapping.
-                        buffer.append((k == this) ? "[self-reference]" : String.valueOf(k));
+                        //buffer.append((k == this) ? "[self-reference]" : String.valueOf(k));
+                        buffer.append(String.valueOf(k));
                         buffer.append("->");
-                        buffer.append((v == this) ? "[self-reference]" : String.valueOf(v));
+                        //buffer.append((v == this) ? "[self-reference]" : String.valueOf(v));
+                        buffer.append(String.valueOf(v));
 
                         // Check advance.
                         next = it.hasNext();
@@ -337,7 +332,7 @@ public abstract class AbstractHeap<TKey, TValue>
          * @see org.teneighty.heap.Heap#containsEntry(org.teneighty.heap.Heap.Entry)
          */
         @Override
-        public boolean containsEntry(final Entry<TKey, TValue> entry)
+        public boolean containsEntry(final Entry entry)
                 throws NullPointerException
         {
                 if (entry == null)
@@ -346,8 +341,8 @@ public abstract class AbstractHeap<TKey, TValue>
                 }
 
                 // Iterate over all entries...
-                Iterator<Heap.Entry<TKey, TValue>> it = getEntries().iterator();
-                Entry<TKey, TValue> next = null;
+                Iterator<Heap.Entry> it = getEntries().iterator();
+                Entry next = null;
                 while (it.hasNext())
                 {
                         next = it.next();
@@ -365,7 +360,7 @@ public abstract class AbstractHeap<TKey, TValue>
          * @see org.teneighty.heap.Heap#getKeys()
          */
         @Override
-        public Collection<TKey> getKeys()
+        public Collection<Integer> getKeys()
         {
                 if (keys == null)
                 {
@@ -379,7 +374,7 @@ public abstract class AbstractHeap<TKey, TValue>
          * @see org.teneighty.heap.Heap#getValues()
          */
         @Override
-        public Collection<TValue> getValues()
+        public Collection<Double> getValues()
         {
                 if (values == null)
                 {
@@ -393,7 +388,7 @@ public abstract class AbstractHeap<TKey, TValue>
          * @see org.teneighty.heap.Heap#getEntries()
          */
         @Override
-        public Collection<Heap.Entry<TKey, TValue>> getEntries()
+        public Collection<Heap.Entry> getEntries()
         {
                 if (entries == null)
                 {
@@ -406,13 +401,11 @@ public abstract class AbstractHeap<TKey, TValue>
         /**
          * @see java.lang.Object#clone()
          */
-        @SuppressWarnings("unchecked")
         @Override
-        protected Object clone()
-                throws CloneNotSupportedException
+        protected Object clone() throws CloneNotSupportedException
         {
                 // May throw clone not supported.
-                AbstractHeap<TKey, TValue> ah = (AbstractHeap<TKey, TValue>) super.clone();
+                AbstractHeap ah = (AbstractHeap) super.clone();
 
                 // Clear lame fields.
                 ah.keys = null;
@@ -663,7 +656,7 @@ public abstract class AbstractHeap<TKey, TValue>
          *          2009) $
          */
         private final class EntryCollection
-                extends AbstractHeapCollection<Heap.Entry<TKey, TValue>>
+                extends AbstractHeapCollection<Heap.Entry>
         {
 
                 /**
@@ -680,7 +673,7 @@ public abstract class AbstractHeap<TKey, TValue>
                  * @see java.util.AbstractCollection#iterator()
                  */
                 @Override
-                public Iterator<Heap.Entry<TKey, TValue>> iterator()
+                public Iterator<Heap.Entry> iterator()
                 {
                         return AbstractHeap.this.iterator();
                 }
@@ -688,7 +681,6 @@ public abstract class AbstractHeap<TKey, TValue>
                 /**
                  * @see org.teneighty.heap.AbstractHeap.AbstractHeapCollection#contains(java.lang.Object)
                  */
-                @SuppressWarnings("unchecked")
                 @Override
                 public final boolean contains(final Object o)
                 {
@@ -702,7 +694,7 @@ public abstract class AbstractHeap<TKey, TValue>
                                 return false;
                         }
 
-                        Heap.Entry<TKey, TValue> e = (Heap.Entry<TKey, TValue>) o;
+                        Heap.Entry e = (Heap.Entry) o;
                         return containsEntry(e);
                 }
 
@@ -717,8 +709,7 @@ public abstract class AbstractHeap<TKey, TValue>
          * @version $Revision$ $Date: 2009-10-29 23:54:44 -0400 (Thu, 29 Oct
          *          2009) $
          */
-        private final class KeyCollection
-                extends AbstractHeapCollection<TKey>
+        private final class KeyCollection extends AbstractHeapCollection<Integer>
         {
 
                 /**
@@ -735,7 +726,7 @@ public abstract class AbstractHeap<TKey, TValue>
                  * @see java.util.AbstractCollection#iterator()
                  */
                 @Override
-                public Iterator<TKey> iterator()
+                public Iterator<Integer> iterator()
                 {
                         return new KeyIterator();
                 }
@@ -747,15 +738,13 @@ public abstract class AbstractHeap<TKey, TValue>
                  * @version $Revision$ $Date: 2009-10-29 23:54:44 -0400 (Thu, 29 Oct
                  *          2009) $
                  */
-                private final class KeyIterator
-                        extends Object
-                        implements Iterator<TKey>
+                private final class KeyIterator extends Object implements Iterator<Integer>
                 {
 
                         /**
                          * Backing iterator.
                          */
-                        private final Iterator<Heap.Entry<TKey, TValue>> backingIterator;
+                        private final Iterator<Heap.Entry> backingIterator;
 
                         /**
                          * Constructor.
@@ -780,7 +769,7 @@ public abstract class AbstractHeap<TKey, TValue>
                          * @see java.util.Iterator#next()
                          */
                         @Override
-                        public TKey next()
+                        public Integer next()
                         {
                                 return backingIterator.next().getKey();
                         }
@@ -805,8 +794,7 @@ public abstract class AbstractHeap<TKey, TValue>
          * @version $Revision$ $Date: 2009-10-29 23:54:44 -0400 (Thu, 29 Oct
          *          2009) $
          */
-        private final class ValueCollection
-                extends AbstractHeapCollection<TValue>
+        private final class ValueCollection extends AbstractHeapCollection<Double>
         {
 
                 /**
@@ -825,7 +813,7 @@ public abstract class AbstractHeap<TKey, TValue>
                  * @return an iterator over this collection.
                  */
                 @Override
-                public Iterator<TValue> iterator()
+                public Iterator<Double> iterator()
                 {
                         // Everything is implemented atop the entry collection iterator.
                         return new ValueIterator();
@@ -838,15 +826,13 @@ public abstract class AbstractHeap<TKey, TValue>
                  * @version $Revision$ $Date: 2009-10-29 23:54:44 -0400 (Thu, 29 Oct
                  *          2009) $
                  */
-                private final class ValueIterator
-                        extends Object
-                        implements Iterator<TValue>
+                private final class ValueIterator extends Object implements Iterator<Double>
                 {
 
                         /**
                          * Backing iterator.
                          */
-                        private final Iterator<Heap.Entry<TKey, TValue>> backingIterator;
+                        private final Iterator<Heap.Entry> backingIterator;
 
                         /**
                          * Constructor.
@@ -872,7 +858,7 @@ public abstract class AbstractHeap<TKey, TValue>
                          * @see java.util.Iterator#next()
                          */
                         @Override
-                        public TValue next()
+                        public Double next()
                         {
                                 return backingIterator.next().getValue();
                         }
@@ -907,20 +893,18 @@ public abstract class AbstractHeap<TKey, TValue>
          * @version $Revision$ $Date: 2009-10-29 23:54:44 -0400 (Thu, 29 Oct
          *          2009) $
          */
-        protected static abstract class AbstractHeapEntry<TKey, TValue>
-                extends Object
-                implements Heap.Entry<TKey, TValue>
+        protected static abstract class AbstractHeapEntry extends Object implements Heap.Entry
         {
 
                 /**
                  * The key.
                  */
-                private TKey key;
+                private Integer key;
 
                 /**
                  * The value.
                  */
-                private TValue value;
+                private Double value;
 
                 /**
                  * Constructor.
@@ -928,7 +912,7 @@ public abstract class AbstractHeap<TKey, TValue>
                  * @param key the key.
                  * @param value the value.
                  */
-                protected AbstractHeapEntry(final TKey key, final TValue value)
+                protected AbstractHeapEntry(final Integer key, final Double value)
                 {
                         super();
 
@@ -941,7 +925,7 @@ public abstract class AbstractHeap<TKey, TValue>
                  * @see org.teneighty.heap.Heap.Entry#getKey()
                  */
                 @Override
-                public final TKey getKey()
+                public final Integer getKey()
                 {
                         return key;
                 }
@@ -957,7 +941,7 @@ public abstract class AbstractHeap<TKey, TValue>
                  * @param key the new key.
                  * @see #getKey()
                  */
-                public final void setKey(final TKey key)
+                public final void setKey(final Integer key)
                 {
                         this.key = key;
                 }
@@ -966,7 +950,7 @@ public abstract class AbstractHeap<TKey, TValue>
                  * @see org.teneighty.heap.Heap.Entry#getValue()
                  */
                 @Override
-                public final TValue getValue()
+                public final Double getValue()
                 {
                         return value;
                 }
@@ -975,9 +959,9 @@ public abstract class AbstractHeap<TKey, TValue>
                  * @see org.teneighty.heap.Heap.Entry#setValue(java.lang.Object)
                  */
                 @Override
-                public final TValue setValue(final TValue value)
+                public final Double setValue(final Double value)
                 {
-                        TValue tmp = value;
+                        Double tmp = value;
                         this.value = value;
                         return tmp;
                 }
@@ -985,7 +969,6 @@ public abstract class AbstractHeap<TKey, TValue>
                 /**
                  * @see Heap.Entry#equals(Object)
                  */
-                @SuppressWarnings("unchecked")
                 @Override
                 public final boolean equals(final Object other)
                 {
@@ -1027,11 +1010,11 @@ public abstract class AbstractHeap<TKey, TValue>
                 public String toString()
                 {
                         StringBuilder sb = new StringBuilder();
-                        sb.append(getKey() == this ? "[self-reference]" : String
-                                        .valueOf(getKey()));
+                        //sb.append(getKey() == this ? "[self-reference]" : String.valueOf(getKey()));
+                        sb.append(String.valueOf(getKey()));
                         sb.append("->");
-                        sb.append(getValue() == this ? "[self-reference]" : String
-                                        .valueOf(getValue()));
+                        //sb.append(getValue() == this ? "[self-reference]" : String.valueOf(getValue()));
+                        sb.append(String.valueOf(getValue()));
                         return sb.toString();
                 }
 

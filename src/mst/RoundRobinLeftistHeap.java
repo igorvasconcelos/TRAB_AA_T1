@@ -1,6 +1,6 @@
 package mst;
 
-import heap.LeftistHeap;
+import newheaps.LeftistHeapV2;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -23,7 +23,7 @@ public class RoundRobinLeftistHeap {
   public class RoundRobinStruct {
 
     /* The Fibonacci heap we'll use to select nodes efficiently. */
-    private LeftistHeap<PairVertex<Integer>> pq;
+    private LeftistHeapV2<PairVertex<Integer>> pq;
     private Integer                          value;
 
     /*

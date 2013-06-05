@@ -54,8 +54,7 @@ import java.lang.ref.WeakReference;
  * @author Fran Lattanzio
  * @version $Revision$ $Date$
  */
-public abstract class AbstractLinkedHeap<TKey, TValue>
-        extends AbstractHeap<TKey, TValue>
+public abstract class AbstractLinkedHeap extends AbstractHeap
 {
 
         /**
@@ -73,12 +72,10 @@ public abstract class AbstractLinkedHeap<TKey, TValue>
          * @see org.teneighty.heap.AbstractHeap#compare(org.teneighty.heap.Heap.Entry, org.teneighty.heap.Heap.Entry)
          */
         @Override
-        protected int compare(final Entry<TKey, TValue> node1,
-                        final Entry<TKey, TValue> node2)
-                throws ClassCastException, NullPointerException
+        protected int compare(final Entry node1, final Entry node2) throws ClassCastException, NullPointerException
         {
-                AbstractLinkedHeapEntry<TKey, TValue> e1 = (AbstractLinkedHeapEntry<TKey, TValue>) node1;
-                AbstractLinkedHeapEntry<TKey, TValue> e2 = (AbstractLinkedHeapEntry<TKey, TValue>) node2;
+                AbstractLinkedHeapEntry e1 = (AbstractLinkedHeapEntry) node1;
+                AbstractLinkedHeapEntry e2 = (AbstractLinkedHeapEntry) node2;
 
                 if (e1.is_infinite && e2.is_infinite)
                 {
@@ -110,8 +107,7 @@ public abstract class AbstractLinkedHeap<TKey, TValue>
          * @version $Revision$ $Date: 2009-10-29 23:54:44 -0400 (Thu, 29 Oct
          *          2009) $
          */
-        protected static abstract class AbstractLinkedHeapEntry<K, V>
-                extends AbstractHeap.AbstractHeapEntry<K, V>
+        protected static abstract class AbstractLinkedHeapEntry extends AbstractHeap.AbstractHeapEntry
         {
 
                 /**
@@ -133,8 +129,7 @@ public abstract class AbstractLinkedHeap<TKey, TValue>
                  * @param value the value.
                  * @param ref the heap reference.
                  */
-                protected AbstractLinkedHeapEntry(final K key, final V value,
-                                final HeapReference ref)
+                protected AbstractLinkedHeapEntry(final Integer key, final Double value, final HeapReference ref)
                 {
                         super(key, value);
 
@@ -151,8 +146,7 @@ public abstract class AbstractLinkedHeap<TKey, TValue>
                  * @throws NullPointerException If <code>heap</code> is
                  *             <code>null</code>. Probably shouldn't happen.
                  */
-                protected final boolean isContainedBy(final AbstractLinkedHeap<K, V> heap)
-                        throws NullPointerException
+                protected final boolean isContainedBy(final AbstractLinkedHeap heap) throws NullPointerException
                 {
                         if (heap == null)
                         {
@@ -195,7 +189,6 @@ public abstract class AbstractLinkedHeap<TKey, TValue>
          * @version $Revision$ $Date: 2009-10-29 23:54:44 -0400 (Thu, 29 Oct
          *          2009) $
          */
-        @SuppressWarnings("unchecked")
         protected static final class HeapReference
                 extends Object
         {

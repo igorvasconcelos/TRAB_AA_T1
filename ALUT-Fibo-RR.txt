@@ -1,0 +1,1100 @@
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:12:18 BRT 2013-Tue Jun 04 20:12:23 BRT 2013-6043.0-11.62413-431
+alut0805.stp-Tue Jun 04 20:12:23 BRT 2013-Tue Jun 04 20:12:28 BRT 2013-5065.0-8.05153-621
+alut1181.stp-Tue Jun 04 20:12:28 BRT 2013-Tue Jun 04 20:12:33 BRT 2013-16352.0-72.89855-69
+alut2010.stp-Tue Jun 04 20:12:33 BRT 2013-Tue Jun 04 20:12:38 BRT 2013-33723.0-249.04762-21
+alut2288.stp-Tue Jun 04 20:12:38 BRT 2013-Tue Jun 04 20:12:44 BRT 2013-49737.0-541.0-10
+alut2566.stp-Tue Jun 04 20:12:44 BRT 2013-Tue Jun 04 20:12:49 BRT 2013-27596.0-175.17241-29
+alut2610.stp-Tue Jun 04 20:12:49 BRT 2013-Tue Jun 04 20:12:55 BRT 2013-184956.0-6310.0-1
+alut2625.stp-Tue Jun 04 20:12:56 BRT 2013-Tue Jun 04 20:13:03 BRT 2013-200270.0-7220.0-1
+alut2764.stp-Tue Jun 04 20:13:03 BRT 2013-Tue Jun 04 20:13:08 BRT 2013-1970.0-1.9654088-2544
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:13:08 BRT 2013-Tue Jun 04 20:13:13 BRT 2013-6043.0-11.312217-442
+alut0805.stp-Tue Jun 04 20:13:13 BRT 2013-Tue Jun 04 20:13:18 BRT 2013-5065.0-7.874016-635
+alut1181.stp-Tue Jun 04 20:13:18 BRT 2013-Tue Jun 04 20:13:23 BRT 2013-16352.0-71.40845-71
+alut2010.stp-Tue Jun 04 20:13:23 BRT 2013-Tue Jun 04 20:13:28 BRT 2013-33723.0-242.85715-21
+alut2288.stp-Tue Jun 04 20:13:28 BRT 2013-Tue Jun 04 20:13:34 BRT 2013-49737.0-529.0-10
+alut2566.stp-Tue Jun 04 20:13:34 BRT 2013-Tue Jun 04 20:13:39 BRT 2013-27596.0-173.10345-29
+alut2610.stp-Tue Jun 04 20:13:39 BRT 2013-Tue Jun 04 20:13:45 BRT 2013-184956.0-6350.0-1
+alut2625.stp-Tue Jun 04 20:13:46 BRT 2013-Tue Jun 04 20:13:53 BRT 2013-200270.0-7120.0-1
+alut2764.stp-Tue Jun 04 20:13:53 BRT 2013-Tue Jun 04 20:13:58 BRT 2013-1970.0-1.9747236-2532
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:13:58 BRT 2013-Tue Jun 04 20:14:03 BRT 2013-6043.0-11.574074-432
+alut0805.stp-Tue Jun 04 20:14:03 BRT 2013-Tue Jun 04 20:14:08 BRT 2013-5065.0-8.0-625
+alut1181.stp-Tue Jun 04 20:14:08 BRT 2013-Tue Jun 04 20:14:13 BRT 2013-16352.0-72.89855-69
+alut2010.stp-Tue Jun 04 20:14:13 BRT 2013-Tue Jun 04 20:14:18 BRT 2013-33723.0-245.71428-21
+alut2288.stp-Tue Jun 04 20:14:18 BRT 2013-Tue Jun 04 20:14:23 BRT 2013-49737.0-516.0-10
+alut2566.stp-Tue Jun 04 20:14:23 BRT 2013-Tue Jun 04 20:14:28 BRT 2013-27596.0-175.17241-29
+alut2610.stp-Tue Jun 04 20:14:29 BRT 2013-Tue Jun 04 20:14:35 BRT 2013-184956.0-6340.0-1
+alut2625.stp-Tue Jun 04 20:14:35 BRT 2013-Tue Jun 04 20:14:42 BRT 2013-200270.0-7130.0-1
+alut2764.stp-Tue Jun 04 20:14:42 BRT 2013-Tue Jun 04 20:14:47 BRT 2013-1970.0-1.977066-2529
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:14:48 BRT 2013-Tue Jun 04 20:14:53 BRT 2013-6043.0-11.682243-428
+alut0805.stp-Tue Jun 04 20:14:53 BRT 2013-Tue Jun 04 20:14:58 BRT 2013-5065.0-8.090615-618
+alut1181.stp-Tue Jun 04 20:14:58 BRT 2013-Tue Jun 04 20:15:03 BRT 2013-16352.0-73.04348-69
+alut2010.stp-Tue Jun 04 20:15:03 BRT 2013-Tue Jun 04 20:15:08 BRT 2013-33723.0-248.57143-21
+alut2288.stp-Tue Jun 04 20:15:08 BRT 2013-Tue Jun 04 20:15:13 BRT 2013-49737.0-544.0-10
+alut2566.stp-Tue Jun 04 20:15:13 BRT 2013-Tue Jun 04 20:15:18 BRT 2013-27596.0-175.86208-29
+alut2610.stp-Tue Jun 04 20:15:19 BRT 2013-Tue Jun 04 20:15:25 BRT 2013-184956.0-6290.0-1
+alut2625.stp-Tue Jun 04 20:15:25 BRT 2013-Tue Jun 04 20:15:32 BRT 2013-200270.0-7100.0-1
+alut2764.stp-Tue Jun 04 20:15:32 BRT 2013-Tue Jun 04 20:15:37 BRT 2013-1970.0-1.9747236-2532
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:15:37 BRT 2013-Tue Jun 04 20:15:42 BRT 2013-6043.0-11.360544-441
+alut0805.stp-Tue Jun 04 20:15:43 BRT 2013-Tue Jun 04 20:15:48 BRT 2013-5065.0-7.874016-635
+alut1181.stp-Tue Jun 04 20:15:48 BRT 2013-Tue Jun 04 20:15:53 BRT 2013-16352.0-71.57143-70
+alut2010.stp-Tue Jun 04 20:15:53 BRT 2013-Tue Jun 04 20:15:58 BRT 2013-33723.0-243.33333-21
+alut2288.stp-Tue Jun 04 20:15:58 BRT 2013-Tue Jun 04 20:16:03 BRT 2013-49737.0-534.0-10
+alut2566.stp-Tue Jun 04 20:16:03 BRT 2013-Tue Jun 04 20:16:08 BRT 2013-27596.0-172.41379-29
+alut2610.stp-Tue Jun 04 20:16:08 BRT 2013-Tue Jun 04 20:16:15 BRT 2013-184956.0-6330.0-1
+alut2625.stp-Tue Jun 04 20:16:15 BRT 2013-Tue Jun 04 20:16:22 BRT 2013-200270.0-7210.0-1
+alut2764.stp-Tue Jun 04 20:16:22 BRT 2013-Tue Jun 04 20:16:27 BRT 2013-1970.0-1.968504-2540
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:16:27 BRT 2013-Tue Jun 04 20:16:32 BRT 2013-6043.0-11.547344-433
+alut0805.stp-Tue Jun 04 20:16:32 BRT 2013-Tue Jun 04 20:16:37 BRT 2013-5065.0-6.377551-784
+alut1181.stp-Tue Jun 04 20:16:37 BRT 2013-Tue Jun 04 20:16:42 BRT 2013-16352.0-70.27778-72
+alut2010.stp-Tue Jun 04 20:16:42 BRT 2013-Tue Jun 04 20:16:48 BRT 2013-33723.0-245.71428-21
+alut2288.stp-Tue Jun 04 20:16:48 BRT 2013-Tue Jun 04 20:16:53 BRT 2013-49737.0-531.0-10
+alut2566.stp-Tue Jun 04 20:16:53 BRT 2013-Tue Jun 04 20:16:58 BRT 2013-27596.0-175.51724-29
+alut2610.stp-Tue Jun 04 20:16:58 BRT 2013-Tue Jun 04 20:17:05 BRT 2013-184956.0-6300.0-1
+alut2625.stp-Tue Jun 04 20:17:05 BRT 2013-Tue Jun 04 20:17:12 BRT 2013-200270.0-7110.0-1
+alut2764.stp-Tue Jun 04 20:17:12 BRT 2013-Tue Jun 04 20:17:17 BRT 2013-1970.0-1.9409938-2576
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:17:17 BRT 2013-Tue Jun 04 20:17:22 BRT 2013-6043.0-11.520738-434
+alut0805.stp-Tue Jun 04 20:17:22 BRT 2013-Tue Jun 04 20:17:27 BRT 2013-5065.0-8.0-625
+alut1181.stp-Tue Jun 04 20:17:27 BRT 2013-Tue Jun 04 20:17:32 BRT 2013-16352.0-72.89855-69
+alut2010.stp-Tue Jun 04 20:17:32 BRT 2013-Tue Jun 04 20:17:37 BRT 2013-33723.0-247.61905-21
+alut2288.stp-Tue Jun 04 20:17:37 BRT 2013-Tue Jun 04 20:17:43 BRT 2013-49737.0-539.0-10
+alut2566.stp-Tue Jun 04 20:17:43 BRT 2013-Tue Jun 04 20:17:48 BRT 2013-27596.0-174.82759-29
+alut2610.stp-Tue Jun 04 20:17:48 BRT 2013-Tue Jun 04 20:17:54 BRT 2013-184956.0-6360.0-1
+alut2625.stp-Tue Jun 04 20:17:55 BRT 2013-Tue Jun 04 20:18:02 BRT 2013-200270.0-6930.0-1
+alut2764.stp-Tue Jun 04 20:18:02 BRT 2013-Tue Jun 04 20:18:07 BRT 2013-1970.0-1.9708316-2537
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:18:07 BRT 2013-Tue Jun 04 20:18:12 BRT 2013-6043.0-11.655012-429
+alut0805.stp-Tue Jun 04 20:18:12 BRT 2013-Tue Jun 04 20:18:17 BRT 2013-5065.0-6.127451-816
+alut1181.stp-Tue Jun 04 20:18:17 BRT 2013-Tue Jun 04 20:18:22 BRT 2013-16352.0-71.12676-71
+alut2010.stp-Tue Jun 04 20:18:22 BRT 2013-Tue Jun 04 20:18:27 BRT 2013-33723.0-248.57143-21
+alut2288.stp-Tue Jun 04 20:18:27 BRT 2013-Tue Jun 04 20:18:33 BRT 2013-49737.0-542.0-10
+alut2566.stp-Tue Jun 04 20:18:33 BRT 2013-Tue Jun 04 20:18:38 BRT 2013-27596.0-176.55173-29
+alut2610.stp-Tue Jun 04 20:18:38 BRT 2013-Tue Jun 04 20:18:44 BRT 2013-184956.0-6320.0-1
+alut2625.stp-Tue Jun 04 20:18:45 BRT 2013-Tue Jun 04 20:18:52 BRT 2013-200270.0-7070.0-1
+alut2764.stp-Tue Jun 04 20:18:52 BRT 2013-Tue Jun 04 20:18:57 BRT 2013-1970.0-1.9661816-2543
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:18:57 BRT 2013-Tue Jun 04 20:19:02 BRT 2013-6043.0-11.520738-434
+alut0805.stp-Tue Jun 04 20:19:02 BRT 2013-Tue Jun 04 20:19:07 BRT 2013-5065.0-6.1576357-812
+alut1181.stp-Tue Jun 04 20:19:07 BRT 2013-Tue Jun 04 20:19:12 BRT 2013-16352.0-66.31579-76
+alut2010.stp-Tue Jun 04 20:19:12 BRT 2013-Tue Jun 04 20:19:17 BRT 2013-33723.0-245.2381-21
+alut2288.stp-Tue Jun 04 20:19:17 BRT 2013-Tue Jun 04 20:19:22 BRT 2013-49737.0-529.0-10
+alut2566.stp-Tue Jun 04 20:19:22 BRT 2013-Tue Jun 04 20:19:28 BRT 2013-27596.0-174.82759-29
+alut2610.stp-Tue Jun 04 20:19:28 BRT 2013-Tue Jun 04 20:19:34 BRT 2013-184956.0-6180.0-1
+alut2625.stp-Tue Jun 04 20:19:34 BRT 2013-Tue Jun 04 20:19:41 BRT 2013-200270.0-6960.0-1
+alut2764.stp-Tue Jun 04 20:19:41 BRT 2013-Tue Jun 04 20:19:46 BRT 2013-1970.0-1.9654088-2544
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:19:46 BRT 2013-Tue Jun 04 20:19:51 BRT 2013-6043.0-11.261261-444
+alut0805.stp-Tue Jun 04 20:19:51 BRT 2013-Tue Jun 04 20:19:56 BRT 2013-5065.0-7.861635-636
+alut1181.stp-Tue Jun 04 20:19:56 BRT 2013-Tue Jun 04 20:20:01 BRT 2013-16352.0-71.26761-71
+alut2010.stp-Tue Jun 04 20:20:01 BRT 2013-Tue Jun 04 20:20:07 BRT 2013-33723.0-242.85715-21
+alut2288.stp-Tue Jun 04 20:20:07 BRT 2013-Tue Jun 04 20:20:12 BRT 2013-49737.0-531.0-10
+alut2566.stp-Tue Jun 04 20:20:12 BRT 2013-Tue Jun 04 20:20:17 BRT 2013-27596.0-173.10345-29
+alut2610.stp-Tue Jun 04 20:20:17 BRT 2013-Tue Jun 04 20:20:24 BRT 2013-184956.0-6350.0-1
+alut2625.stp-Tue Jun 04 20:20:24 BRT 2013-Tue Jun 04 20:20:31 BRT 2013-200270.0-7050.0-1
+alut2764.stp-Tue Jun 04 20:20:31 BRT 2013-Tue Jun 04 20:20:36 BRT 2013-1970.0-1.9708316-2537
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:20:36 BRT 2013-Tue Jun 04 20:20:41 BRT 2013-6043.0-11.597222-432
+alut0805.stp-Tue Jun 04 20:20:41 BRT 2013-Tue Jun 04 20:20:46 BRT 2013-5065.0-8.05153-621
+alut1181.stp-Tue Jun 04 20:20:46 BRT 2013-Tue Jun 04 20:20:51 BRT 2013-16352.0-73.04348-69
+alut2010.stp-Tue Jun 04 20:20:51 BRT 2013-Tue Jun 04 20:20:56 BRT 2013-33723.0-247.14285-21
+alut2288.stp-Tue Jun 04 20:20:56 BRT 2013-Tue Jun 04 20:21:02 BRT 2013-49737.0-538.0-10
+alut2566.stp-Tue Jun 04 20:21:02 BRT 2013-Tue Jun 04 20:21:07 BRT 2013-27596.0-174.48276-29
+alut2610.stp-Tue Jun 04 20:21:07 BRT 2013-Tue Jun 04 20:21:13 BRT 2013-184956.0-6300.0-1
+alut2625.stp-Tue Jun 04 20:21:14 BRT 2013-Tue Jun 04 20:21:21 BRT 2013-200270.0-7130.0-1
+alut2764.stp-Tue Jun 04 20:21:21 BRT 2013-Tue Jun 04 20:21:26 BRT 2013-1970.0-1.9692793-2539
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:21:26 BRT 2013-Tue Jun 04 20:21:31 BRT 2013-6043.0-11.570438-433
+alut0805.stp-Tue Jun 04 20:21:31 BRT 2013-Tue Jun 04 20:21:36 BRT 2013-5065.0-8.05153-621
+alut1181.stp-Tue Jun 04 20:21:36 BRT 2013-Tue Jun 04 20:21:41 BRT 2013-16352.0-72.608696-69
+alut2010.stp-Tue Jun 04 20:21:41 BRT 2013-Tue Jun 04 20:21:46 BRT 2013-33723.0-248.57143-21
+alut2288.stp-Tue Jun 04 20:21:46 BRT 2013-Tue Jun 04 20:21:52 BRT 2013-49737.0-542.0-10
+alut2566.stp-Tue Jun 04 20:21:52 BRT 2013-Tue Jun 04 20:21:57 BRT 2013-27596.0-174.82759-29
+alut2610.stp-Tue Jun 04 20:21:57 BRT 2013-Tue Jun 04 20:22:03 BRT 2013-184956.0-6280.0-1
+alut2625.stp-Tue Jun 04 20:22:04 BRT 2013-Tue Jun 04 20:22:11 BRT 2013-200270.0-7150.0-1
+alut2764.stp-Tue Jun 04 20:22:11 BRT 2013-Tue Jun 04 20:22:16 BRT 2013-1970.0-1.9809825-2524
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:22:16 BRT 2013-Tue Jun 04 20:22:21 BRT 2013-6043.0-11.312217-442
+alut0805.stp-Tue Jun 04 20:22:21 BRT 2013-Tue Jun 04 20:22:26 BRT 2013-5065.0-7.861635-636
+alut1181.stp-Tue Jun 04 20:22:26 BRT 2013-Tue Jun 04 20:22:31 BRT 2013-16352.0-71.40845-71
+alut2010.stp-Tue Jun 04 20:22:31 BRT 2013-Tue Jun 04 20:22:36 BRT 2013-33723.0-243.33333-21
+alut2288.stp-Tue Jun 04 20:22:36 BRT 2013-Tue Jun 04 20:22:42 BRT 2013-49737.0-528.0-10
+alut2566.stp-Tue Jun 04 20:22:42 BRT 2013-Tue Jun 04 20:22:47 BRT 2013-27596.0-166.66667-30
+alut2610.stp-Tue Jun 04 20:22:47 BRT 2013-Tue Jun 04 20:22:53 BRT 2013-184956.0-6360.0-1
+alut2625.stp-Tue Jun 04 20:22:53 BRT 2013-Tue Jun 04 20:23:01 BRT 2013-200270.0-7150.0-1
+alut2764.stp-Tue Jun 04 20:23:01 BRT 2013-Tue Jun 04 20:23:06 BRT 2013-1970.0-1.968504-2540
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:23:06 BRT 2013-Tue Jun 04 20:23:11 BRT 2013-6043.0-11.570438-433
+alut0805.stp-Tue Jun 04 20:23:11 BRT 2013-Tue Jun 04 20:23:16 BRT 2013-5065.0-7.9872203-626
+alut1181.stp-Tue Jun 04 20:23:16 BRT 2013-Tue Jun 04 20:23:21 BRT 2013-16352.0-73.04348-69
+alut2010.stp-Tue Jun 04 20:23:21 BRT 2013-Tue Jun 04 20:23:26 BRT 2013-33723.0-246.19048-21
+alut2288.stp-Tue Jun 04 20:23:26 BRT 2013-Tue Jun 04 20:23:31 BRT 2013-49737.0-535.0-10
+alut2566.stp-Tue Jun 04 20:23:31 BRT 2013-Tue Jun 04 20:23:36 BRT 2013-27596.0-174.82759-29
+alut2610.stp-Tue Jun 04 20:23:37 BRT 2013-Tue Jun 04 20:23:43 BRT 2013-184956.0-6350.0-1
+alut2625.stp-Tue Jun 04 20:23:43 BRT 2013-Tue Jun 04 20:23:50 BRT 2013-200270.0-7140.0-1
+alut2764.stp-Tue Jun 04 20:23:50 BRT 2013-Tue Jun 04 20:23:55 BRT 2013-1970.0-1.9809825-2524
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:23:56 BRT 2013-Tue Jun 04 20:24:01 BRT 2013-6043.0-11.520738-434
+alut0805.stp-Tue Jun 04 20:24:01 BRT 2013-Tue Jun 04 20:24:06 BRT 2013-5065.0-8.05153-621
+alut1181.stp-Tue Jun 04 20:24:06 BRT 2013-Tue Jun 04 20:24:11 BRT 2013-16352.0-72.89855-69
+alut2010.stp-Tue Jun 04 20:24:11 BRT 2013-Tue Jun 04 20:24:16 BRT 2013-33723.0-248.09525-21
+alut2288.stp-Tue Jun 04 20:24:16 BRT 2013-Tue Jun 04 20:24:21 BRT 2013-49737.0-541.0-10
+alut2566.stp-Tue Jun 04 20:24:21 BRT 2013-Tue Jun 04 20:24:26 BRT 2013-27596.0-175.51724-29
+alut2610.stp-Tue Jun 04 20:24:27 BRT 2013-Tue Jun 04 20:24:33 BRT 2013-184956.0-6340.0-1
+alut2625.stp-Tue Jun 04 20:24:33 BRT 2013-Tue Jun 04 20:24:40 BRT 2013-200270.0-7140.0-1
+alut2764.stp-Tue Jun 04 20:24:40 BRT 2013-Tue Jun 04 20:24:45 BRT 2013-1970.0-1.9646366-2545
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:24:46 BRT 2013-Tue Jun 04 20:24:51 BRT 2013-6043.0-11.627907-430
+alut0805.stp-Tue Jun 04 20:24:51 BRT 2013-Tue Jun 04 20:24:56 BRT 2013-5065.0-8.077544-619
+alut1181.stp-Tue Jun 04 20:24:56 BRT 2013-Tue Jun 04 20:25:01 BRT 2013-16352.0-73.333336-69
+alut2010.stp-Tue Jun 04 20:25:01 BRT 2013-Tue Jun 04 20:25:06 BRT 2013-33723.0-249.5238-21
+alut2288.stp-Tue Jun 04 20:25:06 BRT 2013-Tue Jun 04 20:25:11 BRT 2013-49737.0-540.0-10
+alut2566.stp-Tue Jun 04 20:25:11 BRT 2013-Tue Jun 04 20:25:17 BRT 2013-27596.0-176.2069-29
+alut2610.stp-Tue Jun 04 20:25:17 BRT 2013-Tue Jun 04 20:25:23 BRT 2013-184956.0-6330.0-1
+alut2625.stp-Tue Jun 04 20:25:23 BRT 2013-Tue Jun 04 20:25:31 BRT 2013-200270.0-7140.0-1
+alut2764.stp-Tue Jun 04 20:25:31 BRT 2013-Tue Jun 04 20:25:36 BRT 2013-1970.0-1.9817678-2523
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:25:36 BRT 2013-Tue Jun 04 20:25:41 BRT 2013-6043.0-11.547344-433
+alut0805.stp-Tue Jun 04 20:25:41 BRT 2013-Tue Jun 04 20:25:46 BRT 2013-5065.0-7.9744816-627
+alut1181.stp-Tue Jun 04 20:25:46 BRT 2013-Tue Jun 04 20:25:51 BRT 2013-16352.0-73.18841-69
+alut2010.stp-Tue Jun 04 20:25:51 BRT 2013-Tue Jun 04 20:25:56 BRT 2013-33723.0-246.19048-21
+alut2288.stp-Tue Jun 04 20:25:56 BRT 2013-Tue Jun 04 20:26:01 BRT 2013-49737.0-541.0-10
+alut2566.stp-Tue Jun 04 20:26:01 BRT 2013-Tue Jun 04 20:26:06 BRT 2013-27596.0-174.48276-29
+alut2610.stp-Tue Jun 04 20:26:07 BRT 2013-Tue Jun 04 20:26:13 BRT 2013-184956.0-6340.0-1
+alut2625.stp-Tue Jun 04 20:26:13 BRT 2013-Tue Jun 04 20:26:20 BRT 2013-200270.0-7130.0-1
+alut2764.stp-Tue Jun 04 20:26:20 BRT 2013-Tue Jun 04 20:26:25 BRT 2013-1970.0-1.9342359-2585
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:26:26 BRT 2013-Tue Jun 04 20:26:31 BRT 2013-6043.0-11.600928-431
+alut0805.stp-Tue Jun 04 20:26:31 BRT 2013-Tue Jun 04 20:26:36 BRT 2013-5065.0-8.05153-621
+alut1181.stp-Tue Jun 04 20:26:36 BRT 2013-Tue Jun 04 20:26:41 BRT 2013-16352.0-72.608696-69
+alut2010.stp-Tue Jun 04 20:26:41 BRT 2013-Tue Jun 04 20:26:46 BRT 2013-33723.0-248.57143-21
+alut2288.stp-Tue Jun 04 20:26:46 BRT 2013-Tue Jun 04 20:26:51 BRT 2013-49737.0-541.0-10
+alut2566.stp-Tue Jun 04 20:26:52 BRT 2013-Tue Jun 04 20:26:57 BRT 2013-27596.0-175.17241-29
+alut2610.stp-Tue Jun 04 20:26:57 BRT 2013-Tue Jun 04 20:27:03 BRT 2013-184956.0-6320.0-1
+alut2625.stp-Tue Jun 04 20:27:03 BRT 2013-Tue Jun 04 20:27:11 BRT 2013-200270.0-7220.0-1
+alut2764.stp-Tue Jun 04 20:27:11 BRT 2013-Tue Jun 04 20:27:16 BRT 2013-1970.0-1.9755038-2531
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:27:16 BRT 2013-Tue Jun 04 20:27:21 BRT 2013-6043.0-11.655012-429
+alut0805.stp-Tue Jun 04 20:27:21 BRT 2013-Tue Jun 04 20:27:26 BRT 2013-5065.0-8.077544-619
+alut1181.stp-Tue Jun 04 20:27:26 BRT 2013-Tue Jun 04 20:27:31 BRT 2013-16352.0-73.52941-68
+alut2010.stp-Tue Jun 04 20:27:31 BRT 2013-Tue Jun 04 20:27:36 BRT 2013-33723.0-248.57143-21
+alut2288.stp-Tue Jun 04 20:27:36 BRT 2013-Tue Jun 04 20:27:41 BRT 2013-49737.0-539.0-10
+alut2566.stp-Tue Jun 04 20:27:42 BRT 2013-Tue Jun 04 20:27:47 BRT 2013-27596.0-175.86208-29
+alut2610.stp-Tue Jun 04 20:27:47 BRT 2013-Tue Jun 04 20:27:53 BRT 2013-184956.0-6350.0-1
+alut2625.stp-Tue Jun 04 20:27:53 BRT 2013-Tue Jun 04 20:28:01 BRT 2013-200270.0-7130.0-1
+alut2764.stp-Tue Jun 04 20:28:01 BRT 2013-Tue Jun 04 20:28:06 BRT 2013-1970.0-1.977066-2529
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:28:06 BRT 2013-Tue Jun 04 20:28:11 BRT 2013-6043.0-11.286682-443
+alut0805.stp-Tue Jun 04 20:28:11 BRT 2013-Tue Jun 04 20:28:16 BRT 2013-5065.0-7.874016-635
+alut1181.stp-Tue Jun 04 20:28:16 BRT 2013-Tue Jun 04 20:28:21 BRT 2013-16352.0-71.54929-71
+alut2010.stp-Tue Jun 04 20:28:21 BRT 2013-Tue Jun 04 20:28:26 BRT 2013-33723.0-243.33333-21
+alut2288.stp-Tue Jun 04 20:28:26 BRT 2013-Tue Jun 04 20:28:31 BRT 2013-49737.0-530.0-10
+alut2566.stp-Tue Jun 04 20:28:31 BRT 2013-Tue Jun 04 20:28:36 BRT 2013-27596.0-173.44827-29
+alut2610.stp-Tue Jun 04 20:28:37 BRT 2013-Tue Jun 04 20:28:43 BRT 2013-184956.0-6340.0-1
+alut2625.stp-Tue Jun 04 20:28:43 BRT 2013-Tue Jun 04 20:28:50 BRT 2013-200270.0-7110.0-1
+alut2764.stp-Tue Jun 04 20:28:50 BRT 2013-Tue Jun 04 20:28:55 BRT 2013-1970.0-1.9716089-2536
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:28:56 BRT 2013-Tue Jun 04 20:29:01 BRT 2013-6043.0-11.547344-433
+alut0805.stp-Tue Jun 04 20:29:01 BRT 2013-Tue Jun 04 20:29:06 BRT 2013-5065.0-8.025682-623
+alut1181.stp-Tue Jun 04 20:29:06 BRT 2013-Tue Jun 04 20:29:11 BRT 2013-16352.0-72.753624-69
+alut2010.stp-Tue Jun 04 20:29:11 BRT 2013-Tue Jun 04 20:29:16 BRT 2013-33723.0-247.61905-21
+alut2288.stp-Tue Jun 04 20:29:16 BRT 2013-Tue Jun 04 20:29:21 BRT 2013-49737.0-543.0-10
+alut2566.stp-Tue Jun 04 20:29:21 BRT 2013-Tue Jun 04 20:29:26 BRT 2013-27596.0-175.17241-29
+alut2610.stp-Tue Jun 04 20:29:27 BRT 2013-Tue Jun 04 20:29:33 BRT 2013-184956.0-6280.0-1
+alut2625.stp-Tue Jun 04 20:29:33 BRT 2013-Tue Jun 04 20:29:40 BRT 2013-200270.0-7100.0-1
+alut2764.stp-Tue Jun 04 20:29:40 BRT 2013-Tue Jun 04 20:29:45 BRT 2013-1970.0-1.9462826-2569
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:29:46 BRT 2013-Tue Jun 04 20:29:51 BRT 2013-6043.0-11.655012-429
+alut0805.stp-Tue Jun 04 20:29:51 BRT 2013-Tue Jun 04 20:29:56 BRT 2013-5065.0-8.077544-619
+alut1181.stp-Tue Jun 04 20:29:56 BRT 2013-Tue Jun 04 20:30:01 BRT 2013-16352.0-73.52941-68
+alut2010.stp-Tue Jun 04 20:30:01 BRT 2013-Tue Jun 04 20:30:06 BRT 2013-33723.0-246.66667-21
+alut2288.stp-Tue Jun 04 20:30:06 BRT 2013-Tue Jun 04 20:30:11 BRT 2013-49737.0-538.0-10
+alut2566.stp-Tue Jun 04 20:30:11 BRT 2013-Tue Jun 04 20:30:16 BRT 2013-27596.0-175.86208-29
+alut2610.stp-Tue Jun 04 20:30:17 BRT 2013-Tue Jun 04 20:30:23 BRT 2013-184956.0-6360.0-1
+alut2625.stp-Tue Jun 04 20:30:23 BRT 2013-Tue Jun 04 20:30:30 BRT 2013-200270.0-7120.0-1
+alut2764.stp-Tue Jun 04 20:30:30 BRT 2013-Tue Jun 04 20:30:35 BRT 2013-1970.0-1.977066-2529
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:30:35 BRT 2013-Tue Jun 04 20:30:40 BRT 2013-6043.0-11.337869-441
+alut0805.stp-Tue Jun 04 20:30:40 BRT 2013-Tue Jun 04 20:30:45 BRT 2013-5065.0-7.874016-635
+alut1181.stp-Tue Jun 04 20:30:46 BRT 2013-Tue Jun 04 20:30:51 BRT 2013-16352.0-71.26761-71
+alut2010.stp-Tue Jun 04 20:30:51 BRT 2013-Tue Jun 04 20:30:56 BRT 2013-33723.0-243.33333-21
+alut2288.stp-Tue Jun 04 20:30:56 BRT 2013-Tue Jun 04 20:31:01 BRT 2013-49737.0-528.0-10
+alut2566.stp-Tue Jun 04 20:31:01 BRT 2013-Tue Jun 04 20:31:06 BRT 2013-27596.0-172.75862-29
+alut2610.stp-Tue Jun 04 20:31:06 BRT 2013-Tue Jun 04 20:31:13 BRT 2013-184956.0-6310.0-1
+alut2625.stp-Tue Jun 04 20:31:13 BRT 2013-Tue Jun 04 20:31:20 BRT 2013-200270.0-7150.0-1
+alut2764.stp-Tue Jun 04 20:31:20 BRT 2013-Tue Jun 04 20:31:25 BRT 2013-1970.0-1.9747236-2532
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:31:25 BRT 2013-Tue Jun 04 20:31:30 BRT 2013-6043.0-11.547344-433
+alut0805.stp-Tue Jun 04 20:31:30 BRT 2013-Tue Jun 04 20:31:35 BRT 2013-5065.0-6.5876155-759
+alut1181.stp-Tue Jun 04 20:31:35 BRT 2013-Tue Jun 04 20:31:40 BRT 2013-16352.0-72.89855-69
+alut2010.stp-Tue Jun 04 20:31:40 BRT 2013-Tue Jun 04 20:31:45 BRT 2013-33723.0-246.19048-21
+alut2288.stp-Tue Jun 04 20:31:46 BRT 2013-Tue Jun 04 20:31:51 BRT 2013-49737.0-535.0-10
+alut2566.stp-Tue Jun 04 20:31:51 BRT 2013-Tue Jun 04 20:31:56 BRT 2013-27596.0-174.82759-29
+alut2610.stp-Tue Jun 04 20:31:56 BRT 2013-Tue Jun 04 20:32:03 BRT 2013-184956.0-6330.0-1
+alut2625.stp-Tue Jun 04 20:32:03 BRT 2013-Tue Jun 04 20:32:10 BRT 2013-200270.0-7140.0-1
+alut2764.stp-Tue Jun 04 20:32:10 BRT 2013-Tue Jun 04 20:32:15 BRT 2013-1970.0-1.973944-2533
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:32:15 BRT 2013-Tue Jun 04 20:32:20 BRT 2013-6043.0-11.655012-429
+alut0805.stp-Tue Jun 04 20:32:20 BRT 2013-Tue Jun 04 20:32:25 BRT 2013-5065.0-8.05153-621
+alut1181.stp-Tue Jun 04 20:32:25 BRT 2013-Tue Jun 04 20:32:30 BRT 2013-16352.0-73.52941-68
+alut2010.stp-Tue Jun 04 20:32:30 BRT 2013-Tue Jun 04 20:32:35 BRT 2013-33723.0-251.0-20
+alut2288.stp-Tue Jun 04 20:32:35 BRT 2013-Tue Jun 04 20:32:41 BRT 2013-49737.0-540.0-10
+alut2566.stp-Tue Jun 04 20:32:41 BRT 2013-Tue Jun 04 20:32:46 BRT 2013-27596.0-175.86208-29
+alut2610.stp-Tue Jun 04 20:32:46 BRT 2013-Tue Jun 04 20:32:52 BRT 2013-184956.0-6360.0-1
+alut2625.stp-Tue Jun 04 20:32:53 BRT 2013-Tue Jun 04 20:33:00 BRT 2013-200270.0-7090.0-1
+alut2764.stp-Tue Jun 04 20:33:00 BRT 2013-Tue Jun 04 20:33:05 BRT 2013-1970.0-1.9731649-2534
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:33:05 BRT 2013-Tue Jun 04 20:33:10 BRT 2013-6043.0-11.312217-442
+alut0805.stp-Tue Jun 04 20:33:10 BRT 2013-Tue Jun 04 20:33:15 BRT 2013-5065.0-7.518797-665
+alut1181.stp-Tue Jun 04 20:33:15 BRT 2013-Tue Jun 04 20:33:20 BRT 2013-16352.0-71.54929-71
+alut2010.stp-Tue Jun 04 20:33:20 BRT 2013-Tue Jun 04 20:33:25 BRT 2013-33723.0-242.85715-21
+alut2288.stp-Tue Jun 04 20:33:25 BRT 2013-Tue Jun 04 20:33:31 BRT 2013-49737.0-530.0-10
+alut2566.stp-Tue Jun 04 20:33:31 BRT 2013-Tue Jun 04 20:33:36 BRT 2013-27596.0-173.44827-29
+alut2610.stp-Tue Jun 04 20:33:36 BRT 2013-Tue Jun 04 20:33:42 BRT 2013-184956.0-6340.0-1
+alut2625.stp-Tue Jun 04 20:33:42 BRT 2013-Tue Jun 04 20:33:50 BRT 2013-200270.0-7130.0-1
+alut2764.stp-Tue Jun 04 20:33:50 BRT 2013-Tue Jun 04 20:33:55 BRT 2013-1970.0-1.9817678-2523
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:33:55 BRT 2013-Tue Jun 04 20:34:00 BRT 2013-6043.0-10.615711-471
+alut0805.stp-Tue Jun 04 20:34:00 BRT 2013-Tue Jun 04 20:34:05 BRT 2013-5065.0-8.064516-620
+alut1181.stp-Tue Jun 04 20:34:05 BRT 2013-Tue Jun 04 20:34:10 BRT 2013-16352.0-73.18841-69
+alut2010.stp-Tue Jun 04 20:34:10 BRT 2013-Tue Jun 04 20:34:15 BRT 2013-33723.0-239.5238-21
+alut2288.stp-Tue Jun 04 20:34:15 BRT 2013-Tue Jun 04 20:34:20 BRT 2013-49737.0-530.0-10
+alut2566.stp-Tue Jun 04 20:34:20 BRT 2013-Tue Jun 04 20:34:25 BRT 2013-27596.0-174.48276-29
+alut2610.stp-Tue Jun 04 20:34:26 BRT 2013-Tue Jun 04 20:34:32 BRT 2013-184956.0-6340.0-1
+alut2625.stp-Tue Jun 04 20:34:32 BRT 2013-Tue Jun 04 20:34:39 BRT 2013-200270.0-7090.0-1
+alut2764.stp-Tue Jun 04 20:34:39 BRT 2013-Tue Jun 04 20:34:44 BRT 2013-1970.0-1.9825535-2522
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:34:44 BRT 2013-Tue Jun 04 20:34:49 BRT 2013-6043.0-11.261261-444
+alut0805.stp-Tue Jun 04 20:34:49 BRT 2013-Tue Jun 04 20:34:54 BRT 2013-5065.0-7.7760496-643
+alut1181.stp-Tue Jun 04 20:34:54 BRT 2013-Tue Jun 04 20:34:59 BRT 2013-16352.0-71.26761-71
+alut2010.stp-Tue Jun 04 20:34:59 BRT 2013-Tue Jun 04 20:35:05 BRT 2013-33723.0-243.80952-21
+alut2288.stp-Tue Jun 04 20:35:05 BRT 2013-Tue Jun 04 20:35:10 BRT 2013-49737.0-531.0-10
+alut2566.stp-Tue Jun 04 20:35:10 BRT 2013-Tue Jun 04 20:35:15 BRT 2013-27596.0-172.75862-29
+alut2610.stp-Tue Jun 04 20:35:15 BRT 2013-Tue Jun 04 20:35:22 BRT 2013-184956.0-6280.0-1
+alut2625.stp-Tue Jun 04 20:35:22 BRT 2013-Tue Jun 04 20:35:29 BRT 2013-200270.0-7110.0-1
+alut2764.stp-Tue Jun 04 20:35:29 BRT 2013-Tue Jun 04 20:35:34 BRT 2013-1970.0-1.9700551-2538
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:35:34 BRT 2013-Tue Jun 04 20:35:39 BRT 2013-6043.0-11.574074-432
+alut0805.stp-Tue Jun 04 20:35:39 BRT 2013-Tue Jun 04 20:35:44 BRT 2013-5065.0-8.05153-621
+alut1181.stp-Tue Jun 04 20:35:44 BRT 2013-Tue Jun 04 20:35:49 BRT 2013-16352.0-72.91304-69
+alut2010.stp-Tue Jun 04 20:35:49 BRT 2013-Tue Jun 04 20:35:54 BRT 2013-33723.0-248.57143-21
+alut2288.stp-Tue Jun 04 20:35:54 BRT 2013-Tue Jun 04 20:36:00 BRT 2013-49737.0-541.0-10
+alut2566.stp-Tue Jun 04 20:36:00 BRT 2013-Tue Jun 04 20:36:05 BRT 2013-27596.0-176.2069-29
+alut2610.stp-Tue Jun 04 20:36:05 BRT 2013-Tue Jun 04 20:36:12 BRT 2013-184956.0-6310.0-1
+alut2625.stp-Tue Jun 04 20:36:12 BRT 2013-Tue Jun 04 20:36:19 BRT 2013-200270.0-7090.0-1
+alut2764.stp-Tue Jun 04 20:36:19 BRT 2013-Tue Jun 04 20:36:24 BRT 2013-1970.0-1.977066-2529
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:36:24 BRT 2013-Tue Jun 04 20:36:29 BRT 2013-6043.0-11.655012-429
+alut0805.stp-Tue Jun 04 20:36:29 BRT 2013-Tue Jun 04 20:36:34 BRT 2013-5065.0-8.077544-619
+alut1181.stp-Tue Jun 04 20:36:34 BRT 2013-Tue Jun 04 20:36:39 BRT 2013-16352.0-73.333336-69
+alut2010.stp-Tue Jun 04 20:36:39 BRT 2013-Tue Jun 04 20:36:44 BRT 2013-33723.0-248.09525-21
+alut2288.stp-Tue Jun 04 20:36:44 BRT 2013-Tue Jun 04 20:36:50 BRT 2013-49737.0-540.0-10
+alut2566.stp-Tue Jun 04 20:36:50 BRT 2013-Tue Jun 04 20:36:55 BRT 2013-27596.0-175.86208-29
+alut2610.stp-Tue Jun 04 20:36:55 BRT 2013-Tue Jun 04 20:37:02 BRT 2013-184956.0-6310.0-1
+alut2625.stp-Tue Jun 04 20:37:02 BRT 2013-Tue Jun 04 20:37:09 BRT 2013-200270.0-7050.0-1
+alut2764.stp-Tue Jun 04 20:37:09 BRT 2013-Tue Jun 04 20:37:14 BRT 2013-1970.0-1.9708316-2537
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:37:14 BRT 2013-Tue Jun 04 20:37:19 BRT 2013-6043.0-11.337869-441
+alut0805.stp-Tue Jun 04 20:37:19 BRT 2013-Tue Jun 04 20:37:24 BRT 2013-5065.0-7.874016-635
+alut1181.stp-Tue Jun 04 20:37:24 BRT 2013-Tue Jun 04 20:37:29 BRT 2013-16352.0-71.54929-71
+alut2010.stp-Tue Jun 04 20:37:29 BRT 2013-Tue Jun 04 20:37:34 BRT 2013-33723.0-243.33333-21
+alut2288.stp-Tue Jun 04 20:37:34 BRT 2013-Tue Jun 04 20:37:40 BRT 2013-49737.0-532.0-10
+alut2566.stp-Tue Jun 04 20:37:40 BRT 2013-Tue Jun 04 20:37:45 BRT 2013-27596.0-173.7931-29
+alut2610.stp-Tue Jun 04 20:37:45 BRT 2013-Tue Jun 04 20:37:51 BRT 2013-184956.0-6330.0-1
+alut2625.stp-Tue Jun 04 20:37:52 BRT 2013-Tue Jun 04 20:37:58 BRT 2013-200270.0-6910.0-1
+alut2764.stp-Tue Jun 04 20:37:58 BRT 2013-Tue Jun 04 20:38:03 BRT 2013-1970.0-1.9747236-2532
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:38:04 BRT 2013-Tue Jun 04 20:38:09 BRT 2013-6043.0-11.600928-431
+alut0805.stp-Tue Jun 04 20:38:09 BRT 2013-Tue Jun 04 20:38:14 BRT 2013-5065.0-8.077544-619
+alut1181.stp-Tue Jun 04 20:38:14 BRT 2013-Tue Jun 04 20:38:19 BRT 2013-16352.0-73.333336-69
+alut2010.stp-Tue Jun 04 20:38:19 BRT 2013-Tue Jun 04 20:38:24 BRT 2013-33723.0-249.04762-21
+alut2288.stp-Tue Jun 04 20:38:24 BRT 2013-Tue Jun 04 20:38:29 BRT 2013-49737.0-540.0-10
+alut2566.stp-Tue Jun 04 20:38:29 BRT 2013-Tue Jun 04 20:38:35 BRT 2013-27596.0-176.2069-29
+alut2610.stp-Tue Jun 04 20:38:35 BRT 2013-Tue Jun 04 20:38:41 BRT 2013-184956.0-6350.0-1
+alut2625.stp-Tue Jun 04 20:38:41 BRT 2013-Tue Jun 04 20:38:49 BRT 2013-200270.0-7140.0-1
+alut2764.stp-Tue Jun 04 20:38:49 BRT 2013-Tue Jun 04 20:38:54 BRT 2013-1970.0-1.973944-2533
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:38:54 BRT 2013-Tue Jun 04 20:38:59 BRT 2013-6043.0-11.627907-430
+alut0805.stp-Tue Jun 04 20:38:59 BRT 2013-Tue Jun 04 20:39:04 BRT 2013-5065.0-8.064516-620
+alut1181.stp-Tue Jun 04 20:39:04 BRT 2013-Tue Jun 04 20:39:09 BRT 2013-16352.0-73.18841-69
+alut2010.stp-Tue Jun 04 20:39:09 BRT 2013-Tue Jun 04 20:39:14 BRT 2013-33723.0-248.09525-21
+alut2288.stp-Tue Jun 04 20:39:14 BRT 2013-Tue Jun 04 20:39:20 BRT 2013-49737.0-543.0-10
+alut2566.stp-Tue Jun 04 20:39:20 BRT 2013-Tue Jun 04 20:39:25 BRT 2013-27596.0-176.2069-29
+alut2610.stp-Tue Jun 04 20:39:25 BRT 2013-Tue Jun 04 20:39:31 BRT 2013-184956.0-6320.0-1
+alut2625.stp-Tue Jun 04 20:39:31 BRT 2013-Tue Jun 04 20:39:39 BRT 2013-200270.0-7120.0-1
+alut2764.stp-Tue Jun 04 20:39:39 BRT 2013-Tue Jun 04 20:39:44 BRT 2013-1970.0-1.9661816-2543
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:39:44 BRT 2013-Tue Jun 04 20:39:49 BRT 2013-6043.0-11.283784-444
+alut0805.stp-Tue Jun 04 20:39:49 BRT 2013-Tue Jun 04 20:39:54 BRT 2013-5065.0-7.763975-644
+alut1181.stp-Tue Jun 04 20:39:54 BRT 2013-Tue Jun 04 20:39:59 BRT 2013-16352.0-71.40845-71
+alut2010.stp-Tue Jun 04 20:39:59 BRT 2013-Tue Jun 04 20:40:04 BRT 2013-33723.0-243.80952-21
+alut2288.stp-Tue Jun 04 20:40:04 BRT 2013-Tue Jun 04 20:40:09 BRT 2013-49737.0-535.0-10
+alut2566.stp-Tue Jun 04 20:40:09 BRT 2013-Tue Jun 04 20:40:15 BRT 2013-27596.0-173.10345-29
+alut2610.stp-Tue Jun 04 20:40:15 BRT 2013-Tue Jun 04 20:40:21 BRT 2013-184956.0-6340.0-1
+alut2625.stp-Tue Jun 04 20:40:21 BRT 2013-Tue Jun 04 20:40:28 BRT 2013-200270.0-7120.0-1
+alut2764.stp-Tue Jun 04 20:40:28 BRT 2013-Tue Jun 04 20:40:33 BRT 2013-1970.0-1.9677292-2541
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:40:34 BRT 2013-Tue Jun 04 20:40:39 BRT 2013-6043.0-11.600928-431
+alut0805.stp-Tue Jun 04 20:40:39 BRT 2013-Tue Jun 04 20:40:44 BRT 2013-5065.0-6.849315-730
+alut1181.stp-Tue Jun 04 20:40:44 BRT 2013-Tue Jun 04 20:40:49 BRT 2013-16352.0-71.12676-71
+alut2010.stp-Tue Jun 04 20:40:49 BRT 2013-Tue Jun 04 20:40:54 BRT 2013-33723.0-245.2381-21
+alut2288.stp-Tue Jun 04 20:40:54 BRT 2013-Tue Jun 04 20:40:59 BRT 2013-49737.0-539.0-10
+alut2566.stp-Tue Jun 04 20:40:59 BRT 2013-Tue Jun 04 20:41:04 BRT 2013-27596.0-174.48276-29
+alut2610.stp-Tue Jun 04 20:41:05 BRT 2013-Tue Jun 04 20:41:11 BRT 2013-184956.0-6290.0-1
+alut2625.stp-Tue Jun 04 20:41:11 BRT 2013-Tue Jun 04 20:41:18 BRT 2013-200270.0-7100.0-1
+alut2764.stp-Tue Jun 04 20:41:18 BRT 2013-Tue Jun 04 20:41:23 BRT 2013-1970.0-1.9700551-2538
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:41:23 BRT 2013-Tue Jun 04 20:41:28 BRT 2013-6043.0-11.46789-436
+alut0805.stp-Tue Jun 04 20:41:28 BRT 2013-Tue Jun 04 20:41:33 BRT 2013-5065.0-8.0-625
+alut1181.stp-Tue Jun 04 20:41:33 BRT 2013-Tue Jun 04 20:41:38 BRT 2013-16352.0-72.46377-69
+alut2010.stp-Tue Jun 04 20:41:39 BRT 2013-Tue Jun 04 20:41:44 BRT 2013-33723.0-248.09525-21
+alut2288.stp-Tue Jun 04 20:41:44 BRT 2013-Tue Jun 04 20:41:49 BRT 2013-49737.0-541.0-10
+alut2566.stp-Tue Jun 04 20:41:49 BRT 2013-Tue Jun 04 20:41:54 BRT 2013-27596.0-175.51724-29
+alut2610.stp-Tue Jun 04 20:41:55 BRT 2013-Tue Jun 04 20:42:01 BRT 2013-184956.0-6240.0-1
+alut2625.stp-Tue Jun 04 20:42:01 BRT 2013-Tue Jun 04 20:42:08 BRT 2013-200270.0-7020.0-1
+alut2764.stp-Tue Jun 04 20:42:08 BRT 2013-Tue Jun 04 20:42:13 BRT 2013-1970.0-1.9646366-2545
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:42:13 BRT 2013-Tue Jun 04 20:42:18 BRT 2013-6043.0-11.389522-439
+alut0805.stp-Tue Jun 04 20:42:18 BRT 2013-Tue Jun 04 20:42:23 BRT 2013-5065.0-7.911392-632
+alut1181.stp-Tue Jun 04 20:42:23 BRT 2013-Tue Jun 04 20:42:28 BRT 2013-16352.0-71.85714-70
+alut2010.stp-Tue Jun 04 20:42:28 BRT 2013-Tue Jun 04 20:42:34 BRT 2013-33723.0-245.2381-21
+alut2288.stp-Tue Jun 04 20:42:34 BRT 2013-Tue Jun 04 20:42:39 BRT 2013-49737.0-536.0-10
+alut2566.stp-Tue Jun 04 20:42:39 BRT 2013-Tue Jun 04 20:42:44 BRT 2013-27596.0-173.44827-29
+alut2610.stp-Tue Jun 04 20:42:44 BRT 2013-Tue Jun 04 20:42:51 BRT 2013-184956.0-6360.0-1
+alut2625.stp-Tue Jun 04 20:42:51 BRT 2013-Tue Jun 04 20:42:58 BRT 2013-200270.0-7140.0-1
+alut2764.stp-Tue Jun 04 20:42:58 BRT 2013-Tue Jun 04 20:43:03 BRT 2013-1970.0-1.9833399-2521
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:43:03 BRT 2013-Tue Jun 04 20:43:08 BRT 2013-6043.0-11.547344-433
+alut0805.stp-Tue Jun 04 20:43:08 BRT 2013-Tue Jun 04 20:43:13 BRT 2013-5065.0-7.0323486-711
+alut1181.stp-Tue Jun 04 20:43:13 BRT 2013-Tue Jun 04 20:43:18 BRT 2013-16352.0-73.18841-69
+alut2010.stp-Tue Jun 04 20:43:18 BRT 2013-Tue Jun 04 20:43:23 BRT 2013-33723.0-247.61905-21
+alut2288.stp-Tue Jun 04 20:43:23 BRT 2013-Tue Jun 04 20:43:29 BRT 2013-49737.0-494.54544-11
+alut2566.stp-Tue Jun 04 20:43:29 BRT 2013-Tue Jun 04 20:43:34 BRT 2013-27596.0-175.17241-29
+alut2610.stp-Tue Jun 04 20:43:34 BRT 2013-Tue Jun 04 20:43:41 BRT 2013-184956.0-6320.0-1
+alut2625.stp-Tue Jun 04 20:43:41 BRT 2013-Tue Jun 04 20:43:48 BRT 2013-200270.0-7120.0-1
+alut2764.stp-Tue Jun 04 20:43:48 BRT 2013-Tue Jun 04 20:43:53 BRT 2013-1970.0-1.9700551-2538
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:43:53 BRT 2013-Tue Jun 04 20:43:58 BRT 2013-6043.0-11.547344-433
+alut0805.stp-Tue Jun 04 20:43:58 BRT 2013-Tue Jun 04 20:44:03 BRT 2013-5065.0-8.025682-623
+alut1181.stp-Tue Jun 04 20:44:03 BRT 2013-Tue Jun 04 20:44:08 BRT 2013-16352.0-72.753624-69
+alut2010.stp-Tue Jun 04 20:44:08 BRT 2013-Tue Jun 04 20:44:13 BRT 2013-33723.0-249.04762-21
+alut2288.stp-Tue Jun 04 20:44:14 BRT 2013-Tue Jun 04 20:44:19 BRT 2013-49737.0-544.0-10
+alut2566.stp-Tue Jun 04 20:44:19 BRT 2013-Tue Jun 04 20:44:24 BRT 2013-27596.0-175.17241-29
+alut2610.stp-Tue Jun 04 20:44:24 BRT 2013-Tue Jun 04 20:44:31 BRT 2013-184956.0-6280.0-1
+alut2625.stp-Tue Jun 04 20:44:31 BRT 2013-Tue Jun 04 20:44:38 BRT 2013-200270.0-7110.0-1
+alut2764.stp-Tue Jun 04 20:44:38 BRT 2013-Tue Jun 04 20:44:43 BRT 2013-1970.0-1.9516003-2562
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:44:43 BRT 2013-Tue Jun 04 20:44:48 BRT 2013-6043.0-11.682243-428
+alut0805.stp-Tue Jun 04 20:44:48 BRT 2013-Tue Jun 04 20:44:53 BRT 2013-5065.0-8.077544-619
+alut1181.stp-Tue Jun 04 20:44:53 BRT 2013-Tue Jun 04 20:44:58 BRT 2013-16352.0-73.52941-68
+alut2010.stp-Tue Jun 04 20:44:58 BRT 2013-Tue Jun 04 20:45:03 BRT 2013-33723.0-249.04762-21
+alut2288.stp-Tue Jun 04 20:45:04 BRT 2013-Tue Jun 04 20:45:09 BRT 2013-49737.0-543.0-10
+alut2566.stp-Tue Jun 04 20:45:09 BRT 2013-Tue Jun 04 20:45:14 BRT 2013-27596.0-175.86208-29
+alut2610.stp-Tue Jun 04 20:45:14 BRT 2013-Tue Jun 04 20:45:21 BRT 2013-184956.0-6300.0-1
+alut2625.stp-Tue Jun 04 20:45:21 BRT 2013-Tue Jun 04 20:45:28 BRT 2013-200270.0-7150.0-1
+alut2764.stp-Tue Jun 04 20:45:28 BRT 2013-Tue Jun 04 20:45:33 BRT 2013-1970.0-1.9723866-2535
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:45:33 BRT 2013-Tue Jun 04 20:45:38 BRT 2013-6043.0-11.627907-430
+alut0805.stp-Tue Jun 04 20:45:38 BRT 2013-Tue Jun 04 20:45:43 BRT 2013-5065.0-8.090615-618
+alut1181.stp-Tue Jun 04 20:45:43 BRT 2013-Tue Jun 04 20:45:48 BRT 2013-16352.0-73.478264-69
+alut2010.stp-Tue Jun 04 20:45:48 BRT 2013-Tue Jun 04 20:45:54 BRT 2013-33723.0-247.14285-21
+alut2288.stp-Tue Jun 04 20:45:54 BRT 2013-Tue Jun 04 20:45:59 BRT 2013-49737.0-540.0-10
+alut2566.stp-Tue Jun 04 20:45:59 BRT 2013-Tue Jun 04 20:46:04 BRT 2013-27596.0-175.86208-29
+alut2610.stp-Tue Jun 04 20:46:04 BRT 2013-Tue Jun 04 20:46:11 BRT 2013-184956.0-6350.0-1
+alut2625.stp-Tue Jun 04 20:46:11 BRT 2013-Tue Jun 04 20:46:18 BRT 2013-200270.0-7120.0-1
+alut2764.stp-Tue Jun 04 20:46:18 BRT 2013-Tue Jun 04 20:46:23 BRT 2013-1970.0-1.9654088-2544
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:46:23 BRT 2013-Tue Jun 04 20:46:28 BRT 2013-6043.0-11.733021-427
+alut0805.stp-Tue Jun 04 20:46:28 BRT 2013-Tue Jun 04 20:46:33 BRT 2013-5065.0-8.143323-614
+alut1181.stp-Tue Jun 04 20:46:33 BRT 2013-Tue Jun 04 20:46:38 BRT 2013-16352.0-73.18841-69
+alut2010.stp-Tue Jun 04 20:46:38 BRT 2013-Tue Jun 04 20:46:44 BRT 2013-33723.0-248.57143-21
+alut2288.stp-Tue Jun 04 20:46:44 BRT 2013-Tue Jun 04 20:46:49 BRT 2013-49737.0-542.1-10
+alut2566.stp-Tue Jun 04 20:46:49 BRT 2013-Tue Jun 04 20:46:54 BRT 2013-27596.0-175.86208-29
+alut2610.stp-Tue Jun 04 20:46:54 BRT 2013-Tue Jun 04 20:47:01 BRT 2013-184956.0-6340.0-1
+alut2625.stp-Tue Jun 04 20:47:01 BRT 2013-Tue Jun 04 20:47:08 BRT 2013-200270.0-7131.0-1
+alut2764.stp-Tue Jun 04 20:47:08 BRT 2013-Tue Jun 04 20:47:13 BRT 2013-1970.0-1.9864918-2517
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:47:13 BRT 2013-Tue Jun 04 20:47:18 BRT 2013-6043.0-11.657343-429
+alut0805.stp-Tue Jun 04 20:47:18 BRT 2013-Tue Jun 04 20:47:23 BRT 2013-5065.0-8.064516-620
+alut1181.stp-Tue Jun 04 20:47:23 BRT 2013-Tue Jun 04 20:47:28 BRT 2013-16352.0-73.202896-69
+alut2010.stp-Tue Jun 04 20:47:28 BRT 2013-Tue Jun 04 20:47:34 BRT 2013-33723.0-248.09525-21
+alut2288.stp-Tue Jun 04 20:47:34 BRT 2013-Tue Jun 04 20:47:39 BRT 2013-49737.0-540.1-10
+alut2566.stp-Tue Jun 04 20:47:39 BRT 2013-Tue Jun 04 20:47:44 BRT 2013-27596.0-175.86208-29
+alut2610.stp-Tue Jun 04 20:47:44 BRT 2013-Tue Jun 04 20:47:51 BRT 2013-184956.0-6340.0-1
+alut2625.stp-Tue Jun 04 20:47:51 BRT 2013-Tue Jun 04 20:47:58 BRT 2013-200270.0-7161.0-1
+alut2764.stp-Tue Jun 04 20:47:58 BRT 2013-Tue Jun 04 20:48:03 BRT 2013-1970.0-1.9692793-2539
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:48:03 BRT 2013-Tue Jun 04 20:48:08 BRT 2013-6043.0-11.417809-438
+alut0805.stp-Tue Jun 04 20:48:08 BRT 2013-Tue Jun 04 20:48:13 BRT 2013-5065.0-7.9365077-630
+alut1181.stp-Tue Jun 04 20:48:13 BRT 2013-Tue Jun 04 20:48:18 BRT 2013-16352.0-72.478264-69
+alut2010.stp-Tue Jun 04 20:48:18 BRT 2013-Tue Jun 04 20:48:24 BRT 2013-33723.0-245.2381-21
+alut2288.stp-Tue Jun 04 20:48:24 BRT 2013-Tue Jun 04 20:48:29 BRT 2013-49737.0-537.1-10
+alut2566.stp-Tue Jun 04 20:48:29 BRT 2013-Tue Jun 04 20:48:34 BRT 2013-27596.0-174.82759-29
+alut2610.stp-Tue Jun 04 20:48:34 BRT 2013-Tue Jun 04 20:48:41 BRT 2013-184956.0-6361.0-1
+alut2625.stp-Tue Jun 04 20:48:41 BRT 2013-Tue Jun 04 20:48:48 BRT 2013-200270.0-7131.0-1
+alut2764.stp-Tue Jun 04 20:48:48 BRT 2013-Tue Jun 04 20:48:53 BRT 2013-1970.0-1.9936204-2508
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:48:53 BRT 2013-Tue Jun 04 20:48:58 BRT 2013-6043.0-11.653488-430
+alut0805.stp-Tue Jun 04 20:48:58 BRT 2013-Tue Jun 04 20:49:03 BRT 2013-5065.0-8.103727-617
+alut1181.stp-Tue Jun 04 20:49:03 BRT 2013-Tue Jun 04 20:49:08 BRT 2013-16352.0-73.05797-69
+alut2010.stp-Tue Jun 04 20:49:08 BRT 2013-Tue Jun 04 20:49:13 BRT 2013-33723.0-250.0-20
+alut2288.stp-Tue Jun 04 20:49:13 BRT 2013-Tue Jun 04 20:49:19 BRT 2013-49737.0-545.1-10
+alut2566.stp-Tue Jun 04 20:49:19 BRT 2013-Tue Jun 04 20:49:24 BRT 2013-27596.0-176.2069-29
+alut2610.stp-Tue Jun 04 20:49:24 BRT 2013-Tue Jun 04 20:49:31 BRT 2013-184956.0-6401.0-1
+alut2625.stp-Tue Jun 04 20:49:31 BRT 2013-Tue Jun 04 20:49:38 BRT 2013-200270.0-7132.0-1
+alut2764.stp-Tue Jun 04 20:49:38 BRT 2013-Tue Jun 04 20:49:43 BRT 2013-1970.0-1.9896538-2513
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:49:43 BRT 2013-Tue Jun 04 20:49:48 BRT 2013-6043.0-11.653488-430
+alut0805.stp-Tue Jun 04 20:49:48 BRT 2013-Tue Jun 04 20:49:53 BRT 2013-5065.0-8.103727-617
+alut1181.stp-Tue Jun 04 20:49:53 BRT 2013-Tue Jun 04 20:49:58 BRT 2013-16352.0-73.05797-69
+alut2010.stp-Tue Jun 04 20:49:58 BRT 2013-Tue Jun 04 20:50:04 BRT 2013-33723.0-248.57143-21
+alut2288.stp-Tue Jun 04 20:50:04 BRT 2013-Tue Jun 04 20:50:09 BRT 2013-49737.0-536.1-10
+alut2566.stp-Tue Jun 04 20:50:09 BRT 2013-Tue Jun 04 20:50:14 BRT 2013-27596.0-175.17241-29
+alut2610.stp-Tue Jun 04 20:50:14 BRT 2013-Tue Jun 04 20:50:21 BRT 2013-184956.0-6341.0-1
+alut2625.stp-Tue Jun 04 20:50:21 BRT 2013-Tue Jun 04 20:50:28 BRT 2013-200270.0-7151.0-1
+alut2764.stp-Tue Jun 04 20:50:28 BRT 2013-Tue Jun 04 20:50:33 BRT 2013-1970.0-1.9716089-2536
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:50:33 BRT 2013-Tue Jun 04 20:50:38 BRT 2013-6043.0-11.576389-432
+alut0805.stp-Tue Jun 04 20:50:38 BRT 2013-Tue Jun 04 20:50:43 BRT 2013-5065.0-8.090615-618
+alut1181.stp-Tue Jun 04 20:50:43 BRT 2013-Tue Jun 04 20:50:48 BRT 2013-16352.0-72.91304-69
+alut2010.stp-Tue Jun 04 20:50:48 BRT 2013-Tue Jun 04 20:50:54 BRT 2013-33723.0-249.5238-21
+alut2288.stp-Tue Jun 04 20:50:54 BRT 2013-Tue Jun 04 20:50:59 BRT 2013-49737.0-542.1-10
+alut2566.stp-Tue Jun 04 20:50:59 BRT 2013-Tue Jun 04 20:51:04 BRT 2013-27596.0-175.17241-29
+alut2610.stp-Tue Jun 04 20:51:04 BRT 2013-Tue Jun 04 20:51:11 BRT 2013-184956.0-6350.0-1
+alut2625.stp-Tue Jun 04 20:51:11 BRT 2013-Tue Jun 04 20:51:18 BRT 2013-200270.0-7091.0-1
+alut2764.stp-Tue Jun 04 20:51:18 BRT 2013-Tue Jun 04 20:51:23 BRT 2013-1970.0-1.9708316-2537
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:51:23 BRT 2013-Tue Jun 04 20:51:28 BRT 2013-6043.0-11.657343-429
+alut0805.stp-Tue Jun 04 20:51:28 BRT 2013-Tue Jun 04 20:51:33 BRT 2013-5065.0-8.064516-620
+alut1181.stp-Tue Jun 04 20:51:33 BRT 2013-Tue Jun 04 20:51:38 BRT 2013-16352.0-73.54412-68
+alut2010.stp-Tue Jun 04 20:51:38 BRT 2013-Tue Jun 04 20:51:44 BRT 2013-33723.0-249.04762-21
+alut2288.stp-Tue Jun 04 20:51:44 BRT 2013-Tue Jun 04 20:51:49 BRT 2013-49737.0-542.1-10
+alut2566.stp-Tue Jun 04 20:51:49 BRT 2013-Tue Jun 04 20:51:54 BRT 2013-27596.0-176.2069-29
+alut2610.stp-Tue Jun 04 20:51:54 BRT 2013-Tue Jun 04 20:52:01 BRT 2013-184956.0-6360.0-1
+alut2625.stp-Tue Jun 04 20:52:01 BRT 2013-Tue Jun 04 20:52:08 BRT 2013-200270.0-7070.0-1
+alut2764.stp-Tue Jun 04 20:52:08 BRT 2013-Tue Jun 04 20:52:13 BRT 2013-1970.0-1.9696732-2539
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:52:13 BRT 2013-Tue Jun 04 20:52:18 BRT 2013-6043.0-11.570438-433
+alut0805.stp-Tue Jun 04 20:52:18 BRT 2013-Tue Jun 04 20:52:23 BRT 2013-5065.0-8.025682-623
+alut1181.stp-Tue Jun 04 20:52:23 BRT 2013-Tue Jun 04 20:52:28 BRT 2013-16352.0-73.18841-69
+alut2010.stp-Tue Jun 04 20:52:28 BRT 2013-Tue Jun 04 20:52:34 BRT 2013-33723.0-247.14285-21
+alut2288.stp-Tue Jun 04 20:52:34 BRT 2013-Tue Jun 04 20:52:39 BRT 2013-49737.0-538.1-10
+alut2566.stp-Tue Jun 04 20:52:39 BRT 2013-Tue Jun 04 20:52:44 BRT 2013-27596.0-174.82759-29
+alut2610.stp-Tue Jun 04 20:52:44 BRT 2013-Tue Jun 04 20:52:51 BRT 2013-184956.0-6290.0-1
+alut2625.stp-Tue Jun 04 20:52:51 BRT 2013-Tue Jun 04 20:52:58 BRT 2013-200270.0-7130.0-1
+alut2764.stp-Tue Jun 04 20:52:58 BRT 2013-Tue Jun 04 20:53:03 BRT 2013-1970.0-1.951229-2563
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:53:03 BRT 2013-Tue Jun 04 20:53:08 BRT 2013-6043.0-11.627907-430
+alut0805.stp-Tue Jun 04 20:53:08 BRT 2013-Tue Jun 04 20:53:13 BRT 2013-5065.0-8.103727-617
+alut1181.stp-Tue Jun 04 20:53:13 BRT 2013-Tue Jun 04 20:53:18 BRT 2013-16352.0-73.18841-69
+alut2010.stp-Tue Jun 04 20:53:18 BRT 2013-Tue Jun 04 20:53:24 BRT 2013-33723.0-249.5238-21
+alut2288.stp-Tue Jun 04 20:53:24 BRT 2013-Tue Jun 04 20:53:29 BRT 2013-49737.0-538.1-10
+alut2566.stp-Tue Jun 04 20:53:29 BRT 2013-Tue Jun 04 20:53:34 BRT 2013-27596.0-176.2069-29
+alut2610.stp-Tue Jun 04 20:53:34 BRT 2013-Tue Jun 04 20:53:41 BRT 2013-184956.0-6350.0-1
+alut2625.stp-Tue Jun 04 20:53:41 BRT 2013-Tue Jun 04 20:53:48 BRT 2013-200270.0-7170.0-1
+alut2764.stp-Tue Jun 04 20:53:48 BRT 2013-Tue Jun 04 20:53:53 BRT 2013-1970.0-1.9720031-2536
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:53:53 BRT 2013-Tue Jun 04 20:53:58 BRT 2013-6043.0-11.389522-439
+alut0805.stp-Tue Jun 04 20:53:58 BRT 2013-Tue Jun 04 20:54:03 BRT 2013-5065.0-7.9872203-626
+alut1181.stp-Tue Jun 04 20:54:03 BRT 2013-Tue Jun 04 20:54:09 BRT 2013-16352.0-71.71429-70
+alut2010.stp-Tue Jun 04 20:54:09 BRT 2013-Tue Jun 04 20:54:14 BRT 2013-33723.0-253.0-20
+alut2288.stp-Tue Jun 04 20:54:14 BRT 2013-Tue Jun 04 20:54:19 BRT 2013-49737.0-537.1-10
+alut2566.stp-Tue Jun 04 20:54:19 BRT 2013-Tue Jun 04 20:54:24 BRT 2013-27596.0-174.48276-29
+alut2610.stp-Tue Jun 04 20:54:24 BRT 2013-Tue Jun 04 20:54:31 BRT 2013-184956.0-6340.0-1
+alut2625.stp-Tue Jun 04 20:54:31 BRT 2013-Tue Jun 04 20:54:38 BRT 2013-200270.0-7130.0-1
+alut2764.stp-Tue Jun 04 20:54:38 BRT 2013-Tue Jun 04 20:54:43 BRT 2013-1970.0-1.9774615-2529
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:54:43 BRT 2013-Tue Jun 04 20:54:48 BRT 2013-6043.0-11.627907-430
+alut0805.stp-Tue Jun 04 20:54:48 BRT 2013-Tue Jun 04 20:54:53 BRT 2013-5065.0-8.066129-620
+alut1181.stp-Tue Jun 04 20:54:53 BRT 2013-Tue Jun 04 20:54:58 BRT 2013-16352.0-73.333336-69
+alut2010.stp-Tue Jun 04 20:54:58 BRT 2013-Tue Jun 04 20:55:04 BRT 2013-33723.0-247.61905-21
+alut2288.stp-Tue Jun 04 20:55:04 BRT 2013-Tue Jun 04 20:55:09 BRT 2013-49737.0-542.1-10
+alut2566.stp-Tue Jun 04 20:55:09 BRT 2013-Tue Jun 04 20:55:14 BRT 2013-27596.0-175.51724-29
+alut2610.stp-Tue Jun 04 20:55:14 BRT 2013-Tue Jun 04 20:55:21 BRT 2013-184956.0-6320.0-1
+alut2625.stp-Tue Jun 04 20:55:21 BRT 2013-Tue Jun 04 20:55:28 BRT 2013-200270.0-7150.0-1
+alut2764.stp-Tue Jun 04 20:55:28 BRT 2013-Tue Jun 04 20:55:33 BRT 2013-1970.0-1.9720031-2536
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:55:33 BRT 2013-Tue Jun 04 20:55:38 BRT 2013-6043.0-11.655012-429
+alut0805.stp-Tue Jun 04 20:55:38 BRT 2013-Tue Jun 04 20:55:43 BRT 2013-5065.0-8.090615-618
+alut1181.stp-Tue Jun 04 20:55:43 BRT 2013-Tue Jun 04 20:55:48 BRT 2013-16352.0-73.333336-69
+alut2010.stp-Tue Jun 04 20:55:48 BRT 2013-Tue Jun 04 20:55:54 BRT 2013-33723.0-248.57143-21
+alut2288.stp-Tue Jun 04 20:55:54 BRT 2013-Tue Jun 04 20:55:59 BRT 2013-49737.0-540.1-10
+alut2566.stp-Tue Jun 04 20:55:59 BRT 2013-Tue Jun 04 20:56:04 BRT 2013-27596.0-175.86208-29
+alut2610.stp-Tue Jun 04 20:56:05 BRT 2013-Tue Jun 04 20:56:11 BRT 2013-184956.0-6320.0-1
+alut2625.stp-Tue Jun 04 20:56:11 BRT 2013-Tue Jun 04 20:56:18 BRT 2013-200270.0-7210.0-1
+alut2764.stp-Tue Jun 04 20:56:18 BRT 2013-Tue Jun 04 20:56:23 BRT 2013-1970.0-1.9688976-2540
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:56:23 BRT 2013-Tue Jun 04 20:56:28 BRT 2013-6043.0-11.337869-441
+alut0805.stp-Tue Jun 04 20:56:28 BRT 2013-Tue Jun 04 20:56:33 BRT 2013-5065.0-7.9365077-630
+alut1181.stp-Tue Jun 04 20:56:33 BRT 2013-Tue Jun 04 20:56:38 BRT 2013-16352.0-71.57143-70
+alut2010.stp-Tue Jun 04 20:56:39 BRT 2013-Tue Jun 04 20:56:44 BRT 2013-33723.0-243.80952-21
+alut2288.stp-Tue Jun 04 20:56:44 BRT 2013-Tue Jun 04 20:56:49 BRT 2013-49737.0-536.0-10
+alut2566.stp-Tue Jun 04 20:56:49 BRT 2013-Tue Jun 04 20:56:54 BRT 2013-27596.0-173.82759-29
+alut2610.stp-Tue Jun 04 20:56:54 BRT 2013-Tue Jun 04 20:57:01 BRT 2013-184956.0-6330.0-1
+alut2625.stp-Tue Jun 04 20:57:01 BRT 2013-Tue Jun 04 20:57:08 BRT 2013-200270.0-7040.0-1
+alut2764.stp-Tue Jun 04 20:57:08 BRT 2013-Tue Jun 04 20:57:13 BRT 2013-1970.0-1.9447685-2571
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:57:13 BRT 2013-Tue Jun 04 20:57:18 BRT 2013-6043.0-11.600928-431
+alut0805.stp-Tue Jun 04 20:57:18 BRT 2013-Tue Jun 04 20:57:23 BRT 2013-5065.0-7.4626865-670
+alut1181.stp-Tue Jun 04 20:57:23 BRT 2013-Tue Jun 04 20:57:28 BRT 2013-16352.0-73.333336-69
+alut2010.stp-Tue Jun 04 20:57:28 BRT 2013-Tue Jun 04 20:57:33 BRT 2013-33723.0-247.61905-21
+alut2288.stp-Tue Jun 04 20:57:34 BRT 2013-Tue Jun 04 20:57:39 BRT 2013-49737.0-540.0-10
+alut2566.stp-Tue Jun 04 20:57:39 BRT 2013-Tue Jun 04 20:57:44 BRT 2013-27596.0-175.55173-29
+alut2610.stp-Tue Jun 04 20:57:44 BRT 2013-Tue Jun 04 20:57:51 BRT 2013-184956.0-6350.0-1
+alut2625.stp-Tue Jun 04 20:57:51 BRT 2013-Tue Jun 04 20:57:58 BRT 2013-200270.0-7040.0-1
+alut2764.stp-Tue Jun 04 20:57:58 BRT 2013-Tue Jun 04 20:58:03 BRT 2013-1970.0-1.8552876-2695
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:58:03 BRT 2013-Tue Jun 04 20:58:08 BRT 2013-6043.0-11.655012-429
+alut0805.stp-Tue Jun 04 20:58:08 BRT 2013-Tue Jun 04 20:58:13 BRT 2013-5065.0-8.077544-619
+alut1181.stp-Tue Jun 04 20:58:13 BRT 2013-Tue Jun 04 20:58:18 BRT 2013-16352.0-73.18841-69
+alut2010.stp-Tue Jun 04 20:58:18 BRT 2013-Tue Jun 04 20:58:23 BRT 2013-33723.0-249.5238-21
+alut2288.stp-Tue Jun 04 20:58:24 BRT 2013-Tue Jun 04 20:58:29 BRT 2013-49737.0-543.0-10
+alut2566.stp-Tue Jun 04 20:58:29 BRT 2013-Tue Jun 04 20:58:34 BRT 2013-27596.0-175.89655-29
+alut2610.stp-Tue Jun 04 20:58:34 BRT 2013-Tue Jun 04 20:58:41 BRT 2013-184956.0-6350.0-1
+alut2625.stp-Tue Jun 04 20:58:41 BRT 2013-Tue Jun 04 20:58:48 BRT 2013-200270.0-7140.0-1
+alut2764.stp-Tue Jun 04 20:58:48 BRT 2013-Tue Jun 04 20:58:53 BRT 2013-1970.0-1.968504-2540
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:58:53 BRT 2013-Tue Jun 04 20:58:58 BRT 2013-6043.0-11.389522-439
+alut0805.stp-Tue Jun 04 20:58:58 BRT 2013-Tue Jun 04 20:59:03 BRT 2013-5065.0-7.874016-635
+alut1181.stp-Tue Jun 04 20:59:03 BRT 2013-Tue Jun 04 20:59:08 BRT 2013-16352.0-71.42857-70
+alut2010.stp-Tue Jun 04 20:59:08 BRT 2013-Tue Jun 04 20:59:13 BRT 2013-33723.0-244.7619-21
+alut2288.stp-Tue Jun 04 20:59:14 BRT 2013-Tue Jun 04 20:59:19 BRT 2013-49737.0-536.0-10
+alut2566.stp-Tue Jun 04 20:59:19 BRT 2013-Tue Jun 04 20:59:24 BRT 2013-27596.0-172.7931-29
+alut2610.stp-Tue Jun 04 20:59:24 BRT 2013-Tue Jun 04 20:59:30 BRT 2013-184956.0-6310.0-1
+alut2625.stp-Tue Jun 04 20:59:31 BRT 2013-Tue Jun 04 20:59:38 BRT 2013-200270.0-7210.0-1
+alut2764.stp-Tue Jun 04 20:59:38 BRT 2013-Tue Jun 04 20:59:43 BRT 2013-1970.0-1.9731649-2534
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 20:59:43 BRT 2013-Tue Jun 04 20:59:48 BRT 2013-6043.0-11.547344-433
+alut0805.stp-Tue Jun 04 20:59:48 BRT 2013-Tue Jun 04 20:59:53 BRT 2013-5065.0-8.01282-624
+alut1181.stp-Tue Jun 04 20:59:53 BRT 2013-Tue Jun 04 20:59:58 BRT 2013-16352.0-73.18841-69
+alut2010.stp-Tue Jun 04 20:59:58 BRT 2013-Tue Jun 04 21:00:03 BRT 2013-33723.0-248.57143-21
+alut2288.stp-Tue Jun 04 21:00:03 BRT 2013-Tue Jun 04 21:00:09 BRT 2013-49737.0-538.0-10
+alut2566.stp-Tue Jun 04 21:00:09 BRT 2013-Tue Jun 04 21:00:14 BRT 2013-27596.0-175.55173-29
+alut2610.stp-Tue Jun 04 21:00:14 BRT 2013-Tue Jun 04 21:00:20 BRT 2013-184956.0-6340.0-1
+alut2625.stp-Tue Jun 04 21:00:21 BRT 2013-Tue Jun 04 21:00:28 BRT 2013-200270.0-7100.0-1
+alut2764.stp-Tue Jun 04 21:00:28 BRT 2013-Tue Jun 04 21:00:33 BRT 2013-1970.0-1.9692793-2539
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:00:33 BRT 2013-Tue Jun 04 21:00:38 BRT 2013-6043.0-11.600928-431
+alut0805.stp-Tue Jun 04 21:00:38 BRT 2013-Tue Jun 04 21:00:43 BRT 2013-5065.0-8.05153-621
+alut1181.stp-Tue Jun 04 21:00:43 BRT 2013-Tue Jun 04 21:00:48 BRT 2013-16352.0-72.89855-69
+alut2010.stp-Tue Jun 04 21:00:48 BRT 2013-Tue Jun 04 21:00:53 BRT 2013-33723.0-249.04762-21
+alut2288.stp-Tue Jun 04 21:00:53 BRT 2013-Tue Jun 04 21:00:59 BRT 2013-49737.0-542.0-10
+alut2566.stp-Tue Jun 04 21:00:59 BRT 2013-Tue Jun 04 21:01:04 BRT 2013-27596.0-175.55173-29
+alut2610.stp-Tue Jun 04 21:01:04 BRT 2013-Tue Jun 04 21:01:10 BRT 2013-184956.0-6310.0-1
+alut2625.stp-Tue Jun 04 21:01:11 BRT 2013-Tue Jun 04 21:01:18 BRT 2013-200270.0-7210.0-1
+alut2764.stp-Tue Jun 04 21:01:18 BRT 2013-Tue Jun 04 21:01:23 BRT 2013-1970.0-1.9677292-2541
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:01:23 BRT 2013-Tue Jun 04 21:01:28 BRT 2013-6043.0-11.627907-430
+alut0805.stp-Tue Jun 04 21:01:28 BRT 2013-Tue Jun 04 21:01:33 BRT 2013-5065.0-8.077544-619
+alut1181.stp-Tue Jun 04 21:01:33 BRT 2013-Tue Jun 04 21:01:38 BRT 2013-16352.0-73.18841-69
+alut2010.stp-Tue Jun 04 21:01:38 BRT 2013-Tue Jun 04 21:01:43 BRT 2013-33723.0-250.5-20
+alut2288.stp-Tue Jun 04 21:01:43 BRT 2013-Tue Jun 04 21:01:49 BRT 2013-49737.0-539.0-10
+alut2566.stp-Tue Jun 04 21:01:49 BRT 2013-Tue Jun 04 21:01:54 BRT 2013-27596.0-175.86208-29
+alut2610.stp-Tue Jun 04 21:01:54 BRT 2013-Tue Jun 04 21:02:00 BRT 2013-184956.0-6371.0-1
+alut2625.stp-Tue Jun 04 21:02:01 BRT 2013-Tue Jun 04 21:02:08 BRT 2013-200270.0-7130.0-1
+alut2764.stp-Tue Jun 04 21:02:08 BRT 2013-Tue Jun 04 21:02:13 BRT 2013-1970.0-1.9700551-2538
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:02:13 BRT 2013-Tue Jun 04 21:02:18 BRT 2013-6043.0-11.627907-430
+alut0805.stp-Tue Jun 04 21:02:18 BRT 2013-Tue Jun 04 21:02:23 BRT 2013-5065.0-8.064516-620
+alut1181.stp-Tue Jun 04 21:02:23 BRT 2013-Tue Jun 04 21:02:28 BRT 2013-16352.0-73.52941-68
+alut2010.stp-Tue Jun 04 21:02:28 BRT 2013-Tue Jun 04 21:02:33 BRT 2013-33723.0-247.61905-21
+alut2288.stp-Tue Jun 04 21:02:33 BRT 2013-Tue Jun 04 21:02:39 BRT 2013-49737.0-547.0-10
+alut2566.stp-Tue Jun 04 21:02:39 BRT 2013-Tue Jun 04 21:02:44 BRT 2013-27596.0-176.2069-29
+alut2610.stp-Tue Jun 04 21:02:44 BRT 2013-Tue Jun 04 21:02:50 BRT 2013-184956.0-6340.0-1
+alut2625.stp-Tue Jun 04 21:02:51 BRT 2013-Tue Jun 04 21:02:59 BRT 2013-200270.0-8370.0-1
+alut2764.stp-Tue Jun 04 21:02:59 BRT 2013-Tue Jun 04 21:03:04 BRT 2013-1970.0-1.973944-2533
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:03:04 BRT 2013-Tue Jun 04 21:03:09 BRT 2013-6043.0-11.389522-439
+alut0805.stp-Tue Jun 04 21:03:09 BRT 2013-Tue Jun 04 21:03:14 BRT 2013-5065.0-7.911392-632
+alut1181.stp-Tue Jun 04 21:03:14 BRT 2013-Tue Jun 04 21:03:19 BRT 2013-16352.0-71.42857-70
+alut2010.stp-Tue Jun 04 21:03:19 BRT 2013-Tue Jun 04 21:03:24 BRT 2013-33723.0-230.90909-22
+alut2288.stp-Tue Jun 04 21:03:24 BRT 2013-Tue Jun 04 21:03:30 BRT 2013-49737.0-533.0-10
+alut2566.stp-Tue Jun 04 21:03:30 BRT 2013-Tue Jun 04 21:03:35 BRT 2013-27596.0-173.44827-29
+alut2610.stp-Tue Jun 04 21:03:35 BRT 2013-Tue Jun 04 21:03:42 BRT 2013-184956.0-6701.0-1
+alut2625.stp-Tue Jun 04 21:03:42 BRT 2013-Tue Jun 04 21:03:49 BRT 2013-200270.0-7180.0-1
+alut2764.stp-Tue Jun 04 21:03:49 BRT 2013-Tue Jun 04 21:03:54 BRT 2013-1970.0-1.9723866-2535
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:03:54 BRT 2013-Tue Jun 04 21:03:59 BRT 2013-6043.0-11.547344-433
+alut0805.stp-Tue Jun 04 21:03:59 BRT 2013-Tue Jun 04 21:04:04 BRT 2013-5065.0-7.342144-681
+alut1181.stp-Tue Jun 04 21:04:04 BRT 2013-Tue Jun 04 21:04:09 BRT 2013-16352.0-73.333336-69
+alut2010.stp-Tue Jun 04 21:04:09 BRT 2013-Tue Jun 04 21:04:15 BRT 2013-33723.0-246.66667-21
+alut2288.stp-Tue Jun 04 21:04:15 BRT 2013-Tue Jun 04 21:04:20 BRT 2013-49737.0-540.0-10
+alut2566.stp-Tue Jun 04 21:04:20 BRT 2013-Tue Jun 04 21:04:25 BRT 2013-27596.0-175.51724-29
+alut2610.stp-Tue Jun 04 21:04:25 BRT 2013-Tue Jun 04 21:04:32 BRT 2013-184956.0-6320.0-1
+alut2625.stp-Tue Jun 04 21:04:32 BRT 2013-Tue Jun 04 21:04:39 BRT 2013-200270.0-7160.0-1
+alut2764.stp-Tue Jun 04 21:04:39 BRT 2013-Tue Jun 04 21:04:44 BRT 2013-1970.0-1.9755038-2531
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:04:44 BRT 2013-Tue Jun 04 21:04:49 BRT 2013-6043.0-11.337869-441
+alut0805.stp-Tue Jun 04 21:04:49 BRT 2013-Tue Jun 04 21:04:54 BRT 2013-5065.0-7.92393-631
+alut1181.stp-Tue Jun 04 21:04:54 BRT 2013-Tue Jun 04 21:04:59 BRT 2013-16352.0-71.42857-70
+alut2010.stp-Tue Jun 04 21:04:59 BRT 2013-Tue Jun 04 21:05:05 BRT 2013-33723.0-245.71428-21
+alut2288.stp-Tue Jun 04 21:05:05 BRT 2013-Tue Jun 04 21:05:10 BRT 2013-49737.0-536.0-10
+alut2566.stp-Tue Jun 04 21:05:10 BRT 2013-Tue Jun 04 21:05:15 BRT 2013-27596.0-173.7931-29
+alut2610.stp-Tue Jun 04 21:05:15 BRT 2013-Tue Jun 04 21:05:22 BRT 2013-184956.0-6311.0-1
+alut2625.stp-Tue Jun 04 21:05:22 BRT 2013-Tue Jun 04 21:05:29 BRT 2013-200270.0-7100.0-1
+alut2764.stp-Tue Jun 04 21:05:29 BRT 2013-Tue Jun 04 21:05:34 BRT 2013-1970.0-1.973944-2533
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:05:34 BRT 2013-Tue Jun 04 21:05:39 BRT 2013-6043.0-11.574074-432
+alut0805.stp-Tue Jun 04 21:05:39 BRT 2013-Tue Jun 04 21:05:44 BRT 2013-5065.0-8.077544-619
+alut1181.stp-Tue Jun 04 21:05:44 BRT 2013-Tue Jun 04 21:05:49 BRT 2013-16352.0-73.04348-69
+alut2010.stp-Tue Jun 04 21:05:49 BRT 2013-Tue Jun 04 21:05:54 BRT 2013-33723.0-248.57143-21
+alut2288.stp-Tue Jun 04 21:05:54 BRT 2013-Tue Jun 04 21:06:00 BRT 2013-49737.0-543.0-10
+alut2566.stp-Tue Jun 04 21:06:00 BRT 2013-Tue Jun 04 21:06:05 BRT 2013-27596.0-175.51724-29
+alut2610.stp-Tue Jun 04 21:06:05 BRT 2013-Tue Jun 04 21:06:12 BRT 2013-184956.0-6270.0-1
+alut2625.stp-Tue Jun 04 21:06:12 BRT 2013-Tue Jun 04 21:06:19 BRT 2013-200270.0-7090.0-1
+alut2764.stp-Tue Jun 04 21:06:19 BRT 2013-Tue Jun 04 21:06:24 BRT 2013-1970.0-1.9677292-2541
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:06:24 BRT 2013-Tue Jun 04 21:06:29 BRT 2013-6043.0-11.655012-429
+alut0805.stp-Tue Jun 04 21:06:29 BRT 2013-Tue Jun 04 21:06:34 BRT 2013-5065.0-8.090615-618
+alut1181.stp-Tue Jun 04 21:06:34 BRT 2013-Tue Jun 04 21:06:39 BRT 2013-16352.0-73.52941-68
+alut2010.stp-Tue Jun 04 21:06:39 BRT 2013-Tue Jun 04 21:06:44 BRT 2013-33723.0-247.14285-21
+alut2288.stp-Tue Jun 04 21:06:44 BRT 2013-Tue Jun 04 21:06:50 BRT 2013-49737.0-539.0-10
+alut2566.stp-Tue Jun 04 21:06:50 BRT 2013-Tue Jun 04 21:06:55 BRT 2013-27596.0-176.2069-29
+alut2610.stp-Tue Jun 04 21:06:55 BRT 2013-Tue Jun 04 21:07:01 BRT 2013-184956.0-6320.0-1
+alut2625.stp-Tue Jun 04 21:07:02 BRT 2013-Tue Jun 04 21:07:09 BRT 2013-200270.0-7100.0-1
+alut2764.stp-Tue Jun 04 21:07:09 BRT 2013-Tue Jun 04 21:07:14 BRT 2013-1970.0-1.9708316-2537
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:07:14 BRT 2013-Tue Jun 04 21:07:19 BRT 2013-6043.0-11.312217-442
+alut0805.stp-Tue Jun 04 21:07:19 BRT 2013-Tue Jun 04 21:07:24 BRT 2013-5065.0-7.836991-638
+alut1181.stp-Tue Jun 04 21:07:24 BRT 2013-Tue Jun 04 21:07:29 BRT 2013-16352.0-71.42857-70
+alut2010.stp-Tue Jun 04 21:07:29 BRT 2013-Tue Jun 04 21:07:34 BRT 2013-33723.0-244.28572-21
+alut2288.stp-Tue Jun 04 21:07:34 BRT 2013-Tue Jun 04 21:07:40 BRT 2013-49737.0-535.0-10
+alut2566.stp-Tue Jun 04 21:07:40 BRT 2013-Tue Jun 04 21:07:45 BRT 2013-27596.0-172.75862-29
+alut2610.stp-Tue Jun 04 21:07:45 BRT 2013-Tue Jun 04 21:07:51 BRT 2013-184956.0-6300.0-1
+alut2625.stp-Tue Jun 04 21:07:51 BRT 2013-Tue Jun 04 21:07:59 BRT 2013-200270.0-7190.0-1
+alut2764.stp-Tue Jun 04 21:07:59 BRT 2013-Tue Jun 04 21:08:04 BRT 2013-1970.0-1.968504-2540
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:08:04 BRT 2013-Tue Jun 04 21:08:09 BRT 2013-6043.0-11.600928-431
+alut0805.stp-Tue Jun 04 21:08:09 BRT 2013-Tue Jun 04 21:08:14 BRT 2013-5065.0-8.025682-623
+alut1181.stp-Tue Jun 04 21:08:14 BRT 2013-Tue Jun 04 21:08:19 BRT 2013-16352.0-73.333336-69
+alut2010.stp-Tue Jun 04 21:08:19 BRT 2013-Tue Jun 04 21:08:24 BRT 2013-33723.0-248.09525-21
+alut2288.stp-Tue Jun 04 21:08:24 BRT 2013-Tue Jun 04 21:08:30 BRT 2013-49737.0-538.0-10
+alut2566.stp-Tue Jun 04 21:08:30 BRT 2013-Tue Jun 04 21:08:35 BRT 2013-27596.0-175.51724-29
+alut2610.stp-Tue Jun 04 21:08:35 BRT 2013-Tue Jun 04 21:08:41 BRT 2013-184956.0-6320.0-1
+alut2625.stp-Tue Jun 04 21:08:41 BRT 2013-Tue Jun 04 21:08:49 BRT 2013-200270.0-7080.0-1
+alut2764.stp-Tue Jun 04 21:08:49 BRT 2013-Tue Jun 04 21:08:54 BRT 2013-1970.0-1.9669552-2542
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:08:54 BRT 2013-Tue Jun 04 21:08:59 BRT 2013-6043.0-11.709601-427
+alut0805.stp-Tue Jun 04 21:08:59 BRT 2013-Tue Jun 04 21:09:04 BRT 2013-5065.0-8.116883-616
+alut1181.stp-Tue Jun 04 21:09:04 BRT 2013-Tue Jun 04 21:09:09 BRT 2013-16352.0-73.67647-68
+alut2010.stp-Tue Jun 04 21:09:09 BRT 2013-Tue Jun 04 21:09:14 BRT 2013-33723.0-248.57143-21
+alut2288.stp-Tue Jun 04 21:09:14 BRT 2013-Tue Jun 04 21:09:19 BRT 2013-49737.0-539.0-10
+alut2566.stp-Tue Jun 04 21:09:20 BRT 2013-Tue Jun 04 21:09:25 BRT 2013-27596.0-176.55173-29
+alut2610.stp-Tue Jun 04 21:09:25 BRT 2013-Tue Jun 04 21:09:31 BRT 2013-184956.0-6370.0-1
+alut2625.stp-Tue Jun 04 21:09:31 BRT 2013-Tue Jun 04 21:09:39 BRT 2013-200270.0-7150.0-1
+alut2764.stp-Tue Jun 04 21:09:39 BRT 2013-Tue Jun 04 21:09:44 BRT 2013-1970.0-1.9700551-2538
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:09:44 BRT 2013-Tue Jun 04 21:09:49 BRT 2013-6043.0-11.627907-430
+alut0805.stp-Tue Jun 04 21:09:49 BRT 2013-Tue Jun 04 21:09:54 BRT 2013-5065.0-8.064516-620
+alut1181.stp-Tue Jun 04 21:09:54 BRT 2013-Tue Jun 04 21:09:59 BRT 2013-16352.0-73.333336-69
+alut2010.stp-Tue Jun 04 21:09:59 BRT 2013-Tue Jun 04 21:10:04 BRT 2013-33723.0-249.5238-21
+alut2288.stp-Tue Jun 04 21:10:04 BRT 2013-Tue Jun 04 21:10:10 BRT 2013-49737.0-543.0-10
+alut2566.stp-Tue Jun 04 21:10:10 BRT 2013-Tue Jun 04 21:10:15 BRT 2013-27596.0-175.86208-29
+alut2610.stp-Tue Jun 04 21:10:15 BRT 2013-Tue Jun 04 21:10:21 BRT 2013-184956.0-6320.0-1
+alut2625.stp-Tue Jun 04 21:10:22 BRT 2013-Tue Jun 04 21:10:29 BRT 2013-200270.0-7120.0-1
+alut2764.stp-Tue Jun 04 21:10:29 BRT 2013-Tue Jun 04 21:10:34 BRT 2013-1970.0-1.9723866-2535
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:10:34 BRT 2013-Tue Jun 04 21:10:39 BRT 2013-6043.0-11.547344-433
+alut0805.stp-Tue Jun 04 21:10:39 BRT 2013-Tue Jun 04 21:10:44 BRT 2013-5065.0-8.038586-622
+alut1181.stp-Tue Jun 04 21:10:44 BRT 2013-Tue Jun 04 21:10:49 BRT 2013-16352.0-72.89855-69
+alut2010.stp-Tue Jun 04 21:10:49 BRT 2013-Tue Jun 04 21:10:54 BRT 2013-33723.0-248.57143-21
+alut2288.stp-Tue Jun 04 21:10:54 BRT 2013-Tue Jun 04 21:11:00 BRT 2013-49737.0-541.0-10
+alut2566.stp-Tue Jun 04 21:11:00 BRT 2013-Tue Jun 04 21:11:05 BRT 2013-27596.0-176.55173-29
+alut2610.stp-Tue Jun 04 21:11:05 BRT 2013-Tue Jun 04 21:11:11 BRT 2013-184956.0-6310.0-1
+alut2625.stp-Tue Jun 04 21:11:12 BRT 2013-Tue Jun 04 21:11:19 BRT 2013-200270.0-7170.0-1
+alut2764.stp-Tue Jun 04 21:11:19 BRT 2013-Tue Jun 04 21:11:24 BRT 2013-1970.0-1.9700551-2538
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:11:24 BRT 2013-Tue Jun 04 21:11:29 BRT 2013-6043.0-11.709601-427
+alut0805.stp-Tue Jun 04 21:11:29 BRT 2013-Tue Jun 04 21:11:34 BRT 2013-5065.0-8.143323-614
+alut1181.stp-Tue Jun 04 21:11:34 BRT 2013-Tue Jun 04 21:11:39 BRT 2013-16352.0-73.67647-68
+alut2010.stp-Tue Jun 04 21:11:39 BRT 2013-Tue Jun 04 21:11:44 BRT 2013-33723.0-249.5238-21
+alut2288.stp-Tue Jun 04 21:11:44 BRT 2013-Tue Jun 04 21:11:50 BRT 2013-49737.0-543.0-10
+alut2566.stp-Tue Jun 04 21:11:50 BRT 2013-Tue Jun 04 21:11:55 BRT 2013-27596.0-176.55173-29
+alut2610.stp-Tue Jun 04 21:11:55 BRT 2013-Tue Jun 04 21:12:01 BRT 2013-184956.0-6360.0-1
+alut2625.stp-Tue Jun 04 21:12:02 BRT 2013-Tue Jun 04 21:12:09 BRT 2013-200270.0-7160.0-1
+alut2764.stp-Tue Jun 04 21:12:09 BRT 2013-Tue Jun 04 21:12:14 BRT 2013-1970.0-1.9880716-2515
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:12:14 BRT 2013-Tue Jun 04 21:12:19 BRT 2013-6043.0-11.574074-432
+alut0805.stp-Tue Jun 04 21:12:19 BRT 2013-Tue Jun 04 21:12:24 BRT 2013-5065.0-8.077544-619
+alut1181.stp-Tue Jun 04 21:12:24 BRT 2013-Tue Jun 04 21:12:29 BRT 2013-16352.0-73.18841-69
+alut2010.stp-Tue Jun 04 21:12:29 BRT 2013-Tue Jun 04 21:12:34 BRT 2013-33723.0-248.57143-21
+alut2288.stp-Tue Jun 04 21:12:34 BRT 2013-Tue Jun 04 21:12:40 BRT 2013-49737.0-539.0-10
+alut2566.stp-Tue Jun 04 21:12:40 BRT 2013-Tue Jun 04 21:12:45 BRT 2013-27596.0-174.48276-29
+alut2610.stp-Tue Jun 04 21:12:45 BRT 2013-Tue Jun 04 21:12:51 BRT 2013-184956.0-6300.0-1
+alut2625.stp-Tue Jun 04 21:12:52 BRT 2013-Tue Jun 04 21:12:59 BRT 2013-200270.0-7120.0-1
+alut2764.stp-Tue Jun 04 21:12:59 BRT 2013-Tue Jun 04 21:13:04 BRT 2013-1970.0-1.9654088-2544
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:13:04 BRT 2013-Tue Jun 04 21:13:09 BRT 2013-6043.0-11.520738-434
+alut0805.stp-Tue Jun 04 21:13:09 BRT 2013-Tue Jun 04 21:13:14 BRT 2013-5065.0-8.038586-622
+alut1181.stp-Tue Jun 04 21:13:14 BRT 2013-Tue Jun 04 21:13:19 BRT 2013-16352.0-72.753624-69
+alut2010.stp-Tue Jun 04 21:13:19 BRT 2013-Tue Jun 04 21:13:24 BRT 2013-33723.0-247.61905-21
+alut2288.stp-Tue Jun 04 21:13:24 BRT 2013-Tue Jun 04 21:13:30 BRT 2013-49737.0-540.0-10
+alut2566.stp-Tue Jun 04 21:13:30 BRT 2013-Tue Jun 04 21:13:35 BRT 2013-27596.0-175.17241-29
+alut2610.stp-Tue Jun 04 21:13:35 BRT 2013-Tue Jun 04 21:13:41 BRT 2013-184956.0-6350.0-1
+alut2625.stp-Tue Jun 04 21:13:42 BRT 2013-Tue Jun 04 21:13:49 BRT 2013-200270.0-7140.0-1
+alut2764.stp-Tue Jun 04 21:13:49 BRT 2013-Tue Jun 04 21:13:54 BRT 2013-1970.0-1.968504-2540
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:13:54 BRT 2013-Tue Jun 04 21:13:59 BRT 2013-6043.0-11.655012-429
+alut0805.stp-Tue Jun 04 21:13:59 BRT 2013-Tue Jun 04 21:14:04 BRT 2013-5065.0-8.090615-618
+alut1181.stp-Tue Jun 04 21:14:04 BRT 2013-Tue Jun 04 21:14:09 BRT 2013-16352.0-73.52941-68
+alut2010.stp-Tue Jun 04 21:14:09 BRT 2013-Tue Jun 04 21:14:14 BRT 2013-33723.0-248.09525-21
+alut2288.stp-Tue Jun 04 21:14:14 BRT 2013-Tue Jun 04 21:14:20 BRT 2013-49737.0-539.0-10
+alut2566.stp-Tue Jun 04 21:14:20 BRT 2013-Tue Jun 04 21:14:25 BRT 2013-27596.0-176.89655-29
+alut2610.stp-Tue Jun 04 21:14:25 BRT 2013-Tue Jun 04 21:14:32 BRT 2013-184956.0-6840.0-1
+alut2625.stp-Tue Jun 04 21:14:32 BRT 2013-Tue Jun 04 21:14:39 BRT 2013-200270.0-7120.0-1
+alut2764.stp-Tue Jun 04 21:14:39 BRT 2013-Tue Jun 04 21:14:44 BRT 2013-1970.0-1.977066-2529
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:14:44 BRT 2013-Tue Jun 04 21:14:49 BRT 2013-6043.0-11.337869-441
+alut0805.stp-Tue Jun 04 21:14:49 BRT 2013-Tue Jun 04 21:14:54 BRT 2013-5065.0-7.861635-636
+alut1181.stp-Tue Jun 04 21:14:54 BRT 2013-Tue Jun 04 21:14:59 BRT 2013-16352.0-71.42857-70
+alut2010.stp-Tue Jun 04 21:15:00 BRT 2013-Tue Jun 04 21:15:05 BRT 2013-33723.0-243.80952-21
+alut2288.stp-Tue Jun 04 21:15:05 BRT 2013-Tue Jun 04 21:15:10 BRT 2013-49737.0-534.0-10
+alut2566.stp-Tue Jun 04 21:15:10 BRT 2013-Tue Jun 04 21:15:15 BRT 2013-27596.0-171.66667-30
+alut2610.stp-Tue Jun 04 21:15:15 BRT 2013-Tue Jun 04 21:15:22 BRT 2013-184956.0-6360.0-1
+alut2625.stp-Tue Jun 04 21:15:22 BRT 2013-Tue Jun 04 21:15:29 BRT 2013-200270.0-7140.0-1
+alut2764.stp-Tue Jun 04 21:15:29 BRT 2013-Tue Jun 04 21:15:34 BRT 2013-1970.0-1.9716089-2536
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:15:34 BRT 2013-Tue Jun 04 21:15:39 BRT 2013-6043.0-11.574074-432
+alut0805.stp-Tue Jun 04 21:15:39 BRT 2013-Tue Jun 04 21:15:44 BRT 2013-5065.0-8.077544-619
+alut1181.stp-Tue Jun 04 21:15:44 BRT 2013-Tue Jun 04 21:15:49 BRT 2013-16352.0-72.753624-69
+alut2010.stp-Tue Jun 04 21:15:49 BRT 2013-Tue Jun 04 21:15:55 BRT 2013-33723.0-248.57143-21
+alut2288.stp-Tue Jun 04 21:15:55 BRT 2013-Tue Jun 04 21:16:00 BRT 2013-49737.0-542.0-10
+alut2566.stp-Tue Jun 04 21:16:00 BRT 2013-Tue Jun 04 21:16:05 BRT 2013-27596.0-175.51724-29
+alut2610.stp-Tue Jun 04 21:16:05 BRT 2013-Tue Jun 04 21:16:12 BRT 2013-184956.0-6280.0-1
+alut2625.stp-Tue Jun 04 21:16:12 BRT 2013-Tue Jun 04 21:16:19 BRT 2013-200270.0-7090.0-1
+alut2764.stp-Tue Jun 04 21:16:19 BRT 2013-Tue Jun 04 21:16:24 BRT 2013-1970.0-1.9646366-2545
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:16:24 BRT 2013-Tue Jun 04 21:16:29 BRT 2013-6043.0-11.737089-426
+alut0805.stp-Tue Jun 04 21:16:29 BRT 2013-Tue Jun 04 21:16:34 BRT 2013-5065.0-8.116883-616
+alut1181.stp-Tue Jun 04 21:16:34 BRT 2013-Tue Jun 04 21:16:39 BRT 2013-16352.0-73.82353-68
+alut2010.stp-Tue Jun 04 21:16:39 BRT 2013-Tue Jun 04 21:16:45 BRT 2013-33723.0-249.5238-21
+alut2288.stp-Tue Jun 04 21:16:45 BRT 2013-Tue Jun 04 21:16:50 BRT 2013-49737.0-544.0-10
+alut2566.stp-Tue Jun 04 21:16:50 BRT 2013-Tue Jun 04 21:16:55 BRT 2013-27596.0-176.89655-29
+alut2610.stp-Tue Jun 04 21:16:55 BRT 2013-Tue Jun 04 21:17:02 BRT 2013-184956.0-6330.0-1
+alut2625.stp-Tue Jun 04 21:17:02 BRT 2013-Tue Jun 04 21:17:09 BRT 2013-200270.0-7100.0-1
+alut2764.stp-Tue Jun 04 21:17:09 BRT 2013-Tue Jun 04 21:17:14 BRT 2013-1970.0-1.9817678-2523
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:17:14 BRT 2013-Tue Jun 04 21:17:19 BRT 2013-6043.0-11.389522-439
+alut0805.stp-Tue Jun 04 21:17:19 BRT 2013-Tue Jun 04 21:17:24 BRT 2013-5065.0-7.911392-632
+alut1181.stp-Tue Jun 04 21:17:24 BRT 2013-Tue Jun 04 21:17:29 BRT 2013-16352.0-71.57143-70
+alut2010.stp-Tue Jun 04 21:17:29 BRT 2013-Tue Jun 04 21:17:35 BRT 2013-33723.0-244.28572-21
+alut2288.stp-Tue Jun 04 21:17:35 BRT 2013-Tue Jun 04 21:17:40 BRT 2013-49737.0-537.0-10
+alut2566.stp-Tue Jun 04 21:17:40 BRT 2013-Tue Jun 04 21:17:45 BRT 2013-27596.0-173.10345-29
+alut2610.stp-Tue Jun 04 21:17:45 BRT 2013-Tue Jun 04 21:17:52 BRT 2013-184956.0-6350.0-1
+alut2625.stp-Tue Jun 04 21:17:52 BRT 2013-Tue Jun 04 21:17:59 BRT 2013-200270.0-7140.0-1
+alut2764.stp-Tue Jun 04 21:17:59 BRT 2013-Tue Jun 04 21:18:04 BRT 2013-1970.0-1.8860807-2651
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:18:04 BRT 2013-Tue Jun 04 21:18:09 BRT 2013-6043.0-11.547344-433
+alut0805.stp-Tue Jun 04 21:18:09 BRT 2013-Tue Jun 04 21:18:14 BRT 2013-5065.0-8.0-625
+alut1181.stp-Tue Jun 04 21:18:14 BRT 2013-Tue Jun 04 21:18:19 BRT 2013-16352.0-73.18841-69
+alut2010.stp-Tue Jun 04 21:18:19 BRT 2013-Tue Jun 04 21:18:24 BRT 2013-33723.0-248.57143-21
+alut2288.stp-Tue Jun 04 21:18:25 BRT 2013-Tue Jun 04 21:18:30 BRT 2013-49737.0-536.0-10
+alut2566.stp-Tue Jun 04 21:18:30 BRT 2013-Tue Jun 04 21:18:35 BRT 2013-27596.0-175.51724-29
+alut2610.stp-Tue Jun 04 21:18:35 BRT 2013-Tue Jun 04 21:18:42 BRT 2013-184956.0-6330.0-1
+alut2625.stp-Tue Jun 04 21:18:42 BRT 2013-Tue Jun 04 21:18:49 BRT 2013-200270.0-7100.0-1
+alut2764.stp-Tue Jun 04 21:18:49 BRT 2013-Tue Jun 04 21:18:54 BRT 2013-1970.0-1.968504-2540
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:18:54 BRT 2013-Tue Jun 04 21:18:59 BRT 2013-6043.0-11.682243-428
+alut0805.stp-Tue Jun 04 21:18:59 BRT 2013-Tue Jun 04 21:19:04 BRT 2013-5065.0-8.105349-617
+alut1181.stp-Tue Jun 04 21:19:04 BRT 2013-Tue Jun 04 21:19:09 BRT 2013-16352.0-73.478264-69
+alut2010.stp-Tue Jun 04 21:19:09 BRT 2013-Tue Jun 04 21:19:14 BRT 2013-33723.0-249.5238-21
+alut2288.stp-Tue Jun 04 21:19:15 BRT 2013-Tue Jun 04 21:19:20 BRT 2013-49737.0-540.0-10
+alut2566.stp-Tue Jun 04 21:19:20 BRT 2013-Tue Jun 04 21:19:25 BRT 2013-27596.0-176.55173-29
+alut2610.stp-Tue Jun 04 21:19:25 BRT 2013-Tue Jun 04 21:19:32 BRT 2013-184956.0-6360.0-1
+alut2625.stp-Tue Jun 04 21:19:32 BRT 2013-Tue Jun 04 21:19:39 BRT 2013-200270.0-7150.0-1
+alut2764.stp-Tue Jun 04 21:19:39 BRT 2013-Tue Jun 04 21:19:44 BRT 2013-1970.0-1.9708316-2537
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:19:44 BRT 2013-Tue Jun 04 21:19:49 BRT 2013-6043.0-11.547344-433
+alut0805.stp-Tue Jun 04 21:19:49 BRT 2013-Tue Jun 04 21:19:54 BRT 2013-5065.0-8.038586-622
+alut1181.stp-Tue Jun 04 21:19:54 BRT 2013-Tue Jun 04 21:19:59 BRT 2013-16352.0-72.608696-69
+alut2010.stp-Tue Jun 04 21:19:59 BRT 2013-Tue Jun 04 21:20:05 BRT 2013-33723.0-248.57143-21
+alut2288.stp-Tue Jun 04 21:20:05 BRT 2013-Tue Jun 04 21:20:10 BRT 2013-49737.0-543.0-10
+alut2566.stp-Tue Jun 04 21:20:10 BRT 2013-Tue Jun 04 21:20:15 BRT 2013-27596.0-175.17241-29
+alut2610.stp-Tue Jun 04 21:20:15 BRT 2013-Tue Jun 04 21:20:22 BRT 2013-184956.0-6310.0-1
+alut2625.stp-Tue Jun 04 21:20:22 BRT 2013-Tue Jun 04 21:20:29 BRT 2013-200270.0-7150.0-1
+alut2764.stp-Tue Jun 04 21:20:29 BRT 2013-Tue Jun 04 21:20:34 BRT 2013-1970.0-1.9716089-2536
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:20:34 BRT 2013-Tue Jun 04 21:20:39 BRT 2013-6043.0-11.651163-430
+alut0805.stp-Tue Jun 04 21:20:39 BRT 2013-Tue Jun 04 21:20:44 BRT 2013-5065.0-8.116883-616
+alut1181.stp-Tue Jun 04 21:20:44 BRT 2013-Tue Jun 04 21:20:49 BRT 2013-16352.0-73.333336-69
+alut2010.stp-Tue Jun 04 21:20:49 BRT 2013-Tue Jun 04 21:20:55 BRT 2013-33723.0-250.0-21
+alut2288.stp-Tue Jun 04 21:20:55 BRT 2013-Tue Jun 04 21:21:00 BRT 2013-49737.0-542.0-10
+alut2566.stp-Tue Jun 04 21:21:00 BRT 2013-Tue Jun 04 21:21:05 BRT 2013-27596.0-176.55173-29
+alut2610.stp-Tue Jun 04 21:21:06 BRT 2013-Tue Jun 04 21:21:12 BRT 2013-184956.0-6300.0-1
+alut2625.stp-Tue Jun 04 21:21:12 BRT 2013-Tue Jun 04 21:21:19 BRT 2013-200270.0-7140.0-1
+alut2764.stp-Tue Jun 04 21:21:19 BRT 2013-Tue Jun 04 21:21:24 BRT 2013-1970.0-1.9561815-2556
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:21:24 BRT 2013-Tue Jun 04 21:21:29 BRT 2013-6043.0-11.286682-443
+alut0805.stp-Tue Jun 04 21:21:29 BRT 2013-Tue Jun 04 21:21:34 BRT 2013-5065.0-7.92393-631
+alut1181.stp-Tue Jun 04 21:21:34 BRT 2013-Tue Jun 04 21:21:39 BRT 2013-16352.0-72.0-70
+alut2010.stp-Tue Jun 04 21:21:40 BRT 2013-Tue Jun 04 21:21:45 BRT 2013-33723.0-243.33333-21
+alut2288.stp-Tue Jun 04 21:21:45 BRT 2013-Tue Jun 04 21:21:50 BRT 2013-49737.0-534.0-10
+alut2566.stp-Tue Jun 04 21:21:50 BRT 2013-Tue Jun 04 21:21:55 BRT 2013-27596.0-172.75862-29
+alut2610.stp-Tue Jun 04 21:21:55 BRT 2013-Tue Jun 04 21:22:02 BRT 2013-184956.0-6360.0-1
+alut2625.stp-Tue Jun 04 21:22:02 BRT 2013-Tue Jun 04 21:22:09 BRT 2013-200270.0-7100.0-1
+alut2764.stp-Tue Jun 04 21:22:09 BRT 2013-Tue Jun 04 21:22:14 BRT 2013-1970.0-1.9841269-2520
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:22:14 BRT 2013-Tue Jun 04 21:22:19 BRT 2013-6043.0-11.682243-428
+alut0805.stp-Tue Jun 04 21:22:19 BRT 2013-Tue Jun 04 21:22:24 BRT 2013-5065.0-8.130081-615
+alut1181.stp-Tue Jun 04 21:22:24 BRT 2013-Tue Jun 04 21:22:29 BRT 2013-16352.0-73.333336-69
+alut2010.stp-Tue Jun 04 21:22:29 BRT 2013-Tue Jun 04 21:22:35 BRT 2013-33723.0-249.5238-21
+alut2288.stp-Tue Jun 04 21:22:35 BRT 2013-Tue Jun 04 21:22:40 BRT 2013-49737.0-543.0-10
+alut2566.stp-Tue Jun 04 21:22:40 BRT 2013-Tue Jun 04 21:22:45 BRT 2013-27596.0-176.55173-29
+alut2610.stp-Tue Jun 04 21:22:45 BRT 2013-Tue Jun 04 21:22:52 BRT 2013-184956.0-6320.0-1
+alut2625.stp-Tue Jun 04 21:22:52 BRT 2013-Tue Jun 04 21:22:59 BRT 2013-200270.0-7080.0-1
+alut2764.stp-Tue Jun 04 21:22:59 BRT 2013-Tue Jun 04 21:23:04 BRT 2013-1970.0-1.9864918-2517
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:23:04 BRT 2013-Tue Jun 04 21:23:09 BRT 2013-6043.0-11.651163-430
+alut0805.stp-Tue Jun 04 21:23:09 BRT 2013-Tue Jun 04 21:23:14 BRT 2013-5065.0-8.103727-617
+alut1181.stp-Tue Jun 04 21:23:14 BRT 2013-Tue Jun 04 21:23:19 BRT 2013-16352.0-73.18841-69
+alut2010.stp-Tue Jun 04 21:23:19 BRT 2013-Tue Jun 04 21:23:25 BRT 2013-33723.0-250.0-21
+alut2288.stp-Tue Jun 04 21:23:25 BRT 2013-Tue Jun 04 21:23:30 BRT 2013-49737.0-539.0-10
+alut2566.stp-Tue Jun 04 21:23:30 BRT 2013-Tue Jun 04 21:23:35 BRT 2013-27596.0-175.86208-29
+alut2610.stp-Tue Jun 04 21:23:35 BRT 2013-Tue Jun 04 21:23:42 BRT 2013-184956.0-6340.0-1
+alut2625.stp-Tue Jun 04 21:23:42 BRT 2013-Tue Jun 04 21:23:49 BRT 2013-200270.0-7160.0-1
+alut2764.stp-Tue Jun 04 21:23:49 BRT 2013-Tue Jun 04 21:23:54 BRT 2013-1970.0-1.968504-2540
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:23:54 BRT 2013-Tue Jun 04 21:23:59 BRT 2013-6043.0-11.337869-441
+alut0805.stp-Tue Jun 04 21:23:59 BRT 2013-Tue Jun 04 21:24:04 BRT 2013-5065.0-7.8988943-633
+alut1181.stp-Tue Jun 04 21:24:04 BRT 2013-Tue Jun 04 21:24:09 BRT 2013-16352.0-71.42857-70
+alut2010.stp-Tue Jun 04 21:24:09 BRT 2013-Tue Jun 04 21:24:14 BRT 2013-33723.0-242.38095-21
+alut2288.stp-Tue Jun 04 21:24:15 BRT 2013-Tue Jun 04 21:24:20 BRT 2013-49737.0-537.0-10
+alut2566.stp-Tue Jun 04 21:24:20 BRT 2013-Tue Jun 04 21:24:25 BRT 2013-27596.0-173.10345-29
+alut2610.stp-Tue Jun 04 21:24:25 BRT 2013-Tue Jun 04 21:24:31 BRT 2013-184956.0-6240.0-1
+alut2625.stp-Tue Jun 04 21:24:32 BRT 2013-Tue Jun 04 21:24:39 BRT 2013-200270.0-7260.0-1
+alut2764.stp-Tue Jun 04 21:24:39 BRT 2013-Tue Jun 04 21:24:44 BRT 2013-1970.0-1.9677292-2541
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:24:44 BRT 2013-Tue Jun 04 21:24:49 BRT 2013-6043.0-11.627907-430
+alut0805.stp-Tue Jun 04 21:24:49 BRT 2013-Tue Jun 04 21:24:54 BRT 2013-5065.0-8.05153-621
+alut1181.stp-Tue Jun 04 21:24:54 BRT 2013-Tue Jun 04 21:24:59 BRT 2013-16352.0-72.89855-69
+alut2010.stp-Tue Jun 04 21:24:59 BRT 2013-Tue Jun 04 21:25:04 BRT 2013-33723.0-247.14285-21
+alut2288.stp-Tue Jun 04 21:25:04 BRT 2013-Tue Jun 04 21:25:10 BRT 2013-49737.0-538.0-10
+alut2566.stp-Tue Jun 04 21:25:10 BRT 2013-Tue Jun 04 21:25:15 BRT 2013-27596.0-177.24138-29
+alut2610.stp-Tue Jun 04 21:25:15 BRT 2013-Tue Jun 04 21:25:22 BRT 2013-184956.0-6340.0-1
+alut2625.stp-Tue Jun 04 21:25:22 BRT 2013-Tue Jun 04 21:25:29 BRT 2013-200270.0-7040.0-1
+alut2764.stp-Tue Jun 04 21:25:29 BRT 2013-Tue Jun 04 21:25:34 BRT 2013-1970.0-1.977066-2529
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:25:34 BRT 2013-Tue Jun 04 21:25:39 BRT 2013-6043.0-11.651163-430
+alut0805.stp-Tue Jun 04 21:25:39 BRT 2013-Tue Jun 04 21:25:44 BRT 2013-5065.0-8.077544-619
+alut1181.stp-Tue Jun 04 21:25:44 BRT 2013-Tue Jun 04 21:25:49 BRT 2013-16352.0-73.333336-69
+alut2010.stp-Tue Jun 04 21:25:49 BRT 2013-Tue Jun 04 21:25:54 BRT 2013-33723.0-249.04762-21
+alut2288.stp-Tue Jun 04 21:25:54 BRT 2013-Tue Jun 04 21:26:00 BRT 2013-49737.0-543.0-10
+alut2566.stp-Tue Jun 04 21:26:00 BRT 2013-Tue Jun 04 21:26:05 BRT 2013-27596.0-175.86208-29
+alut2610.stp-Tue Jun 04 21:26:05 BRT 2013-Tue Jun 04 21:26:12 BRT 2013-184956.0-6330.0-1
+alut2625.stp-Tue Jun 04 21:26:12 BRT 2013-Tue Jun 04 21:26:19 BRT 2013-200270.0-7130.0-1
+alut2764.stp-Tue Jun 04 21:26:19 BRT 2013-Tue Jun 04 21:26:24 BRT 2013-1970.0-1.9809825-2524
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:26:24 BRT 2013-Tue Jun 04 21:26:29 BRT 2013-6043.0-11.337869-441
+alut0805.stp-Tue Jun 04 21:26:29 BRT 2013-Tue Jun 04 21:26:34 BRT 2013-5065.0-7.8492937-637
+alut1181.stp-Tue Jun 04 21:26:34 BRT 2013-Tue Jun 04 21:26:39 BRT 2013-16352.0-71.40845-71
+alut2010.stp-Tue Jun 04 21:26:39 BRT 2013-Tue Jun 04 21:26:44 BRT 2013-33723.0-244.28572-21
+alut2288.stp-Tue Jun 04 21:26:44 BRT 2013-Tue Jun 04 21:26:50 BRT 2013-49737.0-532.0-10
+alut2566.stp-Tue Jun 04 21:26:50 BRT 2013-Tue Jun 04 21:26:55 BRT 2013-27596.0-173.10345-29
+alut2610.stp-Tue Jun 04 21:26:55 BRT 2013-Tue Jun 04 21:27:01 BRT 2013-184956.0-6330.0-1
+alut2625.stp-Tue Jun 04 21:27:02 BRT 2013-Tue Jun 04 21:27:09 BRT 2013-200270.0-7060.0-1
+alut2764.stp-Tue Jun 04 21:27:09 BRT 2013-Tue Jun 04 21:27:14 BRT 2013-1970.0-1.9669552-2542
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:27:14 BRT 2013-Tue Jun 04 21:27:19 BRT 2013-6043.0-11.627907-430
+alut0805.stp-Tue Jun 04 21:27:19 BRT 2013-Tue Jun 04 21:27:24 BRT 2013-5065.0-8.077544-619
+alut1181.stp-Tue Jun 04 21:27:24 BRT 2013-Tue Jun 04 21:27:29 BRT 2013-16352.0-73.52941-68
+alut2010.stp-Tue Jun 04 21:27:29 BRT 2013-Tue Jun 04 21:27:34 BRT 2013-33723.0-247.14285-21
+alut2288.stp-Tue Jun 04 21:27:34 BRT 2013-Tue Jun 04 21:27:40 BRT 2013-49737.0-537.0-10
+alut2566.stp-Tue Jun 04 21:27:40 BRT 2013-Tue Jun 04 21:27:45 BRT 2013-27596.0-175.86208-29
+alut2610.stp-Tue Jun 04 21:27:45 BRT 2013-Tue Jun 04 21:27:51 BRT 2013-184956.0-6350.0-1
+alut2625.stp-Tue Jun 04 21:27:51 BRT 2013-Tue Jun 04 21:27:59 BRT 2013-200270.0-7110.0-1
+alut2764.stp-Tue Jun 04 21:27:59 BRT 2013-Tue Jun 04 21:28:04 BRT 2013-1970.0-1.8261504-2738
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:28:04 BRT 2013-Tue Jun 04 21:28:09 BRT 2013-6043.0-11.520738-434
+alut0805.stp-Tue Jun 04 21:28:09 BRT 2013-Tue Jun 04 21:28:14 BRT 2013-5065.0-8.064516-620
+alut1181.stp-Tue Jun 04 21:28:14 BRT 2013-Tue Jun 04 21:28:19 BRT 2013-16352.0-72.753624-69
+alut2010.stp-Tue Jun 04 21:28:19 BRT 2013-Tue Jun 04 21:28:24 BRT 2013-33723.0-249.04762-21
+alut2288.stp-Tue Jun 04 21:28:24 BRT 2013-Tue Jun 04 21:28:30 BRT 2013-49737.0-542.0-10
+alut2566.stp-Tue Jun 04 21:28:30 BRT 2013-Tue Jun 04 21:28:35 BRT 2013-27596.0-175.51724-29
+alut2610.stp-Tue Jun 04 21:28:35 BRT 2013-Tue Jun 04 21:28:41 BRT 2013-184956.0-6340.0-1
+alut2625.stp-Tue Jun 04 21:28:41 BRT 2013-Tue Jun 04 21:28:49 BRT 2013-200270.0-7120.0-1
+alut2764.stp-Tue Jun 04 21:28:49 BRT 2013-Tue Jun 04 21:28:54 BRT 2013-1970.0-1.9708316-2537
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:28:54 BRT 2013-Tue Jun 04 21:28:59 BRT 2013-6043.0-11.363636-440
+alut0805.stp-Tue Jun 04 21:28:59 BRT 2013-Tue Jun 04 21:29:04 BRT 2013-5065.0-7.911392-632
+alut1181.stp-Tue Jun 04 21:29:04 BRT 2013-Tue Jun 04 21:29:09 BRT 2013-16352.0-71.40845-71
+alut2010.stp-Tue Jun 04 21:29:09 BRT 2013-Tue Jun 04 21:29:14 BRT 2013-33723.0-243.80952-21
+alut2288.stp-Tue Jun 04 21:29:14 BRT 2013-Tue Jun 04 21:29:19 BRT 2013-49737.0-532.0-10
+alut2566.stp-Tue Jun 04 21:29:19 BRT 2013-Tue Jun 04 21:29:24 BRT 2013-27596.0-173.10345-29
+alut2610.stp-Tue Jun 04 21:29:25 BRT 2013-Tue Jun 04 21:29:31 BRT 2013-184956.0-6310.0-1
+alut2625.stp-Tue Jun 04 21:29:31 BRT 2013-Tue Jun 04 21:29:38 BRT 2013-200270.0-7210.0-1
+alut2764.stp-Tue Jun 04 21:29:38 BRT 2013-Tue Jun 04 21:29:43 BRT 2013-1970.0-1.9708316-2537
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:29:44 BRT 2013-Tue Jun 04 21:29:49 BRT 2013-6043.0-11.574074-432
+alut0805.stp-Tue Jun 04 21:29:49 BRT 2013-Tue Jun 04 21:29:54 BRT 2013-5065.0-5.9382424-842
+alut1181.stp-Tue Jun 04 21:29:54 BRT 2013-Tue Jun 04 21:29:59 BRT 2013-16352.0-73.04348-69
+alut2010.stp-Tue Jun 04 21:29:59 BRT 2013-Tue Jun 04 21:30:04 BRT 2013-33723.0-246.66667-21
+alut2288.stp-Tue Jun 04 21:30:04 BRT 2013-Tue Jun 04 21:30:09 BRT 2013-49737.0-538.0-10
+alut2566.stp-Tue Jun 04 21:30:09 BRT 2013-Tue Jun 04 21:30:14 BRT 2013-27596.0-175.51724-29
+alut2610.stp-Tue Jun 04 21:30:15 BRT 2013-Tue Jun 04 21:30:21 BRT 2013-184956.0-6370.0-1
+alut2625.stp-Tue Jun 04 21:30:21 BRT 2013-Tue Jun 04 21:30:28 BRT 2013-200270.0-7130.0-1
+alut2764.stp-Tue Jun 04 21:30:28 BRT 2013-Tue Jun 04 21:30:33 BRT 2013-1970.0-1.9731649-2534
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:30:34 BRT 2013-Tue Jun 04 21:30:39 BRT 2013-6043.0-11.574074-432
+alut0805.stp-Tue Jun 04 21:30:39 BRT 2013-Tue Jun 04 21:30:44 BRT 2013-5065.0-8.090615-618
+alut1181.stp-Tue Jun 04 21:30:44 BRT 2013-Tue Jun 04 21:30:49 BRT 2013-16352.0-72.753624-69
+alut2010.stp-Tue Jun 04 21:30:49 BRT 2013-Tue Jun 04 21:30:54 BRT 2013-33723.0-248.09525-21
+alut2288.stp-Tue Jun 04 21:30:54 BRT 2013-Tue Jun 04 21:30:59 BRT 2013-49737.0-542.0-10
+alut2566.stp-Tue Jun 04 21:30:59 BRT 2013-Tue Jun 04 21:31:04 BRT 2013-27596.0-175.86208-29
+alut2610.stp-Tue Jun 04 21:31:05 BRT 2013-Tue Jun 04 21:31:11 BRT 2013-184956.0-6310.0-1
+alut2625.stp-Tue Jun 04 21:31:11 BRT 2013-Tue Jun 04 21:31:18 BRT 2013-200270.0-7140.0-1
+alut2764.stp-Tue Jun 04 21:31:18 BRT 2013-Tue Jun 04 21:31:23 BRT 2013-1970.0-1.9809825-2524
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:31:24 BRT 2013-Tue Jun 04 21:31:29 BRT 2013-6043.0-11.682243-428
+alut0805.stp-Tue Jun 04 21:31:29 BRT 2013-Tue Jun 04 21:31:34 BRT 2013-5065.0-8.103727-617
+alut1181.stp-Tue Jun 04 21:31:34 BRT 2013-Tue Jun 04 21:31:39 BRT 2013-16352.0-73.04348-69
+alut2010.stp-Tue Jun 04 21:31:39 BRT 2013-Tue Jun 04 21:31:44 BRT 2013-33723.0-249.04762-21
+alut2288.stp-Tue Jun 04 21:31:44 BRT 2013-Tue Jun 04 21:31:49 BRT 2013-49737.0-541.0-10
+alut2566.stp-Tue Jun 04 21:31:49 BRT 2013-Tue Jun 04 21:31:54 BRT 2013-27596.0-176.55173-29
+alut2610.stp-Tue Jun 04 21:31:55 BRT 2013-Tue Jun 04 21:32:01 BRT 2013-184956.0-6350.0-1
+alut2625.stp-Tue Jun 04 21:32:01 BRT 2013-Tue Jun 04 21:32:08 BRT 2013-200270.0-7140.0-1
+alut2764.stp-Tue Jun 04 21:32:08 BRT 2013-Tue Jun 04 21:32:13 BRT 2013-1970.0-1.9762846-2530
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:32:14 BRT 2013-Tue Jun 04 21:32:19 BRT 2013-6043.0-11.600928-431
+alut0805.stp-Tue Jun 04 21:32:19 BRT 2013-Tue Jun 04 21:32:24 BRT 2013-5065.0-8.143323-614
+alut1181.stp-Tue Jun 04 21:32:24 BRT 2013-Tue Jun 04 21:32:29 BRT 2013-16352.0-73.82353-68
+alut2010.stp-Tue Jun 04 21:32:29 BRT 2013-Tue Jun 04 21:32:34 BRT 2013-33723.0-249.04762-21
+alut2288.stp-Tue Jun 04 21:32:34 BRT 2013-Tue Jun 04 21:32:39 BRT 2013-49737.0-542.0-10
+alut2566.stp-Tue Jun 04 21:32:39 BRT 2013-Tue Jun 04 21:32:45 BRT 2013-27596.0-175.86208-29
+alut2610.stp-Tue Jun 04 21:32:45 BRT 2013-Tue Jun 04 21:32:51 BRT 2013-184956.0-6300.0-1
+alut2625.stp-Tue Jun 04 21:32:51 BRT 2013-Tue Jun 04 21:32:58 BRT 2013-200270.0-7130.0-1
+alut2764.stp-Tue Jun 04 21:32:59 BRT 2013-Tue Jun 04 21:33:04 BRT 2013-1970.0-1.9716089-2536
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:33:04 BRT 2013-Tue Jun 04 21:33:09 BRT 2013-6043.0-11.574074-432
+alut0805.stp-Tue Jun 04 21:33:09 BRT 2013-Tue Jun 04 21:33:14 BRT 2013-5065.0-8.064516-620
+alut1181.stp-Tue Jun 04 21:33:14 BRT 2013-Tue Jun 04 21:33:19 BRT 2013-16352.0-72.608696-69
+alut2010.stp-Tue Jun 04 21:33:19 BRT 2013-Tue Jun 04 21:33:24 BRT 2013-33723.0-250.5-20
+alut2288.stp-Tue Jun 04 21:33:24 BRT 2013-Tue Jun 04 21:33:29 BRT 2013-49737.0-537.0-10
+alut2566.stp-Tue Jun 04 21:33:29 BRT 2013-Tue Jun 04 21:33:34 BRT 2013-27596.0-176.2069-29
+alut2610.stp-Tue Jun 04 21:33:35 BRT 2013-Tue Jun 04 21:33:41 BRT 2013-184956.0-6700.0-1
+alut2625.stp-Tue Jun 04 21:33:42 BRT 2013-Tue Jun 04 21:33:49 BRT 2013-200270.0-7120.0-1
+alut2764.stp-Tue Jun 04 21:33:49 BRT 2013-Tue Jun 04 21:33:54 BRT 2013-1970.0-1.9669552-2542
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:33:54 BRT 2013-Tue Jun 04 21:33:59 BRT 2013-6043.0-11.627907-430
+alut0805.stp-Tue Jun 04 21:33:59 BRT 2013-Tue Jun 04 21:34:04 BRT 2013-5065.0-8.077544-619
+alut1181.stp-Tue Jun 04 21:34:04 BRT 2013-Tue Jun 04 21:34:09 BRT 2013-16352.0-73.18841-69
+alut2010.stp-Tue Jun 04 21:34:09 BRT 2013-Tue Jun 04 21:34:14 BRT 2013-33723.0-248.57143-21
+alut2288.stp-Tue Jun 04 21:34:14 BRT 2013-Tue Jun 04 21:34:20 BRT 2013-49737.0-541.0-10
+alut2566.stp-Tue Jun 04 21:34:20 BRT 2013-Tue Jun 04 21:34:25 BRT 2013-27596.0-176.2069-29
+alut2610.stp-Tue Jun 04 21:34:25 BRT 2013-Tue Jun 04 21:34:31 BRT 2013-184956.0-6320.0-1
+alut2625.stp-Tue Jun 04 21:34:32 BRT 2013-Tue Jun 04 21:34:39 BRT 2013-200270.0-7130.0-1
+alut2764.stp-Tue Jun 04 21:34:39 BRT 2013-Tue Jun 04 21:34:44 BRT 2013-1970.0-1.977848-2528
+ ********* Round Robin *********
+Arquivo-Execução iniciada-Execução Finalizada-Custo total da MST-Tempo de execução médio-Quantidade de iterações em 5 segundos
+alut0787.stp-Tue Jun 04 21:34:44 BRT 2013-Tue Jun 04 21:34:49 BRT 2013-6043.0-11.600928-431
+alut0805.stp-Tue Jun 04 21:34:49 BRT 2013-Tue Jun 04 21:34:54 BRT 2013-5065.0-8.077544-619
+alut1181.stp-Tue Jun 04 21:34:54 BRT 2013-Tue Jun 04 21:34:59 BRT 2013-16352.0-72.753624-69
+alut2010.stp-Tue Jun 04 21:34:59 BRT 2013-Tue Jun 04 21:35:04 BRT 2013-33723.0-248.09525-21
+alut2288.stp-Tue Jun 04 21:35:04 BRT 2013-Tue Jun 04 21:35:10 BRT 2013-49737.0-547.0-10
+alut2566.stp-Tue Jun 04 21:35:10 BRT 2013-Tue Jun 04 21:35:15 BRT 2013-27596.0-175.86208-29
+alut2610.stp-Tue Jun 04 21:35:15 BRT 2013-Tue Jun 04 21:35:21 BRT 2013-184956.0-6360.0-1
+alut2625.stp-Tue Jun 04 21:35:22 BRT 2013-Tue Jun 04 21:35:29 BRT 2013-200270.0-7180.0-1
+alut2764.stp-Tue Jun 04 21:35:29 BRT 2013-Tue Jun 04 21:35:34 BRT 2013-1970.0-1.9723866-2535

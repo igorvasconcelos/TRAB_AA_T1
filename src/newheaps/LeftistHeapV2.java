@@ -109,8 +109,7 @@ import java.io.Serializable;
  * @author Fran Lattanzio
  * @version $Revision$ $Date$
  */
-public class LeftistHeapV2<TKey, TValue>
-        extends AbstractLinkedHeap<TKey, TValue>
+public class LeftistHeapV2 extends AbstractLinkedHeap
         implements Serializable
 {
 
@@ -122,12 +121,12 @@ public class LeftistHeapV2<TKey, TValue>
         /**
          * Comparator.
          */
-        private final Comparator<? super TKey> comp;
+        private final Comparator<Double> comp;
 
         /**
          * The root/minimum node.
          */
-        transient LeftistHeapEntry<TKey, TValue> minimum;
+        transient LeftistHeapEntry minimum;
 
         /**
          * The size of this heap.
@@ -173,7 +172,7 @@ public class LeftistHeapV2<TKey, TValue>
          * @param comp the comparator to use. A <code>null</code> means the keys'
          *            natural ordering will be used.
          */
-        public LeftistHeapV2(final Comparator<? super TKey> comp)
+        public LeftistHeapV2(final Comparator<Double> comp)
         {
                 super();
 
@@ -193,7 +192,7 @@ public class LeftistHeapV2<TKey, TValue>
          * @see org.teneighty.heap.Heap#getComparator()
          */
         @Override
-        public Comparator<? super TKey> getComparator()
+        public Comparator<Double> getComparator()
         {
                 return comp;
         }
@@ -211,8 +210,7 @@ public class LeftistHeapV2<TKey, TValue>
          * @see org.teneighty.heap.Heap#holdsEntry(org.teneighty.heap.Heap.Entry)
          */
         @Override
-        public boolean holdsEntry(final Heap.Entry<TKey, TValue> e)
-                throws NullPointerException
+        public boolean holdsEntry(final Heap.Entry e) throws NullPointerException
         {
                 if (e == null)
                 {
@@ -226,7 +224,7 @@ public class LeftistHeapV2<TKey, TValue>
                 }
 
                 // Narrow.
-                LeftistHeapEntry<TKey, TValue> entry = (LeftistHeapEntry<TKey, TValue>) e;
+                LeftistHeapEntry entry = (LeftistHeapEntry) e;
 
                 // Use reference trickery.
                 return entry.isContainedBy(this);
@@ -236,11 +234,9 @@ public class LeftistHeapV2<TKey, TValue>
          * @see org.teneighty.heap.Heap#insert(java.lang.Object, java.lang.Object)
          */
         @Override
-        public Entry<TKey, TValue> insert(final TKey key, final TValue value)
-                throws ClassCastException, NullPointerException
+        public LeftistHeapEntry insert(final Integer key, final Double value) throws ClassCastException, NullPointerException
         {
-                LeftistHeapEntry<TKey, TValue> lhe = new LeftistHeapEntry<TKey, TValue>(
-                                key, value, source_heap);
+                LeftistHeapEntry lhe = new LeftistHeapEntry(key, value, source_heap);
 
                 // Link new entry with current minimum.
                 minimum = link(minimum, lhe);
@@ -267,9 +263,7 @@ public class LeftistHeapV2<TKey, TValue>
          * @return the entry which is now the parent of tree containing both
          *         <code>e1</code> and <code>e2</code>.
          */
-        private LeftistHeapEntry<TKey, TValue> link(
-                        final LeftistHeapEntry<TKey, TValue> e1,
-                        final LeftistHeapEntry<TKey, TValue> e2)
+        private LeftistHeapEntry link(final LeftistHeapEntry e1, final LeftistHeapEntry e2)
         {
                 if (e1 == null)
                 {
@@ -304,9 +298,7 @@ public class LeftistHeapV2<TKey, TValue>
          * @throws NullPointerException If <code>parent</code> or
          *             <code>newleft</code> are <code>null</code>.
          */
-        private void linkLeft(final LeftistHeapEntry<TKey, TValue> parent,
-                        final LeftistHeapEntry<TKey, TValue> newleft)
-                throws NullPointerException
+        private void linkLeft(final LeftistHeapEntry parent, final LeftistHeapEntry newleft) throws NullPointerException
         {
                 if (parent.left == null)
                 {
@@ -320,8 +312,7 @@ public class LeftistHeapV2<TKey, TValue>
 
                         // First, link the parent's right and the new left (which isn't so
                         // left anymore).
-                        LeftistHeapEntry<TKey, TValue> newright = link(parent.right,
-                                        newleft);
+                        LeftistHeapEntry newright = link(parent.right, newleft);
 
                         // Set dumb references.
                         parent.right = newright;
@@ -332,7 +323,7 @@ public class LeftistHeapV2<TKey, TValue>
                         if (parent.right.nullPathLength > parent.left.nullPathLength)
                         {
                                 // Swap them!
-                                LeftistHeapEntry<TKey, TValue> happy = parent.right;
+                                LeftistHeapEntry happy = parent.right;
                                 parent.right = parent.left;
                                 parent.left = happy;
                         }
@@ -346,9 +337,7 @@ public class LeftistHeapV2<TKey, TValue>
          * @see org.teneighty.heap.Heap#union(org.teneighty.heap.Heap)
          */
         @Override
-        public void union(final Heap<TKey, TValue> other)
-                throws ClassCastException, NullPointerException,
-                IllegalArgumentException
+        public void union(final Heap other) throws ClassCastException, NullPointerException, IllegalArgumentException
         {
                 if (other == null)
                 {
@@ -367,7 +356,7 @@ public class LeftistHeapV2<TKey, TValue>
 
                 if (other.getClass().equals(LeftistHeapV2.class))
                 {
-                        LeftistHeapV2<TKey, TValue> that = (LeftistHeapV2<TKey, TValue>) other;
+                        LeftistHeapV2 that = (LeftistHeapV2) other;
 
                         try
                         {
@@ -401,7 +390,7 @@ public class LeftistHeapV2<TKey, TValue>
          * @see org.teneighty.heap.Heap#getMinimum()
          */
         @Override
-        public Entry<TKey, TValue> getMinimum()
+        public Entry getMinimum()
                 throws NoSuchElementException
         {
                 if (minimum == null)
@@ -416,8 +405,7 @@ public class LeftistHeapV2<TKey, TValue>
          * @see org.teneighty.heap.Heap#extractMinimum()
          */
         @Override
-        public Entry<TKey, TValue> extractMinimum()
-                throws NoSuchElementException
+        public Entry extractMinimum() throws NoSuchElementException
         {
                 if (minimum == null)
                 {
@@ -425,7 +413,7 @@ public class LeftistHeapV2<TKey, TValue>
                 }
 
                 // Temp pointer...
-                LeftistHeapEntry<TKey, TValue> min = minimum;
+                LeftistHeapEntry min = minimum;
 
                 // Replace the minimum.
                 minimum = link(min.left, min.right);
@@ -454,8 +442,7 @@ public class LeftistHeapV2<TKey, TValue>
          * @see org.teneighty.heap.Heap#decreaseKey(org.teneighty.heap.Heap.Entry, java.lang.Object)
          */
         @Override
-        public void decreaseKey(final Heap.Entry<TKey, TValue> e, final TKey k)
-                throws IllegalArgumentException, ClassCastException
+        public void decreaseKey(final Heap.Entry e, final Double k) throws IllegalArgumentException, ClassCastException
         {
                 // Check and cast.
                 if (holdsEntry(e) == false)
@@ -464,10 +451,10 @@ public class LeftistHeapV2<TKey, TValue>
                 }
 
                 // Narrow.
-                LeftistHeapEntry<TKey, TValue> x = (LeftistHeapEntry<TKey, TValue>) e;
+                LeftistHeapEntry x = (LeftistHeapEntry) e;
 
                 // Check key... May throw class cast as well.
-                if (compareKeys(k, x.getKey()) > 0)
+                if (compareKeys(k, x.getValue()) > 0)
                 {
                         throw new IllegalArgumentException();
                 }
@@ -475,7 +462,7 @@ public class LeftistHeapV2<TKey, TValue>
                 if (x == minimum)
                 {
                         // Very easy case.
-                        x.setKey(k);
+                        x.setValue(k);
                         return;
                 }
 
@@ -483,7 +470,7 @@ public class LeftistHeapV2<TKey, TValue>
                 cut(x);
 
                 // Store the new key value.
-                x.setKey(k);
+                x.setValue(k);
 
                 // Merge node with minimum.
                 minimum = link(minimum, x);
@@ -493,8 +480,7 @@ public class LeftistHeapV2<TKey, TValue>
          * @see org.teneighty.heap.Heap#delete(org.teneighty.heap.Heap.Entry)
          */
         @Override
-        public void delete(final Heap.Entry<TKey, TValue> e)
-                throws IllegalArgumentException, NullPointerException
+        public void delete(final Heap.Entry e) throws IllegalArgumentException, NullPointerException
         {
                 // Check and cast.
                 if (holdsEntry(e) == false)
@@ -503,7 +489,7 @@ public class LeftistHeapV2<TKey, TValue>
                 }
 
                 // Narrow.
-                LeftistHeapEntry<TKey, TValue> entry = (LeftistHeapEntry<TKey, TValue>) e;
+                LeftistHeapEntry entry = (LeftistHeapEntry) e;
 
                 if (entry == minimum)
                 {
@@ -530,17 +516,16 @@ public class LeftistHeapV2<TKey, TValue>
          *
          * @param entry the entry to cut.
          */
-        private void cut(final LeftistHeapEntry<TKey, TValue> entry)
+        private void cut(final LeftistHeapEntry entry)
         {
                 // Which side are we replacing?
                 boolean left = (entry.parent.left == entry);
 
                 // Find the replacemnet.
-                LeftistHeapEntry<TKey, TValue> replacement = link(entry.left,
-                                entry.right);
+                LeftistHeapEntry replacement = link(entry.left, entry.right);
 
                 // Definitely not null...
-                LeftistHeapEntry<TKey, TValue> parent = entry.parent;
+                LeftistHeapEntry parent = entry.parent;
 
                 // Actually replace.
                 if (left)
@@ -563,7 +548,7 @@ public class LeftistHeapV2<TKey, TValue>
                         // Easy case - parent has no left (which must be replacement, which
                         // must
                         // also have been null, but why check stuff we know is true?)
-                        LeftistHeapEntry<TKey, TValue> happy = parent.right;
+                        LeftistHeapEntry happy = parent.right;
                         parent.right = parent.left;
                         parent.left = happy;
                         parent.nullPathLength = 0;
@@ -572,7 +557,7 @@ public class LeftistHeapV2<TKey, TValue>
                                 && parent.right.nullPathLength > parent.left.nullPathLength)
                 {
                         // Swap them!
-                        LeftistHeapEntry<TKey, TValue> happy = parent.right;
+                        LeftistHeapEntry happy = parent.right;
                         parent.right = parent.left;
                         parent.left = happy;
                         parent.nullPathLength = (parent.right.nullPathLength + 1);
@@ -611,7 +596,7 @@ public class LeftistHeapV2<TKey, TValue>
          * @see org.teneighty.heap.Heap#iterator()
          */
         @Override
-        public Iterator<Heap.Entry<TKey, TValue>> iterator()
+        public Iterator<Heap.Entry> iterator()
         {
                 return new EntryIterator();
         }
@@ -635,8 +620,8 @@ public class LeftistHeapV2<TKey, TValue>
                 out.writeInt(size);
 
                 // Write out all key/value pairs.
-                Iterator<Heap.Entry<TKey, TValue>> it = new EntryIterator();
-                Heap.Entry<TKey, TValue> et = null;
+                Iterator<Heap.Entry> it = new EntryIterator();
+                Heap.Entry et = null;
                 while (it.hasNext())
                 {
                         try
@@ -671,7 +656,6 @@ public class LeftistHeapV2<TKey, TValue>
          * @throws ClassNotFoundException If deserialization tries to classload an
          *             undefined class.
          */
-        @SuppressWarnings("unchecked")
         private void readObject(final ObjectInputStream in)
                 throws IOException, ClassNotFoundException
         {
@@ -685,12 +669,12 @@ public class LeftistHeapV2<TKey, TValue>
                 source_heap = new HeapReference(this);
 
                 // Read and insert all the keys and values.
-                TKey key;
-                TValue value;
+                Integer key;
+                Double value;
                 for (int index = 0; index < rsize; index++)
                 {
-                        key = (TKey) in.readObject();
-                        value = (TValue) in.readObject();
+                        key = (Integer) in.readObject();
+                        value = (Double) in.readObject();
                         insert(key, value);
                 }
         }
@@ -706,15 +690,13 @@ public class LeftistHeapV2<TKey, TValue>
          * @version $Revision$ $Date: 2009-10-29 23:54:44 -0400 (Thu, 29 Oct
          *          2009) $
          */
-        private final class EntryIterator
-                extends Object
-                implements Iterator<Heap.Entry<TKey, TValue>>
+        private final class EntryIterator extends Object implements Iterator<Heap.Entry>
         {
 
                 /**
                  * The next entry.
                  */
-                private LeftistHeapEntry<TKey, TValue> next;
+                private LeftistHeapEntry next;
 
                 /**
                  * The mod count.
@@ -763,7 +745,7 @@ public class LeftistHeapV2<TKey, TValue>
                  * @see java.util.Iterator#next()
                  */
                 @Override
-                public Heap.Entry<TKey, TValue> next()
+                public Heap.Entry next()
                         throws NoSuchElementException, ConcurrentModificationException
                 {
                         if (hasNext() == false)
@@ -772,7 +754,7 @@ public class LeftistHeapV2<TKey, TValue>
                         }
 
                         // Get the next node.
-                        LeftistHeapEntry<TKey, TValue> n = next;
+                        LeftistHeapEntry n = next;
                         next = getSuccessor(next);
                         return n;
                 }
@@ -784,8 +766,7 @@ public class LeftistHeapV2<TKey, TValue>
                  * @param entry the entry.
                  * @return the next node or <code>null</code>.
                  */
-                private LeftistHeapEntry<TKey, TValue> getSuccessor(
-                                final LeftistHeapEntry<TKey, TValue> entry)
+                private LeftistHeapEntry getSuccessor(final LeftistHeapEntry entry)
                 {
                         if (entry == null)
                         {
@@ -793,7 +774,7 @@ public class LeftistHeapV2<TKey, TValue>
                         }
                         else if (entry.right != null)
                         {
-                                LeftistHeapEntry<TKey, TValue> p = entry.right;
+                                LeftistHeapEntry p = entry.right;
                                 while (p.left != null)
                                 {
                                         p = p.left;
@@ -802,8 +783,8 @@ public class LeftistHeapV2<TKey, TValue>
                         }
                         else
                         {
-                                LeftistHeapEntry<TKey, TValue> p = entry.parent;
-                                LeftistHeapEntry<TKey, TValue> ch = entry;
+                                LeftistHeapEntry p = entry.parent;
+                                LeftistHeapEntry ch = entry;
                                 while (p != null && ch == p.right)
                                 {
                                         ch = p;
@@ -835,9 +816,7 @@ public class LeftistHeapV2<TKey, TValue>
          * @version $Revision$ $Date: 2009-10-29 23:54:44 -0400 (Thu, 29 Oct
          *          2009) $
          */
-        private static final class LeftistHeapEntry<K, V>
-                extends AbstractLinkedHeap.AbstractLinkedHeapEntry<K, V>
-                implements Serializable
+        public static final class LeftistHeapEntry extends AbstractLinkedHeap.AbstractLinkedHeapEntry implements Serializable
         {
 
                 /**
@@ -848,17 +827,17 @@ public class LeftistHeapV2<TKey, TValue>
                 /**
                  * The parent node.
                  */
-                transient LeftistHeapEntry<K, V> left;
+                transient LeftistHeapEntry left;
 
                 /**
                  * The sibling node.
                  */
-                transient LeftistHeapEntry<K, V> right;
+                transient LeftistHeapEntry right;
 
                 /**
                  * The parent node.
                  */
-                transient LeftistHeapEntry<K, V> parent;
+                transient LeftistHeapEntry parent;
 
                 /**
                  * The null path length.
@@ -872,7 +851,7 @@ public class LeftistHeapV2<TKey, TValue>
                  * @param value the value.
                  * @param ref the creating containing heap.
                  */
-                LeftistHeapEntry(final K key, final V value, final HeapReference ref)
+                LeftistHeapEntry(final Integer key, final Double value, final HeapReference ref)
                 {
                         super(key, value, ref);
                 }
